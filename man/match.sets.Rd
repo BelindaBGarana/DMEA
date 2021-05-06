@@ -74,12 +74,12 @@ gene.1 <- as.numeric(seq(0,1, by = 0.04))
 gene.2 <- as.numeric(seq(0,1, by = 0.04))
 gene.3 <- as.numeric(seq(0,1, by = 0.04))
 data <- as.data.frame(cbind(id, rank.metric, gene.1, gene.2, gene.3)) #Example input with 26 id.var and 3 genes
-result <- rank.corr(data=data,id.var="id",rank.var="rank.metric",variable="Gene",value="Intensity",type="spearman",plots=FALSE)$result
-result$Rank.Pearson <- rank(desc(as.numeric(result$Pearson.est)))
-result$Rank.Spearman <- rank(desc(as.numeric(result$Spearman.est)))
+correlations <- rank.corr(data=data,id.var="id",rank.var="rank.metric",variable="Gene",value="Intensity",type="spearman",plots=FALSE)$result
+correlations$Rank.Pearson <- rank(desc(as.numeric(correlations$Pearson.est)))
+correlations$Rank.Spearman <- rank(desc(as.numeric(correlations$Spearman.est)))
 
 #example analysis: match Pearson and Spearman correlation results
-match.sets(result, directions=c("Pearson.est","Spearman.est"),
+match.sets(data=correlations, directions=c("Pearson.est","Spearman.est"),
   ranks=c("Rank.Pearson","Rank.Spearman"))
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
