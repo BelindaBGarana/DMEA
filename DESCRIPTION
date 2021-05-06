@@ -1,0 +1,10 @@
+Package: DMEA
+Type: Package
+Title: Drug Mechanism Enrichment Analysis
+Version: 0.1.0
+Author: Belinda B. Garana, James H. Joly
+Maintainer: Belinda B. Garana <bgarana@usc.edu>
+Description: 4 functions for drug set enrichment analysis, correlations across a matrix, direction-matching rank lists, and weighted gene voting.
+License: CC0
+Encoding: UTF-8
+LazyData: true

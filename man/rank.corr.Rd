@@ -1,0 +1,107 @@
+\name{rank.corr}
+\alias{rank.corr}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Correlations between a rank metric and a set of 2+ variables
+%%  ~~function to do ... ~~
+}
+\description{Runs Pearson & Spearman correlations between a rank metric and a set of 2+ variables and performs statistical analysis. Outputs a dataframe of results, as well as scatter plots for the correlation type and FDR-cutoff specified.
+%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+}
+\usage{
+rank.corr(data, id.var=colnames(data)[1], rank.var=colnames(data)[2],
+  variable="Gene", value="Intensity", type="spearman", N.min=3,
+  plots=TRUE, FDR=0.05, xlab=rank.var, ylab=value)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{data}{Dataframe with id.var, rank.var, and the set of variables (e.g. genes) as column names starting at column 3.
+%%     ~~Describe \code{x} here~~
+}
+  \item{id.var}{Column name containing the id variable (e.g. cell line names). Default: colnames(data)[1].
+%%     ~~Describe \code{x} here~~
+}
+  \item{rank.var}{Column name containing the rank metric. Default: colnames(data)[2].
+%%     ~~Describe \code{x} here~~
+}
+  \item{variable}{Description of the column names starting at column 3. Default: "Gene".
+%%     ~~Describe \code{x} here~~
+}
+  \item{value}{Description of the values starting at column 3. Default: "Intensity".
+%%     ~~Describe \code{x} here~~
+}
+  \item{type}{Correlation type. Must be specified as "pearson" or "spearman". Default: "spearman".
+%%     ~~Describe \code{x} here~~
+}
+  \item{N.min}{Minimum number of datapoints required to run correlations. Default: 3.
+%%     ~~Describe \code{x} here~~
+}
+  \item{plots}{TRUE to produce scatter plots. Default: TRUE.
+%%     ~~Describe \code{x} here~~
+}
+  \item{FDR}{False discovery rate cut-off value to produce scatter plots for significant correlations. Default: 0.05.
+%%     ~~Describe \code{x} here~~
+}
+  \item{xlab}{Text for x-axis label of scatter plots. Default: rank.var.
+%%     ~~Describe \code{x} here~~
+}
+  \item{ylab}{Text for y-axis label of scatter plots. Default: value.
+%%     ~~Describe \code{x} here~~
+}
+}
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
+\value{
+  \item{result }{Dataframe with Pearson & Spearman correlation estimates, p-values, and q-values (B-H method) for each variable item.}
+  \item{scatter }{ggplot object with a scatter plot for each significant correlation on each page.}
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
+\author{Belinda B. Garana
+%%  ~~who you are~~
+}
+\note{Scatter plots can be saved collectively to 1 file using ggsave(filename, rank.corr$scatter).
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+{Warning }{Do not name your variable as "variable.name" or your value as "value.name".
+For this function to work, you need 2 or more variables in your set.
+For scatter plots, correlation type must be specified as "spearman" or "pearson".}
+
+\seealso{
+%% ~~objects to See Also as \code{\link{help}}, ~~~
+}
+\examples{
+#create id
+id <- LETTERS[seq(from = 1, to = 26)]
+
+#create rank metric for each id
+rank.metric <- as.numeric(seq(1,2, by = 0.04))
+
+#create gene expression for each id
+gene.1 <- as.numeric(seq(0,1, by = 0.04))
+gene.2 <- as.numeric(seq(0,1, by = 0.04))
+gene.3 <- as.numeric(seq(0,1, by = 0.04))
+
+#prepare input
+data <- as.data.frame(cbind(id, rank.metric, gene.1, gene.2, gene.3)) #Example input with 26 id.var and 3 genes
+
+#run correlations between rank metric and each gene's expression
+rank.corr(data)
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory (show via RShowDoc("KEYWORDS")):
+% \keyword{ ~kwd1 }
+% \keyword{ ~kwd2 }
+% Use only one keyword per line.
+% For non-standard keywords, use \concept instead of \keyword:
+% \concept{ ~cpt1 }
+% \concept{ ~cpt2 }
+% Use only one concept per line.
