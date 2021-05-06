@@ -1,5 +1,5 @@
 # DMEA
-Drug Mechanism Enrichment Analysis -4 functions for drug set enrichment analysis, correlations across a matrix, direction-matching rank lists, and weighted gene voting:
+Drug Mechanism Enrichment Analysis -4 functions for drug set enrichment analysis, direction-matching rank lists, correlations across a matrix, and weighted gene voting:
 
 drugSEA -Runs GSEA to identify enriched drug sets -Optional: Adjusts correlation estimates for direction of drug activity -Produces mountain plots for significant enrichments
 
