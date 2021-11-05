@@ -4,56 +4,43 @@
 \title{Correlations between a rank metric and a set of 2+ variables
 %%  ~~function to do ... ~~
 }
-\description{Runs Pearson & Spearman correlations between a rank metric and a set of 2+ variables and performs statistical analysis. Outputs a dataframe of results, as well as scatter plots for the correlation type and FDR-cutoff specified.
+\description{Runs correlations (Pearson & Spearman) and regressions (value- & rank-based) between a rank metric and a set of 2+ variables as well as statistical analysis. Outputs a dataframe of results, as well as scatter plots for the correlation type and FDR-cutoff specified.
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-rank.corr(data, id.var=colnames(data)[1], rank.var=colnames(data)[2],
-  variable="Gene", value="Intensity", type="spearman", N.min=3,
-  plots=TRUE, FDR=0.05, xlab=rank.var, ylab=value)
+rank.corr(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plots=TRUE, FDR=0.05, xlab=rank.var, ylab=value, position.x="mid", position.y="max", se=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{data}{Dataframe with id.var, rank.var, and the set of variables (e.g. genes) as column names starting at column 3.
-%%     ~~Describe \code{x} here~~
-}
-  \item{id.var}{Column name containing the id variable (e.g. cell line names). Default: colnames(data)[1].
-%%     ~~Describe \code{x} here~~
-}
-  \item{rank.var}{Column name containing the rank metric. Default: colnames(data)[2].
-%%     ~~Describe \code{x} here~~
+  \item{data}{Dataframe with sample names in column 1, the rank metric in column 2, and the set of variables (e.g. genes) as column names starting at column 3.
 }
   \item{variable}{Description of the column names starting at column 3. Default: "Gene".
-%%     ~~Describe \code{x} here~~
 }
-  \item{value}{Description of the values starting at column 3. Default: "Intensity".
-%%     ~~Describe \code{x} here~~
+  \item{value}{Description of the values starting at column 3. Do not include spaces! Default: "Intensity".
 }
-  \item{type}{Correlation type. Must be specified as "pearson" or "spearman". Default: "spearman".
-%%     ~~Describe \code{x} here~~
+  \item{type}{Correlation type for plots. Must be specified as "pearson" or "spearman". Default: "pearson".
 }
-  \item{N.min}{Minimum number of datapoints required to run correlations. Default: 3.
-%%     ~~Describe \code{x} here~~
+  \item{N.min}{Minimum number of samples required to run correlations. Default: 3.
 }
-  \item{plots}{TRUE to produce scatter plots. Default: TRUE.
-%%     ~~Describe \code{x} here~~
+  \item{plots}{Set TRUE to produce scatter plots. Default: TRUE.
 }
   \item{FDR}{False discovery rate cut-off value to produce scatter plots for significant correlations. Default: 0.05.
-%%     ~~Describe \code{x} here~~
 }
-  \item{xlab}{Text for x-axis label of scatter plots. Default: rank.var.
-%%     ~~Describe \code{x} here~~
+  \item{xlab}{Text describing rank metric for x-axis label of scatter plots. Default: colnames(data)[2].
 }
-  \item{ylab}{Text for y-axis label of scatter plots. Default: value.
-%%     ~~Describe \code{x} here~~
+  \item{ylab}{Text describing variable values for y-axis label of scatter plots. Default: value.
+}
+  \item{position.x}{X-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "mid".
+}
+  \item{position.y}{Y-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "max".
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-  \item{result }{Dataframe with Pearson & Spearman correlation estimates, p-values, and q-values (B-H method) for each variable item.}
-  \item{scatter }{ggplot object with a scatter plot for each significant correlation on each page.}
+  \item{result }{Dataframe with correlation and regression estimates, p-values, and FDR q-values (Benjamini-Hochberg method) for each variable item.}
+  \item{scatter.plots }{ggplot object with a scatter plot for each significant correlation on each page.}
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
@@ -71,9 +58,8 @@ rank.corr(data, id.var=colnames(data)[1], rank.var=colnames(data)[2],
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
-{Warning }{Do not name your variable as "variable.name" or your value as "value.name".
-For this function to work, you need 2 or more variables in your set.
-For scatter plots, correlation type must be specified as "spearman" or "pearson".}
+\section{Warning }{For this function to work, you need 2 or more variables in your set.
+Do not name your variable as "variable.name" or your value as "value.name". Do not include spaces in "value" variable.}
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~

@@ -1,18 +1,25 @@
 #DMEA
-#BG 12-3-20; last edit: BG 5-6-21
-#Note: drugSEA co-authored with JJ (GSEA_custom by JJ and adapted by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
+#BG 20201203; last edit: BG 20211104
+#Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
 rm(list=ls(all=TRUE))
 
-WGV <- function(data, weights, gene.names = colnames(weights)[1], weight.values = colnames(weights)[2]){#data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
+WV <- function(expression, weights, sample.names=colnames(expression)[1],
+                gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){#data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
   library(dplyr);
-  input.df <- data %>% select(weights[,c(gene.names)])
-  WGV.matrix <- input.df #make a dataframe to store resulting WGV score matrix
-  cells <- unique(rownames(WGV.matrix))
-  genes <- unique(colnames(WGV.matrix))
-  WGV.scores <- as.data.frame(cells) #make a dataframe to store resulting WGV scores
-  WGV.scores$WGV <- NA
+
+  cores <- parallel::detectCores() #number of cores available
+  cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
+  doSNOW::registerDoSNOW(cl) #register cluster
+
+  rownames(expression) <- expression[,c(sample.names)]
+  input.df <- expression %>% select(weights[,c(gene.names)])
+  WV.matrix <- input.df #make a dataframe to store resulting WV score matrix
+  cells <- unique(rownames(WV.matrix))
+  genes <- unique(colnames(WV.matrix))
+  WV.scores <- as.data.frame(cells) #make a dataframe to store resulting WV scores
+  WV.scores$WV <- NA
   for(m in 1:length(cells)) {
     for(j in 1:length(genes)) {
       temp.gene <- input.df %>% select(genes[j]) #select expression for particular gene j
@@ -20,17 +27,21 @@ WGV <- function(data, weights, gene.names = colnames(weights)[1], weight.values 
       temp.gene$cells <- rownames(temp.gene) #add column with cell
       temp.gene.cell <- temp.gene[which(temp.gene$cells==cells[m]),] #get expression for cell line m for gene j
       temp.gene.cell$cells <- NULL #remove cell column
-      temp.WGV <- as.numeric(temp.gene.cell[1,1])*as.numeric(temp.weight) #multiply expression value by log2FC
-      WGV.matrix[m,j] <- temp.WGV #store WGV value for each gene, cell combo
+      temp.WV <- as.numeric(temp.gene.cell[1,1])*as.numeric(temp.weight) #multiply expression value by log2FC
+      WV.matrix[m,j] <- temp.WV #store WV value for each gene, cell combo
     }
-    WGV.scores[WGV.scores$cells==cells[m],]$WGV <- sum(as.numeric(WGV.matrix[m,])) #sum WGV values across genes for each cell line
+    WV.scores[WV.scores$cells==cells[m],]$WV <- sum(as.numeric(WV.matrix[m,])) #sum WV values across genes for each cell line
   }
-  colnames(WGV.scores) [1] <- "Sample"
-  outputs <- list(scores = WGV.scores, matrix = WGV.matrix)
+  colnames(WV.scores) [1] <- sample.names
+
+  snow::stopCluster(cl) #stop cluster
+  rm(cl)
+
+  outputs <- list(scores = WV.scores, matrix = WV.matrix)
   return(outputs)
 }
 
-rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2], variable="Gene", value="Intensity", type="spearman", N.min=3, plots=TRUE, FDR=0.05, xlab=rank.var, ylab=value, se=TRUE){
+rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plots=TRUE, FDR=0.05, xlab=rank.var, ylab=value, position.x="mid", position.y="max", se=TRUE){
   library(dplyr);library(qvalue);library(ggplot2);
   #Correlations
   not_all_na <- function(x) any(!is.na(x))
@@ -39,23 +50,33 @@ rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2]
   variable.set <- colnames(all.data.corr[,3:ncol(all.data.corr)])
   corr <- data.frame(variable.set)
   colnames(corr)[1] <- variable
-  corr$Pearson.est <- NA
-  corr$Pearson.p <- NA
-  corr$Pearson.q <- NA
-  corr$Spearman.est <- NA
-  corr$Spearman.p <- NA
-  corr$Spearman.q <- NA
-  corr$N <- NA
+  corr[,c("Pearson.est","Pearson.p","Pearson.q",
+          "Spearman.est","Spearman.p","Spearman.q",
+          "Slope","Intercept","R.squared",
+          "Rank.slope","Rank.intercept","Rank.R.squared","N")] <- NA
   data.corr <- list()
   for (j in 3:ncol(all.data.corr)){
     data.corr[[j-2]] <- na.omit(all.data.corr[,c(2,j)])
-    a <- nrow(data.corr[[j-2]])
+    a <- nrow(data.corr[[j-2]]) #number of samples in the correlation (N)
     if (a >= N.min) {corr$N[j-2] <- a
-    Pearson <- cor.test(as.numeric(data.corr[[j-2]][,c(rank.var)]), as.numeric(data.corr[[j-2]][,2]), method="pearson")
+    x <- as.numeric(data.corr[[j-2]][,1]) #list of rank metric
+    y <- as.numeric(data.corr[[j-2]][,2]) #list of gene expression (for each gene j)
+
+    Regression <- lm(y ~ x)
+    corr$Slope[j-2] <- Regression$coeff[[2]]
+    corr$Intercept[j-2] <- Regression$coeff[[1]]
+    corr$R.squared[j-2] <- summary(Regression)$r.squared
+
+    Rank.regression <- lm(rank(y) ~ rank(x))
+    corr$Rank.slope[j-2] <- Rank.regression$coeff[[2]]
+    corr$Rank.intercept[j-2] <- Rank.regression$coeff[[1]]
+    corr$Rank.R.squared[j-2] <- summary(Rank.regression)$r.squared
+
+    Pearson <- cor.test(x, y, method="pearson")
     corr$Pearson.est[j-2] <- Pearson$estimate
     corr$Pearson.p[j-2] <- Pearson$p.value
 
-    Spearman <- cor.test(as.numeric(data.corr[[j-2]][,c(rank.var)]), as.numeric(data.corr[[j-2]][,2]), method="spearman", exact=FALSE)
+    Spearman <- cor.test(x, y, method="spearman", exact=FALSE)
     corr$Spearman.est[j-2] <- Spearman$estimate
     corr$Spearman.p[j-2] <- Spearman$p.value}
   }
@@ -81,6 +102,8 @@ rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2]
                       axis.title.y = element_text(size=20), axis.text.y  = element_text(size=16),
                       plot.title = element_text(lineheight=.8, face="bold", size=36))
     #Prepare dataframe for plots
+    id.var <- colnames(data)[1]
+    rank.var <- colnames(data)[2]
     plot.data <- reshape2::melt(all.data.corr, id=c(id.var,rank.var), variable.name = variable, value.name = value, na.rm=TRUE)
     if (type=="pearson"){
       results <- unique(corr.no.na[which(corr.no.na$Pearson.q<=FDR),1])
@@ -88,8 +111,16 @@ rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2]
         a <- list()
         for (i in 1:length(results)) {
           sig.data <- plot.data[plot.data[,3]==results[i],]
-          center.x <- 0.5*(min(sig.data[,c(rank.var)]) + max(sig.data[,c(rank.var)]))
+          min.x <- min(sig.data[,c(rank.var)])
+          max.x <- max(sig.data[,c(rank.var)])
+          mid.x <- 0.5*(min.x+max.x)
+          min.y <- min(sig.data[,c(value)])
           max.y <- max(sig.data[,c(value)])
+          mid.y <- 0.5*(min.y+max.y)
+          if (position.x=="min"){pos.x=min.x} else if(position.x=="mid"){pos.x=mid.x
+          } else if(position.x=="max"){pos.x=max.x} else if(is.numeric(position.x)==TRUE){pos.x==position.x}
+          if (position.y=="min"){pos.y=min.y} else if(position.y=="mid"){pos.y=mid.y
+          } else if(position.y=="max"){pos.y=max.y} else if(is.numeric(position.y)==TRUE){pos.y==position.y}
 
           Pearson.est <- corr.no.na[corr.no.na[,1]==results[i],]$Pearson.est
           Pearson.p <- corr.no.na[corr.no.na[,1]==results[i],]$Pearson.p
@@ -97,11 +128,11 @@ rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2]
                                       list(est = format(Pearson.est, digits = 3),
                                            p = format(Pearson.p, digits = 3)))
 
-          a[[i]] <- ggplot(data=sig.data, aes_string(x=sig.data[,c(rank.var)], y=sig.data[,c(value)])) +
-            geom_point() +labs(x = xlab, y = ylab) + ggtitle(results[i]) +
+          a[[i]] <- ggplot(data=sig.data, aes_string(x=rank.var, y=value)) +
+            geom_point() + labs(x = xlab, y = ylab) + ggtitle(results[i]) +
             geom_smooth(method="lm",size = 1.5,linetype = 'solid',color="blue",se = se,na.rm = TRUE) +
-            geom_text(x = center.x, y = max.y, label = as.character(as.expression(stats_pearson)), colour="blue",
-                      size = 8, parse=TRUE) + ng.theme + bg.theme
+            geom_text(x=pos.x,y=pos.y,vjust="inward",hjust="inward", colour="blue", parse=TRUE,
+                       label = as.character(as.expression(stats_pearson)), size = 8) + ng.theme + bg.theme
         }
         scatter.plots <- marrangeGrob(a, nrow=1, ncol=1)
       }else{
@@ -114,8 +145,16 @@ rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2]
         a <- list()
         for (i in 1:length(results)) {
           sig.data <- plot.data[plot.data[,3]==results[i],]
+          min.x <- 1
+          mid.x <- 0.5*length(sig.data[,c(rank.var)])
           max.x <- length(sig.data[,c(rank.var)])
+          min.y <- 1
+          mid.y <- 0.5*length(sig.data[,c(value)])
           max.y <- length(sig.data[,c(value)])
+          if (position.x=="min"){pos.x=min.x} else if(position.x=="mid"){pos.x=mid.x
+          } else if(position.x=="max"){pos.x=max.x} else if(is.numeric(position.x)==TRUE){pos.x==position.x}
+          if (position.y=="min"){pos.y=min.y} else if(position.y=="mid"){pos.y=mid.y
+          } else if(position.y=="max"){pos.y=max.y} else if(is.numeric(position.y)==TRUE){pos.y==position.y}
 
           Spearman.est <- corr.no.na[corr.no.na[,1]==results[i],]$Spearman.est
           Spearman.p <- corr.no.na[corr.no.na[,1]==results[i],]$Spearman.p
@@ -126,7 +165,7 @@ rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2]
           a[[i]] <- ggplot(data=sig.data, aes_string(x=rank(sig.data[,c(rank.var)]), y=rank(sig.data[,c(value)]))) +
             geom_point() + labs(x = paste0(xlab," Rank"), y = paste0(ylab," Rank")) + ggtitle(results[i]) +
             geom_smooth(method="lm",size = 1.5,linetype = 'solid',color="blue",se = se,na.rm = TRUE) +
-            geom_text(x = 0.5*max.x, y = max.y, label = as.character(as.expression(stats_spearman)), colour="blue",
+            geom_text(x = pos.x, y = pos.y, label = as.character(as.expression(stats_spearman)), colour="blue",
                       size = 8, parse=TRUE) + ng.theme + bg.theme
         }
         scatter.plots <- marrangeGrob(a, nrow=1, ncol=1)
@@ -142,8 +181,8 @@ rank.corr <- function(data, id.var=colnames(data)[1], rank.var=colnames(data)[2]
   return(outputs)
 }
 
-drugSEA <- function(data, gmt, drug="Drug", estimate="Spearman.est", set.type=NULL, direction.adjust=NULL,
-                    FDR=0.05, num.permutations=1000, stat.type="Weighted"){
+drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="moa", direction.adjust=NULL,
+                    FDR=0.25, num.permutations=1000, stat.type="Weighted"){
   library(sjmisc);library(dplyr);
   #adjust estimates
   if(length(direction.adjust)>0){
@@ -302,7 +341,7 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Spearman.est", set.type=NU
     num.gene.sets.over.4 <- which(num.hits.pathways.df > 4)
     Gene.Sets.All <- Gene.Sets.All[num.gene.sets.over.4] # write over gene sets all to keep > 4
     if (length(num.gene.sets.under.5) > 1){
-      #print("Warning: Removing gene sets with less than 5 genes observed in data set.")
+      print("Warning: Removing gene sets with less than 5 genes observed in data set.")
       #gene.sets.to.remove <- Gene.Sets.All[num.gene.sets.under.5]
       annotations <- annotations[,c("Gene",Gene.Sets.All)]
       #annotations[,which(colnames(annotations) %in% gene.sets.to.remove)] <- NULL
@@ -418,7 +457,7 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Spearman.est", set.type=NU
         avg <- 0
         KSRandomArray.temp <- KSRandomArray[,i]
         pos.temp <- KSRandomArray.temp[which(KSRandomArray.temp >= 0)]
-        neg.temp <- KSRandomArray.temp[which(KSRandomArray.temp < 0)]
+        neg.temp <- KSRandomArray.temp[which(KSRandomArray.temp <= 0)] #BG OR EQUAL TO
 
         avg.pos <- mean(pos.temp)
         avg.neg <- mean(neg.temp)
@@ -435,36 +474,48 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Spearman.est", set.type=NU
       GSEA.NES.perms <- as.vector(KSRandomArray.Norm)
       rm(KSRandomArray.Norm)
       GSEA.NES.perms.pos <- GSEA.NES.perms[which(GSEA.NES.perms >= 0)]
-      GSEA.NES.perms.neg <- GSEA.NES.perms[which(GSEA.NES.perms < 0)]
+      GSEA.NES.perms.neg <- GSEA.NES.perms[which(GSEA.NES.perms <= 0)] #BG OR EQUAL TO
       rm(GSEA.NES.perms)
-      percent.pos.GSEA <- sum(GSEA.Results$KS > 0) / length(GSEA.Results$KS)
-      percent.neg.GSEA <- sum(GSEA.Results$KS < 0) / length(GSEA.Results$KS)
+      percent.pos.GSEA <- sum(GSEA.Results$KS >= 0) / length(GSEA.Results$KS) #BG OR EQUAL TO
+      percent.neg.GSEA <- sum(GSEA.Results$KS <= 0) / length(GSEA.Results$KS) #BG OR EQUAL TO
 
-      # Calculate GSEA NES and p-value and FDR
-      #print("Calculating GSEA FDR...")
+      # Calculate GSEA NES and p-value
+      #print("Calculating GSEA NES and p-value...")
       for (i in 1:length(Gene.Sets.All)){
         temp.gene.set <- Gene.Sets.All[i]
         temp.KS <- GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS
-        if (temp.KS > 0){
+        if (temp.KS >= 0){ #BG OR EQUAL TO
           pos.perms <- KSRandomArray[,temp.gene.set]
-          pos.perms <- pos.perms[which(pos.perms > 0)]
+          pos.perms <- pos.perms[which(pos.perms >= 0)] #BG OR EQUAL TO
           #p-val
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$p_value = signif(sum(pos.perms > temp.KS) / length(pos.perms),digits = 3)
+          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$p_value = signif(sum(pos.perms >= temp.KS) / length(pos.perms),digits = 3) #BG OR EQUAL TO
           #NES
           GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized = signif(temp.KS / mean(pos.perms), digits = 3)
-          #FDR
-          percent.temp <- sum(GSEA.NES.perms.pos > GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized) / length(GSEA.NES.perms.pos)
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.pos.GSEA, digits = 3) < 1, signif(percent.temp / percent.pos.GSEA, digits = 3), 1)
-        } else if (temp.KS < 0){
+        } else if (temp.KS <= 0){ #BG OR EQUAL TO
           neg.perms <- KSRandomArray[,temp.gene.set]
-          neg.perms <- neg.perms[which(neg.perms < 0)]
+          neg.perms <- neg.perms[which(neg.perms <= 0)] #BG OR EQUAL TO
           #p-val
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$p_value = signif(sum(neg.perms < temp.KS) / length(neg.perms),digits = 3)
+          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$p_value = signif(sum(neg.perms <= temp.KS) / length(neg.perms),digits = 3) #BG OR EQUAL TO
           #NES
           GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized = signif(temp.KS / mean(neg.perms) * -1, digits = 3)
+        }
+      }
+
+      # Calculate GSEA FDR
+      #print("Calculating GSEA FDR...")
+      for (i in 1:length(Gene.Sets.All)){
+        temp.gene.set <- Gene.Sets.All[i]
+        temp.NES <- GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized
+        if (temp.NES >= 0){ #BG OR EQUAL TO
           #FDR
-          percent.temp <- sum(GSEA.NES.perms.neg < GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized) / length(GSEA.NES.perms.neg)
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.neg.GSEA, digits = 3) < 1, signif(percent.temp / percent.neg.GSEA, digits = 3), 1)
+          percent.temp <- sum(GSEA.NES.perms.pos >= GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized) / length(GSEA.NES.perms.pos) #BG OR EQUAL TO
+          percent.pos.stronger <- sum(GSEA.Results$KS_Normalized >= GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized) / sum(GSEA.Results$KS_Normalized >= 0) #BG
+          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.pos.stronger, digits = 3) < 1, signif(percent.temp / percent.pos.stronger, digits = 3), 1) #BG
+        } else if (temp.NES <= 0){ #BG OR EQUAL TO
+          #FDR
+          percent.temp <- sum(GSEA.NES.perms.neg <= temp.NES) / length(GSEA.NES.perms.neg) #BG OR EQUAL TO
+          percent.neg.stronger <- sum(GSEA.Results$KS_Normalized <= temp.NES) / sum(GSEA.Results$KS_Normalized <= 0) #BG
+          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.neg.stronger, digits = 3) < 1, signif(percent.temp / percent.neg.stronger, digits = 3), 1) #BG
         }
       }
 
@@ -582,7 +633,7 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Spearman.est", set.type=NU
     return(assembled)
   }
   #perform GSEA using GSEA_custom
-  GSEA <- GSEA_custom(input,gmt)
+  GSEA <- GSEA_custom(input,gmt,num.permutations=num.permutations,stat.type=stat.type)
   GSEA.Results <- GSEA$GSEA.Results
   #select results which meet FDR threshold and produce mountain plots
   significant.hits <- GSEA.Results[which(GSEA.Results$FDR_q_value<=FDR),]
@@ -592,41 +643,40 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Spearman.est", set.type=NU
       temp <- gsea_mountain_plot(GSEA.list = GSEA, Sample.Name = GSEA.sample.name ,Gene.Set.A = significant.hits$Gene.Set[i])
       temp.plot[i] <- list(temp)
     }
-  colnames(GSEA.Results)[colnames(GSEA.Results) == "Gene.Set"] <- "Drug.Set"
-  } else {print("No enrichments met the FDR cut-off to produce mountain plots")}
+    colnames(GSEA.Results)[colnames(GSEA.Results) == "Gene.Set"] <- "Drug.Set"
+  } else {print("No enrichments met the FDR cut-off to produce mountain plots")
+    colnames(GSEA.Results)[colnames(GSEA.Results) == "Gene.Set"] <- "Drug.Set"}
   outputs <- list(result=GSEA.Results, mtn.plots=temp.plot)
   return(outputs)
 }
 
-match.sets <- function(data, directions, ranks, id.var=colnames(data)[1], n=10, rows.top=NULL, rows.bottom=NULL){
-  library(dplyr); library(gridExtra);
-  n.dir <- length(directions)
-  n.ranks <- length(ranks)
-  if(n.dir==n.ranks){
-    n.sets <- n.dir
-  }else{
-    print("Each set must have a direction list and a rank list.")
-  }
-  if (is.numeric(n.sets) == TRUE){
-    data$Average.Direction <- NA
-    data$Average.Rank <- NA
-    for (i in 1:nrow(data)){
-      direction.vector <- rep(NA, n.sets)
-      rank.vector <- rep(NA, n.sets)
-      for (j in 1:n.sets){
-        direction.vector[j] <- sign(as.numeric(data[i,directions[j]]))
-        rank.vector[j] <- data[i,ranks[j]]
-      }
-      data$'Average Direction'[i] <- as.integer(mean(direction.vector))
-      data$'Average Rank'[i] <- as.integer(mean(rank.vector))
-    }
-    if(is.numeric(n) == TRUE){
-      data.matched <- data[which(data$'Average Direction'=="1" | data$'Average Direction'=="-1"),]
-      top <- slice_min(data.matched, order_by='Average Rank',n=n,with_ties = T)
-      top.table <- tableGrob(top[, c("Average Rank",id.var,"Average Direction")],rows=rows.top)
-      bottom <- slice_max(data.matched, order_by='Average Rank',n=n,with_ties = T)
-      bottom.table <- tableGrob(bottom[, c("Average Rank",id.var,"Average Direction")],rows=rows.bottom)
-    }
-  }
-  return(list(result=data, top=top, bottom=bottom, top.table=top.table, bottom.table=bottom.table))
+DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=colnames(expression)[1],
+                 gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
+                 estimate="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted", N.min=3,
+                 scatter.plots=TRUE, FDR.scatter.plots=0.05, xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
+  print("Calculating Weighted Voting scores...")
+  #WV
+  WV.result <- WV(expression=expression,weights=weights,sample.names=expr.sample.names,gene.names=gene.names,weight.values=weight.values)$scores
+
+  #merge PRISM with WV
+  WV.result.drug.sensitivity <- merge(WV.result,drug.sensitivity,by=expr.sample.names)
+
+  print("Running correlations and regressions...")
+  #rank.corr
+  corr.results <- rank.corr(data=WV.result.drug.sensitivity,variable="Drug",value=value,N.min=N.min,plots=scatter.plots,FDR=FDR.scatter.plots,
+                            xlab=xlab,ylab=ylab,position.x=position.x,position.y=position.y,se=se)
+  corr.Result <- corr.results$result
+  corr.scatter <- corr.results$scatter.plots
+
+  print("Running enrichment analysis...")
+  #drugSEA
+  DMEA.results <- drugSEA(data=corr.Result,gmt=gmt,estimate=estimate,stat.type=stat.type,num.permutations = num.permutations,FDR=FDR)
+  DMEA.Result <- DMEA.results$result
+  DMEA.Mtn.plots <- DMEA.results$mtn.plots
+
+  return(list(WV.scores = WV.result,
+              corr.result = corr.Result,
+              corr.scatter.plots = corr.scatter,
+              DMEA.result = DMEA.Result,
+              DMEA.mtn.plots = DMEA.Mtn.plots))
 }
