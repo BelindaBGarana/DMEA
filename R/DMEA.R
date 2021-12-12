@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20211104
+#BG 20201203; last edit: BG 20211212
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -341,7 +341,7 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     num.gene.sets.over.4 <- which(num.hits.pathways.df > 4)
     Gene.Sets.All <- Gene.Sets.All[num.gene.sets.over.4] # write over gene sets all to keep > 4
     if (length(num.gene.sets.under.5) > 1){
-      print("Warning: Removing gene sets with less than 5 genes observed in data set.")
+      print("Warning: Removing drug sets with less than 5 drugs observed in data set.")
       #gene.sets.to.remove <- Gene.Sets.All[num.gene.sets.under.5]
       annotations <- annotations[,c("Gene",Gene.Sets.All)]
       #annotations[,which(colnames(annotations) %in% gene.sets.to.remove)] <- NULL
