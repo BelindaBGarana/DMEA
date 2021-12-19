@@ -53,7 +53,7 @@ rank.corr(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plot
 \author{Belinda B. Garana
 %%  ~~who you are~~
 }
-\note{Scatter plots can be saved collectively to 1 file using ggsave(filename, rank.corr$scatter).
+\note{Scatter plots can be saved collectively to 1 file using ggsave(filename, rank.corr$scatter.plots).
 %%  ~~further notes~~
 }
 
