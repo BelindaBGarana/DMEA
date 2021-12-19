@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20211212
+#BG 20201203; last edit: BG 20211218
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -177,7 +177,7 @@ rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N
       print("type must be specified as either spearman or pearson to produce scatter plots")
     }
   }else{scatter.plots <- NA}
-  outputs <- list(result=corr.no.na, scatter = scatter.plots)
+  outputs <- list(result=corr.no.na, scatter.plots = scatter.plots)
   return(outputs)
 }
 
@@ -665,18 +665,14 @@ DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", expr.s
   #rank.corr
   corr.results <- rank.corr(data=WV.result.drug.sensitivity,variable="Drug",value=value,N.min=N.min,plots=scatter.plots,FDR=FDR.scatter.plots,
                             xlab=xlab,ylab=ylab,position.x=position.x,position.y=position.y,se=se)
-  corr.Result <- corr.results$result
-  corr.scatter <- corr.results$scatter.plots
 
   print("Running enrichment analysis...")
   #drugSEA
-  DMEA.results <- drugSEA(data=corr.Result,gmt=gmt,estimate=estimate,stat.type=stat.type,num.permutations = num.permutations,FDR=FDR)
-  DMEA.Result <- DMEA.results$result
-  DMEA.Mtn.plots <- DMEA.results$mtn.plots
+  DMEA.results <- drugSEA(data=corr.results$result,gmt=gmt,estimate=estimate,stat.type=stat.type,num.permutations = num.permutations,FDR=FDR)
 
   return(list(WV.scores = WV.result,
-              corr.result = corr.Result,
-              corr.scatter.plots = corr.scatter,
-              DMEA.result = DMEA.Result,
-              DMEA.mtn.plots = DMEA.Mtn.plots))
+              corr.result = corr.results$result,
+              corr.scatter.plots = corr.results$scatter.plots,
+              DMEA.result = DMEA.results$result,
+              DMEA.mtn.plots = DMEA.results$mtn.plots))
 }
