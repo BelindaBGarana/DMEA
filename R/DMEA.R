@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20211218
+#BG 20201203; last edit: BG 20220315
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -342,9 +342,7 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     Gene.Sets.All <- Gene.Sets.All[num.gene.sets.over.4] # write over gene sets all to keep > 4
     if (length(num.gene.sets.under.5) > 1){
       print("Warning: Removing drug sets with less than 5 drugs observed in data set.")
-      #gene.sets.to.remove <- Gene.Sets.All[num.gene.sets.under.5]
       annotations <- annotations[,c("Gene",Gene.Sets.All)]
-      #annotations[,which(colnames(annotations) %in% gene.sets.to.remove)] <- NULL
     }
     annotations <- as.data.frame(annotations)
     data_in <- merge(data_in, annotations, by = "Gene")
@@ -377,7 +375,6 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       rownames(data_in2) <- 1:nrow(data_in2) #reorder row indices for counting in for loop below
 
       ## Assuming first two columns in data table are Genes and Rank Metric (e.g. Foldchange, SNR)
-
       GSEA.Results <- matrix(data = NA, nrow = length(Gene.Sets.All), ncol = 7)
       colnames(GSEA.Results) <- c("Sample","Gene.Set","KS","KS_Normalized",
                                   "p_value","Position_at_max",
@@ -392,7 +389,6 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       ks_results_plot <- list()
       positions.of.hits <- list()
 
-      #ks_results_plot <- as.data.frame(ks_results_plot)
       gene.list <- 1:ions
       rank_metric <- data_in2[,Samples[u]] #Save the rank metric
 
@@ -418,17 +414,10 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       rm(data_in3)
       rm(KS_real)
 
-      #print("Calculating permutations...")
-
-      #pb <- utils::txtProgressBar(max = num.permutations, style = 3)
-      #progress <- function(n) utils::setTxtProgressBar(pb, n)
-      #opts <- list(progress = progress)
-
       KSRandomArray <- matrix(data = NA, nrow = nperm, ncol = length(Gene.Sets.All))
       num.gene.sets.all <- length(Gene.Sets.All)
       `%dopar%` <- foreach::`%dopar%`
 
-      #KSRandomArray <- foreach::foreach(L = 1:nperm, .combine = "rbind",.options.snow = opts) %dopar% {
       KSRandomArray <- foreach::foreach(L = 1:nperm, .combine = "rbind") %dopar% {
         temp.KSRandomArray <- matrix(data = NA, nrow = 1, ncol = num.gene.sets.all)
         for(i in 1:length(Gene.Sets.All)){
@@ -440,13 +429,10 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       }
       colnames(KSRandomArray) <- Gene.Sets.All
 
-      #rm(opts)
-      #rm(pb)
       KSRandomArray <- data.frame(matrix(unlist(KSRandomArray), nrow = nperm, byrow = T))
       colnames(KSRandomArray) <- Gene.Sets.All
       KSRandomArray <- stats::na.omit(KSRandomArray)
 
-      #print("Normalizing enrichment scores...")
       KSRandomArray <- as.data.frame(KSRandomArray)
       ###normalize the GSEA distribution
       KSRandomArray.Norm <- matrix(data = NA, nrow = nrow(KSRandomArray), ncol = ncol(KSRandomArray))
@@ -480,7 +466,6 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       percent.neg.GSEA <- sum(GSEA.Results$KS <= 0) / length(GSEA.Results$KS) #BG OR EQUAL TO
 
       # Calculate GSEA NES and p-value
-      #print("Calculating GSEA NES and p-value...")
       for (i in 1:length(Gene.Sets.All)){
         temp.gene.set <- Gene.Sets.All[i]
         temp.KS <- GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS
@@ -502,7 +487,6 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       }
 
       # Calculate GSEA FDR
-      #print("Calculating GSEA FDR...")
       for (i in 1:length(Gene.Sets.All)){
         temp.gene.set <- Gene.Sets.All[i]
         temp.NES <- GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized
@@ -522,12 +506,6 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       GSEA.Results.All.Samples <- rbind(GSEA.Results.All.Samples,GSEA.Results)
       Mountain.Plot.Info.All.Samples <- c(Mountain.Plot.Info.All.Samples,Mountain.Plot.Info)
       rank_metric.All.Samples <- c(rank_metric.All.Samples,rank_metric)
-
-      #print(paste("Sample #: ", u))
-
-      #end.loop.time <- Sys.time()
-      #total.loop.time <- signif(end.loop.time - loop.time, digits = 3)
-      #print(paste("Time per Sample:" , total.loop.time))
     }
 
     snow::stopCluster(cl)
@@ -584,7 +562,6 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     mtn.plot <- ggplot2::ggplot() +
       ggplot2::geom_line(ggplot2::aes(x=c(0,pos.GeneSetA,ngenes), y = c(0,gsea.es.profile.A,0)), color = color.palette[1], size = 1) +
       ggplot2::labs(x = NULL, y = "ES", title = myName) + ggplot2::scale_x_continuous(expand = c(0,0)) +
-      #cowplot::theme_nothing() +
       ggplot2::theme_bw() +
       ggplot2::geom_hline(yintercept = 0, linetype = "dashed", color = "grey50") +
       ggplot2::theme(
