@@ -1,5 +1,5 @@
 # DMEA
-Drug Mechanism Enrichment Analysis (DMEA) measures the enrichment of drug mechanisms for Class A vs. Class B samples. Any type of ranking metric for drugs is appropriate, but we recommend using Pearson correlation estimates between Weighted Voting score and drug AUC. 
+Drug Mechanism Enrichment Analysis (DMEA) measures the enrichment of drug mechanisms for Class A vs. Class B samples. Any type of ranking metric for drugs is appropriate, but we recommend using Pearson correlation estimates between Weighted Voting score and drug AUC. To replicate our analysis, you will need to input a list ranking genes, as well as a gene expression matrix and drug sensitivity matrix which can be obtained from CCLE and PRISM databases, respectively.
 
 This package contains 4 functions: 1 function which can perform everything described above (DMEA) and 3 others which comprise the 3 custom steps of the DMEA function such that each can be used as a ranking method in their own right.
 
