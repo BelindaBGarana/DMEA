@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220315
+#BG 20201203; last edit: BG 20220406
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -630,7 +630,7 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
 DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=colnames(expression)[1],
                  gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
                  estimate="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted", N.min=3,
-                 scatter.plots=TRUE, FDR.scatter.plots=0.05, xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
+                 scatter.plots=TRUE, scatter.plot.type="pearson",FDR.scatter.plots=0.05, xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
   print("Calculating Weighted Voting scores...")
   #WV
   WV.result <- WV(expression=expression,weights=weights,sample.names=expr.sample.names,gene.names=gene.names,weight.values=weight.values)$scores
@@ -640,8 +640,8 @@ DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", expr.s
 
   print("Running correlations and regressions...")
   #rank.corr
-  corr.results <- rank.corr(data=WV.result.drug.sensitivity,variable="Drug",value=value,N.min=N.min,plots=scatter.plots,FDR=FDR.scatter.plots,
-                            xlab=xlab,ylab=ylab,position.x=position.x,position.y=position.y,se=se)
+  corr.results <- rank.corr(data=WV.result.drug.sensitivity,variable="Drug",value=value,type=scatter.plot.type,N.min=N.min,
+                            plots=scatter.plots,FDR=FDR.scatter.plots,xlab=xlab,ylab=ylab,position.x=position.x,position.y=position.y,se=se)
 
   print("Running enrichment analysis...")
   #drugSEA
