@@ -31,9 +31,7 @@ WV(expression, weights, sample.names=colnames(expression)[1],gene.names=colnames
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
-\value{
-  \item{scores }{Dataframe with Weighted Voting scores for each sample.}
-  \item{matrix }{Dataframe with Weighted Voting values for each gene and sample.}
+\value{Dataframe with Weighted Voting scores for each sample name.}
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
