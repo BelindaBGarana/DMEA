@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220406
+#BG 20201203; last edit: BG 20220409
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -7,42 +7,38 @@ rm(list=ls(all=TRUE))
 
 WV <- function(expression, weights, sample.names=colnames(expression)[1],
                 gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){#data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
-  library(dplyr);
-
-  cores <- parallel::detectCores() #number of cores available
-  cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
-  doSNOW::registerDoSNOW(cl) #register cluster
-
-  rownames(expression) <- expression[,c(sample.names)]
-  input.df <- expression %>% select(weights[,c(gene.names)])
-  WV.matrix <- input.df #make a dataframe to store resulting WV score matrix
-  cells <- unique(rownames(WV.matrix))
-  genes <- unique(colnames(WV.matrix))
-  WV.scores <- as.data.frame(cells) #make a dataframe to store resulting WV scores
-  WV.scores$WV <- NA
-  for(m in 1:length(cells)) {
-    for(j in 1:length(genes)) {
-      temp.gene <- input.df %>% select(genes[j]) #select expression for particular gene j
-      temp.weight <- weights[weights[,c(gene.names)]==genes[j],c(weight.values)]
-      temp.gene$cells <- rownames(temp.gene) #add column with cell
-      temp.gene.cell <- temp.gene[which(temp.gene$cells==cells[m]),] #get expression for cell line m for gene j
-      temp.gene.cell$cells <- NULL #remove cell column
-      temp.WV <- as.numeric(temp.gene.cell[1,1])*as.numeric(temp.weight) #multiply expression value by log2FC
-      WV.matrix[m,j] <- temp.WV #store WV value for each gene, cell combo
-    }
-    WV.scores[WV.scores$cells==cells[m],]$WV <- sum(as.numeric(WV.matrix[m,])) #sum WV values across genes for each cell line
+  #check expression for gene names
+  filtered.expr <- expression %>% dplyr::select(c(tidyselect::all_of(sample.names),tidyselect::all_of(weights[,c(gene.names)])))
+  filtered.expr <- na.omit(filtered.expr)
+  if(nrow(filtered.expr)>0){
+    #prep for matrix multiplication
+    rownames(filtered.expr) <- filtered.expr[,c(sample.names)] #store sample names in row names
+    filtered.expr.data <- dplyr::select(filtered.expr, -c(tidyselect::all_of(sample.names))) #remove sample names from expression
+    filtered.weights <- weights[weights[,c(gene.names)] %in% colnames(filtered.expr.data),c(gene.names, weight.values)] #reduce weights for overlap with expression
+    weight.data <- dplyr::select(filtered.weights, -c(tidyselect::all_of(gene.names))) #remove gene names from weights
+    weight.matrix <- as.matrix(weight.data)
+    expr.matrix <- as.matrix(filtered.expr.data)
+    
+    #perform matrix multiplication
+    scores <- as.data.frame(expr.matrix %*% weight.matrix)
+    
+    #format dataframe for output
+    colnames(scores)[1] <- "WV"
+    scores[,c(sample.names)] <- rownames(scores)
+    scores <- scores %>% relocate(colnames(scores)[2], .before=WV)
+   }else{
+    print("Error: expression dataframe does not contain data for the gene names provided.")
   }
-  colnames(WV.scores) [1] <- sample.names
-
-  snow::stopCluster(cl) #stop cluster
-  rm(cl)
-
-  outputs <- list(scores = WV.scores, matrix = WV.matrix)
-  return(outputs)
+  return(scores)
 }
 
 rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plots=TRUE, FDR=0.05, xlab=rank.var, ylab=value, position.x="mid", position.y="max", se=TRUE){
   library(dplyr);library(qvalue);library(ggplot2);
+  
+  cores <- parallel::detectCores() #number of cores available
+  cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
+  doSNOW::registerDoSNOW(cl) #register cluster
+  
   #Correlations
   not_all_na <- function(x) any(!is.na(x))
   all.data.corr <- data
@@ -177,6 +173,10 @@ rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N
       print("type must be specified as either spearman or pearson to produce scatter plots")
     }
   }else{scatter.plots <- NA}
+  
+  snow::stopCluster(cl) #stop cluster
+  rm(cl)
+  
   outputs <- list(result=corr.no.na, scatter.plots = scatter.plots)
   return(outputs)
 }
@@ -633,7 +633,7 @@ DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", expr.s
                  scatter.plots=TRUE, scatter.plot.type="pearson",FDR.scatter.plots=0.05, xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
   print("Calculating Weighted Voting scores...")
   #WV
-  WV.result <- WV(expression=expression,weights=weights,sample.names=expr.sample.names,gene.names=gene.names,weight.values=weight.values)$scores
+  WV.result <- WV(expression=expression,weights=weights,sample.names=expr.sample.names,gene.names=gene.names,weight.values=weight.values)
 
   #merge PRISM with WV
   WV.result.drug.sensitivity <- merge(WV.result,drug.sensitivity,by=expr.sample.names)
