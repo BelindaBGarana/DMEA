@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220409
+#BG 20201203; last edit: BG 20220414
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -627,16 +627,16 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
   return(outputs)
 }
 
-DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=colnames(expression)[1],
+DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", sample.names=colnames(expression)[1],
                  gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
                  estimate="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted", N.min=3,
                  scatter.plots=TRUE, scatter.plot.type="pearson",FDR.scatter.plots=0.05, xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
   print("Calculating Weighted Voting scores...")
   #WV
-  WV.result <- WV(expression=expression,weights=weights,sample.names=expr.sample.names,gene.names=gene.names,weight.values=weight.values)
+  WV.result <- WV(expression=expression,weights=weights,sample.names=sample.names,gene.names=gene.names,weight.values=weight.values)
 
   #merge PRISM with WV
-  WV.result.drug.sensitivity <- merge(WV.result,drug.sensitivity,by=expr.sample.names)
+  WV.result.drug.sensitivity <- merge(WV.result,drug.sensitivity,by=sample.names)
 
   print("Running correlations and regressions...")
   #rank.corr
