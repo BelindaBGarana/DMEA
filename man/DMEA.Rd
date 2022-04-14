@@ -25,7 +25,7 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
 }
   \item{value}{Description of the values starting at column 3. Do not include spaces! Default: "AUC".
 }
-  \item{expr.sample.names}{Column name in expression dataframe containing the sample names. Default: colnames(expression)[1].
+  \item{sample.names}{Column name in drug sensitivity and expression dataframes containing the sample names. Default: colnames(expression)[1].
 }
   \item{gene.names}{Column name in weights dataframe containing the gene names. Default: colnames(weights)[1].
 }
@@ -77,6 +77,7 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
+\section{Warning }{The column name for your samples must be the same in your drug sensitivity dataframe as in your expression dataframe. You can set the name of the column containing your samples using the parameter sample.names.}
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
