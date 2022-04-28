@@ -37,7 +37,7 @@ WV(expression, weights, sample.names=colnames(expression)[1],gene.names=colnames
 %%  \item{comp1 }{Description of 'comp1'}
 %%  \item{comp2 }{Description of 'comp2'}
 %% ...
-}
+
 \references{
 %% ~put references to the literature/web site here ~
 }
