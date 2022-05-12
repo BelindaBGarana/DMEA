@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220414
+#BG 20201203; last edit: BG 20220511
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -32,7 +32,7 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
   return(scores)
 }
 
-rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plots=TRUE, FDR=0.05, xlab=rank.var, ylab=value, position.x="mid", position.y="max", se=TRUE){
+rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
   library(dplyr);library(qvalue);library(ggplot2);
   
   cores <- parallel::detectCores() #number of cores available
