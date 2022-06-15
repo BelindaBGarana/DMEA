@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220511
+#BG 20201203; last edit: BG 20220614
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -125,7 +125,7 @@ rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N
                                            p = format(Pearson.p, digits = 3)))
 
           a[[i]] <- ggplot(data=sig.data, aes_string(x=rank.var, y=value)) +
-            geom_point() + labs(x = xlab, y = ylab) + ggtitle(results[i]) +
+            geom_point() + labs(x = xlab, y = ylab) + ggtitle(results[i]) + 
             geom_smooth(method="lm",size = 1.5,linetype = 'solid',color="blue",se = se,na.rm = TRUE) +
             geom_text(x=pos.x,y=pos.y,vjust="inward",hjust="inward", colour="blue", parse=TRUE,
                        label = as.character(as.expression(stats_pearson)), size = 8) + ng.theme + bg.theme
@@ -190,22 +190,18 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     info$adjust <- 1
     info[grep(direction.adjust, info[,c(set.type)], value = T), "adjust"] <- -1
     info$adjusted.est <- as.numeric(info[,c(estimate)])*as.numeric(info$adjust)
-    corr.adj <- info[,c(drug,"adjusted.est")]
-    GSEA.sample.name <- "Adjusted Estimate"
-    colnames(corr.adj) <- c("Gene",GSEA.sample.name)
-    input <- corr.adj
+    input <- info[,c(drug,"adjusted.est")]
+    est.name <- paste0(estimate, " direction-adjusted")
   }else{
-    GSEA.sample.name <- "Estimate"
     input <- data[,c(drug,estimate)]
-    colnames(input) <- c("Gene",GSEA.sample.name)
+    est.name <- estimate
   }
+  colnames(input) <- c(drug, est.name)
 
   #load GSEA_custom function
   GSEA_custom <- function(input.df, gmt.list,
                           num.permutations = 1000,
                            stat.type = "Weighted"){
-    loop.time <- Sys.time()
-
     nperm = num.permutations #number of permutations
     if (stat.type == "Classic"){
       score.weight = 0
@@ -214,20 +210,19 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       score.weight = 1
     }
 
-
     #Read in gene expression data
-    #Genes should be first column, named "Gene"
-    #Samples should be columns 2:N
+    #drug names should be first column
+    #estimate name should be second column
     data_in <- input.df
 
     gmt.for.reformat <- gmt.list
-    Gene.Sets <- t(plyr::ldply(gmt.for.reformat$genesets, rbind)) #reformat gmt list to desired format
-    colnames(Gene.Sets) <- gmt.for.reformat$geneset.names
+    Drug.Sets <- t(plyr::ldply(gmt.for.reformat$genesets, rbind)) #reformat gmt list to desired format
+    colnames(Drug.Sets) <- gmt.for.reformat$geneset.names
 
-    Gene.Sets <- as.data.frame(Gene.Sets)
+    Drug.Sets <- as.data.frame(Drug.Sets)
 
     testthat::expect_is(data_in, "data.frame")
-    testthat::expect_is(Gene.Sets, "data.frame")
+    testthat::expect_is(Drug.Sets, "data.frame")
 
     GSEA.EnrichmentScore <- function(gene.list, gene.set, weighted.score.type = score.weight, correl.vector = NULL){
       tag.indicators <- sign(match(gene.list, gene.set, nomatch = 0))
@@ -302,60 +297,47 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
       ES <- signif(ifelse(max.ES > - min.ES, max.ES, min.ES), digits=5)
 
       return(ES)
-
     } #for permutation ES
 
-    Samples <- colnames(data_in)
-    if (Samples[1] != "Gene"){
-      stop("Please ensure that your data frame is organized with the first column to be named 'Gene'")
-    }
-    Samples <- Samples[-1]
+    Samples <- colnames(data_in)[2]
+    Drug.Sets.All <- colnames(Drug.Sets)
 
-    Gene.Sets.All <- colnames(Gene.Sets)
-
-    annotations <- matrix(data = 0, nrow = nrow(data_in), ncol = length(Gene.Sets.All))
-    colnames(annotations) <- Gene.Sets.All
+    annotations <- matrix(data = 0, nrow = nrow(data_in), ncol = length(Drug.Sets.All))
+    colnames(annotations) <- Drug.Sets.All
 
     annotations <- as.data.frame(annotations)
 
-    annotations <- cbind(data_in$Gene,annotations)
-    colnames(annotations) <- c("Gene", Gene.Sets.All)
+    annotations <- cbind(data_in[,1],annotations)
+    colnames(annotations) <- c(colnames(data_in)[1], Drug.Sets.All)
     annotations <- as.matrix(annotations)
 
     num.hits.pathways <- list()
 
-    ### Annotate gene sets
-    for (j in 1:length(Gene.Sets.All)){
-      temp.pathway <- Gene.Sets[,Gene.Sets.All[j]]
+    ### Annotate drug sets
+    for (j in 1:length(Drug.Sets.All)){
+      temp.pathway <- Drug.Sets[,Drug.Sets.All[j]]
       for (i in 1:nrow(annotations)){
-        if (annotations[i,"Gene"] %in% temp.pathway){
+        if (annotations[i,1] %in% temp.pathway){
           annotations[i,j+1] = "X";
         }
       }
-      num.hits.pathways[[Gene.Sets.All[j]]] <- sum(annotations[,Gene.Sets.All[j]] == "X")
+      num.hits.pathways[[Drug.Sets.All[j]]] <- sum(annotations[,Drug.Sets.All[j]] == "X")
     }
 
     num.hits.pathways.df <- matrix(unlist(num.hits.pathways))
-    row.names(num.hits.pathways.df) = Gene.Sets.All
-    num.gene.sets.under.5 <- which(num.hits.pathways.df < 5)
-    num.gene.sets.over.4 <- which(num.hits.pathways.df > 4)
-    Gene.Sets.All <- Gene.Sets.All[num.gene.sets.over.4] # write over gene sets all to keep > 4
-    if (length(num.gene.sets.under.5) > 1){
-      print("Warning: Removing drug sets with less than 5 drugs observed in data set.")
-      annotations <- annotations[,c("Gene",Gene.Sets.All)]
+    row.names(num.hits.pathways.df) = Drug.Sets.All
+    num.Drug.Sets.under.6 <- which(num.hits.pathways.df < 6)
+    num.Drug.Sets.over.5 <- which(num.hits.pathways.df > 5)
+    Drug.Sets.All <- Drug.Sets.All[num.Drug.Sets.over.5] # write over gene sets all to keep > 5
+    if (length(num.Drug.Sets.under.6) > 1){
+      print("Warning: Removing drug sets with less than 6 drugs observed in data set.")
+      annotations <- annotations[,c(colnames(data_in)[1],Drug.Sets.All)]
     }
     annotations <- as.data.frame(annotations)
-    data_in <- merge(data_in, annotations, by = "Gene")
-
+    data_in <- merge(data_in, annotations, by = colnames(data_in)[1])
     data_in <- stats::na.omit(data_in)
-
-    GSEA.Results.All.Samples <- matrix(data = NA, nrow = 0, ncol = 7)
-    colnames(GSEA.Results.All.Samples) <- c("Sample","Gene.Set","KS","KS_Normalized",
-                                            "p-value","Position at Max",
-                                            "FDR q-value")
-    Mountain.Plot.Info.All.Samples <- list()
-    rank_metric.All.Samples <- list()
-
+    rm(annotations)
+    
     #Find out how many cores are available (if you don't already know)
     cores<-parallel::detectCores()
     #Create cluster with desired number of cores, leave one open for the machine
@@ -364,157 +346,142 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     #Register cluster
     doSNOW::registerDoSNOW(cl)
 
-    rm(annotations)
-    data_in2 <- array(data = NA)
-    for (u in 1:length(Samples)){
+    GSEA.Results <- matrix(data = NA, nrow = length(Drug.Sets.All), ncol = 7)
+    colnames(GSEA.Results) <- c("Estimate","Drug_set","ES","NES",
+                                "p_value","Position_at_max","FDR_q_value")
+    GSEA.Results <- as.data.frame(GSEA.Results)
+    GSEA.Results$Drug_set <- Drug.Sets.All
+    GSEA.Results$Estimate <- Samples
 
-      data_in2 <- cbind(subset(data_in, select = Gene.Sets.All),
-                        dplyr::select(data_in, Samples[u]))  #select one Sample type and the genes and Gene.Sets.A.and.B
-      data_in2[,Samples[u]] <- as.numeric(as.character(data_in2[,Samples[u]]))
-      data_in2 <- data_in2[order(-data_in2[,Samples[u]]),] #sort by descending order for the rank metric
-      rownames(data_in2) <- 1:nrow(data_in2) #reorder row indices for counting in for loop below
-
-      ## Assuming first two columns in data table are Genes and Rank Metric (e.g. Foldchange, SNR)
-      GSEA.Results <- matrix(data = NA, nrow = length(Gene.Sets.All), ncol = 7)
-      colnames(GSEA.Results) <- c("Sample","Gene.Set","KS","KS_Normalized",
-                                  "p_value","Position_at_max",
-                                  "FDR_q_value")
-      GSEA.Results <- as.data.frame(GSEA.Results)
-      GSEA.Results$Gene.Set <- Gene.Sets.All
-      GSEA.Results$Sample <- Samples[u]
-
-      ions <- nrow(data_in2)
-
-      #for plotting
-      ks_results_plot <- list()
-      positions.of.hits <- list()
-
-      gene.list <- 1:ions
-      rank_metric <- data_in2[,Samples[u]] #Save the rank metric
-
-      pos_gene_set <- array(data = 0, dim = nrow(data_in2), dimnames = NULL);
-
-      ## Calculate Real KS Statistic
-      for (i in 1:length(Gene.Sets.All)){
-        data_in3 <- data_in2[,Gene.Sets.All[i]]
-        numhits_pathway <- sum(data_in3 == "X"); #check to see if there is anything in the column (e.g. X)
-        if (numhits_pathway > 1){
-          pos_gene_set <- which(data_in2[,Gene.Sets.All[i]] %in% c("X"))
-          KS_real <- GSEA.EnrichmentScore(gene.list, pos_gene_set, weighted.score.type = score.weight, correl.vector = rank_metric)
-          GSEA.Results[GSEA.Results$Gene.Set == Gene.Sets.All[i],]$KS <- KS_real$ES;
-          GSEA.Results[GSEA.Results$Gene.Set == Gene.Sets.All[i],]$Position_at_max <- KS_real$arg.ES;
-          ks_results_plot[[Gene.Sets.All[i]]] = KS_real$RES
-          positions.of.hits[[Gene.Sets.All[i]]] = pos_gene_set
-        }
+    ## Assuming first two columns in data table are drug names and rank metric (e.g. Foldchange, SNR)
+    data_in[,Samples] <- as.numeric(as.character(data_in[,Samples]))
+    data_in <- data_in[order(-data_in[,Samples]),] #sort by descending order for the rank metric
+    rownames(data_in) <- 1:nrow(data_in) #reorder row indices for counting in for loop below
+    ions <- nrow(data_in)
+    
+    #for plotting
+    ks_results_plot <- list()
+    positions.of.hits <- list()
+    
+    gene.list <- 1:ions
+    rank_metric <- data_in[,Samples] #Save the rank metric
+    
+    pos_gene_set <- array(data = 0, dim = nrow(data_in), dimnames = NULL);
+    
+    ## Calculate Real KS Statistic
+    for (i in 1:length(Drug.Sets.All)){
+      data_in3 <- data_in[,Drug.Sets.All[i]]
+      numhits_pathway <- sum(data_in3 == "X"); #check to see if there is anything in the column (e.g. X)
+      if (numhits_pathway > 1){
+        pos_gene_set <- which(data_in[,Drug.Sets.All[i]] %in% c("X"))
+        KS_real <- GSEA.EnrichmentScore(gene.list, pos_gene_set, weighted.score.type = score.weight, correl.vector = rank_metric)
+        GSEA.Results[GSEA.Results$Drug_set == Drug.Sets.All[i],]$ES <- KS_real$ES;
+        GSEA.Results[GSEA.Results$Drug_set == Drug.Sets.All[i],]$Position_at_max <- KS_real$arg.ES;
+        ks_results_plot[[Drug.Sets.All[i]]] = KS_real$RES
+        positions.of.hits[[Drug.Sets.All[i]]] = pos_gene_set
       }
-
-      Mountain.Plot.Info <- list(MountainPlot = ks_results_plot, Position.of.hits = positions.of.hits)
-      rm(pos_gene_set)
-      rm(numhits_pathway)
-      rm(data_in3)
-      rm(KS_real)
-
-      KSRandomArray <- matrix(data = NA, nrow = nperm, ncol = length(Gene.Sets.All))
-      num.gene.sets.all <- length(Gene.Sets.All)
-      `%dopar%` <- foreach::`%dopar%`
-
-      KSRandomArray <- foreach::foreach(L = 1:nperm, .combine = "rbind") %dopar% {
-        temp.KSRandomArray <- matrix(data = NA, nrow = 1, ncol = num.gene.sets.all)
-        for(i in 1:length(Gene.Sets.All)){
-          numhits_pathway <- length(positions.of.hits[[Gene.Sets.All[i]]])
-          pos_gene_set <- sample(1:ions,numhits_pathway)
-          temp.KSRandomArray[,i] <- GSEA.EnrichmentScore2(gene.list, pos_gene_set, weighted.score.type = score.weight, correl.vector = rank_metric)
-        }
-        temp.KSRandomArray
-      }
-      colnames(KSRandomArray) <- Gene.Sets.All
-
-      KSRandomArray <- data.frame(matrix(unlist(KSRandomArray), nrow = nperm, byrow = T))
-      colnames(KSRandomArray) <- Gene.Sets.All
-      KSRandomArray <- stats::na.omit(KSRandomArray)
-
-      KSRandomArray <- as.data.frame(KSRandomArray)
-      ###normalize the GSEA distribution
-      KSRandomArray.Norm <- matrix(data = NA, nrow = nrow(KSRandomArray), ncol = ncol(KSRandomArray))
-      colnames(KSRandomArray.Norm) <- colnames(KSRandomArray)
-      avg <- 0
-      KSRandomArray.temp <- 0
-      for (i in 1:ncol(KSRandomArray.Norm)){
-        avg <- 0
-        KSRandomArray.temp <- KSRandomArray[,i]
-        pos.temp <- KSRandomArray.temp[which(KSRandomArray.temp >= 0)]
-        neg.temp <- KSRandomArray.temp[which(KSRandomArray.temp <= 0)] #BG OR EQUAL TO
-
-        avg.pos <- mean(pos.temp)
-        avg.neg <- mean(neg.temp)
-
-        norm.pos.temp <- pos.temp / avg.pos
-        norm.neg.temp <- neg.temp / avg.neg * -1
-
-        norm.perms <- c(norm.pos.temp,norm.neg.temp)
-
-        KSRandomArray.Norm[,i] <- norm.perms
-
-      }
-
-      GSEA.NES.perms <- as.vector(KSRandomArray.Norm)
-      rm(KSRandomArray.Norm)
-      GSEA.NES.perms.pos <- GSEA.NES.perms[which(GSEA.NES.perms >= 0)]
-      GSEA.NES.perms.neg <- GSEA.NES.perms[which(GSEA.NES.perms <= 0)] #BG OR EQUAL TO
-      rm(GSEA.NES.perms)
-      percent.pos.GSEA <- sum(GSEA.Results$KS >= 0) / length(GSEA.Results$KS) #BG OR EQUAL TO
-      percent.neg.GSEA <- sum(GSEA.Results$KS <= 0) / length(GSEA.Results$KS) #BG OR EQUAL TO
-
-      # Calculate GSEA NES and p-value
-      for (i in 1:length(Gene.Sets.All)){
-        temp.gene.set <- Gene.Sets.All[i]
-        temp.KS <- GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS
-        if (temp.KS >= 0){ #BG OR EQUAL TO
-          pos.perms <- KSRandomArray[,temp.gene.set]
-          pos.perms <- pos.perms[which(pos.perms >= 0)] #BG OR EQUAL TO
-          #p-val
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$p_value = signif(sum(pos.perms >= temp.KS) / length(pos.perms),digits = 3) #BG OR EQUAL TO
-          #NES
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized = signif(temp.KS / mean(pos.perms), digits = 3)
-        } else if (temp.KS <= 0){ #BG OR EQUAL TO
-          neg.perms <- KSRandomArray[,temp.gene.set]
-          neg.perms <- neg.perms[which(neg.perms <= 0)] #BG OR EQUAL TO
-          #p-val
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$p_value = signif(sum(neg.perms <= temp.KS) / length(neg.perms),digits = 3) #BG OR EQUAL TO
-          #NES
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized = signif(temp.KS / mean(neg.perms) * -1, digits = 3)
-        }
-      }
-
-      # Calculate GSEA FDR
-      for (i in 1:length(Gene.Sets.All)){
-        temp.gene.set <- Gene.Sets.All[i]
-        temp.NES <- GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized
-        if (temp.NES >= 0){ #BG OR EQUAL TO
-          #FDR
-          percent.temp <- sum(GSEA.NES.perms.pos >= GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized) / length(GSEA.NES.perms.pos) #BG OR EQUAL TO
-          percent.pos.stronger <- sum(GSEA.Results$KS_Normalized >= GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$KS_Normalized) / sum(GSEA.Results$KS_Normalized >= 0) #BG
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.pos.stronger, digits = 3) < 1, signif(percent.temp / percent.pos.stronger, digits = 3), 1) #BG
-        } else if (temp.NES <= 0){ #BG OR EQUAL TO
-          #FDR
-          percent.temp <- sum(GSEA.NES.perms.neg <= temp.NES) / length(GSEA.NES.perms.neg) #BG OR EQUAL TO
-          percent.neg.stronger <- sum(GSEA.Results$KS_Normalized <= temp.NES) / sum(GSEA.Results$KS_Normalized <= 0) #BG
-          GSEA.Results[GSEA.Results$Gene.Set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.neg.stronger, digits = 3) < 1, signif(percent.temp / percent.neg.stronger, digits = 3), 1) #BG
-        }
-      }
-
-      GSEA.Results.All.Samples <- rbind(GSEA.Results.All.Samples,GSEA.Results)
-      Mountain.Plot.Info.All.Samples <- c(Mountain.Plot.Info.All.Samples,Mountain.Plot.Info)
-      rank_metric.All.Samples <- c(rank_metric.All.Samples,rank_metric)
     }
-
+    Mountain.Plot.Info <- list(MountainPlot = ks_results_plot, Position.of.hits = positions.of.hits)
+    rm(pos_gene_set)
+    rm(numhits_pathway)
+    rm(data_in3)
+    rm(KS_real)
+    
+    KSRandomArray <- matrix(data = NA, nrow = nperm, ncol = length(Drug.Sets.All))
+    num.Drug.Sets.all <- length(Drug.Sets.All)
+    `%dopar%` <- foreach::`%dopar%`
+    
+    KSRandomArray <- foreach::foreach(L = 1:nperm, .combine = "rbind") %dopar% {
+      temp.KSRandomArray <- matrix(data = NA, nrow = 1, ncol = num.Drug.Sets.all)
+      for(i in 1:length(Drug.Sets.All)){
+        numhits_pathway <- length(positions.of.hits[[Drug.Sets.All[i]]])
+        pos_gene_set <- sample(1:ions,numhits_pathway)
+        temp.KSRandomArray[,i] <- GSEA.EnrichmentScore2(gene.list, pos_gene_set, weighted.score.type = score.weight, correl.vector = rank_metric)
+      }
+      temp.KSRandomArray
+    }
+    colnames(KSRandomArray) <- Drug.Sets.All
+    
+    KSRandomArray <- data.frame(matrix(unlist(KSRandomArray), nrow = nperm, byrow = T))
+    colnames(KSRandomArray) <- Drug.Sets.All
+    KSRandomArray <- stats::na.omit(KSRandomArray)
+    
+    KSRandomArray <- as.data.frame(KSRandomArray)
+    ###normalize the GSEA distribution
+    KSRandomArray.Norm <- matrix(data = NA, nrow = nrow(KSRandomArray), ncol = ncol(KSRandomArray))
+    colnames(KSRandomArray.Norm) <- colnames(KSRandomArray)
+    avg <- 0
+    KSRandomArray.temp <- 0
+    for (i in 1:ncol(KSRandomArray.Norm)){
+      avg <- 0
+      KSRandomArray.temp <- KSRandomArray[,i]
+      pos.temp <- KSRandomArray.temp[which(KSRandomArray.temp >= 0)]
+      neg.temp <- KSRandomArray.temp[which(KSRandomArray.temp <= 0)] #BG OR EQUAL TO
+      
+      avg.pos <- mean(pos.temp)
+      avg.neg <- mean(neg.temp)
+      
+      norm.pos.temp <- pos.temp / avg.pos
+      norm.neg.temp <- neg.temp / avg.neg * -1
+      
+      norm.perms <- c(norm.pos.temp,norm.neg.temp)
+      
+      KSRandomArray.Norm[,i] <- norm.perms
+      
+    }
+    GSEA.NES.perms <- as.vector(KSRandomArray.Norm)
+    rm(KSRandomArray.Norm)
+    GSEA.NES.perms.pos <- GSEA.NES.perms[which(GSEA.NES.perms >= 0)]
+    GSEA.NES.perms.neg <- GSEA.NES.perms[which(GSEA.NES.perms <= 0)] #BG OR EQUAL TO
+    rm(GSEA.NES.perms)
+    percent.pos.GSEA <- sum(GSEA.Results$ES >= 0) / length(GSEA.Results$ES) #BG OR EQUAL TO
+    percent.neg.GSEA <- sum(GSEA.Results$ES <= 0) / length(GSEA.Results$ES) #BG OR EQUAL TO
+    
+    # Calculate GSEA NES and p-value
+    for (i in 1:length(Drug.Sets.All)){
+      temp.gene.set <- Drug.Sets.All[i]
+      temp.ES <- GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$ES
+      if (temp.ES >= 0){ #BG OR EQUAL TO
+        pos.perms <- KSRandomArray[,temp.gene.set]
+        pos.perms <- pos.perms[which(pos.perms >= 0)] #BG OR EQUAL TO
+        #p-val
+        GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$p_value = signif(sum(pos.perms >= temp.ES) / length(pos.perms),digits = 3) #BG OR EQUAL TO
+        #NES
+        GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES = signif(temp.ES / mean(pos.perms), digits = 3)
+      } else if (temp.ES <= 0){ #BG OR EQUAL TO
+        neg.perms <- KSRandomArray[,temp.gene.set]
+        neg.perms <- neg.perms[which(neg.perms <= 0)] #BG OR EQUAL TO
+        #p-val
+        GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$p_value = signif(sum(neg.perms <= temp.ES) / length(neg.perms),digits = 3) #BG OR EQUAL TO
+        #NES
+        GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES = signif(temp.ES / mean(neg.perms) * -1, digits = 3)
+      }
+    }
+    
+    # Calculate GSEA FDR
+    for (i in 1:length(Drug.Sets.All)){
+      temp.gene.set <- Drug.Sets.All[i]
+      temp.NES <- GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES
+      if (temp.NES >= 0){ #BG OR EQUAL TO
+        #FDR
+        percent.temp <- sum(GSEA.NES.perms.pos >= GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES) / length(GSEA.NES.perms.pos) #BG OR EQUAL TO
+        percent.pos.stronger <- sum(GSEA.Results$NES >= GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES) / sum(GSEA.Results$NES >= 0) #BG
+        GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.pos.stronger, digits = 3) < 1, signif(percent.temp / percent.pos.stronger, digits = 3), 1) #BG
+      } else if (temp.NES <= 0){ #BG OR EQUAL TO
+        #FDR
+        percent.temp <- sum(GSEA.NES.perms.neg <= temp.NES) / length(GSEA.NES.perms.neg) #BG OR EQUAL TO
+        percent.neg.stronger <- sum(GSEA.Results$NES <= temp.NES) / sum(GSEA.Results$NES <= 0) #BG
+        GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.neg.stronger, digits = 3) < 1, signif(percent.temp / percent.neg.stronger, digits = 3), 1) #BG
+      }
+    }
     snow::stopCluster(cl)
     rm(cl)
 
-    return(list(GSEA.Results = GSEA.Results.All.Samples,
-                Mountain.Plot.Info = Mountain.Plot.Info.All.Samples,
-                ranking.metric = rank_metric.All.Samples))
+    return(list(GSEA.Results = GSEA.Results,
+                Mountain.Plot.Info = Mountain.Plot.Info,
+                ranking.metric = rank_metric))
   }
+  
   #load mountain plot function
   gsea_mountain_plot <- function(GSEA.list, Sample.Name, Gene.Set.A, color = TRUE){
     library(ggplot2);
@@ -542,9 +509,9 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     GSEA.results$p_value <- as.numeric(as.character(GSEA.results$p_value))
     GSEA.results$FDR_q_value <- as.numeric(as.character(GSEA.results$FDR_q_value))
 
-    gsea.normalized.enrichment.score <- signif(GSEA.results[GSEA.results$Gene.Set == myName,]$KS_Normalized, digits =3)
-    gsea.p.value <- signif(GSEA.results[GSEA.results$Gene.Set == myName,]$p_value, digits = 3)
-    gsea.q.val <- signif(GSEA.results[GSEA.results$Gene.Set == myName,]$FDR_q_value, digits = 3)
+    gsea.normalized.enrichment.score <- signif(GSEA.results[GSEA.results$Drug_set == myName,]$NES, digits =3)
+    gsea.p.value <- signif(GSEA.results[GSEA.results$Drug_set == myName,]$p_value, digits = 3)
+    gsea.q.val <- signif(GSEA.results[GSEA.results$Drug_set == myName,]$FDR_q_value, digits = 3)
 
     results.as.text <- paste("NES",gsea.normalized.enrichment.score,"\np-value:", gsea.p.value,
                              "\nq-value:",gsea.q.val)
@@ -603,27 +570,55 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
         plot.margin = ggplot2::unit(c(0,0,0,0),"cm")
       ) +
       aplot::xlim2(mtn.plot)
-
-
-
+    
     assembled <- mtn.plot + hit.markers + show.rank.metric + patchwork::plot_layout(ncol = 1, heights = c(2.5,0.5,2))
     return(assembled)
   }
-  #perform GSEA using GSEA_custom
-  GSEA <- GSEA_custom(input,gmt,num.permutations=num.permutations,stat.type=stat.type)
-  GSEA.Results <- GSEA$GSEA.Results
-  #select results which meet FDR threshold and produce mountain plots
-  significant.hits <- GSEA.Results[which(GSEA.Results$FDR_q_value<=FDR),]
+  
+  ## perform enrichment analysis using GSEA_custom
+  EA <- GSEA_custom(input, gmt, num.permutations=num.permutations, stat.type=stat.type)
+  EA.Results <- EA$GSEA.Results
+  
+  ## select results which meet FDR threshold and produce mountain plots
+  significant.hits <- EA.Results[which(EA.Results$FDR_q_value < FDR),]
   temp.plot <- list()
   if (nrow(significant.hits) > 0){
     for (i in 1:nrow(significant.hits)){
-      temp <- gsea_mountain_plot(GSEA.list = GSEA, Sample.Name = GSEA.sample.name ,Gene.Set.A = significant.hits$Gene.Set[i])
+      temp <- gsea_mountain_plot(GSEA.list = EA, Sample.Name = est.name, Gene.Set.A = significant.hits$Drug_set[i])
       temp.plot[i] <- list(temp)
     }
-    colnames(GSEA.Results)[colnames(GSEA.Results) == "Gene.Set"] <- "Drug.Set"
-  } else {print("No enrichments met the FDR cut-off to produce mountain plots")
-    colnames(GSEA.Results)[colnames(GSEA.Results) == "Gene.Set"] <- "Drug.Set"}
-  outputs <- list(result=GSEA.Results, mtn.plots=temp.plot)
+  } else {print("No enrichments met the FDR cut-off to produce mountain plots")}
+  
+  ## produce volcano plot
+  plot.data <- EA.Results
+  if(nrow(plot.data[plot.data$p_value==0,])>0){plot.data[plot.data$p_value==0,]$p_value <- 0.00099}
+  # define x, y limits
+  limit.x <- ceiling(max(abs(as.numeric(plot.data$NES)), na.rm=TRUE))
+  limit.y <- ceiling(max(-as.numeric(log(plot.data$p_value, 10)), na.rm=TRUE))
+  # categorize data by significance level if there are significant hits
+  if(nrow(significant.hits) > 0){
+    plot.data$Significance <- paste0("FDR > ", FDR)
+    plot.data[plot.data$FDR_q_value < FDR,]$Significance <- paste0("FDR < ", FDR)
+    plot.data$Significance <- factor(plot.data$Significance,levels=c(paste0("FDR < ", FDR), paste0("FDR > ", FDR)))
+    volc <- ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10), color=Significance)) + geom_point(size = 4) + 
+      ggrepel::geom_text_repel(data=subset(plot.data,Significance==paste0("FDR < ", FDR)),mapping=aes(label=Drug_set,size=I(4)),nudge_y = 0.25) +
+      scale_color_manual(values=c("red","azure4"),name="Significance",breaks=c(paste0("FDR < ", FDR), paste0("FDR > ", FDR))) +
+      xlim(-limit.x,limit.x) + ylim(0,limit.y) + xlab("Normalized Enrichment Score") + ylab("-Log(p-value)") +
+      geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
+      theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
+            legend.text=element_text(size=10),axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
+            panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10),
+            legend.position = "bottom")
+  } else {
+    volc <- ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10))) + geom_point(size = 4, color="azure4") + 
+      xlim(-limit.x,limit.x) + ylim(0,limit.y) + xlab("Normalized Enrichment Score") + ylab("-Log(p-value)") +
+      geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
+      theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
+            axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
+            panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10))
+  }
+  
+  outputs <- list(result = EA.Results, mtn.plots = temp.plot, volcano.plot = volc)
   return(outputs)
 }
 
@@ -651,5 +646,6 @@ DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", sample
               corr.result = corr.results$result,
               corr.scatter.plots = corr.results$scatter.plots,
               DMEA.result = DMEA.results$result,
-              DMEA.mtn.plots = DMEA.results$mtn.plots))
+              DMEA.mtn.plots = DMEA.results$mtn.plots,
+              DMEA.volcano.plot = DMEA.results$volcano.plot))
 }
