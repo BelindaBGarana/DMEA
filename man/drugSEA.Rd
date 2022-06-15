@@ -38,6 +38,7 @@ drugSEA(data, gmt, drug="Drug", estimate="Pearson.est", set.type="moa", directio
 \value{
   \item{result }{Dataframe containing enrichment analysis results for drug sets.}
   \item{mtn.plots }{ggplot object list of mountain plots for drug sets with enrichments which meet the FDR threshold.}
+  \item{volcano.plot }{ggplot object for volcano plot summarizing enrichment of all drug sets evaluated.}
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
@@ -50,7 +51,7 @@ drugSEA(data, gmt, drug="Drug", estimate="Pearson.est", set.type="moa", directio
 \author{Belinda B. Garana, James H. Joly
 %%  ~~who you are~~
 }
-\note{Mountain plots can be saved individually out of a list i using ggsave(filename, drugSEA$mtn.plots[i]).
+\note{Mountain plots can be saved individually using for(i in 1:length(drugSEA.output$mtn.plots)){ggsave(filename, drugSEA.output$mtn.plots[[i]])}.
 %%  ~~further notes~~
 }
 

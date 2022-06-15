@@ -65,6 +65,7 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
   \item{corr.scatter.plots }{ggplot object with a scatter plot for each significant correlation on each page.}
   \item{DMEA.result }{Dataframe containing GSEA results for drug sets.}
   \item{DMEA.mtn.plots }{ggplot object list of mountain plots for drug sets with enrichment which meet the FDR threshold.}
+  \item{DMEA.volcano.plot }{ggplot object for volcano plot summarizing enrichment of all drug sets evaluated.}
 }
 \references{
 %% ~put references to the literature/web site here ~
@@ -72,7 +73,7 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
 \author{Belinda B. Garana, James H. Joly
 %%  ~~who you are~~
 }
-\note{Mountain plots can be saved individually out of a list i using ggsave(filename, DMEA$mtn.plots[i]).
+\note{Mountain plots can be saved individually using for(i in 1:length(DMEA.output$DMEA.mtn.plots)){ggsave(filename, DMEA.output$DMEA.mtn.plots[[i]])}.
 %%  ~~further notes~~
 }
 
