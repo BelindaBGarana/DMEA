@@ -702,8 +702,14 @@ DMEA <- function(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", s
   # if necessary, generate gmt object
   if(is.null(gmt)){
     if(is.null(drug.info)){
-      print("drug.info dataframe containing set membership information must be provided as input if no gmt object is provided")
-      break
+      print("Error: drug.info dataframe containing set membership information must be provided as input if no gmt object is provided")
+      return(list(WV.scores = WV.result,
+                  corr.result = corr.results$result,
+                  corr.scatter.plots = corr.results$scatter.plots,
+                  gmt = NULL,
+                  DMEA.result = NULL,
+                  DMEA.mtn.plots = NULL,
+                  DMEA.volcano.plot = NULL))
       }else{
       corr.output <- merge(corr.results$result, drug.info, by=drug)
       gmt <- as.gmt(data=corr.output, element.names=drug, set.names=set.type, min.per.set, sep, exclusions, descriptions)
