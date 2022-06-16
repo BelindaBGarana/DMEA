@@ -10,14 +10,15 @@
 \usage{
 DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=colnames(expression)[1],
                  gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
-                 estimate="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted",
-                 N.min=3, scatter.plots=TRUE, scatter.plot.type="pearson", FDR.scatter.plots=0.05,
+                 rank.metric="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted",
+                 drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]", exclusions=c("-666", "NA", "NaN", "NULL"), descriptions=NULL,
+                 min.per.corr=3, scatter.plots=TRUE, scatter.plot.type="pearson", FDR.scatter.plots=0.05,
                  xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE)
 }
 \arguments{
   \item{drug.sensitivity}{Dataframe containing drug sensitivity scores (e.g., AUC) with drug names as column names, except for one column which contains sample names.
 }
-  \item{gmt}{gmt list containing drug mechanism-of-action sets (e.g., output from GSA.read.gmt function from GSA package).
+  \item{gmt}{Optional: gmt object containing drug sets (e.g., output from GSA.read.gmt function from GSA package). If gmt is not provided, drug.info parameter must be provided. Default: NULL.
 }
   \item{expression}{Dataframe containing normalized gene expression with gene names as column names, except for one column which contains sample names.
 }
@@ -39,7 +40,21 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
 }
   \item{stat.type}{Statistic type for enrichment analysis. Must be either "Weighted" (score weight = 1) or "Classic" (score weight = 0). Default: "Weighted".
 }
-  \item{N.min}{Minimum number of samples required to run correlations. Default: 3.
+  \item{drug.info}{Dataframe with set membership information for each element. Optional unless gmt is not provided. Default: NULL.
+}
+  \item{drug}{Column name in drug.info containing the drug names. Optional unless gmt is not provided. Default: "Drug".
+}
+  \item{set.type}{Column name in drug.info containing the set membership information for each drug. Optional unless gmt is not provided. Default: "moa".
+}
+  \item{min.per.set}{The minimum number of drugs required per set. Default: 6.
+}
+  \item{sep}{Character(s) to use for splitting drug set names. Optional unless gmt is not provided. Default: "[|]".
+}
+  \item{exclusions}{A vector of drug set names to be excluded from the generated gmt. Optional unless gmt is not provided. Default: c("-666", "NA", "NaN", "NULL").
+}
+  \item{descriptions}{Optional: column name in drug.info containing descriptions for each drug set. If not provided and gmt is also not provided, set.type will be used for the descriptions instead. Default: NULL.
+}
+  \item{min.per.corr}{Minimum number of samples required to run correlations. Default: 3.
 }
   \item{scatter.plots}{Set TRUE to produce scatter plots for correlations. Default: TRUE.
 }
@@ -63,6 +78,7 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
   \item{WV.scores }{Dataframe with Weighted Voting scores for each sample.}
   \item{corr.result }{Dataframe with Pearson & Spearman correlation estimates, p-values, and FDR q-values (Benjamini-Hochberg method) for each variable item.}
   \item{corr.scatter.plots }{ggplot object with a scatter plot for each significant correlation on each page.}
+  \item{gmt }{gmt object containing list of elements (genesets), set names (geneset.names), and set descriptions (geneset.descriptions).}
   \item{DMEA.result }{Dataframe containing GSEA results for drug sets.}
   \item{DMEA.mtn.plots }{ggplot object list of mountain plots for drug sets with enrichment which meet the FDR threshold.}
   \item{DMEA.volcano.plot }{ggplot object for volcano plot summarizing enrichment of all drug sets evaluated.}
@@ -74,6 +90,7 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
 %%  ~~who you are~~
 }
 \note{Mountain plots can be saved individually using for(i in 1:length(DMEA.output$DMEA.mtn.plots)){ggsave(filename, DMEA.output$DMEA.mtn.plots[[i]])}.
+Output gmt can be saved for future use as an R object using saveRDS(DMEA.output$gmt, file).
 %%  ~~further notes~~
 }
 
@@ -84,30 +101,30 @@ DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-#create sample ids
+# create sample ids
 id <- LETTERS[seq(from = 1, to = 26)]
 
-#create gene expression for each sample id
+# create gene expression for each sample id
 gene.1 <- as.numeric(seq(0,1, by = 0.04))
 gene.2 <- as.numeric(seq(0,1, by = 0.04))
 gene.3 <- as.numeric(seq(0,1, by = 0.04))
 
-#prepare expression dataframe
+# prepare expression dataframe
 expression <- as.data.frame(cbind(id, gene.1, gene.2, gene.3)) #Example expression dataframe with 26 samples and 3 genes
 
-#prepare weights dataframe
+# prepare weights dataframe
 gene.names <- c("gene.1", "gene.2", "gene.3")
 weights <- as.data.frame(gene.names)
 weights$weight.value <- 1 #In this example, these genes all have a weight of 1
 
-#Prepare dataframe containing drug sensitivity metric AUC for each drug
+# prepare dataframe containing drug sensitivity metric AUC for each drug
 drug.sensitivity <- data.frame(id)
 Drug <- LETTERS[seq(from = 1, to = 26)]
 for (i in 1:length(Drug)){
 drug.sensitivity[,c(Drug[i])] <- seq(0,1, by = 0.04)
 }
 
-#Prepare gmt object
+# prepare gmt object
 drug.set.A <- c("A","B","C","D","E")
 drug.set.B <- c("V","W","X","Y","Z")
 drug.set.X <- c("J","Q","O","E","F")
@@ -118,7 +135,7 @@ Drug.Sets <- list(drug.set.A,drug.set.B,drug.set.X,drug.set.Y,drug.set.Z)
 names(Drug.Sets) <- NULL
 gmt <- list(genesets = Drug.Sets, geneset.names = names, geneset.descriptions = names)
 
-#Perform DMEA
+# perform DMEA
 DMEA(drug.sensitivity, gmt, expression, weights)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

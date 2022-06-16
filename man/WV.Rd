@@ -4,7 +4,7 @@
 \title{Weighted Voting
 %%  ~~function to do ... ~~
 }
-\description{Weights are multiplied by their gene expression values, then summed across all genes for each sample or cell line to produce a score. Other types of expression data may also be used (e.g., proteomics data).
+\description{Weights are multiplied by their expression values, then summed across all parameters (e.g., genes) for each sample or cell line to produce a score. Various types of expression data may be used (e.g., RNAseq, proteomics data).
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
@@ -13,19 +13,14 @@ WV(expression, weights, sample.names=colnames(expression)[1],gene.names=colnames
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{expression}{Dataframe containing normalized gene expression with gene names as column names, except for one column which contains sample names.
-%%     ~~Describe \code{x} here~~
 }
   \item{weights}{Dataframe with gene.names and weight.values (e.g., log2(fold-change) values). All gene.names must be present in the expression dataframe.
-%%     ~~Describe \code{x} here~~
 }
   \item{sample.names}{Column name in expression dataframe containing the sample names. Default: colnames(expression)[1].
-%%     ~~Describe \code{x} here~~
 }
   \item{gene.names}{Column name in weights dataframe containing the gene names. Default: colnames(weights)[1].
-%%     ~~Describe \code{x} here~~
 }
   \item{weight.values}{Column name in weights dataframe containing the weight values (e.g., log2(fold-change) values). Default: colnames(weights)[2].
-%%     ~~Describe \code{x} here~~
 }
 }
 \details{
@@ -55,23 +50,23 @@ WV(expression, weights, sample.names=colnames(expression)[1],gene.names=colnames
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-#create sample ids
+# create sample ids
 id <- LETTERS[seq(from = 1, to = 26)]
 
-#create gene expression for each sample id
+# create gene expression for each sample id
 gene.1 <- as.numeric(seq(0,1, by = 0.04))
 gene.2 <- as.numeric(seq(0,1, by = 0.04))
 gene.3 <- as.numeric(seq(0,1, by = 0.04))
 
-#prepare expression dataframe
-expression <- as.data.frame(cbind(id, gene.1, gene.2, gene.3)) #Example expression dataframe with 26 samples and 3 genes
+# prepare expression dataframe
+expression <- as.data.frame(cbind(id, gene.1, gene.2, gene.3)) # example expression dataframe with 26 samples and 3 genes
 
-#prepare weights dataframe
+# prepare weights dataframe
 gene.names <- c("gene.1", "gene.2", "gene.3")
 weights <- as.data.frame(gene.names)
-weights$weight.value <- 1 #In this example, these genes all have a weight of 1
+weights$weight.value <- 1 # in this example, these genes all have a weight of 1
 
-#run Weighted Voting to score each sample
+# run Weighted Voting to score each sample
 WV(expression,weights)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

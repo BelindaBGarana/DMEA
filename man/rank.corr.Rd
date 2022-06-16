@@ -8,19 +8,19 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-rank.corr(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE)
+rank.corr(data, variable="Drug", value="AUC",type="pearson", min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{data}{Dataframe with sample names in column 1, the rank metric in column 2, and the set of variables (e.g. genes) as column names starting at column 3.
+  \item{data}{Dataframe with sample names in column 1, the rank metric in column 2, and the set of variables (e.g. drugs) as column names starting at column 3.
 }
-  \item{variable}{Description of the column names starting at column 3. Default: "Gene".
+  \item{variable}{Description of the column names starting at column 3. Default: "Drug".
 }
-  \item{value}{Description of the values starting at column 3. Do not include spaces! Default: "Intensity".
+  \item{value}{Description of the values starting at column 3. Do not include spaces! Default: "AUC".
 }
   \item{type}{Correlation type for plots. Must be specified as "pearson" or "spearman". Default: "pearson".
 }
-  \item{N.min}{Minimum number of samples required to run correlations. Default: 3.
+  \item{min.per.corr}{Minimum number of samples required to run each correlation. Default: 3.
 }
   \item{plots}{Set TRUE to produce scatter plots. Default: TRUE.
 }
@@ -65,21 +65,21 @@ Do not name your variable as "variable.name" or your value as "value.name". Do n
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-#create id
+# create id
 id <- LETTERS[seq(from = 1, to = 26)]
 
-#create rank metric for each id
+# create rank metric for each id
 rank.metric <- as.numeric(seq(1,2, by = 0.04))
 
-#create gene expression for each id
-gene.1 <- as.numeric(seq(0,1, by = 0.04))
-gene.2 <- as.numeric(seq(0,1, by = 0.04))
-gene.3 <- as.numeric(seq(0,1, by = 0.04))
+# create values for each id and variable
+drug.1 <- as.numeric(seq(0,1, by = 0.04))
+drug.2 <- as.numeric(seq(0,1, by = 0.04))
+drug.3 <- as.numeric(seq(0,1, by = 0.04))
 
-#prepare input
-data <- as.data.frame(cbind(id, rank.metric, gene.1, gene.2, gene.3)) #Example input with 26 id.var and 3 genes
+# prepare input
+data <- as.data.frame(cbind(id, rank.metric, drug.1, drug.2, drug.3)) #Example input with 26 id.var and 3 drugs
 
-#run correlations between rank metric and each gene's expression
+# run correlations between the rank metric and each variable's values
 rank.corr(data)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
