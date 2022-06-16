@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220614
+#BG 20201203; last edit: BG 20220616
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -7,6 +7,7 @@ rm(list=ls(all=TRUE))
 
 WV <- function(expression, weights, sample.names=colnames(expression)[1],
                 gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){#data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
+  print("Calculating Weighted Voting scores...")
   #check expression for gene names
   filtered.expr <- expression %>% dplyr::select(c(tidyselect::all_of(sample.names),tidyselect::all_of(weights[,c(gene.names)])))
   filtered.expr <- na.omit(filtered.expr)
@@ -32,7 +33,8 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
   return(scores)
 }
 
-rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N.min=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
+rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
+  print("Running correlations and regressions...")
   library(dplyr);library(qvalue);library(ggplot2);
   
   cores <- parallel::detectCores() #number of cores available
@@ -54,7 +56,7 @@ rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N
   for (j in 3:ncol(all.data.corr)){
     data.corr[[j-2]] <- na.omit(all.data.corr[,c(2,j)])
     a <- nrow(data.corr[[j-2]]) #number of samples in the correlation (N)
-    if (a >= N.min) {corr$N[j-2] <- a
+    if (a >= min.per.corr) {corr$N[j-2] <- a
     x <- as.numeric(data.corr[[j-2]][,1]) #list of rank metric
     y <- as.numeric(data.corr[[j-2]][,2]) #list of gene expression (for each gene j)
 
@@ -181,27 +183,69 @@ rank.corr <- function(data, variable="Gene", value="Intensity",type="pearson", N
   return(outputs)
 }
 
-drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="moa", direction.adjust=NULL,
-                    FDR=0.25, num.permutations=1000, stat.type="Weighted"){
+as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=6, 
+                   sep = "[|]", exclusions = c("-666", "NA", "NaN", "NULL"), descriptions = NULL){
+  print("Generating gmt object for enrichment analysis...")
+  all.sets <- unique(data[,c(set.names)])
+  all.sets <- all.sets[all.sets %in% exclusions == FALSE]
+  elements <- list()
+  
+  cores <- parallel::detectCores() #number of cores available
+  cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
+  doSNOW::registerDoSNOW(cl) #register cluster
+  
+  final.sets <- c()
+  final.elements <- list()
+  for(i in 1:length(all.sets)){
+    elements[[all.sets[i]]] <- list()
+    for(j in 1:nrow(data)){ 
+      sets <- strsplit(as.character(data[j, c(set.names)]), sep)[[1]]
+      if(all.sets[i] %in% sets){elements[[all.sets[i]]] <- c(elements[[all.sets[i]]], data[j, c(element.names)])}
+    }
+    # store sets with elements
+    if(length(elements[[all.sets[i]]])>=min.per.set){
+      final.sets <- c(final.sets, all.sets[i])
+      final.elements[[all.sets[i]]] <- elements[[all.sets[i]]]
+    }
+  }
+  rm(elements)
+  rm(all.sets)
+  snow::stopCluster(cl) #stop cluster
+  rm(cl)
+  
+  if(!is.null(descriptions)){
+    final.set.info <- distinct(data[data[,c(set.names)] %in% final.sets, c(set.names, descriptions)])
+    final.set.info <- final.set.info[, c(descriptions)]
+  }else{
+    final.set.info <- final.sets
+  }
+  
+  gmt <- list(genesets=final.elements, geneset.names=final.sets, geneset.descriptions=final.set.info)
+  return(gmt)
+}
+
+drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.type="moa", direction.adjust=NULL,
+                    FDR=0.25, num.permutations=1000, stat.type="Weighted", min.per.set=6,
+                    sep = "[|]", exclusions = c("-666", "NA", "NaN", "NULL"), descriptions=NULL){
   library(sjmisc);library(dplyr);
-  #adjust estimates
+  #if needed, adjust rank metrics
   if(length(direction.adjust)>0){
-    info <- distinct(data[,c(drug, estimate, set.type)])
+    info <- distinct(data[,c(drug, rank.metric, set.type)])
     info$adjust <- 1
     info[grep(direction.adjust, info[,c(set.type)], value = T), "adjust"] <- -1
-    info$adjusted.est <- as.numeric(info[,c(estimate)])*as.numeric(info$adjust)
+    info$adjusted.est <- as.numeric(info[,c(rank.metric)])*as.numeric(info$adjust)
     input <- info[,c(drug,"adjusted.est")]
-    est.name <- paste0(estimate, " direction-adjusted")
+    est.name <- paste0(rank.metric, " direction-adjusted")
   }else{
-    input <- data[,c(drug,estimate)]
-    est.name <- estimate
+    input <- data[,c(drug,rank.metric)]
+    est.name <- rank.metric
   }
   colnames(input) <- c(drug, est.name)
 
   #load GSEA_custom function
   GSEA_custom <- function(input.df, gmt.list,
                           num.permutations = 1000,
-                           stat.type = "Weighted"){
+                           stat.type = "Weighted", min.per.set){
     nperm = num.permutations #number of permutations
     if (stat.type == "Classic"){
       score.weight = 0
@@ -212,13 +256,24 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
 
     #Read in gene expression data
     #drug names should be first column
-    #estimate name should be second column
+    #rank metric name should be second column
     data_in <- input.df
 
-    gmt.for.reformat <- gmt.list
-    Drug.Sets <- t(plyr::ldply(gmt.for.reformat$genesets, rbind)) #reformat gmt list to desired format
-    colnames(Drug.Sets) <- gmt.for.reformat$geneset.names
-
+    # find biggest drug set
+    biggest.set <- min.per.set
+    for(i in 1:length(gmt.list$genesets)){
+      if(length(gmt.list$genesets[[i]]) > biggest.set){
+        biggest.set <- length(gmt.list$genesets[[i]])
+      }
+    }
+    
+    Drug.Sets <- matrix(data = "", nrow = biggest.set, ncol = length(gmt.list$genesets))
+    colnames(Drug.Sets) <- gmt.list$geneset.names
+    for(i in 1:ncol(Drug.Sets)){
+      for(j in 1:length(gmt.list$genesets[[i]])){
+        Drug.Sets[j,i] <- gmt.list$genesets[[i]][[j]][1]
+      }
+    }
     Drug.Sets <- as.data.frame(Drug.Sets)
 
     testthat::expect_is(data_in, "data.frame")
@@ -326,11 +381,11 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
 
     num.hits.pathways.df <- matrix(unlist(num.hits.pathways))
     row.names(num.hits.pathways.df) = Drug.Sets.All
-    num.Drug.Sets.under.6 <- which(num.hits.pathways.df < 6)
-    num.Drug.Sets.over.5 <- which(num.hits.pathways.df > 5)
-    Drug.Sets.All <- Drug.Sets.All[num.Drug.Sets.over.5] # write over gene sets all to keep > 5
-    if (length(num.Drug.Sets.under.6) > 1){
-      print("Warning: Removing drug sets with less than 6 drugs observed in data set.")
+    Drug.Sets.under <- which(num.hits.pathways.df < min.per.set)
+    Drug.Sets.over <- which(num.hits.pathways.df >= min.per.set)
+    Drug.Sets.All <- Drug.Sets.All[Drug.Sets.over] # write over gene sets all to keep >= min.per.set
+    if (length(Drug.Sets.under) > 0){
+      print(paste0("Warning: Removing drug sets with less than ",min.per.set," drugs observed in data set."))
       annotations <- annotations[,c(colnames(data_in)[1],Drug.Sets.All)]
     }
     annotations <- as.data.frame(annotations)
@@ -347,11 +402,11 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     doSNOW::registerDoSNOW(cl)
 
     GSEA.Results <- matrix(data = NA, nrow = length(Drug.Sets.All), ncol = 7)
-    colnames(GSEA.Results) <- c("Estimate","Drug_set","ES","NES",
+    colnames(GSEA.Results) <- c("Rank_metric","Drug_set","ES","NES",
                                 "p_value","Position_at_max","FDR_q_value")
     GSEA.Results <- as.data.frame(GSEA.Results)
     GSEA.Results$Drug_set <- Drug.Sets.All
-    GSEA.Results$Estimate <- Samples
+    GSEA.Results$Rank_metric <- Samples
 
     ## Assuming first two columns in data table are drug names and rank metric (e.g. Foldchange, SNR)
     data_in[,Samples] <- as.numeric(as.character(data_in[,Samples]))
@@ -575,8 +630,14 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
     return(assembled)
   }
   
+  ## if necessary, generate gmt object
+  if(is.null(gmt)){
+    gmt <- as.gmt(data, element.names=drug, set.names=set.type, min.per.set, sep, exclusions, descriptions)
+  }
+  
   ## perform enrichment analysis using GSEA_custom
-  EA <- GSEA_custom(input, gmt, num.permutations=num.permutations, stat.type=stat.type)
+  print("Running enrichment analysis...")
+  EA <- GSEA_custom(input, gmt, num.permutations, stat.type, min.per.set)
   EA.Results <- EA$GSEA.Results
   
   ## select results which meet FDR threshold and produce mountain plots
@@ -618,33 +679,46 @@ drugSEA <- function(data, gmt, drug="Drug", estimate="Pearson.est", set.type="mo
             panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10))
   }
   
-  outputs <- list(result = EA.Results, mtn.plots = temp.plot, volcano.plot = volc)
+  outputs <- list(gmt = gmt, result = EA.Results, mtn.plots = temp.plot, volcano.plot = volc)
   return(outputs)
 }
 
-DMEA <- function(drug.sensitivity, gmt, expression, weights, value="AUC", sample.names=colnames(expression)[1],
+DMEA <- function(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", sample.names=colnames(expression)[1],
                  gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
-                 estimate="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted", N.min=3,
-                 scatter.plots=TRUE, scatter.plot.type="pearson",FDR.scatter.plots=0.05, xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
-  print("Calculating Weighted Voting scores...")
-  #WV
+                 rank.metric="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted", 
+                 drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]", exclusions=c("-666", "NA", "NaN", "NULL"), descriptions=NULL,
+                 min.per.corr=3, scatter.plots=TRUE, scatter.plot.type="pearson",FDR.scatter.plots=0.05, 
+                 xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
+  # WV
   WV.result <- WV(expression=expression,weights=weights,sample.names=sample.names,gene.names=gene.names,weight.values=weight.values)
 
-  #merge PRISM with WV
+  # merge PRISM with WV
   WV.result.drug.sensitivity <- merge(WV.result,drug.sensitivity,by=sample.names)
 
-  print("Running correlations and regressions...")
-  #rank.corr
-  corr.results <- rank.corr(data=WV.result.drug.sensitivity,variable="Drug",value=value,type=scatter.plot.type,N.min=N.min,
+  # rank.corr
+  corr.results <- rank.corr(data=WV.result.drug.sensitivity,variable="Drug",value=value,type=scatter.plot.type,min.per.corr=min.per.corr,
                             plots=scatter.plots,FDR=FDR.scatter.plots,xlab=xlab,ylab=ylab,position.x=position.x,position.y=position.y,se=se)
 
-  print("Running enrichment analysis...")
-  #drugSEA
-  DMEA.results <- drugSEA(data=corr.results$result,gmt=gmt,estimate=estimate,stat.type=stat.type,num.permutations = num.permutations,FDR=FDR)
+  # if necessary, generate gmt object
+  if(is.null(gmt)){
+    if(is.null(drug.info)){
+      print("drug.info dataframe containing set membership information must be provided as input if no gmt object is provided")
+      break
+      }else{
+      corr.output <- merge(corr.results$result, drug.info, by=drug)
+      gmt <- as.gmt(data=corr.output, element.names=drug, set.names=set.type, min.per.set, sep, exclusions, descriptions)
+    }
+  }else{
+    corr.output <- corr.results$result
+  }
+  
+  # drugSEA
+  DMEA.results <- drugSEA(data=corr.output, gmt, rank.metric=rank.metric, stat.type=stat.type, num.permutations=num.permutations, FDR=FDR)
 
   return(list(WV.scores = WV.result,
               corr.result = corr.results$result,
               corr.scatter.plots = corr.results$scatter.plots,
+              gmt = gmt,
               DMEA.result = DMEA.results$result,
               DMEA.mtn.plots = DMEA.results$mtn.plots,
               DMEA.volcano.plot = DMEA.results$volcano.plot))
