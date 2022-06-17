@@ -1,0 +1,338 @@
+"","id","moa","pert_id","pert_iname","pert_type","target_name","aud_q75","aud_med","aud_q25","aud_iqr","cell_id","query","neg_query"
+"1","BRD-K69726342","HMGCR inhibitor","BRD-K69726342","atorvastatin","trt_cp","DPP4|HMGCR",0.22,0.16,0.1,0.12,-666,2.37,-2.37
+"2","BRD-K94441233","HMGCR inhibitor","BRD-K94441233","mevastatin","trt_cp","HMGCR",0.32,0.26,0.2,0.12,-666,2.11,-2.11
+"3","BRD-K09416995","HMGCR inhibitor","BRD-K09416995","lovastatin","trt_cp","HMGCR",0.2,0.16,0.13,0.07,-666,2.11,-2.11
+"4","BRD-K66296774","HMGCR inhibitor","BRD-K66296774","fluvastatin","trt_cp","HMGCR",0.4,0.34,0.27,0.14,-666,2.04,-2.04
+"5","BRD-K75958547","HMGCR inhibitor","BRD-K75958547","pitavastatin","trt_cp","HMGCR",0.32,0.25,0.18,0.14,-666,1.99,-1.99
+"6","BRD-K43621685","PDGFR tyrosine kinase receptor inhibitor","BRD-K43621685","CP-673451","trt_cp","PDGFRB",0.18,0.15,0.12,0.06,-666,1.93,-1.93
+"7","BRD-K79239947","Focal adhesion kinase inhibitor","BRD-K79239947","PF-573228","trt_cp","-666",0.21,0.17,0.14,0.07,-666,1.89,-1.89
+"8","BRD-K22134346","HMGCR inhibitor","BRD-K22134346","simvastatin","trt_cp","HMGCR",0.24,0.2,0.16,0.07,-666,1.8,-1.8
+"9","BRD-K32821942","Dehydrogenase inhibitor","BRD-K32821942","azathioprine","trt_cp","PPAT",0.18,0.15,0.11,0.08,-666,1.71,-1.71
+"10","BRD-K91601245","Immunosuppressant|Protein synthesis inhibitor|Purine antagonist","BRD-K91601245","mercaptopurine","trt_cp","-666",0.19,0.15,0.12,0.07,-666,1.71,-1.71
+"11","BRD-M80207679","Dopamine receptor antagonist","BRD-M80207679","nemonapride","trt_cp","DRD2|DRD3",0.11,0.08,0.06,0.05,-666,1.69,-1.69
+"12","BRD-A12230535","MDM inhibitor","BRD-A12230535","nutlin-3","trt_cp","MDM2",0.14,0.09,0.06,0.07,-666,1.68,-1.68
+"13","BRD-A54275602","Sterol demethylase inhibitor","BRD-A54275602","lanoconazole","trt_cp","-666",0.14,0.1,0.07,0.07,-666,1.67,-1.67
+"14","BRD-K47598052","Abl kinase inhibitor|Src inhibitor","BRD-K47598052","PP-1","trt_cp","-666",0.2,0.16,0.13,0.07,-666,1.66,-1.66
+"15","BRD-K81016934","C-Met inhibitor","BRD-K81016934","INC-280","trt_cp","-666",0.12,0.09,0.06,0.06,-666,1.66,-1.66
+"16","BRD-K21670884","Sodium/hydrogen exchanger inhibitor","BRD-K21670884","cariporide","trt_cp","-666",0.27,0.21,0.17,0.1,-666,1.66,-1.66
+"17","BRD-K80700417","Pim kinase inhibitor","BRD-K80700417","SGI-1776","trt_cp","PIM1|FLT3|PIM2|PIM3",0.2,0.16,0.13,0.08,-666,1.65,-1.65
+"18","BRD-K42756753","Steroid","BRD-K42756753","epiandrosterone","trt_cp","-666",0.11,0.08,0.06,0.05,-666,1.62,-1.62
+"19","BRD-A34513497","Osmosis stimulant","BRD-A34513497","lacitol","trt_cp","-666",0.23,0.19,0.15,0.08,-666,1.62,-1.62
+"20","BRD-K33622447","CDK inhibitor","BRD-K33622447","LY-2835219","trt_cp","-666",0.28,0.24,0.2,0.09,-666,1.6,-1.6
+"21","BRD-K51474575","Antioxidant","BRD-K51474575","taurine","trt_cp","-666",0.12,0.1,0.07,0.05,-666,1.6,-1.6
+"22","BRD-K13050303","Dopamine receptor agonist","BRD-K13050303","uridine","trt_cp","-666",0.12,0.09,0.06,0.06,-666,1.6,-1.6
+"23","BRD-K49328571","Bcr-Abl kinase inhibitor|Ephrin inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|Src inhibitor|Tyrosine kinase inhibitor","BRD-K49328571","dasatinib","trt_cp","ABL1|BCR|EPHA2|FYN|KIT|LCK|LYN|PDGFRB|SRC|YES1",0.51,0.44,0.37,0.13,-666,1.58,-1.58
+"24","BRD-A07704283","Dopamine receptor antagonist","BRD-A07704283","isofloxythepin","trt_cp","-666",0.16,0.14,0.12,0.04,-666,1.58,-1.58
+"25","BRD-K17894950","CDK inhibitor|Glycogen synthase kinase inhibitor","BRD-K17894950","indirubin","trt_cp","CDK1|CDK5|GSK3A",0.16,0.12,0.1,0.06,-666,1.58,-1.58
+"26","BRD-K63126190","Adrenergic receptor agonist|Neurotransmitter","BRD-K63126190","epinephrine","trt_cp","ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C|ADRB1|ADRB2|ADRB3",0.24,0.2,0.17,0.07,-666,1.57,-1.57
+"27","BRD-K09602097","Adenylyl cyclase activator","BRD-K09602097","forskolin","trt_cp","ADCY2",0.13,0.1,0.07,0.06,-666,1.56,-1.56
+"28","BRD-A16700644","Adrenergic receptor agonist","BRD-A16700644","isoxsuprine","trt_cp","ADRB2",0.15,0.13,0.1,0.05,-666,1.56,-1.56
+"29","BRD-K81694556","Renin inhibitor","BRD-K81694556","VTP-27999","trt_cp","REN",0.2,0.17,0.14,0.06,-666,1.55,-1.55
+"30","BRD-K16195444","Adrenergic receptor agonist","BRD-K16195444","oxymetazoline","trt_cp","ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C",0.13,0.09,0.06,0.06,-666,1.55,-1.55
+"31","BRD-K14003026","Adrenergic receptor agonist","BRD-K14003026","ritodrine","trt_cp","ADRB2",0.12,0.09,0.07,0.06,-666,1.54,-1.54
+"32","BRD-K58299615","Beta amyloid inhibitor","BRD-K58299615","Ro-90-7501","trt_cp","APP",0.13,0.1,0.07,0.06,-666,1.54,-1.54
+"33","BRD-K13646352","FLT3 inhibitor|KIT inhibitor|PKC inhibitor","BRD-K13646352","midostaurin","trt_cp","FLT3|KIT",0.35,0.31,0.26,0.09,-666,1.53,-1.53
+"34","BRD-K01683783","Aurora kinase inhibitor","BRD-K01683783","TAK-901","trt_cp","AURKB",0.4,0.36,0.31,0.1,-666,1.53,-1.53
+"35","BRD-K87036601","DNA synthesis inhibitor","BRD-K87036601","azodicarbonamide","trt_cp","-666",0.13,0.11,0.08,0.05,-666,1.53,-1.53
+"36","BRD-K24603946","Acetylcholine receptor antagonist","BRD-K24603946","5-hydroxymethyl-tolterodine","trt_cp","CHRM3",0.29,0.24,0.2,0.09,-666,1.52,-1.52
+"37","BRD-K57080016","MEK inhibitor","BRD-K57080016","selumetinib","trt_cp","MAP2K1",0.21,0.13,0.07,0.13,-666,1.51,-1.51
+"38","BRD-K62965247","Farnesyltransferase inhibitor","BRD-K62965247","tipifarnib-P2","trt_cp","FNTA|FNTB",0.28,0.23,0.18,0.1,-666,1.51,-1.51
+"39","BRD-A42699921","Dihydroorotate dehydrogenase inhibitor","BRD-A42699921","teriflunomide","trt_cp","DHODH",0.27,0.24,0.21,0.06,-666,1.51,-1.51
+"40","BRD-K13154216","MTOR inhibitor","BRD-K13154216","everolimus","trt_cp","MTOR",0.39,0.31,0.21,0.17,-666,1.5,-1.5
+"41","BRD-K21680192","Topoisomerase inhibitor","BRD-K21680192","mitoxantrone","trt_cp","TOP2A",0.66,0.58,0.51,0.15,-666,1.5,-1.5
+"42","BRD-K72420232","EGFR inhibitor","BRD-K72420232","WZ-4002","trt_cp","EGFR|ERBB2",0.18,0.15,0.12,0.06,-666,1.5,-1.5
+"43","BRD-K92213669","Microsomal trigylceride transfer protein inhibitor","BRD-K92213669","lomitapide","trt_cp","MTTP",0.2,0.17,0.14,0.06,-666,1.49,-1.49
+"44","BRD-K41599323","Farnesyltransferase inhibitor","BRD-K41599323","lonafarnib","trt_cp","FNTA",0.23,0.18,0.14,0.08,-666,1.48,-1.48
+"45","BRD-K20285085","SYK inhibitor","BRD-K20285085","fostamatinib","trt_cp","SYK",0.21,0.17,0.14,0.08,-666,1.48,-1.48
+"46","BRD-K87696786","Glutamate receptor antagonist","BRD-K87696786","LY-456236","trt_cp","GRM1",0.32,0.27,0.22,0.1,-666,1.47,-1.47
+"47","BRD-A79981887","Adrenergic receptor agonist","BRD-A79981887","midodrine","trt_cp","ADRA1A|ADRA1B|ADRA1D",0.26,0.2,0.17,0.09,-666,1.47,-1.47
+"48","BRD-K32285926","Tyrosine kinase inhibitor","BRD-K32285926","AMG-208","trt_cp","MET",0.14,0.11,0.09,0.05,-666,1.47,-1.47
+"49","BRD-K31491153","Serotonin receptor agonist","BRD-K31491153","1-phenylbiguanide","trt_cp","-666",0.19,0.16,0.13,0.06,-666,1.47,-1.47
+"50","BRD-K02898090","Mannosidase inhibitor","BRD-K02898090","kifunensine","trt_cp","-666",0.18,0.14,0.1,0.08,-666,1.47,-1.47
+"51","BRD-K73303757","Protein tyrosine kinase inhibitor","BRD-K73303757","4-methylgenistein","trt_cp","-666",0.14,0.11,0.07,0.07,-666,1.47,-1.47
+"52","BRD-A25004090","Ion channel antagonist","BRD-A25004090","erastin","trt_cp","VDAC2",0.27,0.21,0.16,0.11,-666,1.46,-1.46
+"53","BRD-K53972329","JAK inhibitor","BRD-K53972329","ruxolitinib","trt_cp","JAK1|JAK2|TYK2",0.12,0.1,0.07,0.05,-666,1.46,-1.46
+"54","BRD-K75649340","Purine antagonist","BRD-K75649340","tioguanine","trt_cp","-666",0.26,0.2,0.16,0.1,-666,1.46,-1.46
+"55","BRD-K94397152","Antiviral","BRD-K94397152","ribavirin","trt_cp","IMPDH1",0.11,0.09,0.06,0.05,-666,1.46,-1.46
+"56","BRD-K19540840","Src inhibitor","BRD-K19540840","saracatinib","trt_cp","ABL1|SRC",0.3,0.25,0.21,0.09,-666,1.45,-1.45
+"58","BRD-K50677762","Acetylcholine receptor agonist","BRD-K50677762","oxiracetam","trt_cp","-666",0.27,0.22,0.18,0.09,-666,1.44,-1.44
+"59","BRD-K18834913","Farnesyltransferase inhibitor","BRD-K18834913","LB-42708","trt_cp","-666",0.36,0.31,0.26,0.1,-666,1.44,-1.44
+"61","BRD-K64866502","Aurora kinase inhibitor","BRD-K64866502","CYC-116","trt_cp","-666",0.16,0.13,0.11,0.05,-666,1.44,-1.44
+"62","BRD-K06152156","Membrane permeability inhibitor","BRD-K06152156","methoxyflurane","trt_cp","GABRA1|GABRA2|GABRA3|GABRA4|GABRA5|GABRA6|GABRB1|GABRB2|GABRB3|GABRD|GABRE|GABRG1|GABRG2|GABRG3|GABRP|GABRQ|GLRA1",0.29,0.25,0.21,0.09,-666,1.43,-1.43
+"63","BRD-K56405753","FGFR inhibitor|VEGFR inhibitor","BRD-K56405753","MK-2461","trt_cp","FGFR1|FGFR2|FGFR3|FLT1|FLT3|MET",0.2,0.16,0.12,0.08,-666,1.43,-1.43
+"64","BRD-K72703948","Aurora kinase inhibitor","BRD-K72703948","ZM-447439","trt_cp","AURKA|AURKB",0.26,0.22,0.18,0.08,-666,1.43,-1.43
+"65","BRD-K37590257","Phosphodiesterase inhibitor","BRD-K37590257","GSK-256066","trt_cp","-666",0.19,0.15,0.11,0.09,-666,1.43,-1.43
+"66","BRD-K19388745","Adenylyl cyclase activator|Adenylate cyclase stimulant","BRD-K19388745","colforsin-daproate","trt_cp","-666",0.12,0.08,0.05,0.06,-666,1.43,-1.43
+"67","BRD-K63828191","Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)","BRD-K63828191","raloxifene","trt_cp","ESR1|ESR2",0.13,0.11,0.08,0.05,-666,1.43,-1.43
+"68","BRD-A28970875","Protein synthesis inhibitor","BRD-A28970875","puromycin","trt_cp","-666",0.46,0.41,0.35,0.11,-666,1.42,-1.42
+"70","BRD-K64890080","PLK inhibitor","BRD-K64890080","BI-2536","trt_cp","PLK1",0.53,0.44,0.36,0.17,-666,1.42,-1.42
+"71","BRD-K64800655","CDK inhibitor","BRD-K64800655","PHA-793887","trt_cp","CDK1|CDK2|CDK4|CDK5|CDK7|CDK9",0.34,0.28,0.21,0.13,-666,1.42,-1.42
+"72","BRD-K87510569","CC chemokine receptor antagonist","BRD-K87510569","RS-504393","trt_cp","CCR2",0.17,0.15,0.12,0.05,-666,1.42,-1.42
+"73","BRD-K04623885","Telomerase inhibitor","BRD-K04623885","BIBR-1532","trt_cp","TERT",0.25,0.21,0.17,0.08,-666,1.41,-1.41
+"74","BRD-K36055864","Protein synthesis inhibitor","BRD-K36055864","cycloheximide","trt_cp","RPL3",0.36,0.32,0.26,0.1,-666,1.41,-1.41
+"75","BRD-K52756523","Bacterial 50S ribosomal subunit inhibitor","BRD-K52756523","dirithromycin","trt_cp","-666",0.12,0.09,0.07,0.05,-666,1.41,-1.41
+"76","BRD-K22127577","PDGFR tyrosine kinase receptor inhibitor","BRD-K22127577","crenolanib","trt_cp","PDGFRB|PDGFRA",0.35,0.32,0.28,0.07,-666,1.41,-1.41
+"77","BRD-K00615600","PARP inhibitor","BRD-K00615600","AG-14361","trt_cp","PARP1",0.13,0.11,0.08,0.05,-666,1.41,-1.41
+"78","BRD-K56334280","Topoisomerase inhibitor","BRD-K56334280","amonafide","trt_cp","TOP2A",0.19,0.16,0.12,0.07,-666,1.4,-1.4
+"79","BRD-K71512533","Aurora kinase inhibitor","BRD-K71512533","SNS-314","trt_cp","AURKA|AURKB|AURKC",0.33,0.26,0.2,0.13,-666,1.4,-1.4
+"80","BRD-K56483981","Glutamate transporter modulator|Macrophage migration inhibiting factor inhibitor|Glutamate inhibitor|Macrophage inhibitor","BRD-K56483981","chicago-sky-blue-6b","trt_cp","MIF",0.09,0.07,0.05,0.04,-666,1.4,-1.4
+"81","BRD-K00077635","DNA synthesis inhibitor|Microtubule inhibitor|DNA alkylating drug|DNA inhibitor|Estrogen receptor agonist","BRD-K00077635","estramustine-phosphate","trt_cp","ESR1|ESR2|MAP1A|MAP2",0.12,0.09,0.07,0.05,-666,1.4,-1.4
+"82","BRD-K53665955","Aurora kinase inhibitor","BRD-K53665955","MK-5108","trt_cp","AURKA|AURKB",0.28,0.25,0.21,0.07,-666,1.39,-1.39
+"83","BRD-K76037122","HSP inhibitor","BRD-K76037122","guanidine","trt_cp","-666",0.11,0.08,0.06,0.05,-666,1.39,-1.39
+"84","BRD-K61717546","Topoisomerase inhibitor","BRD-K61717546","fleroxacin","trt_cp","-666",0.13,0.1,0.06,0.07,-666,1.39,-1.39
+"85","BRD-K12932420","Phosphodiesterase inhibitor","BRD-K12932420","YM-976","trt_cp","PDE4A",0.15,0.12,0.1,0.05,-666,1.39,-1.39
+"86","BRD-K44827188","Hedgehog pathway inhibitor|Smoothened receptor antagonist","BRD-K44827188","vismodegib","trt_cp","SMO",0.17,0.14,0.11,0.06,-666,1.39,-1.39
+"87","BRD-K85146014","DNA polymerase inhibitor","BRD-K85146014","foscarnet","trt_cp","-666",0.21,0.18,0.14,0.07,-666,1.39,-1.39
+"88","BRD-K51544265","RET tyrosine kinase inhibitor|VEGFR inhibitor","BRD-K51544265","cabozantinib","trt_cp","KDR|MET|FLT3|KIT|RET|TEK",0.22,0.19,0.15,0.08,-666,1.38,-1.38
+"89","BRD-K86930074","KIT inhibitor|VEGFR inhibitor","BRD-K86930074","cediranib","trt_cp","FLT1|FLT4|KDR|KIT|PDGFRB",0.31,0.26,0.23,0.08,-666,1.38,-1.38
+"90","BRD-K64925568","MDM inhibitor","BRD-K64925568","AMG-232","trt_cp","MDM2",0.21,0.12,0.08,0.13,-666,1.38,-1.38
+"91","BRD-A33280134","Topoisomerase inhibitor","BRD-A33280134","etoposide","trt_cp","TOP2A|TOP2B",0.33,0.27,0.22,0.11,-666,1.38,-1.38
+"92","BRD-K38287497","HCV inhibitor","BRD-K38287497","narlaprevir","trt_cp","-666",0.12,0.09,0.06,0.07,-666,1.38,-1.38
+"93","BRD-K71221037","XIAP inhibitor","BRD-K71221037","birinapant","trt_cp","BIRC2|XIAP",0.21,0.14,0.09,0.12,-666,1.38,-1.38
+"94","BRD-K46585355","Cyclooxygenase inhibitor","BRD-K46585355","acetylsalicylsalicylic-acid","trt_cp","-666",0.17,0.15,0.12,0.05,-666,1.37,-1.37
+"95","BRD-K63457253","DOT1L inhibitor","BRD-K63457253","EPZ-5676","trt_cp","DOT1L",0.22,0.18,0.13,0.09,-666,1.37,-1.37
+"96","BRD-K94176593","Glycogen synthase kinase inhibitor","BRD-K94176593","TWS-119","trt_cp","GSK3B",0.2,0.17,0.14,0.07,-666,1.37,-1.37
+"97","BRD-K96631475","Antitumor agent","BRD-K96631475","10-deacetylbaccatin","trt_cp","-666",0.33,0.28,0.22,0.11,-666,1.37,-1.37
+"99","BRD-K16189898","Glycogen synthase kinase inhibitor","BRD-K16189898","CHIR-99021","trt_cp","-666",0.15,0.11,0.08,0.07,-666,1.36,-1.36
+"100","BRD-K36627727","Retinoid receptor agonist","BRD-K36627727","tamibarotene","trt_cp","RARA|RARB",0.16,0.13,0.09,0.07,-666,1.36,-1.36
+"101","BRD-K77245796","GABA receptor agonist","BRD-K77245796","gamma-aminobutyric-acid","trt_cp","-666",0.1,0.08,0.05,0.05,-666,1.36,-1.36
+"102","BRD-K48488978","PI3K inhibitor","BRD-K48488978","YM-201636","trt_cp","-666",0.23,0.2,0.16,0.06,-666,1.36,-1.36
+"103","BRD-K92093830","Topoisomerase inhibitor","BRD-K92093830","doxorubicin","trt_cp","TOP2A",0.56,0.51,0.45,0.11,-666,1.36,-1.36
+"104","BRD-K26305185","K-ras inhibitor","BRD-K26305185","K-Ras(G12C)-inhibitor-6","trt_cp","-666",0.19,0.15,0.13,0.06,-666,1.36,-1.36
+"105","BRD-K73391359","Local anesthetic","BRD-K73391359","quinisocaine","trt_cp","-666",0.12,0.1,0.08,0.04,-666,1.35,-1.35
+"106","BRD-K70914287","Tyrosine kinase inhibitor|EGFR inhibitor","BRD-K70914287","BIBX-1382","trt_cp","EGFR",0.14,0.11,0.08,0.06,-666,1.35,-1.35
+"107","BRD-A18696154","Adrenergic receptor antagonist","BRD-A18696154","idazoxan","trt_cp","ADRA2A",0.22,0.19,0.15,0.06,-666,1.35,-1.35
+"108","BRD-K78318619","Cytochrome P450 inhibitor","BRD-K78318619","PF-4981517","trt_cp","CYP3A4",0.19,0.16,0.12,0.07,-666,1.35,-1.35
+"111","BRD-K87827419","DNA alkylating agent|DNA inhibitor","BRD-K87827419","melphalan","trt_cp","-666",0.23,0.19,0.16,0.07,-666,1.35,-1.35
+"112","BRD-K75352575","Exportin antagonist","BRD-K75352575","KPT-276","trt_cp","XPO1",0.41,0.36,0.3,0.12,-666,1.34,-1.34
+"113","BRD-K01773560","MER tyrosine kinase inhibitor","BRD-K01773560","UNC-2250","trt_cp","-666",0.24,0.2,0.16,0.08,-666,1.34,-1.34
+"114","BRD-K49027941","Adenosine receptor antagonist","BRD-K49027941","PSB-1115","trt_cp","ADORA1|ADORA2B",0.12,0.09,0.06,0.06,-666,1.34,-1.34
+"115","BRD-K10670311","Antirheumatic drug|NFkB pathway inhibitor","BRD-K10670311","sulfasalazine","trt_cp","ALOX5|PTGS1|PTGS2",0.11,0.08,0.05,0.05,-666,1.34,-1.34
+"116","BRD-A46813902","Acetylcholine receptor antagonist","BRD-A46813902","iododexetimide","trt_cp","-666",0.1,0.08,0.05,0.05,-666,1.34,-1.34
+"117","BRD-K16551357","Cholesteryl ester transfer protein inhibitor","BRD-K16551357","evacetrapib","trt_cp","CETP",0.19,0.17,0.15,0.05,-666,1.34,-1.34
+"118","BRD-K92441787","Retinoid receptor agonist","BRD-K92441787","bexarotene","trt_cp","RXRA|RXRB|RXRG",0.14,0.11,0.08,0.06,-666,1.34,-1.34
+"119","BRD-K21283037","Glutamate inhibitor","BRD-K21283037","riluzole","trt_cp","SCN5A",0.2,0.17,0.14,0.06,-666,1.34,-1.34
+"120","BRD-K69280563","Tubulin inhibitor","BRD-K69280563","vinorelbine","trt_cp","TUBB",0.48,0.41,0.35,0.13,-666,1.34,-1.34
+"121","BRD-K07442505","BAX activator","BRD-K07442505","BAM7","trt_cp","BAX",0.19,0.15,0.12,0.07,-666,1.34,-1.34
+"122","BRD-K49229349","Tubulin inhibitor","BRD-K49229349","vincristine","trt_cp","TUBB",0.5,0.42,0.33,0.17,-666,1.33,-1.33
+"123","BRD-K75911534","PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor","BRD-K75911534","SU-014813","trt_cp","-666",0.19,0.15,0.12,0.07,-666,1.33,-1.33
+"124","BRD-K49071277","GABA receptor antagonist|TP53 activator","BRD-K49071277","securinine","trt_cp","GABRA1",0.13,0.12,0.09,0.04,-666,1.33,-1.33
+"125","BRD-A22707317","GABA receptor modulator","BRD-A22707317","SB-205384","trt_cp","GABRA3|GABRA5|GABRA6",0.2,0.17,0.13,0.07,-666,1.33,-1.33
+"126","BRD-K49075727","FGFR inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor","BRD-K49075727","nintedanib","trt_cp","FLT1|FLT4|KDR|PDGFRA|FGFR1|FGFR3|PDGFRB",0.17,0.14,0.11,0.07,-666,1.33,-1.33
+"127","BRD-A25569250","Lysophosphatidic acid receptor antagonist","BRD-A25569250","KI-16425","trt_cp","LPAR1|LPAR3",0.19,0.16,0.13,0.06,-666,1.33,-1.33
+"128","BRD-K16478699","RAF inhibitor","BRD-K16478699","PLX-4720","trt_cp","BRAF",0.29,0.23,0.19,0.1,-666,1.33,-1.33
+"129","BRD-A10070317","Adrenergic receptor antagonist","BRD-A10070317","propranolol","trt_cp","ADRB2|ADRB3",0.16,0.13,0.1,0.06,-666,1.32,-1.32
+"130","BRD-A94702766","GABA receptor antagonist","BRD-A94702766","ginkgolide-a","trt_cp","-666",0.2,0.17,0.14,0.06,-666,1.32,-1.32
+"131","BRD-A41304429","Adrenergic receptor antagonist","BRD-A41304429","practolol","trt_cp","ADRB1",0.19,0.16,0.14,0.05,-666,1.32,-1.32
+"132","BRD-K75037734","Cholinergic receptor agonist","BRD-K75037734","carbachol","trt_cp","CHRM1|CHRM2|CHRNA2",0.1,0.07,0.05,0.05,-666,1.32,-1.32
+"133","BRD-K68103045","Benzodiazepine receptor agonist","BRD-K68103045","CGS-20625","trt_cp","GABRA1|GABRA2|GABRA3|GABRA4|GABRA5|GABRA6",0.15,0.12,0.1,0.05,-666,1.32,-1.32
+"134","BRD-K45033733","DNA polymerase inhibitor","BRD-K45033733","famciclovir","trt_cp","-666",0.11,0.08,0.06,0.05,-666,1.31,-1.31
+"135","BRD-K86887724","Potassium channel blocker","BRD-K86887724","dofetilide","trt_cp","KCNH2",0.2,0.17,0.14,0.07,-666,1.31,-1.31
+"136","BRD-K16664969","FLT3 inhibitor|Tyrosine kinase inhibitor","BRD-K16664969","GTP-14564","trt_cp","FLT3",0.14,0.1,0.07,0.07,-666,1.31,-1.31
+"137","BRD-K96188950","NFkB pathway inhibitor|HIV integrase inhibitor","BRD-K96188950","caffeic-acid-phenethyl-ester","trt_cp","-666",0.12,0.1,0.07,0.05,-666,1.31,-1.31
+"138","BRD-K56844688","Topoisomerase inhibitor","BRD-K56844688","epirubicin","trt_cp","TOP2A",0.56,0.5,0.45,0.11,-666,1.31,-1.31
+"139","BRD-K19333160","Rho associated kinase inhibitor","BRD-K19333160","RKI-1447","trt_cp","ROCK1|ROCK2",0.2,0.17,0.13,0.07,-666,1.31,-1.31
+"140","BRD-K21728777","Aurora kinase inhibitor","BRD-K21728777","AMG-900","trt_cp","-666",0.4,0.33,0.26,0.14,-666,1.31,-1.31
+"141","BRD-K13183738","Anti-pneumocystis agent","BRD-K13183738","pentamidine","trt_cp","-666",0.28,0.24,0.21,0.07,-666,1.31,-1.31
+"142","BRD-A72716251","Cardiac glycoside","BRD-A72716251","peruvoside","trt_cp","-666",0.54,0.48,0.42,0.12,-666,1.31,-1.31
+"143","BRD-K45446451","Monoacylglucerol lipase inhibitor","BRD-K45446451","JZL-184","trt_cp","-666",0.11,0.09,0.06,0.05,-666,1.3,-1.3
+"144","BRD-K52233191","CDK inhibitor","BRD-K52233191","R-547","trt_cp","-666",0.41,0.37,0.33,0.09,-666,1.3,-1.3
+"145","BRD-K11244467","DNA damage inducer","BRD-K11244467","ambazone","trt_cp","-666",0.12,0.1,0.08,0.04,-666,1.3,-1.3
+"148","BRD-K24601397","Sodium/glucose cotransporter inhibitor","BRD-K24601397","phlorizin","trt_cp","SLC5A1|SLC5A2",0.21,0.19,0.17,0.05,-666,1.29,-1.29
+"149","BRD-K28824103","Choleretic agent","BRD-K28824103","genipin","trt_cp","-666",0.27,0.23,0.19,0.08,-666,1.29,-1.29
+"150","BRD-K14991967","Serum/glucocorticoid regulated kinase inhibitor","BRD-K14991967","GSK-650394","trt_cp","SGK1",0.23,0.2,0.17,0.06,-666,1.29,-1.29
+"151","BRD-K68938568","XIAP inhibitor","BRD-K68938568","GDC-0152","trt_cp","-666",0.19,0.14,0.1,0.09,-666,1.29,-1.29
+"152","BRD-A96754982","Calcineurin inhibitor","BRD-A96754982","tacrolimus","trt_cp","FKBP1A",0.21,0.18,0.15,0.06,-666,1.29,-1.29
+"153","BRD-K62310379","Glucocorticoid receptor agonist","BRD-K62310379","fluticasone-propionate","trt_cp","NR3C1|PGR",0.33,0.28,0.22,0.11,-666,1.29,-1.29
+"154","BRD-K52751261","P38 MAPK inhibitor","BRD-K52751261","TAK-715","trt_cp","MAPK14",0.11,0.08,0.06,0.05,-666,1.29,-1.29
+"155","BRD-A85651701","Sodium/chloride cotransporter inhibitor","BRD-A85651701","clopamide","trt_cp","-666",0.18,0.14,0.11,0.07,-666,1.29,-1.29
+"156","BRD-A03249105","Estrogen receptor antagonist","BRD-A03249105","fulvestrant","trt_cp","ESR1",0.12,0.1,0.07,0.05,-666,1.29,-1.29
+"157","BRD-A75850590","Bacterial DNA gyrase inhibitor","BRD-A75850590","lomefloxacin","trt_cp","-666",0.29,0.25,0.21,0.08,-666,1.28,-1.28
+"159","BRD-K07106112","EGFR inhibitor|Receptor tyrosine protein kinase inhibitor","BRD-K07106112","BMS-599626","trt_cp","EGFR|ERBB2|ERBB4",0.11,0.08,0.05,0.06,-666,1.28,-1.28
+"160","BRD-K88172511","Opioid receptor antagonist","BRD-K88172511","naltrexone","trt_cp","OPRD1|OPRK1|OPRM1",0.11,0.08,0.05,0.06,-666,1.28,-1.28
+"161","BRD-K47000838","Microtubule inhibitor","BRD-K47000838","cytochalasin-b","trt_cp","ACTB",0.28,0.25,0.21,0.07,-666,1.28,-1.28
+"162","BRD-K42898655","MTOR inhibitor","BRD-K42898655","temsirolimus","trt_cp","MTOR",0.46,0.39,0.31,0.14,-666,1.28,-1.28
+"163","BRD-K85751432","MEK inhibitor","BRD-K85751432","refametinib","trt_cp","MAP2K1|MAP2K2",0.24,0.2,0.15,0.08,-666,1.28,-1.28
+"164","BRD-K23677682","Topoisomerase inhibitor","BRD-K23677682","voreloxin","trt_cp","TOP2A",0.32,0.27,0.23,0.09,-666,1.28,-1.28
+"165","BRD-K54838207","Mucolytic agent","BRD-K54838207","fudosteine","trt_cp","-666",0.2,0.17,0.15,0.05,-666,1.28,-1.28
+"166","BRD-A10039652","HIV protease inhibitor","BRD-A10039652","tipranavir","trt_cp","-666",0.17,0.14,0.11,0.06,-666,1.28,-1.28
+"167","BRD-K78815826","Cyclooxygenase inhibitor","BRD-K78815826","suxibuzone","trt_cp","-666",0.2,0.17,0.15,0.05,-666,1.28,-1.28
+"168","BRD-K97464279","Dihydrofolate reductase inhibitor","BRD-K97464279","diaveridine","trt_cp","-666",0.12,0.09,0.06,0.06,-666,1.28,-1.28
+"169","BRD-K81330143","Glycogen synthase kinase inhibitor","BRD-K81330143","tideglusib","trt_cp","GSK3B",0.22,0.19,0.15,0.06,-666,1.27,-1.27
+"170","BRD-K73088654","DNA synthesis inhibitor","BRD-K73088654","floxuridine","trt_cp","-666",0.47,0.39,0.32,0.14,-666,1.27,-1.27
+"171","BRD-K74514084","KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor","BRD-K74514084","pazopanib","trt_cp","FLT1|FLT4|KDR|KIT|PDGFRA|PDGFRB",0.17,0.14,0.11,0.07,-666,1.27,-1.27
+"172","BRD-K90947825","DNA alkylating drug|DNA inhibitor","BRD-K90947825","carboplatin","trt_cp","-666",0.23,0.19,0.16,0.07,-666,1.27,-1.27
+"173","BRD-K97746869","ATP channel blocker","BRD-K97746869","chlorpropamide","trt_cp","ABCC8",0.2,0.17,0.14,0.06,-666,1.27,-1.27
+"174","BRD-K66527818","Glutamate receptor positive allosteric modulator","BRD-K66527818","VU-0364770","trt_cp","-666",0.21,0.17,0.14,0.07,-666,1.27,-1.27
+"175","BRD-K06858286","Microtubule inhibitor","BRD-K06858286","cabazitaxel","trt_cp","-666",0.68,0.6,0.51,0.18,-666,1.27,-1.27
+"176","BRD-K72327355","Lipoxygenase inhibitor","BRD-K72327355","baicalein","trt_cp","-666",0.15,0.12,0.1,0.06,-666,1.27,-1.27
+"177","BRD-K39974922","FGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor","BRD-K39974922","lenvatinib","trt_cp","KDR|FLT4|FGFR1|FLT1|KIT",0.4,0.33,0.28,0.12,-666,1.26,-1.26
+"178","BRD-K08248804","XIAP inhibitor","BRD-K08248804","LCL-161","trt_cp","-666",0.26,0.21,0.17,0.09,-666,1.26,-1.26
+"179","BRD-K93918653","FLT3 inhibitor","BRD-K93918653","quizartinib","trt_cp","CSF1R|FLT3|KIT|RET",0.14,0.11,0.08,0.06,-666,1.26,-1.26
+"180","BRD-K97010173","Chelating agent","BRD-K97010173","deferasirox","trt_cp","CYP3A4",0.18,0.15,0.12,0.06,-666,1.26,-1.26
+"181","BRD-A58193911","Cholinergic receptor antagonist","BRD-A58193911","oxyphencyclimine","trt_cp","-666",0.37,0.31,0.25,0.12,-666,1.26,-1.26
+"182","BRD-K67261995","Contrast agent","BRD-K67261995","adipiodone","trt_cp","-666",0.27,0.23,0.19,0.08,-666,1.26,-1.26
+"183","BRD-K59369769","Aurora kinase inhibitor|Bcr-Abl kinase inhibitor|FLT3 inhibitor|JAK inhibitor","BRD-K59369769","tozasertib","trt_cp","ABL1|AURKA|AURKB|AURKC|BCR|FLT3|JAK2",0.34,0.29,0.23,0.12,-666,1.26,-1.26
+"184","BRD-A55913614","Antimalarial agent|DNA inhibitor","BRD-A55913614","primaquine","trt_cp","-666",0.18,0.15,0.13,0.05,-666,1.26,-1.26
+"185","BRD-K44993696","Adrenergic receptor antagonist","BRD-K44993696","atenolol","trt_cp","ADRB1|ADRB2",0.11,0.08,0.06,0.05,-666,1.26,-1.26
+"186","BRD-K54095730","P38 MAPK inhibitor","BRD-K54095730","CMPD-1","trt_cp","MAPK14",0.29,0.25,0.21,0.08,-666,1.26,-1.26
+"187","BRD-K42981054","Glutamate receptor modulator","BRD-K42981054","mibampator","trt_cp","GRIA1",0.21,0.18,0.15,0.06,-666,1.26,-1.26
+"188","BRD-A93236127","ATPase inhibitor","BRD-A93236127","digitoxin","trt_cp","ATP1A1",0.53,0.47,0.42,0.12,-666,1.25,-1.25
+"189","BRD-K12502280","FLT3 inhibitor|JAK inhibitor","BRD-K12502280","TG-101348","trt_cp","FLT3|JAK2",0.27,0.24,0.21,0.06,-666,1.25,-1.25
+"190","BRD-K36740062","Aurora kinase inhibitor","BRD-K36740062","GSK-1070916","trt_cp","AURKB|AURKC",0.4,0.34,0.28,0.12,-666,1.25,-1.25
+"191","BRD-K47878171","Acetylcholine receptor agonist","BRD-K47878171","bephenium","trt_cp","-666",0.15,0.12,0.1,0.05,-666,1.25,-1.25
+"192","BRD-K39467894","Bacterial DNA inhibitor","BRD-K39467894","nithiamide","trt_cp","-666",0.15,0.12,0.1,0.05,-666,1.25,-1.25
+"193","BRD-K50388907","PPAR receptor agonist","BRD-K50388907","fenofibrate","trt_cp","PPARA",0.11,0.08,0.06,0.05,-666,1.25,-1.25
+"194","BRD-K63923597","Aurora kinase inhibitor","BRD-K63923597","barasertib-HQPA","trt_cp","AURKA|AURKB",0.28,0.23,0.18,0.1,-666,1.25,-1.25
+"195","BRD-K31698212","EGFR inhibitor","BRD-K31698212","icotinib","trt_cp","EGFR",0.18,0.14,0.1,0.07,-666,1.25,-1.25
+"196","BRD-K38305202","Dopamine receptor antagonist","BRD-K38305202","domperidone","trt_cp","DRD2|DRD3",0.18,0.15,0.11,0.07,-666,1.25,-1.25
+"197","BRD-K63712959","Radical formation stimulant","BRD-K63712959","temoporfin","trt_cp","-666",0.1,0.08,0.05,0.05,-666,1.25,-1.25
+"198","BRD-A91366704","GABA receptor agonist","BRD-A91366704","eprinomectin","trt_cp","-666",0.12,0.1,0.07,0.04,-666,1.25,-1.25
+"199","BRD-K35329391","Bcr-Abl kinase inhibitor","BRD-K35329391","GZD-824","trt_cp","-666",0.47,0.41,0.36,0.11,-666,1.25,-1.25
+"201","BRD-K73309154","EGFR inhibitor","BRD-K73309154","OSI-420","trt_cp","EGFR",0.26,0.22,0.18,0.08,-666,1.24,-1.24
+"202","BRD-K08586861","Prostanoid receptor antagonist","BRD-K08586861","ramatroban","trt_cp","TBXA2R|PTGDR2",0.17,0.14,0.11,0.06,-666,1.24,-1.24
+"203","BRD-K09090949","Cannabinoid receptor antagonist","BRD-K09090949","CP-945598","trt_cp","-666",0.23,0.19,0.17,0.06,-666,1.24,-1.24
+"204","BRD-K29968218","Src inhibitor|Tubulin inhibitor","BRD-K29968218","KX2-391","trt_cp","SRC",0.42,0.36,0.3,0.12,-666,1.24,-1.24
+"205","BRD-K27799744","Calcium channel modulator","BRD-K27799744","cyclovirobuxin-d","trt_cp","-666",0.24,0.21,0.18,0.06,-666,1.24,-1.24
+"206","BRD-K19061412","Receptor tyrosine protein kinase inhibitor","BRD-K19061412","mubritinib","trt_cp","ERBB2",0.36,0.32,0.27,0.09,-666,1.24,-1.24
+"207","BRD-A39975020","Bacterial cell wall synthesis inhibitor","BRD-A39975020","cefpiramide","trt_cp","-666",0.17,0.14,0.12,0.05,-666,1.24,-1.24
+"208","BRD-K03243820","DNA directed DNA polymerase inhibitor|Thymidylate synthase inhibitor","BRD-K03243820","trifluridine","trt_cp","TYMS",0.39,0.33,0.27,0.12,-666,1.24,-1.24
+"209","BRD-K56751279","Rho associated kinase inhibitor","BRD-K56751279","Y-39983","trt_cp","ROCK1|ROCK2",0.18,0.15,0.12,0.06,-666,1.24,-1.24
+"210","BRD-K27351809","Progesterone receptor agonist","BRD-K27351809","nomegestrol-acetate","trt_cp","PGR",0.11,0.08,0.06,0.05,-666,1.24,-1.24
+"211","BRD-K52075715","Tubulin inhibitor","BRD-K52075715","oxibendazole","trt_cp","TUBB",0.35,0.3,0.26,0.09,-666,1.24,-1.24
+"212","BRD-K89015388","Centromere associated protein inhibitor","BRD-K89015388","GSK-923295","trt_cp","-666",0.26,0.22,0.17,0.09,-666,1.24,-1.24
+"213","BRD-A58564983","Nematocide","BRD-A58564983","selamectin","trt_cp","-666",0.14,0.11,0.09,0.04,-666,1.23,-1.23
+"214","BRD-K84091759","Angiotensin receptor antagonist","BRD-K84091759","candesartan","trt_cp","AGTR1",0.11,0.09,0.06,0.05,-666,1.23,-1.23
+"215","BRD-K36234266","DNA alkylating drug|DNA inhibitor","BRD-K36234266","carmustine","trt_cp","GSR",0.14,0.12,0.09,0.06,-666,1.23,-1.23
+"216","BRD-A26032986","Calmodulin antagonist","BRD-A26032986","zaldaride","trt_cp","CALM1",0.14,0.12,0.09,0.04,-666,1.23,-1.23
+"217","BRD-K54606188","Bromodomain inhibitor","BRD-K54606188","JQ1-(+)","trt_cp","BRD4",0.24,0.17,0.11,0.13,-666,1.23,-1.23
+"218","BRD-K64888243","JAK inhibitor","BRD-K64888243","AZ-960","trt_cp","-666",0.34,0.3,0.25,0.09,-666,1.23,-1.23
+"220","BRD-A50157456","Adrenergic receptor agonist","BRD-A50157456","terbutaline","trt_cp","ADRB2",0.19,0.15,0.11,0.07,-666,1.23,-1.23
+"221","BRD-K32107296","DNA alkylating drug","BRD-K32107296","temozolomide","trt_cp","MGMT",0.15,0.12,0.09,0.06,-666,1.23,-1.23
+"222","BRD-K70401845","EGFR inhibitor","BRD-K70401845","erlotinib","trt_cp","EGFR",0.32,0.26,0.2,0.12,-666,1.23,-1.23
+"223","BRD-K70159787","Pim kinase inhibitor","BRD-K70159787","SMI-4a","trt_cp","PIM1",0.19,0.15,0.12,0.07,-666,1.23,-1.23
+"224","BRD-A51571244","IKK inhibitor","BRD-A51571244","hypoestoxide","trt_cp","IKBKB|IL1B|TNF",0.21,0.18,0.16,0.05,-666,1.23,-1.23
+"225","BRD-K60866521","PI3K inhibitor","BRD-K60866521","idelalisib","trt_cp","PIK3CD|PIK3CG",0.14,0.11,0.09,0.05,-666,1.22,-1.22
+"226","BRD-K07310275","MTOR inhibitor|PI3K inhibitor","BRD-K07310275","PF-04691502","trt_cp","MTOR|PIK3CA",0.41,0.37,0.33,0.08,-666,1.22,-1.22
+"227","BRD-K33813875","Bacterial 50S ribosomal subunit inhibitor","BRD-K33813875","valnemulin","trt_cp","-666",0.33,0.29,0.24,0.09,-666,1.22,-1.22
+"228","BRD-K07202345","Immunosuppressant","BRD-K07202345","frentizole","trt_cp","-666",0.28,0.23,0.2,0.08,-666,1.22,-1.22
+"229","BRD-K63126143","Topoisomerase inhibitor","BRD-K63126143","idarubicin","trt_cp","TOP2A",0.57,0.52,0.48,0.09,-666,1.22,-1.22
+"230","BRD-K19859123","Acetylcholine receptor allosteric modulator","BRD-K19859123","CCMI","trt_cp","CHRNA7",0.15,0.12,0.1,0.05,-666,1.22,-1.22
+"231","BRD-K03601870","Microtubule stabilizing agent","BRD-K03601870","ixabepilone","trt_cp","TUBB|TUBB3",0.51,0.45,0.39,0.12,-666,1.22,-1.22
+"232","BRD-K73425385","Bacterial 30S ribosomal subunit inhibitor","BRD-K73425385","bekanamycin","trt_cp","-666",0.13,0.1,0.07,0.06,-666,1.22,-1.22
+"233","BRD-K64538373","MEK inhibitor","BRD-K64538373","Ro-4987655","trt_cp","MAP2K1",0.33,0.25,0.17,0.16,-666,1.22,-1.22
+"234","BRD-K37312348","CDK inhibitor|Glycogen synthase kinase inhibitor","BRD-K37312348","kenpaullone","trt_cp","CDK1|CDK5|GSK3B",0.17,0.14,0.11,0.06,-666,1.22,-1.22
+"235","BRD-K06234293","P38 MAPK inhibitor|TGF beta receptor inhibitor","BRD-K06234293","LY-364947","trt_cp","TGFBR1",0.12,0.1,0.07,0.05,-666,1.22,-1.22
+"236","BRD-K17743125","HDAC inhibitor","BRD-K17743125","belinostat","trt_cp","HDAC1|HDAC2|HDAC3|HDAC4|HDAC5|HDAC6|HDAC7|HDAC8|HDAC9",0.39,0.35,0.3,0.09,-666,1.21,-1.21
+"237","BRD-A14886633","Progesterone receptor agonist","BRD-A14886633","norgestrel","trt_cp","-666",0.15,0.12,0.09,0.06,-666,1.21,-1.21
+"238","BRD-K57169635","EGFR inhibitor","BRD-K57169635","dacomitinib","trt_cp","EGFR|ERBB2|ERBB4",0.32,0.28,0.26,0.06,-666,1.21,-1.21
+"239","BRD-A28746609","Tubulin inhibitor","BRD-A28746609","paclitaxel","trt_cp","NR1I2|TUBB",0.66,0.59,0.51,0.16,-666,1.21,-1.21
+"240","BRD-K09132007","TGF beta receptor inhibitor","BRD-K09132007","D-4476","trt_cp","CSNK1A1|TGFB1",0.1,0.08,0.06,0.04,-666,1.21,-1.21
+"241","BRD-K92723993","Bcr-Abl kinase inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor","BRD-K92723993","imatinib","trt_cp","ABL1|BCR|CSF1R|KIT|PDGFRA|PDGFRB",0.26,0.23,0.19,0.07,-666,1.21,-1.21
+"242","BRD-K00662280","GABA receptor agonist","BRD-K00662280","CL-218872","trt_cp","GABRA1",0.11,0.08,0.06,0.05,-666,1.21,-1.21
+"243","BRD-A93695607","Acetylcholine receptor agonist","BRD-A93695607","nicotine","trt_cp","CHRNA10|CHRNA4|CHRNA9|CHRNB2",0.13,0.1,0.07,0.05,-666,1.2,-1.2
+"244","BRD-K56032964","ALK tyrosine kinase receptor inhibitor","BRD-K56032964","AP-26113","trt_cp","-666",0.22,0.19,0.15,0.07,-666,1.2,-1.2
+"246","BRD-K87031376","Microtubule stabilizing agent","BRD-K87031376","epothilone-a","trt_cp","-666",0.62,0.54,0.47,0.15,-666,1.2,-1.2
+"247","BRD-K51040301","Cytochrome P450 inhibitor","BRD-K51040301","cobicistat","trt_cp","CYP3A4",0.18,0.15,0.13,0.05,-666,1.2,-1.2
+"NA",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"249","BRD-K85014146","PARP inhibitor","BRD-K85014146","AZD-2461","trt_cp","-666",0.2,0.16,0.12,0.08,-666,1.11,-1.11
+"250","BRD-K62696033","G protein-coupled receptor agonist","BRD-K62696033","G-1","trt_cp","GPER1",0.26,0.22,0.17,0.09,-666,1.11,-1.11
+"251","BRD-K24844714","RNA synthesis inhibitor|Thymidylate synthase inhibitor","BRD-K24844714","fluorouracil","trt_cp","TYMS|DPYD",0.26,0.22,0.18,0.08,-666,1.1,-1.1
+"252","BRD-K20722021","RAF inhibitor","BRD-K20722021","CEP-32496","trt_cp","BRAF",0.18,0.15,0.11,0.07,-666,1.1,-1.1
+"253","BRD-A72711497","Bacterial permeability inducer","BRD-A72711497","lasalocid","trt_cp","-666",0.35,0.32,0.28,0.07,-666,1.1,-1.1
+"254","BRD-K87349682","Adrenergic receptor agonist","BRD-K87349682","norepinephrine","trt_cp","ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C|ADRB1|ADRB3",0.23,0.2,0.16,0.07,-666,1.1,-1.1
+"255","BRD-K50590187","TRPV agonist","BRD-K50590187","capsaicin","trt_cp","TRPV1",0.12,0.09,0.06,0.06,-666,1.1,-1.1
+"256","BRD-K50000283","CDC inhibitor","BRD-K50000283","PHA-767491","trt_cp","-666",0.27,0.24,0.2,0.07,-666,1.1,-1.1
+"257","BRD-K25433859","Norepinephrine reputake inhibitor|Tricyclic antidepressant","BRD-K25433859","maprotiline","trt_cp","SLC6A2",0.12,0.1,0.07,0.05,-666,1.1,-1.1
+"259","BRD-K37379014","Kinesin inhibitor","BRD-K37379014","filanesib","trt_cp","KIF11",0.55,0.45,0.37,0.18,-666,1.1,-1.1
+"260","BRD-K42828737","FLT3 inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor","BRD-K42828737","sunitinib","trt_cp","FLT1|FLT3|FLT4|KDR|KIT|PDGFRA|PDGFRB|RET",0.29,0.26,0.22,0.06,-666,1.1,-1.1
+"NA.1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"262","BRD-K91825936","CC chemokine receptor antagonist","BRD-K91825936","ZK-811752","trt_cp","-666",0.25,0.23,0.2,0.06,-666,0.57,-0.57
+"263","BRD-K21528677","Glucocorticoid receptor agonist","BRD-K21528677","desonide","trt_cp","NR3C1",0.2,0.16,0.11,0.09,-666,0.57,-0.57
+"264","BRD-K81728688","EGFR inhibitor","BRD-K81728688","WZ-8040","trt_cp","-666",0.27,0.24,0.21,0.06,-666,0.57,-0.57
+"265","BRD-K82135108","Oxidative stress inducer","BRD-K82135108","elesclomol","trt_cp","HSPA1A",0.55,0.48,0.41,0.14,-666,0.56,-0.56
+"266","BRD-K81258678","RNA polymerase inhibitor","BRD-K81258678","triptolide","trt_cp","-666",0.74,0.68,0.62,0.12,-666,0.56,-0.56
+"267","BRD-K14796088","LDL receptor activator","BRD-K14796088","berberine","trt_cp","LDLR",0.23,0.19,0.16,0.07,-666,0.56,-0.56
+"268","BRD-K22848513","Apoptosis stimulant|BCL inhibitor|Glutathione Reductase (NADPH) Activators|Heme Oxygenase Activators|IKK-1 (IKK-alpha) Inhibitors|NFkB pathway inhibitor|Nitric oxide production inhibitor|PPAR receptor agonist|Reducing agent|Nuclear factor erythroid derived, like (NRF2) activator","BRD-K22848513","bardoxolone-methyl","trt_cp","NFE2L2|PPARG",0.44,0.4,0.37,0.07,-666,0.56,-0.56
+"269","BRD-K82928847","HDAC inhibitor","BRD-K82928847","ACY-1215","trt_cp","HDAC6",0.23,0.19,0.16,0.06,-666,0.56,-0.56
+"270","BRD-K29950728","Estrogen receptor antagonist","BRD-K29950728","clomifene","trt_cp","ESR1",0.23,0.2,0.16,0.07,-666,0.56,-0.56
+"271","BRD-A83937277","Hydantoin antiepileptic","BRD-A83937277","mephenytoin","trt_cp","SCN5A",0.15,0.13,0.1,0.05,-666,0.56,-0.56
+"272","BRD-A97701745","Adrenergic receptor antagonist","BRD-A97701745","pindolol","trt_cp","ADRB1|ADRB2|HTR1A",0.16,0.14,0.11,0.05,-666,0.56,-0.56
+"273","BRD-A95886749","Pulmonary surfactant","BRD-A95886749","colfosceril-palmitate","trt_cp","-666",0.16,0.13,0.09,0.06,-666,0.55,-0.55
+"274","BRD-K29673530","Tyrosine kinase inhibitor","BRD-K29673530","hypericin","trt_cp","-666",0.12,0.1,0.08,0.05,-666,0.55,-0.55
+"275","BRD-K51143828","Dopamine receptor antagonist|Serotonin receptor antagonist","BRD-K51143828","lurasidone","trt_cp","DRD2|HTR2A|HTR7|HTR1A|ADRA2A|ADRA2C",0.13,0.11,0.09,0.04,-666,0.55,-0.55
+"276","BRD-K69932463","MTOR inhibitor","BRD-K69932463","AZD-8055","trt_cp","MTOR",0.4,0.36,0.31,0.09,-666,0.54,-0.54
+"277","BRD-K08893438","G protein signaling inhibitor","BRD-K08893438","CCG-50014","trt_cp","-666",0.33,0.3,0.27,0.06,-666,0.54,-0.54
+"278","BRD-K34851558","NFkB pathway inhibitor|Adiponectin receptor agonist","BRD-K34851558","parthenolide-(-)","trt_cp","HDAC1",0.23,0.21,0.18,0.05,-666,0.54,-0.54
+"279","BRD-K56614220","GK0582 inhibitor","BRD-K56614220","clofazimine","trt_cp","-666",0.19,0.16,0.14,0.06,-666,0.54,-0.54
+"280","BRD-K66808046","Chelating agent","BRD-K66808046","oxyquinoline","trt_cp","-666",0.26,0.22,0.17,0.09,-666,0.54,-0.54
+"281","BRD-K60585088","Vitamin D receptor agonist","BRD-K60585088","paricalcitol","trt_cp","VDR",0.23,0.19,0.15,0.07,-666,0.54,-0.54
+"282","BRD-A71033472","Calcium channel blocker","BRD-A71033472","fendiline","trt_cp","-666",0.16,0.14,0.11,0.05,-666,0.53,-0.53
+"283","BRD-K38350380","Cyclooxygenase inhibitor","BRD-K38350380","FK-3311","trt_cp","PTGS2",0.21,0.18,0.16,0.05,-666,0.53,-0.53
+"284","BRD-K82823804","PKC inhibitor","BRD-K82823804","PD-407824","trt_cp","-666",0.22,0.19,0.16,0.06,-666,0.53,-0.53
+"285","BRD-A36331462","Proteasome inhibitor","BRD-A36331462","oprozomib","trt_cp","-666",0.59,0.54,0.49,0.09,-666,0.53,-0.53
+"286","BRD-K73838513","Calcium channel activator","BRD-K73838513","cinacalcet","trt_cp","CASR",0.24,0.22,0.19,0.05,-666,0.52,-0.52
+"287","BRD-K82091397","P38 MAPK inhibitor","BRD-K82091397","SB-239063","trt_cp","MAPK11|MAPK14",0.29,0.25,0.22,0.07,-666,0.52,-0.52
+"288","BRD-A86248581","Cytidine deaminase inhibitor","BRD-A86248581","tetrahydrouridine","trt_cp","CDA",0.13,0.11,0.08,0.05,-666,0.52,-0.52
+"289","BRD-K19412355","P38 MAPK inhibitor","BRD-K19412355","SB-242235","trt_cp","-666",0.13,0.11,0.08,0.05,-666,0.52,-0.52
+"291","BRD-A49765801","Glucocorticoid receptor agonist","BRD-A49765801","fludroxycortide","trt_cp","NR3C1",0.23,0.2,0.17,0.06,-666,0.51,-0.51
+"292","BRD-A81129465","Prostagladin inhibitor","BRD-A81129465","fenoprofen","trt_cp","PTGS1",0.24,0.22,0.19,0.06,-666,0.51,-0.51
+"293","BRD-K28822270","HDAC inhibitor","BRD-K28822270","resminostat","trt_cp","HDAC1",0.27,0.24,0.2,0.07,-666,0.51,-0.51
+"294","BRD-A90547603","Platelet aggregation inhibitor","BRD-A90547603","eptifibatide","trt_cp","ITGA2B|ITGB3",0.19,0.16,0.13,0.05,-666,0.51,-0.51
+"295","BRD-A90272038","Glutamate receptor antagonist","BRD-A90272038","CGP-37849","trt_cp","-666",0.16,0.14,0.11,0.05,-666,0.51,-0.51
+"296","BRD-K59574735","Leukotriene inhibitor","BRD-K59574735","ubenimex","trt_cp","LTA4H|RNPEP",0.23,0.21,0.18,0.05,-666,0.5,-0.5
+"297","BRD-K06749501","Insulin growth factor receptor inhibitor","BRD-K06749501","GSK-1838705A","trt_cp","-666",0.23,0.19,0.16,0.06,-666,0.5,-0.5
+"298","BRD-K36269323","Dimethylarginine dimethylaminohydrolase inhibitor|Nitric oxide synthase inhibitor","BRD-K36269323","asymmetrical-dimethylarginine","trt_cp","NOS2|NOS3",0.23,0.2,0.16,0.07,-666,0.49,-0.49
+"299","BRD-K87909389","CDK inhibitor","BRD-K87909389","alvocidib","trt_cp","CDK1|CDK2|CDK4|CDK5|CDK6|CDK7|CDK8|CDK9|EGFR|PYGM",0.47,0.44,0.41,0.06,-666,0.49,-0.49
+"300","BRD-A76999758","Caspase activator|HSP inhibitor|MYC expression inhibitor|Telomerase reverse transcriptase expression inhibitor|Topoisomerase inhibitor","BRD-A76999758","gambogic-acid","trt_cp","BCL2",0.29,0.26,0.22,0.07,-666,0.48,-0.48
+"301","BRD-K97714174","Ubiquitin specific protease inhibitor","BRD-K97714174","P-22077","trt_cp","-666",0.17,0.14,0.11,0.06,-666,0.48,-0.48
+"302","BRD-K26756394","ATR kinase inhibitor","BRD-K26756394","VE-821","trt_cp","ATR",0.18,0.14,0.11,0.07,-666,0.47,-0.47
+"303","BRD-K42495768","Apoptosis stimulant","BRD-K42495768","tasisulam","trt_cp","-666",0.13,0.1,0.08,0.06,-666,0.47,-0.47
+"304","BRD-A53244165","ARF inhibitor","BRD-A53244165","golgicide-a","trt_cp","GBF1",0.25,0.22,0.18,0.06,-666,0.46,-0.46
+"305","BRD-K01109406","Hydroxyphenylpyruvate dioxygenase inhibitor","BRD-K01109406","nitisinone","trt_cp","HPD",0.16,0.13,0.1,0.06,-666,0.46,-0.46
+"307","BRD-K30867024","Serotonin receptor antagonist","BRD-K30867024","SB-216641","trt_cp","HTR1B|HTR1D",0.25,0.22,0.19,0.06,-666,0.46,-0.46
+"308","BRD-K40438880","Glutamate receptor modulator","BRD-K40438880","spermidine","trt_cp","-666",0.23,0.2,0.17,0.06,-666,0.44,-0.44
+"309","BRD-K05445342","STAT inhibitor","BRD-K05445342","WP-1066","trt_cp","-666",0.37,0.35,0.32,0.05,-666,0.44,-0.44
+"310","BRD-K53561341","Aurora kinase inhibitor","BRD-K53561341","aurora-a-inhibitor-i","trt_cp","AURKA",0.28,0.26,0.23,0.05,-666,0.44,-0.44
+"311","BRD-K62607865","Bacterial cell wall synthesis inhibitor","BRD-K62607865","aztreonam","trt_cp","-666",0.18,0.15,0.13,0.05,-666,0.43,-0.43
+"312","BRD-K15025317","NFkB pathway inhibitor","BRD-K15025317","BAY-11-7082","trt_cp","-666",0.25,0.23,0.21,0.04,-666,0.42,-0.42
+"313","BRD-K86525559","CHK inhibitor","BRD-K86525559","AZD-7762","trt_cp","CHEK1|CHEK2",0.48,0.43,0.39,0.09,-666,0.42,-0.42
+"314","BRD-K92049597","Sodium channel blocker","BRD-K92049597","triamterene","trt_cp","SCNN1A|SCNN1B|SCNN1G",0.21,0.18,0.14,0.07,-666,0.42,-0.42
+"315","BRD-K34073885","AP inhibitor","BRD-K34073885","tanshinone-i","trt_cp","IFNG",0.24,0.21,0.19,0.06,-666,0.41,-0.41
+"316","BRD-K13249881","GABA receptor agonist","BRD-K13249881","piperazine","trt_cp","-666",0.18,0.16,0.13,0.05,-666,0.41,-0.41
+"317","BRD-K46937689","Cyclooxygenase inhibitor","BRD-K46937689","phenazone","trt_cp","-666",0.16,0.13,0.11,0.06,-666,0.39,-0.39
+"318","BRD-K19034817","FLT3 inhibitor|JAK inhibitor","BRD-K19034817","pacritinib","trt_cp","FLT3|JAK2",0.25,0.23,0.21,0.04,-666,0.39,-0.39
+"319","BRD-K73794685","Bacterial 50S ribosomal subunit inhibitor","BRD-K73794685","azithromycin","trt_cp","-666",0.29,0.26,0.23,0.06,-666,0.38,-0.38
+"320","BRD-K66094457","Glutamate receptor antagonist","BRD-K66094457","CPP","trt_cp","GRIN1",0.24,0.2,0.17,0.07,-666,0.38,-0.38
+"321","BRD-K78055238","Glycogen synthase kinase inhibitor","BRD-K78055238","LY-2090314","trt_cp","-666",0.33,0.26,0.22,0.11,-666,0.38,-0.38
+"322","BRD-K99475619","Topoisomerase inhibitor","BRD-K99475619","genz-644282","trt_cp","TOP1",0.61,0.55,0.5,0.11,-666,0.38,-0.38
+"323","BRD-K76840893","Adrenergic receptor antagonist","BRD-K76840893","RS-17053","trt_cp","ADRA1A",0.27,0.25,0.23,0.04,-666,0.36,-0.36
+"324","BRD-K26824830","Protein synthesis inhibitor","BRD-K26824830","azomycin-(2-nitroimidazole)","trt_cp","-666",0.15,0.12,0.09,0.06,-666,0.35,-0.35
+"325","BRD-K35189033","Estrogen receptor agonist|Glucocorticoid receptor antagonist|Progesterone receptor agonist|Progesterone receptor antagonist","BRD-K35189033","levonorgestrel","trt_cp","PGR",0.18,0.15,0.12,0.05,-666,0.34,-0.34
+"326","BRD-K48195801","Histamine receptor antagonist","BRD-K48195801","tecastemizole","trt_cp","HRH1",0.16,0.14,0.11,0.05,-666,0.31,-0.31
+"327","BRD-K95785345","Vitamin B","BRD-K95785345","thiamine","trt_cp","SLC19A2",0.23,0.2,0.18,0.05,-666,0.29,-0.29
+"328","BRD-K49111258","Adrenergic receptor antagonist","BRD-K49111258","prazosin","trt_cp","ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C",0.18,0.15,0.13,0.05,-666,0.26,-0.26
+"329","BRD-K63784565","Topoisomerase inhibitor","BRD-K63784565","10-hydroxycamptothecin","trt_cp","TOP1",0.68,0.62,0.54,0.14,-666,0.25,-0.25
+"330","BRD-K20605374","Ubiquitin-conjugating enzyme inhibitor","BRD-K20605374","NSC-697923","trt_cp","UBE2N",0.36,0.33,0.3,0.06,-666,-0.63,0.63
+"331","BRD-K69116396","Dopamine receptor antagonist|Serotonin receptor antagonist","BRD-K69116396","sertindole","trt_cp","DRD2|HTR2A|HTR2C",0.26,0.23,0.2,0.06,-666,-0.7,0.7
+"332","BRD-K94559059","Serotonin receptor antagonist|Serotonin release inhibitor","BRD-K94559059","telotristat","trt_cp","TPH1",0.29,0.26,0.23,0.06,-666,-0.73,0.73
+"333","BRD-K73982490","JNK inhibitor","BRD-K73982490","BI-78D3","trt_cp","MAPK8",0.3,0.27,0.24,0.06,-666,-0.74,0.74
+"334","BRD-K66956375","Cannabinoid receptor agonist|Glucose dependent insulinotropic receptor agonist|Potassium channel blocker|PPAR receptor agonist","BRD-K66956375","oleoylethanolamide","trt_cp","GPR119|PPARA",0.2,0.17,0.14,0.06,-666,-0.75,0.75
+"337","BRD-K59197931","Cyclooxygenase inhibitor","BRD-K59197931","naproxen","trt_cp","PTGS1|PTGS2",0.16,0.13,0.11,0.05,-666,-0.76,0.76
+"339","BRD-K92000912","Cannabinoid receptor antagonist","BRD-K92000912","AM-251","trt_cp","CNR1",0.2,0.17,0.14,0.05,-666,-0.91,0.91
+"340","BRD-K79145628","Bacterial DNA inhibitor","BRD-K79145628","nimorazole","trt_cp","-666",0.22,0.19,0.17,0.05,-666,-0.92,0.92
+"341","BRD-K96153583","DNA polymerase inhibitor","BRD-K96153583","cidofovir","trt_cp","-666",0.18,0.15,0.12,0.06,-666,-0.94,0.94
+"342","BRD-K97883416","HIV attachment inhibitor","BRD-K97883416","BMS-626529","trt_cp","-666",0.22,0.19,0.16,0.05,-666,-0.94,0.94
+"343","BRD-A00077618","PKA activator","BRD-A00077618","8-bromo-cGMP","trt_cp","PRKG1",0.16,0.13,0.11,0.05,-666,-1.01,1.01
+"344","BRD-K48578705","Adrenergic receptor agonist","BRD-K48578705","methyldopa","trt_cp","ADRA2A|DDC",0.13,0.11,0.08,0.05,-666,-1.01,1.01
+"345","BRD-A80213327","Ras GTPase inhibitor","BRD-A80213327","NSC-23766","trt_cp","-666",0.17,0.14,0.11,0.06,-666,-1.03,1.03
+"346","BRD-K54847683","Estrogen receptor agonist","BRD-K54847683","equol","trt_cp","ESR1|ESR2",0.18,0.15,0.12,0.06,-666,-1.04,1.04
+"348","BRD-K16136380","ATP synthase inhibitor","BRD-K16136380","pyrithione-zinc","trt_cp","-666",0.57,0.54,0.5,0.07,-666,-1.06,1.06
+"349","BRD-K97440753","Adrenergic receptor antagonist|Prolactin inhibitor","BRD-K97440753","dihydroergocristine","trt_cp","ADRA1A|ADRB1|DRD1|DRD2|DRD3|DRD4|DRD5|HTR1A|HTR2A|HTR3A|HTR4|HTR5A|HTR6|HTR7",0.14,0.12,0.09,0.05,-666,-1.07,1.07
+"350","BRD-K28143534","Histamine receptor antagonist","BRD-K28143534","cyproheptadine","trt_cp","HRH1",0.17,0.15,0.12,0.06,-666,-1.11,1.11
+"351","BRD-K68065987","AKT inhibitor","BRD-K68065987","MK-2206","trt_cp","AKT1",0.27,0.24,0.19,0.08,-666,-1.17,1.17
+"352","BRD-K72093121","Antiviral","BRD-K72093121","vidarabine","trt_cp","ADA",0.23,0.2,0.17,0.06,-666,-1.29,1.29
+"353","BRD-A20239487","Adrenergic receptor antagonist","BRD-A20239487","atenolol-(+/-)","trt_cp","ADRB1|ADRB2",0.21,0.18,0.15,0.06,-666,-1.39,1.39
+"354","BRD-K82846253","Insulin secretagogue","BRD-K82846253","repaglinide","trt_cp","ABCC8|KCNJ11",0.14,0.12,0.1,0.04,-666,-1.4,1.4
+"355","BRD-K23566484","Androgen receptor antagonist","BRD-K23566484","nilutamide","trt_cp","AR",0.12,0.1,0.07,0.05,-666,-1.47,1.47
+"356","BRD-K03294269","CDK inhibitor","BRD-K03294269","NU-6027","trt_cp","-666",0.18,0.15,0.12,0.06,-666,-1.55,1.55

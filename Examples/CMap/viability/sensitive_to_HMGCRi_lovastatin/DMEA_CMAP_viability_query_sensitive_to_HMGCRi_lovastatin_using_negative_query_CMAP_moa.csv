@@ -1,0 +1,11 @@
+"","Rank_metric","Drug_set","ES","NES","p_value","Position_at_max","FDR_q_value"
+"1","neg_query","HMGCR inhibitor",-0.99392,-2.98,0,327,0
+"2","neg_query","PDGFR tyrosine kinase receptor inhibitor",-0.30481,-0.893,0.603,162,0.896
+"3","neg_query","CDK inhibitor",-0.30401,-0.892,0.615,267,0.769
+"4","neg_query","Adrenergic receptor agonist",-0.57181,-1.69,0.0176,289,0.0918
+"5","neg_query","Aurora kinase inhibitor",-0.40843,-1.19,0.239,145,0.732
+"6","neg_query","Topoisomerase inhibitor",-0.36675,-1.06,0.38,186,0.857
+"7","neg_query","EGFR inhibitor",-0.26606,-0.793,0.721,87,0.735
+"8","neg_query","Glycogen synthase kinase inhibitor",-0.30545,-0.924,0.549,235,0.997
+"9","neg_query","Adrenergic receptor antagonist",0.31595,1.07,0.342,232,0.348
+"10","neg_query","FLT3 inhibitor",-0.28556,-0.838,0.687,156,0.759

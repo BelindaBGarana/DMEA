@@ -1,0 +1,1259 @@
+id	moa	pert_id	pert_iname	pert_type	target_name	aud_q75	aud_med	aud_q25	aud_iqr	cell_id	query
+BRD-K49075727	FGFR inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K49075727	nintedanib	trt_cp	FLT1|FLT4|KDR|PDGFRA|FGFR1|FGFR3|PDGFRB	0.17	0.14	0.11	0.07	-666	2.76
+BRD-K74514084	KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K74514084	pazopanib	trt_cp	FLT1|FLT4|KDR|KIT|PDGFRA|PDGFRB	0.17	0.14	0.11	0.07	-666	2.67
+BRD-K75911534	PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K75911534	SU-014813	trt_cp	-666	0.19	0.15	0.12	0.07	-666	2.57
+BRD-K29905972	PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K29905972	axitinib	trt_cp	FLT1|FLT4|KDR	0.25	0.21	0.17	0.08	-666	2.47
+BRD-K31309378	FGFR inhibitor|VEGFR inhibitor	BRD-K31309378	lucitanib	trt_cp	FGFR1|FLT1|KDR|FGFR2|FLT4	0.21	0.18	0.14	0.06	-666	2.39
+BRD-K43621685	PDGFR tyrosine kinase receptor inhibitor	BRD-K43621685	CP-673451	trt_cp	PDGFRB	0.18	0.15	0.12	0.06	-666	2.37
+BRD-K53414658	VEGFR inhibitor	BRD-K53414658	tivozanib	trt_cp	FLT1|FLT4|KDR|KIT|PDGFRA|PDGFRB	0.23	0.2	0.15	0.08	-666	2.37
+BRD-K51544265	RET tyrosine kinase inhibitor|VEGFR inhibitor	BRD-K51544265	cabozantinib	trt_cp	KDR|MET|FLT3|KIT|RET|TEK	0.22	0.19	0.15	0.08	-666	2.33
+BRD-K47150025	VEGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor	BRD-K47150025	KI-8751	trt_cp	KDR	0.23	0.19	0.16	0.07	-666	2.32
+BRD-K25244359	RET tyrosine kinase inhibitor	BRD-K25244359	apatinib	trt_cp	KDR|RET	0.14	0.12	0.09	0.05	-666	2.32
+BRD-A93695607	Acetylcholine receptor agonist	BRD-A93695607	nicotine	trt_cp	CHRNA10|CHRNA4|CHRNA9|CHRNB2	0.13	0.1	0.07	0.05	-666	2.17
+BRD-K13050303	Dopamine receptor agonist	BRD-K13050303	uridine	trt_cp	-666	0.12	0.09	0.06	0.06	-666	2.16
+BRD-K93918653	FLT3 inhibitor	BRD-K93918653	quizartinib	trt_cp	CSF1R|FLT3|KIT|RET	0.14	0.11	0.08	0.06	-666	2.15
+BRD-K42828737	FLT3 inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor	BRD-K42828737	sunitinib	trt_cp	FLT1|FLT3|FLT4|KDR|KIT|PDGFRA|PDGFRB|RET	0.29	0.26	0.22	0.06	-666	2.13
+BRD-K56405753	FGFR inhibitor|VEGFR inhibitor	BRD-K56405753	MK-2461	trt_cp	FGFR1|FGFR2|FGFR3|FLT1|FLT3|MET	0.2	0.16	0.12	0.08	-666	2.03
+BRD-K56277358	VEGFR inhibitor	BRD-K56277358	MGCD-265	trt_cp	MET|AXL	0.23	0.2	0.16	0.07	-666	2.01
+BRD-K99749624	PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K99749624	linifanib	trt_cp	CSF1R|FLT1|FLT3|FLT4|KDR|PDGFRB	0.16	0.13	0.1	0.05	-666	2
+BRD-K33818169	ABC transporter expression enhancer|LXR agonist	BRD-K33818169	GW-3965	trt_cp	NR1H2|NR1H3	0.12	0.09	0.06	0.06	-666	1.95
+BRD-K52542745	Bacterial 50S ribosomal subunit inhibitor|Protein synthesis inhibitor	BRD-K52542745	clindamycin-phosphate	trt_cp	-666	0.12	0.1	0.07	0.05	-666	1.94
+BRD-K81016934	C-Met inhibitor	BRD-K81016934	INC-280	trt_cp	-666	0.12	0.09	0.06	0.06	-666	1.91
+BRD-K20290250	MEK inhibitor	BRD-K20290250	BIX-02188	trt_cp	-666	0.29	0.26	0.22	0.06	-666	1.9
+BRD-K66030860	Beta amyloid protein neurotoxicity inhibitor	BRD-K66030860	salidroside	trt_cp	APP	0.11	0.08	0.06	0.05	-666	1.88
+BRD-K84564571	KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K84564571	telatinib	trt_cp	KDR	0.16	0.13	0.1	0.06	-666	1.88
+BRD-K63712959	Radical formation stimulant	BRD-K63712959	temoporfin	trt_cp	-666	0.1	0.08	0.05	0.05	-666	1.87
+BRD-K12040459	-666	BRD-K12040459	AT7867	trt_cp	AKT2	0.18	0.15	0.11	0.07	-666	1.86
+BRD-K87827419	DNA alkylating agent|DNA inhibitor	BRD-K87827419	melphalan	trt_cp	-666	0.23	0.19	0.16	0.07	-666	1.86
+BRD-K20722021	RAF inhibitor	BRD-K20722021	CEP-32496	trt_cp	BRAF	0.18	0.15	0.11	0.07	-666	1.82
+BRD-K21782625	MET inhibitor	BRD-K21782625	AMG-458	trt_cp	-666	0.16	0.13	0.1	0.05	-666	1.79
+BRD-K13169950	HDAC inhibitor	BRD-K13169950	NSC-3852	trt_cp	HDAC1	0.3	0.26	0.23	0.08	-666	1.77
+BRD-K20285085	SYK inhibitor	BRD-K20285085	fostamatinib	trt_cp	SYK	0.21	0.17	0.14	0.08	-666	1.77
+BRD-K38904395	VEGFR inhibitor	BRD-K38904395	SAR-131675	trt_cp	-666	0.23	0.19	0.16	0.07	-666	1.77
+BRD-K51199656	-666	BRD-K51199656	fluoromethylcholine	trt_cp	-666	0.11	0.08	0.06	0.05	-666	1.77
+BRD-K75037734	Cholinergic receptor agonist	BRD-K75037734	carbachol	trt_cp	CHRM1|CHRM2|CHRNA2	0.1	0.07	0.05	0.05	-666	1.76
+BRD-K85402309	EGFR inhibitor|FGFR inhibitor|FLT3 inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K85402309	dovitinib	trt_cp	EGFR|FGFR1|FGFR2|FGFR3|FLT1|FLT3|FLT4|KDR|KIT|PDGFRB	0.2	0.17	0.15	0.05	-666	1.75
+BRD-K92723993	Bcr-Abl kinase inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor	BRD-K92723993	imatinib	trt_cp	ABL1|BCR|CSF1R|KIT|PDGFRA|PDGFRB	0.26	0.23	0.19	0.07	-666	1.74
+BRD-K69726342	HMGCR inhibitor	BRD-K69726342	atorvastatin	trt_cp	DPP4|HMGCR	0.22	0.16	0.1	0.12	-666	1.74
+BRD-K16133773	"17,20 lyase inhibitor|Cytochrome P450 inhibitor|Steroid sulfatase inhibitor|Androgen biosynthesis inhibitor"	BRD-K16133773	abiraterone-acetate	trt_cp	CYP17A1	0.19	0.16	0.13	0.06	-666	1.74
+BRD-M80207679	Dopamine receptor antagonist	BRD-M80207679	nemonapride	trt_cp	DRD2|DRD3	0.11	0.08	0.06	0.05	-666	1.73
+BRD-K16730910	FGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RAF inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor	BRD-K16730910	regorafenib	trt_cp	KDR|KIT|RET|BRAF|FLT1|FLT4|PDGFRA|TEK|ABL1|DDR2|FGFR1|FGFR2|FRK|MAPK11|PDGFRB|RAF1	0.22	0.19	0.16	0.07	-666	1.73
+BRD-A67516570	Histamine receptor antagonist	BRD-A67516570	lafutidine	trt_cp	HRH2	0.13	0.1	0.06	0.06	-666	1.72
+BRD-A94702766	GABA receptor antagonist	BRD-A94702766	ginkgolide-a	trt_cp	-666	0.2	0.17	0.14	0.06	-666	1.71
+BRD-A46813902	Acetylcholine receptor antagonist	BRD-A46813902	iododexetimide	trt_cp	-666	0.1	0.08	0.05	0.05	-666	1.7
+BRD-K17203476	FGFR antagonist	BRD-K17203476	LY-2874455	trt_cp	-666	0.41	0.36	0.31	0.1	-666	1.7
+BRD-K25835157	-666	BRD-K25835157	cerdulatinib	trt_cp	-666	0.21	0.18	0.14	0.07	-666	1.7
+BRD-K29458283	DNA inhibitor	BRD-K29458283	chlorambucil	trt_cp	-666	0.21	0.18	0.15	0.06	-666	1.69
+BRD-K49027941	Adenosine receptor antagonist	BRD-K49027941	PSB-1115	trt_cp	ADORA1|ADORA2B	0.12	0.09	0.06	0.06	-666	1.69
+BRD-K34022604	Ribonucleoside reductase inhibitor	BRD-K34022604	clofarabine	trt_cp	POLA1|RRM1|RRM2	0.45	0.39	0.33	0.12	-666	1.69
+BRD-K49111258	Adrenergic receptor antagonist	BRD-K49111258	prazosin	trt_cp	ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C	0.18	0.15	0.13	0.05	-666	1.68
+BRD-K68938568	XIAP inhibitor	BRD-K68938568	GDC-0152	trt_cp	-666	0.19	0.14	0.1	0.09	-666	1.67
+BRD-K84810405	Orexin receptor antagonist	BRD-K84810405	almorexant	trt_cp	HCRTR1|HCRTR2	0.1	0.07	0.05	0.05	-666	1.67
+BRD-A55312468	-666	BRD-A55312468	K-strophanthidin	trt_cp	-666	0.26	0.23	0.19	0.07	-666	1.66
+BRD-K36889451	-666	BRD-K36889451	tetramethylthiuram-monosulfide	trt_cp	-666	0.32	0.28	0.24	0.08	-666	1.66
+BRD-K16195444	Adrenergic receptor agonist	BRD-K16195444	oxymetazoline	trt_cp	ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C	0.13	0.09	0.06	0.06	-666	1.65
+BRD-K70163715	KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K70163715	vatalanib	trt_cp	FLT1|FLT4|KDR|KIT|PDGFRB	0.19	0.16	0.13	0.06	-666	1.65
+BRD-K06222852	Sterol demethylase inhibitor	BRD-K06222852	posaconazole	trt_cp	CYP3A4	0.18	0.15	0.13	0.05	-666	1.65
+BRD-K04552268	-666	BRD-K04552268	4-pyrimidinecarbonitrile	trt_cp	-666	0.15	0.12	0.08	0.07	-666	1.65
+BRD-K45401373	Apoptosis stimulant|Caspase activator|Diacylglycerol O acyltransferase inhibitor|HIV integrase inhibitor|NFkB pathway activator|SARS coronavirus 3C-like protease inhibitor|Topoisomerase inhibitor	BRD-K45401373	betulinic-acid	trt_cp	GPBAR1	0.19	0.16	0.12	0.07	-666	1.64
+BRD-K86930074	KIT inhibitor|VEGFR inhibitor	BRD-K86930074	cediranib	trt_cp	FLT1|FLT4|KDR|KIT|PDGFRB	0.31	0.26	0.23	0.08	-666	1.63
+BRD-A03249105	Estrogen receptor antagonist	BRD-A03249105	fulvestrant	trt_cp	ESR1	0.12	0.1	0.07	0.05	-666	1.63
+BRD-K34411947	DNA alkylating agent	BRD-K34411947	streptozotocin	trt_cp	-666	0.13	0.1	0.08	0.06	-666	1.63
+BRD-K01669786	Ribonucleoside reductase inhibitor	BRD-K01669786	triapine	trt_cp	RRM1|RRM2	0.36	0.31	0.27	0.09	-666	1.62
+BRD-K63932022	Adenosine receptor agonist	BRD-K63932022	2'-MeCCPA	trt_cp	ADORA1	0.13	0.1	0.07	0.07	-666	1.61
+BRD-K45551181	Mitotic kinase inhibitor	BRD-K45551181	MPI-0479605	trt_cp	TTK	0.51	0.44	0.35	0.15	-666	1.61
+BRD-K03449891	VEGFR inhibitor	BRD-K03449891	foretinib	trt_cp	KDR|MET	0.29	0.25	0.22	0.07	-666	1.6
+BRD-A06352508	CHK inhibitor	BRD-A06352508	SB-218078	trt_cp	CHEK1	0.26	0.22	0.17	0.09	-666	1.6
+BRD-K01683783	Aurora kinase inhibitor	BRD-K01683783	TAK-901	trt_cp	AURKB	0.4	0.36	0.31	0.1	-666	1.6
+BRD-K49669041	Pyruvate dehydrogenase kinase inhibitor	BRD-K49669041	BX-912	trt_cp	PDK1|PDPK1	0.35	0.3	0.25	0.09	-666	1.6
+BRD-K57136142	Aurora kinase inhibitor	BRD-K57136142	CCT-129202	trt_cp	-666	0.24	0.21	0.18	0.06	-666	1.6
+BRD-K87737963	-666	BRD-K87737963	CYT387	trt_cp	-666	0.26	0.23	0.19	0.06	-666	1.6
+BRD-A92537424	Estrogen receptor antagonist|Progesterone receptor agonist	BRD-A92537424	danazol	trt_cp	ESR1|GNRHR	0.16	0.13	0.11	0.05	-666	1.59
+BRD-K67173685	Protein synthesis inhibitor	BRD-K67173685	4E1RCat	trt_cp	EIF4E|EIF4G1	0.13	0.11	0.09	0.05	-666	1.59
+BRD-K11215326	Histone lysine methyltransferase inhibitor	BRD-K11215326	tazemetostat	trt_cp	EZH2	0.18	0.14	0.11	0.07	-666	1.58
+BRD-K89561498	Topoisomerase inhibitor	BRD-K89561498	SN-38	trt_cp	TOP1	0.74	0.65	0.57	0.17	-666	1.58
+BRD-K67844266	Nedd activating enzyme inhibitor	BRD-K67844266	pevonedistat	trt_cp	NAE1	0.31	0.26	0.21	0.09	-666	1.57
+BRD-K15108141	Ribonucleotide reductase inhibitor	BRD-K15108141	gemcitabine	trt_cp	RRM1	0.72	0.63	0.54	0.18	-666	1.57
+BRD-A36267905	Adrenergic receptor agonist	BRD-A36267905	buphenine	trt_cp	ADRB2	0.18	0.14	0.11	0.07	-666	1.57
+BRD-K66808046	Chelating agent	BRD-K66808046	oxyquinoline	trt_cp	-666	0.26	0.22	0.17	0.09	-666	1.57
+BRD-A44500574	Notch signaling inhibitor	BRD-A44500574	FLI-06	trt_cp	-666	0.25	0.21	0.16	0.09	-666	1.56
+BRD-K21718444	Abl kinase inhibitor|Aurora kinase inhibitor|FLT3 inhibitor	BRD-K21718444	KW-2449	trt_cp	FLT3|ABL1|AURKA|FGFR1	0.28	0.23	0.19	0.09	-666	1.56
+BRD-K63126190	Adrenergic receptor agonist|Neurotransmitter	BRD-K63126190	epinephrine	trt_cp	ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C|ADRB1|ADRB2|ADRB3	0.24	0.2	0.17	0.07	-666	1.56
+BRD-K35952844	-666	BRD-K35952844	calcium-gluceptate	trt_cp	-666	0.12	0.09	0.06	0.06	-666	1.56
+BRD-K97464279	Dihydrofolate reductase inhibitor	BRD-K97464279	diaveridine	trt_cp	-666	0.12	0.09	0.06	0.06	-666	1.56
+BRD-A68083442	Calcium channel blocker	BRD-A68083442	pranidipine	trt_cp	CACNA1C	0.15	0.12	0.09	0.06	-666	1.56
+BRD-K71221037	XIAP inhibitor	BRD-K71221037	birinapant	trt_cp	BIRC2|XIAP	0.21	0.14	0.09	0.12	-666	1.55
+BRD-K55305701	P-glycoprotein inhibitor	BRD-K55305701	SC-144	trt_cp	-666	0.28	0.23	0.18	0.1	-666	1.55
+BRD-K96188950	NFkB pathway inhibitor|HIV integrase inhibitor	BRD-K96188950	caffeic-acid-phenethyl-ester	trt_cp	-666	0.12	0.1	0.07	0.05	-666	1.54
+BRD-A91366704	GABA receptor agonist	BRD-A91366704	eprinomectin	trt_cp	-666	0.12	0.1	0.07	0.04	-666	1.54
+BRD-K77245796	GABA receptor agonist	BRD-K77245796	gamma-aminobutyric-acid	trt_cp	-666	0.1	0.08	0.05	0.05	-666	1.54
+BRD-A77582494	DNA synthesis inhibitor	BRD-A77582494	enocitabine	trt_cp	CMPK1|RRM1|TYMS	0.19	0.16	0.13	0.06	-666	1.54
+BRD-A12230535	MDM inhibitor	BRD-A12230535	nutlin-3	trt_cp	MDM2	0.14	0.09	0.06	0.07	-666	1.53
+BRD-K65924316	MDM inhibitor	BRD-K65924316	serdemetan	trt_cp	MDM2	0.31	0.27	0.23	0.09	-666	1.52
+BRD-A54275602	Sterol demethylase inhibitor	BRD-A54275602	lanoconazole	trt_cp	-666	0.14	0.1	0.07	0.07	-666	1.52
+BRD-K66296774	HMGCR inhibitor	BRD-K66296774	fluvastatin	trt_cp	HMGCR	0.4	0.34	0.27	0.14	-666	1.52
+BRD-K18910433	Estrogen receptor agonist	BRD-K18910433	estradiol	trt_cp	ESR1|ESR2|NR1I2	0.13	0.11	0.07	0.06	-666	1.51
+BRD-K73303757	Protein tyrosine kinase inhibitor	BRD-K73303757	4-methylgenistein	trt_cp	-666	0.14	0.11	0.07	0.07	-666	1.51
+BRD-A22081593	Adenosine receptor antagonist	BRD-A22081593	sulmazole	trt_cp	-666	0.12	0.09	0.06	0.05	-666	1.51
+BRD-K17944737	DNA synthesis inhibitor	BRD-K17944737	artesunate	trt_cp	-666	0.17	0.14	0.1	0.06	-666	1.5
+BRD-K22385716	Casein kinase inhibitor|PI3K inhibitor	BRD-K22385716	LY-303511	trt_cp	BRD2|BRD3|BRD4	0.15	0.12	0.07	0.08	-666	1.5
+BRD-K30933884	CC chemokine receptor antagonist	BRD-K30933884	UNBS-5162	trt_cp	-666	0.18	0.15	0.13	0.05	-666	1.5
+BRD-K71512533	Aurora kinase inhibitor	BRD-K71512533	SNS-314	trt_cp	AURKA|AURKB|AURKC	0.33	0.26	0.2	0.13	-666	1.49
+BRD-A55962179	ATPase inhibitor	BRD-A55962179	omeprazole	trt_cp	ATP4A	0.22	0.19	0.16	0.06	-666	1.49
+BRD-K39974922	FGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor	BRD-K39974922	lenvatinib	trt_cp	KDR|FLT4|FGFR1|FLT1|KIT	0.4	0.33	0.28	0.12	-666	1.49
+BRD-K02113016	PARP inhibitor	BRD-K02113016	olaparib	trt_cp	PARP1|PARP2	0.18	0.14	0.11	0.07	-666	1.49
+BRD-K03289018	Aurora kinase inhibitor	BRD-K03289018	CCT-137690	trt_cp	-666	0.32	0.27	0.22	0.09	-666	1.49
+BRD-K39841531	JAK inhibitor	BRD-K39841531	TG-101209	trt_cp	JAK2|JAK3	0.31	0.27	0.23	0.08	-666	1.48
+BRD-K00662280	GABA receptor agonist	BRD-K00662280	CL-218872	trt_cp	GABRA1	0.11	0.08	0.06	0.05	-666	1.48
+BRD-K22503835	HDAC inhibitor	BRD-K22503835	scriptaid	trt_cp	HDAC1	0.29	0.25	0.21	0.07	-666	1.48
+BRD-K13646352	FLT3 inhibitor|KIT inhibitor|PKC inhibitor	BRD-K13646352	midostaurin	trt_cp	FLT3|KIT	0.35	0.31	0.26	0.09	-666	1.47
+BRD-K01773560	MER tyrosine kinase inhibitor	BRD-K01773560	UNC-2250	trt_cp	-666	0.24	0.2	0.16	0.08	-666	1.47
+BRD-K62200014	Phosphodiesterase inhibitor	BRD-K62200014	anagrelide	trt_cp	PDE3A	0.18	0.14	0.1	0.08	-666	1.47
+BRD-K72231366	-666	BRD-K72231366	TAME	trt_cp	-666	0.1	0.07	0.05	0.05	-666	1.46
+BRD-K54094468	Dopamine receptor antagonist	BRD-K54094468	remoxipride	trt_cp	DRD2	0.1	0.08	0.05	0.05	-666	1.46
+BRD-K35245662	Glucocorticoid receptor agonist	BRD-K35245662	ciclesonide	trt_cp	NR3C1	0.2	0.15	0.11	0.09	-666	1.46
+BRD-K11267252	ALK tyrosine kinase receptor inhibitor	BRD-K11267252	alectinib	trt_cp	ALK	0.25	0.23	0.2	0.05	-666	1.46
+BRD-K27184429	Histamine receptor antagonist	BRD-K27184429	levocetirizine	trt_cp	HRH1	0.2	0.16	0.13	0.07	-666	1.46
+BRD-K32821942	Dehydrogenase inhibitor	BRD-K32821942	azathioprine	trt_cp	PPAT	0.18	0.15	0.11	0.08	-666	1.46
+BRD-K08248804	XIAP inhibitor	BRD-K08248804	LCL-161	trt_cp	-666	0.26	0.21	0.17	0.09	-666	1.46
+BRD-K94176593	Glycogen synthase kinase inhibitor	BRD-K94176593	TWS-119	trt_cp	GSK3B	0.2	0.17	0.14	0.07	-666	1.45
+BRD-K75958547	HMGCR inhibitor	BRD-K75958547	pitavastatin	trt_cp	HMGCR	0.32	0.25	0.18	0.14	-666	1.45
+BRD-K21728777	Aurora kinase inhibitor	BRD-K21728777	AMG-900	trt_cp	-666	0.4	0.33	0.26	0.14	-666	1.45
+BRD-K63784565	Topoisomerase inhibitor	BRD-K63784565	10-hydroxycamptothecin	trt_cp	TOP1	0.68	0.62	0.54	0.14	-666	1.45
+BRD-K45446451	Monoacylglucerol lipase inhibitor	BRD-K45446451	JZL-184	trt_cp	-666	0.11	0.09	0.06	0.05	-666	1.44
+BRD-K08547377	Topoisomerase inhibitor	BRD-K08547377	irinotecan	trt_cp	TOP1	0.32	0.27	0.21	0.1	-666	1.44
+BRD-K58466253	Dopamine synthesis inhibitor	BRD-K58466253	palmatine-chloride	trt_cp	-666	0.16	0.13	0.1	0.06	-666	1.44
+BRD-K27182532	Bcr-Abl kinase inhibitor	BRD-K27182532	metatinib	trt_cp	ABL1|BCR	0.32	0.27	0.23	0.08	-666	1.43
+BRD-K29254801	-666	BRD-K29254801	thiram	trt_cp	-666	0.51	0.44	0.38	0.13	-666	1.43
+BRD-K33588785	Cholinesterase reactivator	BRD-K33588785	obidoxime	trt_cp	-666	0.1	0.08	0.05	0.05	-666	1.43
+BRD-K73391359	Local anesthetic	BRD-K73391359	quinisocaine	trt_cp	-666	0.12	0.1	0.08	0.04	-666	1.43
+BRD-K23677682	Topoisomerase inhibitor	BRD-K23677682	voreloxin	trt_cp	TOP2A	0.32	0.27	0.23	0.09	-666	1.43
+BRD-K19333160	Rho associated kinase inhibitor	BRD-K19333160	RKI-1447	trt_cp	ROCK1|ROCK2	0.2	0.17	0.13	0.07	-666	1.42
+BRD-K75649340	Purine antagonist	BRD-K75649340	tioguanine	trt_cp	-666	0.26	0.2	0.16	0.1	-666	1.42
+BRD-K16664969	FLT3 inhibitor|Tyrosine kinase inhibitor	BRD-K16664969	GTP-14564	trt_cp	FLT3	0.14	0.1	0.07	0.07	-666	1.42
+BRD-K06593056	Retinoid receptor agonist	BRD-K06593056	LE-135	trt_cp	RARB	0.23	0.2	0.16	0.07	-666	1.42
+BRD-K42495768	Apoptosis stimulant	BRD-K42495768	tasisulam	trt_cp	-666	0.13	0.1	0.08	0.06	-666	1.41
+BRD-K53523901	MEK inhibitor	BRD-K53523901	arctigenin	trt_cp	CHUK|MAP2K1	0.21	0.18	0.15	0.06	-666	1.41
+BRD-K89299012	Potassium channel activator	BRD-K89299012	DCEBIO	trt_cp	-666	0.28	0.24	0.2	0.08	-666	1.41
+BRD-K82928892	Vitamin D receptor agonist	BRD-K82928892	doxercalciferol	trt_cp	VDR	0.17	0.14	0.11	0.07	-666	1.41
+BRD-K04394237	Mineralocorticoid receptor antagonist	BRD-K04394237	drospirenone	trt_cp	NR3C2|PGR	0.24	0.2	0.16	0.08	-666	1.41
+BRD-K68997413	FAAH inhibitor	BRD-K68997413	PF-3845	trt_cp	FAAH	0.14	0.12	0.09	0.05	-666	1.41
+BRD-K22520627	-666	BRD-K22520627	DVD-111	trt_cp	-666	0.13	0.11	0.09	0.04	-666	1.4
+BRD-A79226577	Serotonin receptor antagonist	BRD-A79226577	tropisetron	trt_cp	HTR3A	0.16	0.13	0.11	0.05	-666	1.4
+BRD-K78960041	DNA inhibitor	BRD-K78960041	oxaliplatin	trt_cp	-666	0.29	0.24	0.19	0.1	-666	1.4
+BRD-K58299615	Beta amyloid inhibitor	BRD-K58299615	Ro-90-7501	trt_cp	APP	0.13	0.1	0.07	0.06	-666	1.39
+BRD-K72327355	Lipoxygenase inhibitor	BRD-K72327355	baicalein	trt_cp	-666	0.15	0.12	0.1	0.06	-666	1.39
+BRD-K41104902	PERK inhibitor	BRD-K41104902	GSK-2656157	trt_cp	-666	0.17	0.14	0.12	0.05	-666	1.39
+BRD-K28907958	Retinoid receptor agonist	BRD-K28907958	CD-437	trt_cp	RARG	0.41	0.37	0.32	0.09	-666	1.39
+BRD-K31812033	Adrenergic receptor antagonist	BRD-K31812033	levobunolol	trt_cp	ADRB1|ADRB2	0.22	0.2	0.17	0.05	-666	1.39
+BRD-K15567136	Phosphodiesterase inhibitor	BRD-K15567136	papaverine	trt_cp	PDE10A	0.28	0.25	0.22	0.06	-666	1.39
+BRD-A33280134	Topoisomerase inhibitor	BRD-A33280134	etoposide	trt_cp	TOP2A|TOP2B	0.33	0.27	0.22	0.11	-666	1.39
+BRD-A96754982	Calcineurin inhibitor	BRD-A96754982	tacrolimus	trt_cp	FKBP1A	0.21	0.18	0.15	0.06	-666	1.38
+BRD-K42973005	GSK inhibitor	BRD-K42973005	CHIR-98014	trt_cp	-666	0.15	0.13	0.11	0.05	-666	1.38
+BRD-K00077635	DNA synthesis inhibitor|Microtubule inhibitor|DNA alkylating drug|DNA inhibitor|Estrogen receptor agonist	BRD-K00077635	estramustine-phosphate	trt_cp	ESR1|ESR2|MAP1A|MAP2	0.12	0.09	0.07	0.05	-666	1.38
+BRD-A11990600	Benzodiazepine receptor agonist	BRD-A11990600	lorazepam	trt_cp	GABRA1|GABRA2|GABRA3|GABRA4|GABRA5|GABRA6|GABRB1|GABRB2|GABRB3|GABRD|GABRE|GABRG1|GABRG2|GABRG3|GABRP|GABRQ	0.19	0.15	0.12	0.06	-666	1.38
+BRD-K27799744	Calcium channel modulator	BRD-K27799744	cyclovirobuxin-d	trt_cp	-666	0.24	0.21	0.18	0.06	-666	1.38
+BRD-K24715592	DNA intercalating agent	BRD-K24715592	ethacridine-lactate-monohydrate	trt_cp	-666	0.24	0.2	0.16	0.08	-666	1.38
+BRD-K22134346	HMGCR inhibitor	BRD-K22134346	simvastatin	trt_cp	HMGCR	0.24	0.2	0.16	0.07	-666	1.38
+BRD-K62310379	Glucocorticoid receptor agonist	BRD-K62310379	fluticasone-propionate	trt_cp	NR3C1|PGR	0.33	0.28	0.22	0.11	-666	1.38
+BRD-K70159787	Pim kinase inhibitor	BRD-K70159787	SMI-4a	trt_cp	PIM1	0.19	0.15	0.12	0.07	-666	1.38
+BRD-A94756469	ATPase inhibitor	BRD-A94756469	digoxin	trt_cp	ATP1A1	0.57	0.52	0.47	0.1	-666	1.37
+BRD-K68095457	Cannabinoid receptor agonist	BRD-K68095457	palmitoylethanolamide	trt_cp	CNR2|GPR119	0.09	0.07	0.05	0.04	-666	1.37
+BRD-A08187463	Enkephalinase inhibitor	BRD-A08187463	racecadotril	trt_cp	MME	0.16	0.13	0.09	0.07	-666	1.37
+BRD-K56334280	Topoisomerase inhibitor	BRD-K56334280	amonafide	trt_cp	TOP2A	0.19	0.16	0.12	0.07	-666	1.37
+BRD-K79315489	-666	BRD-K79315489	erythritol	trt_cp	-666	0.15	0.12	0.09	0.07	-666	1.37
+BRD-K56751279	Rho associated kinase inhibitor	BRD-K56751279	Y-39983	trt_cp	ROCK1|ROCK2	0.18	0.15	0.12	0.06	-666	1.37
+BRD-K86204871	Sterol demethylase inhibitor	BRD-K86204871	terconazole	trt_cp	-666	0.1	0.08	0.06	0.05	-666	1.37
+BRD-K52751261	P38 MAPK inhibitor	BRD-K52751261	TAK-715	trt_cp	MAPK14	0.11	0.08	0.06	0.05	-666	1.37
+BRD-A76999758	Caspase activator|HSP inhibitor|MYC expression inhibitor|Telomerase reverse transcriptase expression inhibitor|Topoisomerase inhibitor	BRD-A76999758	gambogic-acid	trt_cp	BCL2	0.29	0.26	0.22	0.07	-666	1.36
+BRD-K68395654	NFkB pathway inhibitor	BRD-K68395654	EVP-4593	trt_cp	-666	0.39	0.33	0.27	0.11	-666	1.36
+BRD-K24576554	Aurora kinase inhibitor|JAK inhibitor|Abl kinase inhibitor|Bcr-Abl kinase inhibitor|FLT3 inhibitor|Mitotic inhibitor|Protein kinase inhibitor	BRD-K24576554	AT-9283	trt_cp	AURKA|AURKB|JAK2|JAK3	0.34	0.29	0.24	0.1	-666	1.36
+BRD-K51313569	CDK inhibitor	BRD-K51313569	palbociclib	trt_cp	CDK4|CDK6	0.25	0.2	0.14	0.1	-666	1.36
+BRD-A50064262	-666	BRD-A50064262	flumethasone-pivalate	trt_cp	-666	0.16	0.12	0.08	0.08	-666	1.36
+BRD-A34513497	Osmosis stimulant	BRD-A34513497	lacitol	trt_cp	-666	0.23	0.19	0.15	0.08	-666	1.36
+BRD-K84091759	Angiotensin receptor antagonist	BRD-K84091759	candesartan	trt_cp	AGTR1	0.11	0.09	0.06	0.05	-666	1.35
+BRD-K87024524	Monoamine oxidase inhibitor	BRD-K87024524	phenelzine	trt_cp	AOC3|MAOA|MAOB	0.11	0.08	0.06	0.05	-666	1.35
+BRD-K33127281	Retinoid receptor agonist	BRD-K33127281	adapalene	trt_cp	RARB|RARG|RARA	0.17	0.14	0.11	0.06	-666	1.35
+BRD-K03243820	DNA directed DNA polymerase inhibitor|Thymidylate synthase inhibitor	BRD-K03243820	trifluridine	trt_cp	TYMS	0.39	0.33	0.27	0.12	-666	1.35
+BRD-A38350138	Sterol demethylase inhibitor	BRD-A38350138	ketoconazole	trt_cp	AR|CYP19A1	0.19	0.17	0.14	0.06	-666	1.35
+BRD-K72167406	Bacterial cell wall synthesis inhibitor	BRD-K72167406	cefditoren-pivoxil	trt_cp	-666	0.2	0.17	0.14	0.06	-666	1.35
+BRD-K66241279	-666	BRD-K66241279	cinromide	trt_cp	-666	0.1	0.07	0.05	0.05	-666	1.35
+BRD-K09602097	Adenylyl cyclase activator	BRD-K09602097	forskolin	trt_cp	ADCY2	0.13	0.1	0.07	0.06	-666	1.34
+BRD-K42898655	MTOR inhibitor	BRD-K42898655	temsirolimus	trt_cp	MTOR	0.46	0.39	0.31	0.14	-666	1.34
+BRD-K90948141	Benzodiazepine receptor agonist|GABA receptor agonist	BRD-K90948141	indiplon	trt_cp	GABRA1	0.16	0.13	0.1	0.06	-666	1.33
+BRD-K59369769	Aurora kinase inhibitor|Bcr-Abl kinase inhibitor|FLT3 inhibitor|JAK inhibitor	BRD-K59369769	tozasertib	trt_cp	ABL1|AURKA|AURKB|AURKC|BCR|FLT3|JAK2	0.34	0.29	0.23	0.12	-666	1.33
+BRD-K24187789	Acetylcholine receptor allosteric modulator	BRD-K24187789	VU-0238429	trt_cp	-666	0.37	0.32	0.27	0.1	-666	1.33
+BRD-K87036601	DNA synthesis inhibitor	BRD-K87036601	azodicarbonamide	trt_cp	-666	0.13	0.11	0.08	0.05	-666	1.33
+BRD-K99383816	Thymidylate synthase inhibitor	BRD-K99383816	ftorafur	trt_cp	TYMS	0.14	0.12	0.09	0.05	-666	1.33
+BRD-K39171998	NAMPT inhibitor	BRD-K39171998	STF-118804	trt_cp	NAMPT	0.48	0.43	0.37	0.11	-666	1.33
+BRD-K93034159	Adenosine deaminase inhibitor|Ribonucleoside reductase inhibitor	BRD-K93034159	cladribine	trt_cp	ADA	0.45	0.4	0.34	0.11	-666	1.33
+BRD-K79254416	DNA methyltransferase inhibitor	BRD-K79254416	decitabine	trt_cp	DNMT1	0.41	0.35	0.28	0.13	-666	1.33
+BRD-A02367930	Estrogen receptor agonist|DNA directed DNA polymerase stimunlant|Estrogenic component in oral contraceptives	BRD-A02367930	ethinyl-estradiol	trt_cp	ESR1	0.19	0.16	0.12	0.06	-666	1.32
+BRD-K13154216	MTOR inhibitor	BRD-K13154216	everolimus	trt_cp	MTOR	0.39	0.31	0.21	0.17	-666	1.32
+BRD-K51747290	Ribonucleoside reductase inhibitor	BRD-K51747290	hydroxyurea	trt_cp	RRM1|RRM2	0.23	0.2	0.16	0.06	-666	1.32
+BRD-K03384561	Angiogenesis inhibitor|TNF production inhibitor	BRD-K03384561	roquinimex	trt_cp	-666	0.12	0.1	0.07	0.05	-666	1.32
+BRD-K86727142	HCV inhibitor|XIAP inhibitor	BRD-K86727142	embelin	trt_cp	XIAP	0.16	0.13	0.11	0.05	-666	1.32
+BRD-K88625236	Membrane integrity inhibitor	BRD-K88625236	nonoxynol-9	trt_cp	-666	0.25	0.21	0.18	0.07	-666	1.32
+BRD-K47598052	Abl kinase inhibitor|Src inhibitor	BRD-K47598052	PP-1	trt_cp	-666	0.2	0.16	0.13	0.07	-666	1.32
+BRD-A60786380	Tyrosine phosphatase inhibitor	BRD-A60786380	sodium-stibogluconate	trt_cp	-666	0.22	0.18	0.15	0.07	-666	1.31
+BRD-K54838207	Mucolytic agent	BRD-K54838207	fudosteine	trt_cp	-666	0.2	0.17	0.15	0.05	-666	1.31
+BRD-K09549677	T-type calcium channel blocker	BRD-K09549677	mibefradil	trt_cp	CACNA1C|CACNA1G|CACNA1H|CACNA1I	0.19	0.15	0.12	0.06	-666	1.31
+BRD-A48237631	DNA alkylating drug|DNA inhibitor|DNA alkylating agent|DNA synthesis inhibitor	BRD-A48237631	mitomycin-c	trt_cp	-666	0.47	0.41	0.34	0.12	-666	1.31
+BRD-K48988407	-666	BRD-K48988407	cytochlor	trt_cp	-666	0.25	0.21	0.18	0.07	-666	1.31
+BRD-K10845183	Bone resorption inhibitor|Osteoclast inhibitor	BRD-K10845183	tiludronate	trt_cp	-666	0.14	0.11	0.08	0.06	-666	1.31
+BRD-K60866521	PI3K inhibitor	BRD-K60866521	idelalisib	trt_cp	PIK3CD|PIK3CG	0.14	0.11	0.09	0.05	-666	1.31
+BRD-K99946902	Local anesthetic	BRD-K99946902	hexylresorcinol	trt_cp	-666	0.2	0.16	0.12	0.09	-666	1.31
+BRD-K22127577	PDGFR tyrosine kinase receptor inhibitor	BRD-K22127577	crenolanib	trt_cp	PDGFRB|PDGFRA	0.35	0.32	0.28	0.07	-666	1.31
+BRD-K36222532	-666	BRD-K36222532	broxaldine	trt_cp	-666	0.3	0.25	0.21	0.08	-666	1.31
+BRD-K25279140	Aurora kinase inhibitor	BRD-K25279140	MK-8745	trt_cp	AURKA	0.31	0.26	0.21	0.09	-666	1.3
+BRD-K09078998	MTOR inhibitor	BRD-K09078998	deforolimus	trt_cp	MTOR	0.42	0.36	0.3	0.12	-666	1.3
+BRD-K99604664	Progesterone receptor agonist	BRD-K99604664	tanaproget	trt_cp	PGR	0.17	0.14	0.11	0.06	-666	1.3
+BRD-K09372874	Inosine monophosphate dehydrogenase inhibitor	BRD-K09372874	merimepodib	trt_cp	IMPDH1	0.23	0.19	0.16	0.07	-666	1.3
+BRD-K40992116	Antiinfective drug	BRD-K40992116	parachlorophenol	trt_cp	-666	0.11	0.09	0.05	0.06	-666	1.3
+BRD-K13044802	Membrane integrity inhibitor	BRD-K13044802	ciclopirox	trt_cp	ATP1A1	0.29	0.24	0.2	0.08	-666	1.29
+BRD-K18961567	MET inhibitor	BRD-K18961567	LY-2801653	trt_cp	-666	0.26	0.22	0.19	0.07	-666	1.29
+BRD-K37312348	CDK inhibitor|Glycogen synthase kinase inhibitor	BRD-K37312348	kenpaullone	trt_cp	CDK1|CDK5|GSK3B	0.17	0.14	0.11	0.06	-666	1.29
+BRD-K19061412	Receptor tyrosine protein kinase inhibitor	BRD-K19061412	mubritinib	trt_cp	ERBB2	0.36	0.32	0.27	0.09	-666	1.29
+BRD-K13183738	Anti-pneumocystis agent	BRD-K13183738	pentamidine	trt_cp	-666	0.28	0.24	0.21	0.07	-666	1.29
+BRD-K70177501	Hec1 inhibitor	BRD-K70177501	INH1	trt_cp	NDC80	0.11	0.08	0.06	0.05	-666	1.28
+BRD-K61567297	Toll-like receptor antagonist	BRD-K61567297	resatorvid	trt_cp	TLR4	0.16	0.12	0.09	0.07	-666	1.28
+BRD-K85140930	RNA synthesis inhibitor	BRD-K85140930	aphidicolin	trt_cp	-666	0.34	0.3	0.24	0.1	-666	1.28
+BRD-A22707317	GABA receptor modulator	BRD-A22707317	SB-205384	trt_cp	GABRA3|GABRA5|GABRA6	0.2	0.17	0.13	0.07	-666	1.28
+BRD-K18250272	Local anesthetic	BRD-K18250272	propoxycaine	trt_cp	-666	0.17	0.15	0.12	0.05	-666	1.28
+BRD-K74763371	Endothelin receptor antagonist	BRD-K74763371	bosentan	trt_cp	EDNRA|EDNRB	0.2	0.17	0.14	0.06	-666	1.28
+BRD-K27316855	Vitamin D receptor agonist	BRD-K27316855	calcitriol	trt_cp	VDR	0.25	0.22	0.19	0.06	-666	1.28
+BRD-K72703948	Aurora kinase inhibitor	BRD-K72703948	ZM-447439	trt_cp	AURKA|AURKB	0.26	0.22	0.18	0.08	-666	1.28
+BRD-K09397065	Serotonin receptor agonist	BRD-K09397065	SR-57227A	trt_cp	HTR3A	0.15	0.11	0.08	0.06	-666	1.28
+BRD-K63068307	PI3K inhibitor	BRD-K63068307	ZSTK-474	trt_cp	PIK3CG	0.25	0.21	0.18	0.07	-666	1.28
+BRD-K30480208	Electrolyte reabsorption inhibitor|Thromboxane receptor antagonist	BRD-K30480208	torasemide	trt_cp	SLC12A1	0.18	0.15	0.12	0.06	-666	1.28
+BRD-K68747584	Aurora kinase inhibitor	BRD-K68747584	PF-03814735	trt_cp	-666	0.27	0.22	0.18	0.09	-666	1.27
+BRD-A06352418	Histamine receptor antagonist	BRD-A06352418	terfenadine	trt_cp	HRH1|KCNH2	0.22	0.2	0.17	0.05	-666	1.27
+BRD-A25004090	Ion channel antagonist	BRD-A25004090	erastin	trt_cp	VDAC2	0.27	0.21	0.16	0.11	-666	1.27
+BRD-A27376179	FLT3 inhibitor|Growth factor receptor inhibitor|JAK inhibitor	BRD-A27376179	lestaurtinib	trt_cp	FLT3|NTRK1	0.4	0.35	0.31	0.09	-666	1.27
+BRD-K14003026	Adrenergic receptor agonist	BRD-K14003026	ritodrine	trt_cp	ADRB2	0.12	0.09	0.07	0.06	-666	1.27
+BRD-K53972329	JAK inhibitor	BRD-K53972329	ruxolitinib	trt_cp	JAK1|JAK2|TYK2	0.12	0.1	0.07	0.05	-666	1.27
+BRD-K70463136	Hypoxia inducible factor inhibitor	BRD-K70463136	BAY-87-2243	trt_cp	HIF1A	0.44	0.38	0.31	0.13	-666	1.27
+BRD-K06426971	Histone lysine methyltransferase inhibitor	BRD-K06426971	ryuvidine	trt_cp	CDK4	0.36	0.33	0.29	0.08	-666	1.27
+BRD-K81021983	DNA synthesis inhibitor|RNA synthesis inhibitor	BRD-K81021983	cyclocytidine	trt_cp	-666	0.37	0.32	0.27	0.1	-666	1.27
+BRD-K06294530	Procollagen C-Endopeptidase Inhibitors	BRD-K06294530	UK-383367	trt_cp	-666	0.23	0.2	0.17	0.06	-666	1.26
+BRD-A54927599	P selectin inhibitor	BRD-A54927599	KF-38789	trt_cp	SELP	0.33	0.29	0.25	0.08	-666	1.26
+BRD-K82928847	HDAC inhibitor	BRD-K82928847	ACY-1215	trt_cp	HDAC6	0.23	0.19	0.16	0.06	-666	1.26
+BRD-K63504947	VEGFR inhibitor	BRD-K63504947	semaxanib	trt_cp	FLT1|KDR|KIT|PDGFRB	0.3	0.25	0.21	0.09	-666	1.26
+BRD-K85014146	PARP inhibitor	BRD-K85014146	AZD-2461	trt_cp	-666	0.2	0.16	0.12	0.08	-666	1.26
+BRD-K77685957	PKC inhibitor	BRD-K77685957	dequalinium	trt_cp	-666	0.25	0.22	0.18	0.07	-666	1.25
+BRD-K94720315	Antispasmodic	BRD-K94720315	chromocarb	trt_cp	-666	0.17	0.14	0.11	0.05	-666	1.25
+BRD-K76064317	FLT3 inhibitor	BRD-K76064317	tyrphostin-AG-1296	trt_cp	FLT3	0.27	0.23	0.19	0.08	-666	1.25
+BRD-K09426783	Topoisomerase inhibitor	BRD-K09426783	TAS-103	trt_cp	TOP1	0.42	0.36	0.3	0.13	-666	1.25
+BRD-K96424892	Protein synthesis inhibitor	BRD-K96424892	chloramphenicol-palmitate	trt_cp	-666	0.12	0.09	0.06	0.05	-666	1.25
+BRD-K26756394	ATR kinase inhibitor	BRD-K26756394	VE-821	trt_cp	ATR	0.18	0.14	0.11	0.07	-666	1.25
+BRD-K91601245	Immunosuppressant|Protein synthesis inhibitor|Purine antagonist	BRD-K91601245	mercaptopurine	trt_cp	-666	0.19	0.15	0.12	0.07	-666	1.25
+BRD-K64785675	-666	BRD-K64785675	TG-100115	trt_cp	PIK3CD|PIK3CG	0.12	0.09	0.07	0.05	-666	1.25
+BRD-K43236057	ICAM1 expression inhibitor	BRD-K43236057	polydatin	trt_cp	ICAM1	0.29	0.25	0.21	0.09	-666	1.24
+BRD-K68488863	Aurora kinase inhibitor|FLT3 inhibitor|VEGFR inhibitor	BRD-K68488863	ENMD-2076	trt_cp	AURKA|FLT3|KDR|PDGFRA|SRC	0.26	0.22	0.19	0.07	-666	1.24
+BRD-K48488978	PI3K inhibitor	BRD-K48488978	YM-201636	trt_cp	-666	0.23	0.2	0.16	0.06	-666	1.24
+BRD-K44844162	PI3K inhibitor	BRD-K44844162	taselisib	trt_cp	PIK3CA	0.3	0.25	0.19	0.12	-666	1.24
+BRD-K05804044	RAF inhibitor	BRD-K05804044	AZ-628	trt_cp	BRAF|RAF1	0.23	0.18	0.14	0.09	-666	1.24
+BRD-K64622987	Cholesteryl ester transfer protein inhibitor	BRD-K64622987	torcetrapib	trt_cp	CETP	0.1	0.08	0.06	0.04	-666	1.24
+BRD-K07881437	Aurora kinase inhibitor|Growth factor receptor inhibitor	BRD-K07881437	danusertib	trt_cp	AURKA|AURKB|AURKC|FGFR1|NTRK1|RET	0.43	0.38	0.32	0.11	-666	1.24
+BRD-K88429204	Dihydrofolate reductase inhibitor	BRD-K88429204	pyrimethamine	trt_cp	-666	0.26	0.23	0.18	0.09	-666	1.24
+BRD-K63923597	Aurora kinase inhibitor	BRD-K63923597	barasertib-HQPA	trt_cp	AURKA|AURKB	0.28	0.23	0.18	0.1	-666	1.24
+BRD-A14886633	Progesterone receptor agonist	BRD-A14886633	norgestrel	trt_cp	-666	0.15	0.12	0.09	0.06	-666	1.23
+BRD-K14796088	LDL receptor activator	BRD-K14796088	berberine	trt_cp	LDLR	0.23	0.19	0.16	0.07	-666	1.23
+BRD-K31928526	Aurora kinase inhibitor	BRD-K31928526	barasertib	trt_cp	AURKB|AURKA	0.23	0.19	0.16	0.07	-666	1.23
+BRD-K45875383	-666	BRD-K45875383	XBD-173	trt_cp	-666	0.13	0.1	0.07	0.06	-666	1.23
+BRD-K79239947	Focal adhesion kinase inhibitor	BRD-K79239947	PF-573228	trt_cp	-666	0.21	0.17	0.14	0.07	-666	1.23
+BRD-K38868394	Androgen receptor modulator	BRD-K38868394	MK-0773	trt_cp	AR	0.15	0.12	0.09	0.06	-666	1.23
+BRD-K79584249	-666	BRD-K79584249	CGM-097	trt_cp	-666	0.19	0.12	0.08	0.11	-666	1.23
+BRD-K02594908	Carbonic anhydrase inhibitor	BRD-K02594908	sulfanilamide	trt_cp	CYP2C19|CYP2C9|CYP2D6|CYP2E1|CYP3A4	0.25	0.22	0.19	0.06	-666	1.23
+BRD-K61688984	HDAC inhibitor	BRD-K61688984	RGFP-966	trt_cp	ALOX5|HDAC3	0.15	0.12	0.09	0.06	-666	1.23
+BRD-K62196610	Inosine monophosphate dehydrogenase inhibitor	BRD-K62196610	AVN-944	trt_cp	IMPDH2|IMPDH1	0.31	0.27	0.23	0.09	-666	1.23
+BRD-K36740062	Aurora kinase inhibitor	BRD-K36740062	GSK-1070916	trt_cp	AURKB|AURKC	0.4	0.34	0.28	0.12	-666	1.23
+BRD-K69001009	VEGFR inhibitor	BRD-K69001009	golvatinib	trt_cp	MET|KDR	0.21	0.18	0.16	0.05	-666	1.23
+BRD-K37764012	P21 activated kinase inhibitor	BRD-K37764012	PF-03758309	trt_cp	PAK4	0.44	0.39	0.33	0.11	-666	1.22
+BRD-K59146805	Monopolar spindle 1 kinase inhibitor	BRD-K59146805	AZ-3146	trt_cp	-666	0.25	0.21	0.17	0.08	-666	1.22
+BRD-K08703257	PARP inhibitor	BRD-K08703257	3-amino-benzamide	trt_cp	-666	0.18	0.16	0.13	0.06	-666	1.22
+BRD-K55462201	Cyclooxygenase inhibitor|FAAH inhibitor|TRPV antagonist	BRD-K55462201	AM-404	trt_cp	TRPV1	0.17	0.15	0.13	0.05	-666	1.22
+BRD-K33622447	CDK inhibitor	BRD-K33622447	LY-2835219	trt_cp	-666	0.28	0.24	0.2	0.09	-666	1.22
+BRD-K62391742	BCL inhibitor	BRD-K62391742	venetoclax	trt_cp	BCL2	0.14	0.11	0.09	0.05	-666	1.22
+BRD-K09416995	HMGCR inhibitor	BRD-K09416995	lovastatin	trt_cp	HMGCR	0.2	0.16	0.13	0.07	-666	1.22
+BRD-K48141473	Opioid receptor agonist	BRD-K48141473	cebranopadol	trt_cp	OPRL1|OPRM1	0.11	0.09	0.06	0.05	-666	1.22
+BRD-K11073688	Tumor necrosis factor release inhibitor	BRD-K11073688	CPI-1189	trt_cp	TNF	0.17	0.15	0.12	0.05	-666	1.22
+BRD-K05444225	PARP inhibitor	BRD-K05444225	E-7449	trt_cp	-666	0.24	0.2	0.16	0.08	-666	1.22
+BRD-K09132007	TGF beta receptor inhibitor	BRD-K09132007	D-4476	trt_cp	CSNK1A1|TGFB1	0.1	0.08	0.06	0.04	-666	1.21
+BRD-K10784860	Angiotensin converting enzyme inhibitor	BRD-K10784860	temocapril	trt_cp	ACE	0.21	0.18	0.15	0.05	-666	1.21
+BRD-K49456274	PI3K inhibitor	BRD-K49456274	pilaralisib	trt_cp	-666	0.18	0.15	0.12	0.06	-666	1.21
+BRD-K96358241	Protein synthesis inhibitor	BRD-K96358241	harringtonine	trt_cp	-666	0.4	0.35	0.3	0.11	-666	1.21
+BRD-K21680192	Topoisomerase inhibitor	BRD-K21680192	mitoxantrone	trt_cp	TOP2A	0.66	0.58	0.51	0.15	-666	1.2
+BRD-K62398570	Serotonin receptor antagonist	BRD-K62398570	lerisetron	trt_cp	HTR3A	0.16	0.13	0.1	0.05	-666	1.2
+BRD-K00152668	Retinoid receptor agonist	BRD-K00152668	adarotene	trt_cp	RARG|RARB	0.39	0.34	0.29	0.1	-666	1.2
+BRD-K38458514	Glutamate receptor antagonist	BRD-K38458514	diazooxonorleucine	trt_cp	-666	0.13	0.09	0.06	0.06	-666	1.2
+BRD-K02764365	Anthelmintic agent	BRD-K02764365	methiazole	trt_cp	-666	0.29	0.24	0.2	0.09	-666	1.2
+BRD-A85439007	DNA synthesis inhibitor	BRD-A85439007	idoxuridin	trt_cp	-666	0.23	0.19	0.14	0.09	-666	1.2
+BRD-A43082461	Anticonvulsant	BRD-A43082461	linalool	trt_cp	-666	0.13	0.11	0.08	0.05	-666	1.19
+BRD-K78567475	Tubulin inhibitor|Immunostimulant|Microtubule inhibitor|Tubulin polymerisation inhibitor	BRD-K78567475	dolastatin-10	trt_cp	-666	0.7	0.63	0.54	0.17	-666	1.19
+BRD-K28824103	Choleretic agent	BRD-K28824103	genipin	trt_cp	-666	0.27	0.23	0.19	0.08	-666	1.19
+BRD-K25690923	Macrophage inhibitor	BRD-K25690923	4-iodo-6-phenylpyrimidine	trt_cp	MIF	0.12	0.1	0.07	0.04	-666	1.19
+BRD-K18518344	ATPase inhibitor	BRD-K18518344	digitoxigenin	trt_cp	-666	0.45	0.41	0.35	0.1	-666	1.19
+BRD-K94441233	HMGCR inhibitor	BRD-K94441233	mevastatin	trt_cp	HMGCR	0.32	0.26	0.2	0.12	-666	1.19
+BRD-K81613478	-666	BRD-K81613478	gastrodin	trt_cp	-666	0.27	0.22	0.18	0.09	-666	1.19
+BRD-K40797222	Dihydroorotate dehydrogenase inhibitor	BRD-K40797222	SC-12267	trt_cp	DHODH|IL17A	0.12	0.1	0.08	0.04	-666	1.19
+BRD-K54606188	Bromodomain inhibitor	BRD-K54606188	JQ1-(+)	trt_cp	BRD4	0.24	0.17	0.11	0.13	-666	1.19
+BRD-K56483981	Glutamate transporter modulator|Macrophage migration inhibiting factor inhibitor|Glutamate inhibitor|Macrophage inhibitor	BRD-K56483981	chicago-sky-blue-6b	trt_cp	MIF	0.09	0.07	0.05	0.04	-666	1.19
+BRD-K43578482	Focal adhesion kinase inhibitor	BRD-K43578482	defactinib	trt_cp	PTK2	0.19	0.16	0.13	0.05	-666	1.18
+BRD-K06814349	Tubulin inhibitor|VE-cadherin antagonist	BRD-K06814349	fosbretabulin	trt_cp	CDH5	0.35	0.31	0.26	0.09	-666	1.18
+BRD-A51799737	FOXM1 inhibitor|Protein synthesis inhibitor	BRD-A51799737	thiostrepton	trt_cp	FOXM1	0.3	0.26	0.21	0.09	-666	1.18
+BRD-K68408467	Topical anesthetic	BRD-K68408467	proflavine-hemisulfate	trt_cp	-666	0.27	0.23	0.2	0.07	-666	1.18
+BRD-K85146014	DNA polymerase inhibitor	BRD-K85146014	foscarnet	trt_cp	-666	0.21	0.18	0.14	0.07	-666	1.18
+BRD-K13167095	HDAC inhibitor	BRD-K13167095	AR-42	trt_cp	HDAC1|HDAC2	0.39	0.35	0.3	0.09	-666	1.18
+BRD-M29182745	-666	BRD-M29182745	ammonium-lactate	trt_cp	-666	0.13	0.1	0.07	0.06	-666	1.18
+BRD-K52756523	Bacterial 50S ribosomal subunit inhibitor	BRD-K52756523	dirithromycin	trt_cp	-666	0.12	0.09	0.07	0.05	-666	1.17
+BRD-K83963101	Mitotic inhibitor|Protein kinase inhibitor|Aurora kinase inhibitor	BRD-K83963101	MLN-8054	trt_cp	AURKA	0.33	0.28	0.23	0.09	-666	1.17
+BRD-K18619710	Steroid	BRD-K18619710	digoxigenin	trt_cp	-666	0.29	0.27	0.24	0.05	-666	1.17
+BRD-K96123349	Dihydroorotate dehydrogenase inhibitor	BRD-K96123349	brequinar	trt_cp	DHODH	0.28	0.24	0.19	0.09	-666	1.17
+BRD-K37890730	Topoisomerase inhibitor	BRD-K37890730	camptothecin	trt_cp	TOP1	0.6	0.52	0.44	0.16	-666	1.17
+BRD-K81528515	Abl kinase inhibitor|Bcr-Abl kinase inhibitor	BRD-K81528515	nilotinib	trt_cp	ABL1|BCR|KIT	0.22	0.19	0.16	0.06	-666	1.17
+BRD-K36055864	Protein synthesis inhibitor	BRD-K36055864	cycloheximide	trt_cp	RPL3	0.36	0.32	0.26	0.1	-666	1.17
+BRD-K81330143	Glycogen synthase kinase inhibitor	BRD-K81330143	tideglusib	trt_cp	GSK3B	0.22	0.19	0.15	0.06	-666	1.17
+BRD-K65814004	Nitric oxide synthase inhibitor	BRD-K65814004	diphenyleneiodonium	trt_cp	NOS2|NOS3	0.51	0.46	0.4	0.11	-666	1.17
+BRD-K04568635	Membrane integrity inhibitor	BRD-K04568635	octenidine	trt_cp	-666	0.38	0.35	0.32	0.07	-666	1.16
+BRD-K06858286	Microtubule inhibitor	BRD-K06858286	cabazitaxel	trt_cp	-666	0.68	0.6	0.51	0.18	-666	1.16
+BRD-K49328571	Bcr-Abl kinase inhibitor|Ephrin inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|Src inhibitor|Tyrosine kinase inhibitor	BRD-K49328571	dasatinib	trt_cp	ABL1|BCR|EPHA2|FYN|KIT|LCK|LYN|PDGFRB|SRC|YES1	0.51	0.44	0.37	0.13	-666	1.16
+BRD-A69815203	Calcineurin inhibitor	BRD-A69815203	cyclosporin-a	trt_cp	PPIA|PPP3CA	0.13	0.1	0.07	0.06	-666	1.16
+BRD-K77625799	EGFR inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor	BRD-K77625799	vandetanib	trt_cp	EGFR|KDR|RET|FLT1|FLT4|PTK6|TEK	0.19	0.16	0.12	0.08	-666	1.16
+BRD-K42191735	PI3K inhibitor	BRD-K42191735	buparlisib	trt_cp	PIK3CA	0.32	0.28	0.25	0.07	-666	1.16
+BRD-K44993696	Adrenergic receptor antagonist	BRD-K44993696	atenolol	trt_cp	ADRB1|ADRB2	0.11	0.08	0.06	0.05	-666	1.16
+BRD-K49313711	-666	BRD-K49313711	ribitol	trt_cp	-666	0.17	0.15	0.13	0.05	-666	1.16
+BRD-K87990216	Glucocorticoid receptor agonist	BRD-K87990216	piretanide	trt_cp	SLC12A1|SLC12A2	0.14	0.11	0.08	0.06	-666	1.16
+BRD-K84683831	Bacterial 30S ribosomal subunit inhibitor|Bacterial 50S ribosomal subunit inhibitor	BRD-K84683831	radezolid	trt_cp	-666	0.25	0.22	0.18	0.08	-666	1.16
+BRD-A50049929	GABA benzodiazepine site receptor agonist	BRD-A50049929	oxazepam	trt_cp	GABRA1|GABRA2|GABRA3|GABRA5|GABRA4|GABRA6|GABRB1|GABRB2|GABRB3|GABRD|GABRE|GABRG1|GABRG2|GABRG3|GABRP|GABRQ	0.24	0.21	0.17	0.07	-666	1.16
+BRD-K73794685	Bacterial 50S ribosomal subunit inhibitor	BRD-K73794685	azithromycin	trt_cp	-666	0.29	0.26	0.23	0.06	-666	1.15
+BRD-K62779383	-666	BRD-K62779383	cholecalciferol	trt_cp	VDR	0.34	0.29	0.24	0.1	-666	1.15
+BRD-K62696033	G protein-coupled receptor agonist	BRD-K62696033	G-1	trt_cp	GPER1	0.26	0.22	0.17	0.09	-666	1.15
+BRD-K39381259	ALK tyrosine kinase receptor inhibitor	BRD-K39381259	DMH1	trt_cp	ACVR1	0.13	0.1	0.08	0.05	-666	1.15
+BRD-K24556098	Progestogen hormone	BRD-K24556098	deoxycorticosterone-acetate	trt_cp	-666	0.4	0.34	0.28	0.12	-666	1.15
+BRD-K28360340	BCL inhibitor	BRD-K28360340	TW-37	trt_cp	BCL2|BCL2L1|MCL1	0.43	0.38	0.33	0.11	-666	1.15
+BRD-K84011460	Ion channel antagonist	BRD-K84011460	nizofenone	trt_cp	-666	0.12	0.1	0.07	0.05	-666	1.15
+BRD-K51662849	Matrix metalloprotease inhibitor	BRD-K51662849	ilomastat	trt_cp	-666	0.1	0.08	0.05	0.05	-666	1.15
+BRD-K86003836	Tubulin inhibitor	BRD-K86003836	flubendazole	trt_cp	TUBB	0.34	0.29	0.25	0.1	-666	1.15
+BRD-K21283037	Glutamate inhibitor	BRD-K21283037	riluzole	trt_cp	SCN5A	0.2	0.17	0.14	0.06	-666	1.15
+BRD-K43860855	Antineoplastic agent	BRD-K43860855	iobenguane	trt_cp	-666	0.12	0.1	0.07	0.05	-666	1.14
+BRD-K23403298	Cationic surfactant	BRD-K23403298	benzyldimethylhexadecylammonium	trt_cp	-666	0.19	0.17	0.14	0.05	-666	1.14
+BRD-A09838294	BCL inhibitor	BRD-A09838294	oridonin	trt_cp	BCL2	0.28	0.26	0.24	0.04	-666	1.14
+BRD-K95142244	PARP inhibitor	BRD-K95142244	talazoparib	trt_cp	PARP2|PARP1	0.45	0.37	0.3	0.15	-666	1.14
+BRD-K95785537	Src inhibitor	BRD-K95785537	PP-2	trt_cp	LCK|SRC	0.23	0.2	0.17	0.06	-666	1.14
+BRD-K13949769	SIRT inhibitor	BRD-K13949769	tenovin-6	trt_cp	SIRT1|SIRT2|SIRT3	0.27	0.23	0.2	0.08	-666	1.14
+BRD-K29673530	Tyrosine kinase inhibitor	BRD-K29673530	hypericin	trt_cp	-666	0.12	0.1	0.08	0.05	-666	1.14
+BRD-K17026858	DNA inhibitor	BRD-K17026858	pibenzimol	trt_cp	-666	0.15	0.12	0.09	0.06	-666	1.14
+BRD-K36627727	Retinoid receptor agonist	BRD-K36627727	tamibarotene	trt_cp	RARA|RARB	0.16	0.13	0.09	0.07	-666	1.14
+BRD-A58193911	Cholinergic receptor antagonist	BRD-A58193911	oxyphencyclimine	trt_cp	-666	0.37	0.31	0.25	0.12	-666	1.14
+BRD-A83937277	Hydantoin antiepileptic	BRD-A83937277	mephenytoin	trt_cp	SCN5A	0.15	0.13	0.1	0.05	-666	1.14
+BRD-K38287497	HCV inhibitor	BRD-K38287497	narlaprevir	trt_cp	-666	0.12	0.09	0.06	0.07	-666	1.14
+BRD-K83834509	BMI-1 inhibitor	BRD-K83834509	PTC-209	trt_cp	-666	0.24	0.21	0.17	0.07	-666	1.13
+BRD-A74914197	Dihydrofolate reductase inhibitor	BRD-A74914197	pralatrexate	trt_cp	DHFR	0.53	0.46	0.39	0.13	-666	1.13
+BRD-K84937637	MTOR inhibitor	BRD-K84937637	sirolimus	trt_cp	FKBP1A|MTOR	0.49	0.43	0.36	0.13	-666	1.13
+BRD-K13050541	Gamma glutamyltransferase Inhibitors	BRD-K13050541	acivicin	trt_cp	-666	0.31	0.27	0.23	0.08	-666	1.13
+BRD-K92150287	Topoisomerase inhibitor	BRD-K92150287	exatecan-mesylate	trt_cp	TOP1	0.71	0.62	0.56	0.15	-666	1.13
+BRD-K27351809	Progesterone receptor agonist	BRD-K27351809	nomegestrol-acetate	trt_cp	PGR	0.11	0.08	0.06	0.05	-666	1.13
+BRD-K63750851	Dehydrogenase inhibitor|Inositol monophosphatase inhibitor	BRD-K63750851	mycophenolic-acid	trt_cp	IMPDH1|IMPDH2	0.3	0.25	0.21	0.09	-666	1.13
+BRD-K99498722	Tubulin inhibitor	BRD-K99498722	plinabulin	trt_cp	-666	0.55	0.48	0.41	0.14	-666	1.13
+BRD-K16189898	Glycogen synthase kinase inhibitor	BRD-K16189898	CHIR-99021	trt_cp	-666	0.15	0.11	0.08	0.07	-666	1.12
+BRD-K58550667	Niacinamide phosphoribosyltransferase inhibitor	BRD-K58550667	FK-866	trt_cp	NAMPT	0.56	0.5	0.43	0.13	-666	1.12
+BRD-A09919099	Bacterial permeability inducer	BRD-A09919099	monensin	trt_cp	-666	0.41	0.36	0.3	0.11	-666	1.12
+BRD-K97799481	Adenosine receptor antagonist	BRD-K97799481	theophylline	trt_cp	ADORA1|ADORA2A|ADORA2B|ADORA3|PDE3A|PDE4A|PDE4B	0.24	0.21	0.18	0.06	-666	1.12
+BRD-K08586861	Prostanoid receptor antagonist	BRD-K08586861	ramatroban	trt_cp	TBXA2R|PTGDR2	0.17	0.14	0.11	0.06	-666	1.12
+BRD-K99455969	Beta glucuronidase inhibitor	BRD-K99455969	baicalin	trt_cp	-666	0.24	0.22	0.18	0.06	-666	1.12
+BRD-A39935389	DNA inhibitor	BRD-A39935389	teroxirone	trt_cp	-666	0.26	0.22	0.19	0.07	-666	1.12
+BRD-K03063480	CHK inhibitor	BRD-K03063480	PF-477736	trt_cp	CHEK1	0.44	0.37	0.31	0.12	-666	1.12
+BRD-A70083328	Acetylcholinesterase inhibitor|Microtubule inhibitor	BRD-A70083328	secnidazole	trt_cp	-666	0.2	0.17	0.14	0.06	-666	1.12
+BRD-A10523515	Rho associated kinase inhibitor	BRD-A10523515	GSK-429286A	trt_cp	ROCK1	0.2	0.16	0.13	0.07	-666	1.11
+BRD-A11319535	Immunosuppressant|Glucocorticoid receptor agonist	BRD-A11319535	beclomethasone-dipropionate	trt_cp	NR3C1	0.19	0.16	0.12	0.07	-666	1.11
+BRD-K86887724	Potassium channel blocker	BRD-K86887724	dofetilide	trt_cp	KCNH2	0.2	0.17	0.14	0.07	-666	1.11
+BRD-K66527818	Glutamate receptor positive allosteric modulator	BRD-K66527818	VU-0364770	trt_cp	-666	0.21	0.17	0.14	0.07	-666	1.11
+BRD-K87512222	Tubulin inhibitor	BRD-K87512222	taltobulin	trt_cp	-666	0.58	0.5	0.43	0.15	-666	1.11
+BRD-K82135108	Oxidative stress inducer	BRD-K82135108	elesclomol	trt_cp	HSPA1A	0.55	0.48	0.41	0.14	-666	1.11
+BRD-K44827188	Hedgehog pathway inhibitor|Smoothened receptor antagonist	BRD-K44827188	vismodegib	trt_cp	SMO	0.17	0.14	0.11	0.06	-666	1.11
+BRD-K76674262	Protein synthesis inhibitor	BRD-K76674262	homoharringtonine	trt_cp	-666	0.52	0.46	0.41	0.11	-666	1.11
+BRD-K10670311	Antirheumatic drug|NFkB pathway inhibitor	BRD-K10670311	sulfasalazine	trt_cp	ALOX5|PTGS1|PTGS2	0.11	0.08	0.05	0.05	-666	1.11
+BRD-K64890080	PLK inhibitor	BRD-K64890080	BI-2536	trt_cp	PLK1	0.53	0.44	0.36	0.17	-666	1.11
+BRD-A73427433	TGF beta receptor inhibitor	BRD-A73427433	adaprev	trt_cp	M6PR	0.26	0.22	0.19	0.07	-666	1.11
+BRD-K37270826	Glucocorticoid receptor antagonist|Progesterone receptor antagonist	BRD-K37270826	mifepristone	trt_cp	AR|NR3C1|PGR	0.21	0.18	0.15	0.06	-666	1.11
+BRD-K37590257	Phosphodiesterase inhibitor	BRD-K37590257	GSK-256066	trt_cp	-666	0.19	0.15	0.11	0.09	-666	1.11
+BRD-K97010173	Chelating agent	BRD-K97010173	deferasirox	trt_cp	CYP3A4	0.18	0.15	0.12	0.06	-666	1.11
+BRD-K54314721	Serotonin receptor agonist	BRD-K54314721	zolmitriptan	trt_cp	HTR1A|HTR1B|HTR1D|HTR1F	0.18	0.15	0.12	0.06	-666	1.11
+BRD-K15025317	NFkB pathway inhibitor	BRD-K15025317	BAY-11-7082	trt_cp	-666	0.25	0.23	0.21	0.04	-666	1.11
+BRD-K75009076	CHK inhibitor	BRD-K75009076	SCH-900776	trt_cp	CHEK1	0.37	0.32	0.28	0.08	-666	1.11
+BRD-K93779381	PKC activator	BRD-K93779381	ingenol-mebutate	trt_cp	PRKCD|PRKCA	0.28	0.18	0.11	0.17	-666	1.11
+BRD-K31627533	Glucocorticoid receptor agonist	BRD-K31627533	rimexolone	trt_cp	NR3C1	0.14	0.1	0.07	0.07	-666	1.11
+BRD-K58122457	Aurora kinase inhibitor	BRD-K58122457	hesperadin	trt_cp	-666	0.46	0.4	0.34	0.12	-666	1.11
+BRD-K83257731	Histamine receptor antagonist	BRD-K83257731	chloropyramine	trt_cp	HRH1	0.35	0.32	0.28	0.07	-666	1.11
+BRD-K99023089	AKT inhibitor	BRD-K99023089	AZD-5363	trt_cp	-666	0.18	0.14	0.11	0.07	-666	1.1
+BRD-K86687746	HDAC inhibitor	BRD-K86687746	R-306465	trt_cp	-666	0.44	0.4	0.36	0.08	-666	1.1
+BRD-K41312087	Growth factor receptor inhibitor	BRD-K41312087	GW-441756	trt_cp	NTRK1	0.16	0.13	0.11	0.06	-666	1.1
+BRD-K89015388	Centromere associated protein inhibitor	BRD-K89015388	GSK-923295	trt_cp	-666	0.26	0.22	0.17	0.09	-666	1.1
+BRD-K12932420	Phosphodiesterase inhibitor	BRD-K12932420	YM-976	trt_cp	PDE4A	0.15	0.12	0.1	0.05	-666	1.1
+BRD-K91370081	DNA synthesis inhibitor	BRD-K91370081	anisomycin	trt_cp	-666	0.45	0.4	0.35	0.1	-666	1.1
+BRD-K60160658	GABA uptake inhibitor	BRD-K60160658	tiagabine	trt_cp	SLC6A1	0.18	0.15	0.12	0.05	-666	1.1
+BRD-A23195370	Opioid receptor antagonist	BRD-A23195370	naloxone	trt_cp	OPRD1|OPRK1|OPRM1	0.19	0.16	0.14	0.05	-666	1.1
+BRD-K99545815	Focal adhesion kinase inhibitor	BRD-K99545815	PF-562271	trt_cp	PTK2|PTK2B	0.24	0.2	0.17	0.07	-666	1.1
+BRD-K18424115	Src inhibitor|VEGFR inhibitor	BRD-K18424115	TG-100572	trt_cp	SRC|KDR	0.33	0.3	0.28	0.05	-666	1.09
+BRD-K26619122	GABA receptor antagonist	BRD-K26619122	thiocolchicoside	trt_cp	-666	0.14	0.11	0.07	0.07	-666	1.09
+BRD-K72951360	DNA inhibitor|Topoisomerase inhibitor	BRD-K72951360	valrubicin	trt_cp	TOP2A	0.48	0.43	0.37	0.11	-666	1.09
+BRD-K93441486	Acetylcholine receptor antagonist	BRD-K93441486	diphemanil	trt_cp	CHRM3	0.11	0.09	0.06	0.05	-666	1.09
+BRD-K95523387	TRPV agonist	BRD-K95523387	OLDA	trt_cp	-666	0.14	0.12	0.1	0.05	-666	1.09
+BRD-K75295174	Aurora kinase inhibitor	BRD-K75295174	alisertib	trt_cp	AURKA	0.34	0.29	0.24	0.1	-666	1.09
+BRD-K76197012	Progesterone receptor antagonist	BRD-K76197012	ulipristal	trt_cp	PGR	0.13	0.11	0.09	0.05	-666	1.09
+BRD-A24397426	Bacterial DNA gyrase inhibitor	BRD-A24397426	nadifloxacin	trt_cp	-666	0.1	0.08	0.05	0.05	-666	1.09
+BRD-K78431006	ALK tyrosine kinase receptor inhibitor	BRD-K78431006	crizotinib	trt_cp	ALK|MET	0.27	0.24	0.19	0.08	-666	1.09
+BRD-K71822263	-666	BRD-K71822263	D-serine	trt_cp	-666	0.15	0.13	0.1	0.05	-666	1.09
+BRD-K45033733	DNA polymerase inhibitor	BRD-K45033733	famciclovir	trt_cp	-666	0.11	0.08	0.06	0.05	-666	1.09
+BRD-A08840375	MAP kinase phosphatase inhibitor	BRD-A08840375	CID-5458317	trt_cp	MAPK3	0.32	0.29	0.26	0.06	-666	1.09
+BRD-A18696154	Adrenergic receptor antagonist	BRD-A18696154	idazoxan	trt_cp	ADRA2A	0.22	0.19	0.15	0.06	-666	1.09
+BRD-K37720887	TGF beta receptor inhibitor	BRD-K37720887	SB-525334	trt_cp	TGFBR1	0.16	0.13	0.1	0.05	-666	1.09
+BRD-K68346641	Topoisomerase inhibitor	BRD-K68346641	amsacrine	trt_cp	TOP2A	0.49	0.42	0.36	0.13	-666	1.09
+BRD-K92441787	Retinoid receptor agonist	BRD-K92441787	bexarotene	trt_cp	RXRA|RXRB|RXRG	0.14	0.11	0.08	0.06	-666	1.09
+BRD-K11636097	CDK inhibitor	BRD-K11636097	JNJ-7706621	trt_cp	AURKA|AURKB|CDK1|CDK2	0.34	0.3	0.26	0.08	-666	1.09
+BRD-K32285926	Tyrosine kinase inhibitor	BRD-K32285926	AMG-208	trt_cp	MET	0.14	0.11	0.09	0.05	-666	1.09
+BRD-K69726595	HCV inhibitor	BRD-K69726595	mericitabine	trt_cp	-666	0.13	0.11	0.09	0.05	-666	1.09
+BRD-K92428232	PLK inhibitor	BRD-K92428232	GSK-461364	trt_cp	PLK1	0.43	0.37	0.29	0.14	-666	1.08
+BRD-K77943374	MET inhibitor	BRD-K77943374	NVP-BVU972	trt_cp	MET	0.14	0.1	0.08	0.06	-666	1.08
+BRD-A86248581	Cytidine deaminase inhibitor	BRD-A86248581	tetrahydrouridine	trt_cp	CDA	0.13	0.11	0.08	0.05	-666	1.08
+BRD-K72726508	CDK inhibitor	BRD-K72726508	arcyriaflavin-a	trt_cp	CCND1|CDK4	0.19	0.14	0.1	0.09	-666	1.08
+BRD-K51318897	Tubulin inhibitor	BRD-K51318897	fenbendazole	trt_cp	TUBB	0.37	0.32	0.27	0.1	-666	1.08
+BRD-K79684402	Dopamine receptor agonist	BRD-K79684402	Ro-10-5824	trt_cp	DRD4	0.12	0.1	0.07	0.05	-666	1.08
+BRD-K37561857	Phosphodiesterase inhibitor	BRD-K37561857	zardaverine	trt_cp	PDE4D	0.34	0.3	0.26	0.08	-666	1.08
+BRD-K82746043	BCL inhibitor	BRD-K82746043	navitoclax	trt_cp	BCL2|BCL2L1|BCL2L2	0.22	0.18	0.14	0.08	-666	1.08
+BRD-K34332569	Angiotensin converting enzyme inhibitor	BRD-K34332569	imidapril	trt_cp	ACE	0.29	0.25	0.21	0.08	-666	1.08
+BRD-K44408410	Hypoxia inducible factor inhibitor	BRD-K44408410	2-methoxyestradiol	trt_cp	HIF1A	0.23	0.19	0.16	0.07	-666	1.08
+BRD-K45252063	PPAR receptor agonist	BRD-K45252063	clofibrate	trt_cp	PPARA	0.13	0.1	0.08	0.06	-666	1.08
+BRD-K07442505	BAX activator	BRD-K07442505	BAM7	trt_cp	BAX	0.19	0.15	0.12	0.07	-666	1.07
+BRD-K48684885	NFkB pathway inhibitor	BRD-K48684885	BAY-11-7085	trt_cp	NFKBIA	0.33	0.3	0.27	0.05	-666	1.07
+BRD-K68502831	DNA alkylating drug	BRD-K68502831	dianhydrogalactitol	trt_cp	-666	0.31	0.27	0.23	0.08	-666	1.07
+BRD-K39987650	Laxative	BRD-K39987650	bisacodyl	trt_cp	-666	0.26	0.22	0.18	0.07	-666	1.07
+BRD-K14618467	IKK inhibitor	BRD-K14618467	IKK-16	trt_cp	IKBKB	0.25	0.22	0.19	0.06	-666	1.07
+BRD-K21528677	Glucocorticoid receptor agonist	BRD-K21528677	desonide	trt_cp	NR3C1	0.2	0.16	0.11	0.09	-666	1.07
+BRD-K64925568	MDM inhibitor	BRD-K64925568	AMG-232	trt_cp	MDM2	0.21	0.12	0.08	0.13	-666	1.07
+BRD-K97752965	Nitric oxide donor|Potassium channel activator	BRD-K97752965	nicorandil	trt_cp	-666	0.13	0.1	0.07	0.06	-666	1.07
+BRD-A26032986	Calmodulin antagonist	BRD-A26032986	zaldaride	trt_cp	CALM1	0.14	0.12	0.09	0.04	-666	1.07
+BRD-A10903566	Adrenergic receptor antagonist	BRD-A10903566	imiloxan	trt_cp	ADRA2A|ADRA2B	0.12	0.09	0.07	0.05	-666	1.07
+BRD-K76037122	HSP inhibitor	BRD-K76037122	guanidine	trt_cp	-666	0.11	0.08	0.06	0.05	-666	1.07
+BRD-K06234293	P38 MAPK inhibitor|TGF beta receptor inhibitor	BRD-K06234293	LY-364947	trt_cp	TGFBR1	0.12	0.1	0.07	0.05	-666	1.07
+BRD-K85333151	Cyclooxygenase inhibitor	BRD-K85333151	ramifenazone	trt_cp	-666	0.17	0.14	0.12	0.05	-666	1.07
+BRD-K92049597	Sodium channel blocker	BRD-K92049597	triamterene	trt_cp	SCNN1A|SCNN1B|SCNN1G	0.21	0.18	0.14	0.07	-666	1.06
+BRD-K64866502	Aurora kinase inhibitor	BRD-K64866502	CYC-116	trt_cp	-666	0.16	0.13	0.11	0.05	-666	1.06
+BRD-K56291712	MTOR inhibitor|PI3K inhibitor	BRD-K56291712	voxtalisib	trt_cp	MTOR|PIK3CA	0.21	0.18	0.14	0.07	-666	1.06
+BRD-K43471985	Bromodomain inhibitor	BRD-K43471985	OTX-015	trt_cp	-666	0.27	0.21	0.13	0.14	-666	1.06
+BRD-K94177716	Glucocorticoid receptor agonist	BRD-K94177716	deflazacort	trt_cp	NR3C1	0.29	0.23	0.17	0.11	-666	1.06
+BRD-A28329383	Glutamate receptor antagonist	BRD-A28329383	MTPG	trt_cp	GRM2|GRM3	0.15	0.12	0.09	0.06	-666	1.06
+BRD-K77677632	Serotonin receptor antagonist	BRD-K77677632	SB-200646	trt_cp	HTR2B|HTR2C	0.21	0.17	0.14	0.07	-666	1.06
+BRD-K16551357	Cholesteryl ester transfer protein inhibitor	BRD-K16551357	evacetrapib	trt_cp	CETP	0.19	0.17	0.15	0.05	-666	1.06
+BRD-K44227013	Bcr-Abl kinase inhibitor|FLT3 inhibitor|PDGFR tyrosine kinase receptor inhibitor	BRD-K44227013	ponatinib	trt_cp	ABL1|BCR|FLT3|RET|FGFR1|FGFR2|FGFR3|FGFR4|KIT|TEK	0.35	0.31	0.27	0.07	-666	1.06
+BRD-K60443845	Fungal lanosterol demethylase inhibitor	BRD-K60443845	chlormidazole	trt_cp	-666	0.29	0.25	0.21	0.08	-666	1.06
+BRD-K17068645	DNA inhibitor	BRD-K17068645	bendamustine	trt_cp	-666	0.17	0.15	0.12	0.05	-666	1.06
+BRD-K23984367	FLT3 inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RAF inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor	BRD-K23984367	sorafenib	trt_cp	BRAF|DDR2|FGFR1|FLT1|FLT3|FLT4|KDR|KIT|PDGFRB|RAF1|RET	0.26	0.21	0.16	0.1	-666	1.06
+BRD-K72815923	Acetylcholine receptor agonist	BRD-K72815923	xanomeline	trt_cp	CHRM1|CHRM2|CHRM3|CHRM4|CHRM5	0.31	0.26	0.21	0.09	-666	1.06
+BRD-K13390322	CDK inhibitor|Cell cycle inhibitor	BRD-K13390322	AT-7519	trt_cp	CDK1|CDK2|CDK4|CDK5|CDK6|CDK9	0.3	0.27	0.24	0.06	-666	1.05
+BRD-K85307935	Bacterial DNA gyrase inhibitor	BRD-K85307935	novobiocin	trt_cp	-666	0.22	0.19	0.15	0.07	-666	1.05
+BRD-K99170882	P53 activator	BRD-K99170882	NSC-319726	trt_cp	-666	0.56	0.49	0.43	0.13	-666	1.05
+BRD-K44067360	Chloride channel blocker	BRD-K44067360	flufenamic-acid	trt_cp	AKR1C3|AR|PTGS1|PTGS2	0.1	0.08	0.05	0.05	-666	1.05
+BRD-K62965247	Farnesyltransferase inhibitor	BRD-K62965247	tipifarnib-P2	trt_cp	FNTA|FNTB	0.28	0.23	0.18	0.1	-666	1.05
+BRD-K19388745	Adenylyl cyclase activator|Adenylate cyclase stimulant	BRD-K19388745	colforsin-daproate	trt_cp	-666	0.12	0.08	0.05	0.06	-666	1.05
+BRD-K42756753	Steroid	BRD-K42756753	epiandrosterone	trt_cp	-666	0.11	0.08	0.06	0.05	-666	1.05
+BRD-K62814476	CDK inhibitor	BRD-K62814476	BMS-265246	trt_cp	CDK1|CDK2	0.37	0.32	0.26	0.11	-666	1.05
+BRD-K69280563	Tubulin inhibitor	BRD-K69280563	vinorelbine	trt_cp	TUBB	0.48	0.41	0.35	0.13	-666	1.05
+BRD-K28542495	Prostanoid receptor antagonist	BRD-K28542495	benzydamine	trt_cp	-666	0.17	0.14	0.11	0.06	-666	1.04
+BRD-K01715490	DNA synthesis inhibitor	BRD-K01715490	artemisinin	trt_cp	CYP2B6	0.2	0.17	0.13	0.07	-666	1.04
+BRD-K47869605	Microtubule inhibitor|Tubulin inhibitor	BRD-K47869605	podophyllotoxin	trt_cp	-666	0.6	0.53	0.46	0.13	-666	1.04
+BRD-K00615600	PARP inhibitor	BRD-K00615600	AG-14361	trt_cp	PARP1	0.13	0.11	0.08	0.05	-666	1.04
+BRD-K96159438	DNA directed DNA polymerase inhibitor|DNA synthesis inhibitor|RNA directed DNA polymerase inhibitor|DNA polymerase inhibitor	BRD-K96159438	adefovir-dipivoxil	trt_cp	-666	0.34	0.29	0.25	0.09	-666	1.04
+BRD-K51350053	Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)	BRD-K51350053	toremifene	trt_cp	ESR1	0.27	0.23	0.19	0.08	-666	1.04
+BRD-K32744045	Aldehyde dehydrogenase inhibitor|DNA methyltransferase inhibitor|TRPV agonist	BRD-K32744045	disulfiram	trt_cp	ALDH2	0.32	0.25	0.19	0.13	-666	1.04
+BRD-K37618799	Adenosine receptor antagonist	BRD-K37618799	MRS-1220	trt_cp	ADORA3	0.17	0.12	0.08	0.09	-666	1.04
+BRD-A93236127	ATPase inhibitor	BRD-A93236127	digitoxin	trt_cp	ATP1A1	0.53	0.47	0.42	0.12	-666	1.04
+BRD-K17894950	CDK inhibitor|Glycogen synthase kinase inhibitor	BRD-K17894950	indirubin	trt_cp	CDK1|CDK5|GSK3A	0.16	0.12	0.1	0.06	-666	1.04
+BRD-A94624445	Adenosine receptor agonist|CAMP stimulant	BRD-A94624445	bucladesine	trt_cp	PRKACA	0.2	0.17	0.14	0.06	-666	1.03
+BRD-K61323504	CC chemokine receptor antagonist	BRD-K61323504	SB-225002	trt_cp	CXCR2	0.25	0.21	0.17	0.08	-666	1.03
+BRD-A02180903	Glucocorticoid receptor agonist	BRD-A02180903	betamethasone	trt_cp	NR3C1	0.19	0.15	0.12	0.07	-666	1.03
+BRD-K41213548	HSP inhibitor	BRD-K41213548	KW-2478	trt_cp	-666	0.37	0.32	0.26	0.11	-666	1.03
+BRD-A53951045	Cholinergic receptor antagonist	BRD-A53951045	butylscopolamine-bromide	trt_cp	-666	0.23	0.19	0.16	0.07	-666	1.03
+BRD-K56908511	Local anesthetic	BRD-K56908511	fluroxene	trt_cp	-666	0.15	0.12	0.08	0.07	-666	1.03
+BRD-K61717546	Topoisomerase inhibitor	BRD-K61717546	fleroxacin	trt_cp	-666	0.13	0.1	0.06	0.07	-666	1.03
+BRD-K15898725	-666	BRD-K15898725	maytansinol-isobutyrate	trt_cp	-666	0.72	0.63	0.54	0.18	-666	1.03
+BRD-A00758722	Progestogen hormone	BRD-A00758722	noretynodrel	trt_cp	PGR	0.25	0.22	0.19	0.06	-666	1.03
+BRD-K96259238	Interleukin inhibitor	BRD-K96259238	Y-320	trt_cp	IL17A	0.23	0.18	0.13	0.09	-666	1.03
+BRD-K59058747	Mucolytic agent	BRD-K59058747	acetylcysteine	trt_cp	-666	0.13	0.1	0.08	0.05	-666	1.03
+BRD-A10070317	Adrenergic receptor antagonist	BRD-A10070317	propranolol	trt_cp	ADRB2|ADRB3	0.16	0.13	0.1	0.06	-666	1.03
+BRD-K25340465	KIT inhibitor|VEGFR inhibitor	BRD-K25340465	OSI-930	trt_cp	KIT|KDR	0.21	0.18	0.14	0.06	-666	1.02
+BRD-K54095730	P38 MAPK inhibitor	BRD-K54095730	CMPD-1	trt_cp	MAPK14	0.29	0.25	0.21	0.08	-666	1.02
+BRD-A98605041	-666	BRD-A98605041	salinomycin	trt_cp	-666	0.31	0.27	0.22	0.09	-666	1.02
+BRD-K11927976	Mediator release inhibitor|SYK inhibitor	BRD-K11927976	ER-27319	trt_cp	SYK	0.35	0.33	0.3	0.06	-666	1.02
+BRD-K73589491	Histamine receptor antagonist	BRD-K73589491	nizatidine	trt_cp	HRH2	0.15	0.13	0.1	0.05	-666	1.02
+BRD-K67043667	DNA synthesis inhibitor	BRD-K67043667	altretamine	trt_cp	-666	0.11	0.08	0.05	0.06	-666	1.02
+BRD-K40255344	Protein tyrosine kinase inhibitor|Tyrosine kinase inhibitor	BRD-K40255344	tyrphostin-A9	trt_cp	-666	0.3	0.26	0.21	0.09	-666	1.02
+BRD-A68478444	Other antibiotic	BRD-A68478444	nanchangmycin	trt_cp	-666	0.46	0.4	0.34	0.12	-666	1.02
+BRD-M89827113	Potassium channel activator	BRD-M89827113	levcromakalim	trt_cp	KCNJ8	0.09	0.07	0.05	0.04	-666	1.02
+BRD-K63126143	Topoisomerase inhibitor	BRD-K63126143	idarubicin	trt_cp	TOP2A	0.57	0.52	0.48	0.09	-666	1.02
+BRD-K41876534	Carbonic anhydrase inhibitor	BRD-K41876534	tioxolone	trt_cp	-666	0.18	0.14	0.12	0.06	-666	1.02
+BRD-K22822991	Cathepsin inhibitor	BRD-K22822991	odanacatib	trt_cp	CTSK	0.15	0.12	0.1	0.05	-666	1.02
+BRD-K50140147	ALK tyrosine kinase receptor inhibitor	BRD-K50140147	NVP-TAE684	trt_cp	ALK	0.37	0.33	0.29	0.09	-666	1.02
+BRD-K67868012	MTOR inhibitor|PI3K inhibitor	BRD-K67868012	PI-103	trt_cp	MTOR|PIK3CA|PIK3CB|PIK3CD|PIK3CG	0.23	0.2	0.18	0.05	-666	1.01
+BRD-A60197193	Dopamine receptor antagonist	BRD-A60197193	amisulpride	trt_cp	DRD2|DRD3	0.14	0.12	0.09	0.05	-666	1.01
+BRD-K24556407	ATR kinase inhibitor	BRD-K24556407	ETP-46464	trt_cp	-666	0.3	0.26	0.22	0.08	-666	1.01
+BRD-K94397152	Antiviral	BRD-K94397152	ribavirin	trt_cp	IMPDH1	0.11	0.09	0.06	0.05	-666	1.01
+BRD-K23363278	Tubulin inhibitor	BRD-K23363278	CYT-997	trt_cp	TUBB	0.48	0.41	0.35	0.13	-666	1.01
+BRD-K44084986	Rho associated kinase inhibitor	BRD-K44084986	Y-27632	trt_cp	ROCK1|ROCK2	0.23	0.2	0.16	0.07	-666	1.01
+BRD-K18779551	Acetylcholine release stimulant	BRD-K18779551	bifemelane	trt_cp	MAOA|MAOB	0.16	0.14	0.11	0.05	-666	1.01
+BRD-K00259736	Microtubule inhibitor	BRD-K00259736	colchicine	trt_cp	TUBB|TUBB1	0.63	0.56	0.49	0.14	-666	1.01
+BRD-K04622161	Gamma secretase inhibitor	BRD-K04622161	YO-01027	trt_cp	-666	0.15	0.12	0.09	0.07	-666	1.01
+BRD-K60341624	"Glucose-Dependent Insulinotropic Receptor (GDIR, GPR119) Agonists"	BRD-K60341624	GSK-1292263	trt_cp	-666	0.21	0.18	0.16	0.05	-666	1.01
+BRD-K12184916	MTOR inhibitor|PI3K inhibitor	BRD-K12184916	NVP-BEZ235	trt_cp	MTOR|PIK3CA|PIK3CD|PIK3CG	0.39	0.35	0.3	0.08	-666	1
+BRD-K07265709	Chelating agent|Topoisomerase inhibitor	BRD-K07265709	dexrazoxane	trt_cp	TOP2A|TOP2B	0.35	0.31	0.27	0.08	-666	1
+BRD-A67748489	Kinesin-like spindle protein inhibitor	BRD-A67748489	K-858	trt_cp	KIF11	0.4	0.33	0.29	0.11	-666	1
+BRD-K18574842	Bacterial cell wall synthesis inhibitor	BRD-K18574842	nafcillin	trt_cp	CYP1A2|CYP3A4|SLC22A6	0.11	0.08	0.05	0.06	-666	1
+BRD-K97764662	FGFR inhibitor|VEGFR inhibitor	BRD-K97764662	PD-173074	trt_cp	FGFR1|FGFR3	0.23	0.2	0.17	0.06	-666	1
+BRD-K42497885	DNA alkylating drug	BRD-K42497885	satraplatin	trt_cp	-666	0.24	0.2	0.16	0.08	-666	1
+BRD-K29542628	Src inhibitor	BRD-K29542628	1-naphthyl-PP1	trt_cp	SRC	0.29	0.25	0.21	0.08	-666	1
+BRD-K85872723	Glutamate receptor antagonist	BRD-K85872723	kynurenic-acid	trt_cp	-666	0.16	0.13	0.11	0.05	-666	1
+BRD-K79612754	Neurotrophic agent	BRD-K79612754	inosine	trt_cp	-666	0.29	0.25	0.21	0.07	-666	1
+BRD-K59983611	Bacterial antifolate	BRD-K59983611	sulfabenzamide	trt_cp	-666	0.17	0.15	0.12	0.05	-666	1
+BRD-K56156786	RNA polymerase inhibitor	BRD-K56156786	rifampin	trt_cp	NR1I2	0.2	0.18	0.15	0.05	-666	1
+BRD-A70858459	DNA alkylating drug	BRD-A70858459	estramustine	trt_cp	-666	0.16	0.13	0.11	0.05	-666	0.99
+BRD-A03216249	Potassium channel blocker|Sodium channel blocker	BRD-A03216249	mepivacaine	trt_cp	-666	0.14	0.11	0.08	0.06	-666	0.99
+BRD-K25433859	Norepinephrine reputake inhibitor|Tricyclic antidepressant	BRD-K25433859	maprotiline	trt_cp	SLC6A2	0.12	0.1	0.07	0.05	-666	0.99
+BRD-K04923131	Glycogen synthase kinase inhibitor|Lipoxygenase inhibitor	BRD-K04923131	GSK-3-inhibitor-IX	trt_cp	GSK3A|GSK3B	0.19	0.15	0.12	0.07	-666	0.99
+BRD-K37865504	FAAH reuptake inhibitor|FAAH inhibitor	BRD-K37865504	LY-2183240	trt_cp	FAAH	0.28	0.24	0.19	0.09	-666	0.99
+BRD-K15179879	Proteasome inhibitor	BRD-K15179879	carfilzomib	trt_cp	PSMB1|PSMB10|PSMB2|PSMB5|PSMB8|PSMB9	0.78	0.73	0.67	0.11	-666	0.99
+BRD-K23566484	Androgen receptor antagonist	BRD-K23566484	nilutamide	trt_cp	AR	0.12	0.1	0.07	0.05	-666	0.99
+BRD-K88172511	Opioid receptor antagonist	BRD-K88172511	naltrexone	trt_cp	OPRD1|OPRK1|OPRM1	0.11	0.08	0.05	0.06	-666	0.99
+BRD-K17075857	Opioid receptor antagonist	BRD-K17075857	chloroxine	trt_cp	-666	0.27	0.24	0.2	0.07	-666	0.99
+BRD-K73425385	Bacterial 30S ribosomal subunit inhibitor	BRD-K73425385	bekanamycin	trt_cp	-666	0.13	0.1	0.07	0.06	-666	0.99
+BRD-K41337261	Abl kinase inhibitor|Src inhibitor|VEGFR inhibitor	BRD-K41337261	ZM-306416	trt_cp	FLT1|KDR	0.2	0.16	0.12	0.08	-666	0.99
+BRD-K02900412	Protein synthesis inhibitor	BRD-K02900412	clofoctol	trt_cp	-666	0.2	0.17	0.14	0.05	-666	0.99
+BRD-K28307902	Androgen receptor antagonist	BRD-K28307902	flutamide	trt_cp	AR	0.13	0.11	0.08	0.05	-666	0.99
+BRD-K32107296	DNA alkylating drug	BRD-K32107296	temozolomide	trt_cp	MGMT	0.15	0.12	0.09	0.06	-666	0.99
+BRD-K56614220	GK0582 inhibitor	BRD-K56614220	clofazimine	trt_cp	-666	0.19	0.16	0.14	0.06	-666	0.99
+BRD-K12539581	Tubulin inhibitor	BRD-K12539581	nocodazole	trt_cp	-666	0.44	0.38	0.32	0.12	-666	0.99
+BRD-A16700644	Adrenergic receptor agonist	BRD-A16700644	isoxsuprine	trt_cp	ADRB2	0.15	0.13	0.1	0.05	-666	0.98
+BRD-K73197500	HSP inhibitor	BRD-K73197500	SNX-5422	trt_cp	-666	0.48	0.42	0.37	0.11	-666	0.98
+BRD-K49071277	GABA receptor antagonist|TP53 activator	BRD-K49071277	securinine	trt_cp	GABRA1	0.13	0.12	0.09	0.04	-666	0.98
+BRD-K40496271	Thrombopoietin receptor agonist	BRD-K40496271	eltrombopag	trt_cp	MPL	0.23	0.2	0.16	0.07	-666	0.98
+BRD-K73237276	Vitamin D receptor agonist	BRD-K73237276	tacalcitol	trt_cp	VDR	0.15	0.1	0.06	0.09	-666	0.98
+BRD-A39975020	Bacterial cell wall synthesis inhibitor	BRD-A39975020	cefpiramide	trt_cp	-666	0.17	0.14	0.12	0.05	-666	0.98
+BRD-A74391928	Potassium channel blocker	BRD-A74391928	ibutilide	trt_cp	KCNH2|CACNA1C	0.22	0.18	0.15	0.07	-666	0.98
+BRD-K46585355	Cyclooxygenase inhibitor	BRD-K46585355	acetylsalicylsalicylic-acid	trt_cp	-666	0.17	0.15	0.12	0.05	-666	0.98
+BRD-K78096648	Dopamine receptor antagonist	BRD-K78096648	oxiperomide	trt_cp	-666	0.24	0.21	0.17	0.07	-666	0.98
+BRD-K21937671	Cysteine peptidase inhibitor	BRD-K21937671	loxistatin-acid	trt_cp	CTSB	0.12	0.1	0.07	0.05	-666	0.98
+BRD-K42205652	-666	BRD-K42205652	"MNS-(3,4-methylenedioxy-nitrostyrene)"	trt_cp	-666	0.26	0.24	0.22	0.05	-666	0.98
+BRD-K29173907	Glucocorticoid receptor agonist	BRD-K29173907	isoflupredone-acetate	trt_cp	NR3C1	0.15	0.11	0.08	0.07	-666	0.98
+BRD-A25608658	Antiprotozoal agent	BRD-A25608658	narasin	trt_cp	-666	0.39	0.34	0.28	0.11	-666	0.98
+BRD-K11196887	Bacterial DNA gyrase inhibitor	BRD-K11196887	norfloxacin	trt_cp	-666	0.21	0.17	0.14	0.07	-666	0.98
+BRD-A95886749	Pulmonary surfactant	BRD-A95886749	colfosceril-palmitate	trt_cp	-666	0.16	0.13	0.09	0.06	-666	0.98
+BRD-A75850590	Bacterial DNA gyrase inhibitor	BRD-A75850590	lomefloxacin	trt_cp	-666	0.29	0.25	0.21	0.08	-666	0.98
+BRD-A68631409	ATPase inhibitor|TRPV agonist	BRD-A68631409	evodiamine	trt_cp	TRPV1	0.33	0.28	0.24	0.1	-666	0.98
+BRD-K02898090	Mannosidase inhibitor	BRD-K02898090	kifunensine	trt_cp	-666	0.18	0.14	0.1	0.08	-666	0.98
+BRD-K92241597	Peptidase inhibitor	BRD-K92241597	tosedostat	trt_cp	ANPEP|NPEPPS|LAP3	0.31	0.25	0.2	0.11	-666	0.98
+BRD-K78177893	AKT inhibitor	BRD-K78177893	A-674563	trt_cp	AKT1	0.4	0.36	0.33	0.07	-666	0.98
+BRD-K14991967	Serum/glucocorticoid regulated kinase inhibitor	BRD-K14991967	GSK-650394	trt_cp	SGK1	0.23	0.2	0.17	0.06	-666	0.97
+BRD-A73741725	Aromatase inhibitor	BRD-A73741725	exemestane	trt_cp	CYP19A1	0.14	0.11	0.09	0.05	-666	0.97
+BRD-K84892605	-666	BRD-K84892605	IOWH-032	trt_cp	-666	0.16	0.13	0.11	0.05	-666	0.97
+BRD-K07736136	P38 MAPK inhibitor	BRD-K07736136	VX-702	trt_cp	MAPK14	0.16	0.13	0.11	0.05	-666	0.97
+BRD-K61250484	-666	BRD-K61250484	FPH1	trt_cp	-666	0.11	0.09	0.06	0.05	-666	0.97
+BRD-K92644009	Vitamin D receptor agonist	BRD-K92644009	alfacalcidol	trt_cp	VDR	0.21	0.18	0.15	0.07	-666	0.97
+BRD-K40175214	MTOR inhibitor|PI3K inhibitor	BRD-K40175214	torin-1	trt_cp	MTOR	0.45	0.39	0.35	0.1	-666	0.97
+BRD-K55187425	Cell cycle inhibitor|PLK inhibitor	BRD-K55187425	rigosertib	trt_cp	PLK1	0.48	0.41	0.34	0.14	-666	0.96
+BRD-K29968218	Src inhibitor|Tubulin inhibitor	BRD-K29968218	KX2-391	trt_cp	SRC	0.42	0.36	0.3	0.12	-666	0.96
+BRD-K67977190	Angiotensin receptor antagonist	BRD-K67977190	eprosartan	trt_cp	AGTR1	0.1	0.08	0.05	0.05	-666	0.96
+BRD-K71467466	Exportin antagonist	BRD-K71467466	KPT-185	trt_cp	XPO1	0.46	0.41	0.34	0.12	-666	0.96
+BRD-K97746869	ATP channel blocker	BRD-K97746869	chlorpropamide	trt_cp	ABCC8	0.2	0.17	0.14	0.06	-666	0.96
+BRD-K12885236	Non-nucleoside reverse transcriptase inhibitor	BRD-K12885236	dapivirine	trt_cp	CYP3A5|CYP3A4	0.23	0.2	0.17	0.06	-666	0.96
+BRD-A63546914	Glutamate receptor antagonist	BRD-A63546914	Ro-04-5595	trt_cp	GRIN2B	0.15	0.12	0.09	0.06	-666	0.96
+BRD-K26253904	ATPase inhibitor	BRD-K26253904	NMS-873	trt_cp	VCP	0.44	0.39	0.35	0.09	-666	0.96
+BRD-A79981887	Adrenergic receptor agonist	BRD-A79981887	midodrine	trt_cp	ADRA1A|ADRA1B|ADRA1D	0.26	0.2	0.17	0.09	-666	0.96
+BRD-K15409150	T-type calcium channel blocker	BRD-K15409150	penfluridol	trt_cp	-666	0.42	0.37	0.34	0.07	-666	0.96
+BRD-K52911425	PI3K inhibitor	BRD-K52911425	GDC-0941	trt_cp	PIK3CG	0.22	0.18	0.15	0.07	-666	0.96
+BRD-A35588707	Topoisomerase inhibitor	BRD-A35588707	teniposide	trt_cp	TOP2A	0.56	0.49	0.42	0.14	-666	0.96
+BRD-K60997853	CDK inhibitor|Growth factor receptor inhibitor	BRD-K60997853	PHA-848125	trt_cp	CDK2|CDK4|NTRK1|CDK1	0.31	0.28	0.24	0.07	-666	0.96
+BRD-K19796430	Smoothened receptor antagonist	BRD-K19796430	sonidegib	trt_cp	SMO	0.13	0.11	0.09	0.04	-666	0.96
+BRD-A11815689	-666	BRD-A11815689	proscillaridin-a	trt_cp	-666	0.64	0.56	0.5	0.14	-666	0.96
+BRD-K98795921	MTOR inhibitor|PI3K inhibitor	BRD-K98795921	SB-2343	trt_cp	MTOR|PIK3CA|PIK3CB|PIK3CD|PIK3CG	0.38	0.34	0.3	0.08	-666	0.96
+BRD-K37723606	Apoptosis stimulant	BRD-K37723606	dioscin	trt_cp	-666	0.29	0.26	0.23	0.07	-666	0.95
+BRD-K66094457	Glutamate receptor antagonist	BRD-K66094457	CPP	trt_cp	GRIN1	0.24	0.2	0.17	0.07	-666	0.95
+BRD-K70402238	HDAC inhibitor	BRD-K70402238	nexturastat-a	trt_cp	HDAC6	0.18	0.15	0.12	0.06	-666	0.95
+BRD-K04993719	Antitumor agent|Ribonucleoside reductase inhibitor	BRD-K04993719	LY-2334737	trt_cp	-666	0.33	0.29	0.24	0.09	-666	0.95
+BRD-K49759007	-666	BRD-K49759007	4-hydroxy-phenazone	trt_cp	-666	0.14	0.11	0.08	0.06	-666	0.95
+BRD-K38305202	Dopamine receptor antagonist	BRD-K38305202	domperidone	trt_cp	DRD2|DRD3	0.18	0.15	0.11	0.07	-666	0.95
+BRD-A12417644	MAP kinase activator	BRD-A12417644	usniacin-(+)	trt_cp	-666	0.14	0.11	0.09	0.05	-666	0.95
+BRD-K64800655	CDK inhibitor	BRD-K64800655	PHA-793887	trt_cp	CDK1|CDK2|CDK4|CDK5|CDK7|CDK9	0.34	0.28	0.21	0.13	-666	0.95
+BRD-K81694556	Renin inhibitor	BRD-K81694556	VTP-27999	trt_cp	REN	0.2	0.17	0.14	0.06	-666	0.95
+BRD-K26824830	Protein synthesis inhibitor	BRD-K26824830	azomycin-(2-nitroimidazole)	trt_cp	-666	0.15	0.12	0.09	0.06	-666	0.94
+BRD-A91877226	DNA synthesis inhibitor|Thymidylate synthase inhibitor	BRD-A91877226	capecitabine	trt_cp	TYMS	0.14	0.12	0.09	0.05	-666	0.94
+BRD-K36529613	HSP inhibitor	BRD-K36529613	PU-H71	trt_cp	HSP90AA1	0.41	0.37	0.32	0.09	-666	0.94
+BRD-K10961822	Prostanoid receptor agonist	BRD-K10961822	latanoprost	trt_cp	PTGFR	0.17	0.14	0.12	0.05	-666	0.94
+BRD-K60184833	Tyrosine kinase inhibitor	BRD-K60184833	tyrphostin-AG-99	trt_cp	-666	0.3	0.25	0.22	0.09	-666	0.94
+BRD-K97472745	Progesterone receptor antagonist	BRD-K97472745	gestrinone	trt_cp	AR|ESR1|PGR	0.14	0.12	0.09	0.06	-666	0.94
+BRD-K68633617	Glutamate receptor antagonist	BRD-K68633617	ACDPP	trt_cp	-666	0.18	0.15	0.12	0.06	-666	0.94
+BRD-K40308497	MTH1 inhibitor	BRD-K40308497	crizotinib-(S)	trt_cp	NUDT1	0.35	0.31	0.28	0.07	-666	0.93
+BRD-K37069697	-666	BRD-K37069697	fexinidazole	trt_cp	-666	0.15	0.12	0.08	0.07	-666	0.93
+BRD-K90647725	G protein-coupled receptor agonist	BRD-K90647725	oleanolic-acid	trt_cp	-666	0.18	0.16	0.13	0.05	-666	0.93
+BRD-K50677762	Acetylcholine receptor agonist	BRD-K50677762	oxiracetam	trt_cp	-666	0.27	0.22	0.18	0.09	-666	0.93
+BRD-K63457253	DOT1L inhibitor	BRD-K63457253	EPZ-5676	trt_cp	DOT1L	0.22	0.18	0.13	0.09	-666	0.93
+BRD-K91623615	Tubulin inhibitor	BRD-K91623615	ABT-751	trt_cp	-666	0.48	0.41	0.36	0.12	-666	0.93
+BRD-A78391468	Glucocorticoid receptor agonist	BRD-A78391468	prednisolone-hemisuccinate	trt_cp	NR3C1	0.21	0.17	0.13	0.08	-666	0.93
+BRD-K21361524	Exportin antagonist	BRD-K21361524	selinexor	trt_cp	XPO1	0.46	0.41	0.35	0.1	-666	0.93
+BRD-K70511574	PLK inhibitor	BRD-K70511574	HMN-214	trt_cp	CSF1R|FLT1|FLT3|FLT4|KDR|KIT|PDGFRB|RET	0.33	0.28	0.24	0.09	-666	0.93
+BRD-K47337578	Serotonin receptor antagonist	BRD-K47337578	4-(4-fluorobenzoyl)-1-(4-phenylbutyl)-piperidine	trt_cp	HTR2A	0.15	0.12	0.09	0.06	-666	0.93
+BRD-K53665955	Aurora kinase inhibitor	BRD-K53665955	MK-5108	trt_cp	AURKA|AURKB	0.28	0.25	0.21	0.07	-666	0.93
+BRD-K03273112	Glycogen synthase kinase inhibitor	BRD-K03273112	1-azakenpaullone	trt_cp	GSK3B|CDK1|CDK5	0.22	0.18	0.14	0.08	-666	0.92
+BRD-A20644369	Mineralocorticoid receptor antagonist	BRD-A20644369	canrenone	trt_cp	NR3C2	0.11	0.09	0.07	0.05	-666	0.92
+BRD-K51143828	Dopamine receptor antagonist|Serotonin receptor antagonist	BRD-K51143828	lurasidone	trt_cp	DRD2|HTR2A|HTR7|HTR1A|ADRA2A|ADRA2C	0.13	0.11	0.09	0.04	-666	0.92
+BRD-K92093830	Topoisomerase inhibitor	BRD-K92093830	doxorubicin	trt_cp	TOP2A	0.56	0.51	0.45	0.11	-666	0.92
+BRD-K00535541	-666	BRD-K00535541	9-aminoacridine	trt_cp	-666	0.35	0.32	0.29	0.06	-666	0.92
+BRD-A36057565	Protein synthesis inhibitor	BRD-A36057565	bruceantin	trt_cp	-666	0.56	0.5	0.44	0.12	-666	0.92
+BRD-K19318328	Endothelin receptor antagonist	BRD-K19318328	FR-139317	trt_cp	EDNRA	0.23	0.2	0.17	0.07	-666	0.92
+BRD-K11853856	PARP inhibitor	BRD-K11853856	PJ-34	trt_cp	-666	0.14	0.12	0.09	0.06	-666	0.92
+BRD-K20545304	"Nuclear factor erythroid derived, like (NRF2) activator"	BRD-K20545304	bardoxolone	trt_cp	NFE2L2|PPARG	0.39	0.35	0.3	0.08	-666	0.92
+BRD-K52536804	ATP synthase inhibitor|ATPase inhibitor	BRD-K52536804	oligomycin-a	trt_cp	ATP5A1	0.55	0.47	0.4	0.15	-666	0.92
+BRD-A53134341	NFkB pathway inhibitor	BRD-A53134341	Ro-106-9920	trt_cp	-666	0.38	0.34	0.31	0.07	-666	0.92
+BRD-K43905307	-666	BRD-K43905307	L-798106	trt_cp	-666	0.23	0.19	0.16	0.07	-666	0.92
+BRD-K77987382	Tubulin inhibitor	BRD-K77987382	mebendazole	trt_cp	-666	0.31	0.27	0.24	0.08	-666	0.92
+BRD-K87696786	Glutamate receptor antagonist	BRD-K87696786	LY-456236	trt_cp	GRM1	0.32	0.27	0.22	0.1	-666	0.92
+BRD-A17846016	Antioxidant	BRD-A17846016	trolox	trt_cp	-666	0.12	0.09	0.07	0.05	-666	0.92
+BRD-A28746609	Tubulin inhibitor	BRD-A28746609	paclitaxel	trt_cp	NR1I2|TUBB	0.66	0.59	0.51	0.16	-666	0.91
+BRD-K89053832	USP14 inhibitor	BRD-K89053832	VLX-600	trt_cp	-666	0.34	0.28	0.22	0.12	-666	0.91
+BRD-K61734568	Bcl-XL downregulator	BRD-K61734568	"2,3-DCPE"	trt_cp	BCL2L1	0.24	0.2	0.16	0.08	-666	0.91
+BRD-K88506063	Rho associated kinase inhibitor	BRD-K88506063	KD-025	trt_cp	-666	0.2	0.17	0.14	0.06	-666	0.91
+BRD-K89704198	Adrenergic receptor antagonist	BRD-K89704198	vincamine	trt_cp	-666	0.19	0.15	0.13	0.06	-666	0.91
+BRD-K99571587	DNA polymerase inhibitor	BRD-K99571587	cephalomannine	trt_cp	-666	0.58	0.5	0.42	0.16	-666	0.91
+BRD-K08619574	Dopamine receptor antagonist	BRD-K08619574	thioproperazine	trt_cp	-666	0.15	0.13	0.1	0.05	-666	0.91
+BRD-A64242993	Cardiac glycoside	BRD-A64242993	lanatoside-c	trt_cp	-666	0.47	0.42	0.38	0.09	-666	0.91
+BRD-A10039652	HIV protease inhibitor	BRD-A10039652	tipranavir	trt_cp	-666	0.17	0.14	0.11	0.06	-666	0.91
+BRD-K17979676	Monoamine oxidase inhibitor	BRD-K17979676	eprobemide	trt_cp	MAOA	0.2	0.17	0.15	0.05	-666	0.91
+BRD-K54997624	PI3K inhibitor	BRD-K54997624	alpelisib	trt_cp	PIK3CA	0.2	0.17	0.14	0.06	-666	0.91
+BRD-K32572029	-666	BRD-K32572029	orotic-acid	trt_cp	-666	0.15	0.12	0.09	0.06	-666	0.91
+BRD-K79633074	-666	BRD-K79633074	xilobam	trt_cp	-666	0.21	0.18	0.14	0.07	-666	0.91
+BRD-K76406695	AKT inhibitor	BRD-K76406695	CCT-128930	trt_cp	-666	0.19	0.16	0.13	0.06	-666	0.91
+BRD-A68009927	RNA synthesis inhibitor|Topoisomerase inhibitor	BRD-A68009927	daunorubicin	trt_cp	TOP2A	0.64	0.59	0.54	0.1	-666	0.91
+BRD-K74057757	Tubulin inhibitor	BRD-K74057757	indibulin	trt_cp	-666	0.42	0.36	0.31	0.11	-666	0.9
+BRD-K77554836	Glucocorticoid receptor agonist	BRD-K77554836	triamcinolone	trt_cp	NR3C1	0.17	0.14	0.11	0.06	-666	0.9
+BRD-K01109406	Hydroxyphenylpyruvate dioxygenase inhibitor	BRD-K01109406	nitisinone	trt_cp	HPD	0.16	0.13	0.1	0.06	-666	0.9
+BRD-K85920262	MTOR inhibitor	BRD-K85920262	WAY-600	trt_cp	MTOR	0.32	0.28	0.25	0.07	-666	0.9
+BRD-A09722536	DNA alkylating agent	BRD-A09722536	cyclophosphamide	trt_cp	CYP2A6|CYP2B6|CYP2C18|CYP2C19|CYP2C8|CYP2C9|CYP2D6|CYP3A4|CYP3A5|CYP3A7	0.17	0.15	0.12	0.05	-666	0.9
+BRD-K13087974	EGFR inhibitor	BRD-K13087974	CGP-52411	trt_cp	EGFR	0.28	0.25	0.21	0.07	-666	0.9
+BRD-K96631475	Antitumor agent	BRD-K96631475	10-deacetylbaccatin	trt_cp	-666	0.33	0.28	0.22	0.11	-666	0.9
+BRD-K06854232	Retinoid receptor agonist	BRD-K06854232	AM-580	trt_cp	RARA	0.21	0.18	0.15	0.06	-666	0.9
+BRD-K62627508	MDM inhibitor	BRD-K62627508	idasanutlin	trt_cp	MDM2|TP53	0.29	0.22	0.16	0.14	-666	0.9
+BRD-K76908866	Tyrosine kinase inhibitor|EGFR inhibitor	BRD-K76908866	CP-724714	trt_cp	ERBB2	0.21	0.17	0.14	0.06	-666	0.9
+BRD-A08545410	Metalloproteinase inhibitor	BRD-A08545410	doxycycline	trt_cp	MMP8	0.24	0.21	0.18	0.06	-666	0.9
+BRD-A49035384	Bacterial 50S ribosomal subunit inhibitor	BRD-A49035384	metacycline	trt_cp	-666	0.22	0.19	0.15	0.06	-666	0.9
+BRD-K54262262	Melanin inhibitor	BRD-K54262262	monobenzone	trt_cp	TYR	0.2	0.17	0.14	0.06	-666	0.9
+BRD-K69776681	PLK inhibitor	BRD-K69776681	volasertib	trt_cp	PLK1	0.42	0.36	0.3	0.12	-666	0.89
+BRD-A68930007	ATPase inhibitor	BRD-A68930007	ouabain	trt_cp	ATP1A1	0.6	0.55	0.5	0.1	-666	0.89
+BRD-K52762805	Microtubule stabilizing agent|Microtubule stimulant|Tubulin polymerisation inhibitor|Tubulin inhibitor	BRD-K52762805	epothilone-d	trt_cp	TUBB	0.59	0.53	0.47	0.13	-666	0.89
+BRD-A81370665	Ribosomal protein inhibitor	BRD-A81370665	BI-D1870	trt_cp	RPS6KA1|RPS6KA2|RPS6KA3	0.15	0.12	0.1	0.06	-666	0.89
+BRD-K67566344	MTOR inhibitor	BRD-K67566344	KU-0063794	trt_cp	MTOR	0.29	0.25	0.21	0.07	-666	0.89
+BRD-K13094524	Bromodomain inhibitor	BRD-K13094524	PFI-1	trt_cp	-666	0.33	0.28	0.24	0.1	-666	0.89
+BRD-K93869735	Thyrotropin releasing hormone receptor agonist	BRD-K93869735	taltirelin	trt_cp	TRHR	0.2	0.16	0.13	0.07	-666	0.89
+BRD-K65928735	JAK inhibitor	BRD-K65928735	AZD-1480	trt_cp	JAK1|JAK2	0.22	0.2	0.17	0.05	-666	0.89
+BRD-K93754473	Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)	BRD-K93754473	tamoxifen	trt_cp	ESR1|ESR2	0.12	0.09	0.07	0.05	-666	0.89
+BRD-K57284066	HCV inhibitor	BRD-K57284066	Ro-9187	trt_cp	-666	0.23	0.2	0.17	0.06	-666	0.89
+BRD-K19085898	Phospholipase inhibitor	BRD-K19085898	darapladib	trt_cp	PLA2G7	0.23	0.22	0.2	0.04	-666	0.89
+BRD-K41278234	EGFR inhibitor	BRD-K41278234	CUDC-101	trt_cp	EGFR|ERBB2	0.35	0.31	0.26	0.09	-666	0.89
+BRD-K08303368	Acetylcholinesterase inhibitor	BRD-K08303368	chlorpyrifos	trt_cp	-666	0.2	0.18	0.14	0.06	-666	0.89
+BRD-K64881305	Kinesin inhibitor	BRD-K64881305	ispinesib	trt_cp	KIF11	0.46	0.39	0.32	0.13	-666	0.89
+BRD-K85606544	EGFR inhibitor	BRD-K85606544	neratinib	trt_cp	EGFR|ERBB2|ERBB4	0.27	0.22	0.17	0.09	-666	0.89
+BRD-A97739905	Cyclooxygenase inhibitor	BRD-A97739905	ketoprofen	trt_cp	PTGS1|PTGS2	0.22	0.18	0.15	0.06	-666	0.88
+BRD-K99475619	Topoisomerase inhibitor	BRD-K99475619	genz-644282	trt_cp	TOP1	0.61	0.55	0.5	0.11	-666	0.88
+BRD-A39390670	ATPase inhibitor|Gastrin inhibitor	BRD-A39390670	rabeprazole	trt_cp	ATP4A	0.17	0.15	0.12	0.06	-666	0.88
+BRD-K30519779	Glutamate receptor agonist	BRD-K30519779	homoquinolinic-acid	trt_cp	-666	0.15	0.12	0.09	0.06	-666	0.88
+BRD-K17518951	Chelating agent	BRD-K17518951	penicillamine-(D)	trt_cp	-666	0.2	0.17	0.15	0.06	-666	0.88
+BRD-A20239487	Adrenergic receptor antagonist	BRD-A20239487	atenolol-(+/-)	trt_cp	ADRB1|ADRB2	0.21	0.18	0.15	0.06	-666	0.88
+BRD-K49229349	Tubulin inhibitor	BRD-K49229349	vincristine	trt_cp	TUBB	0.5	0.42	0.33	0.17	-666	0.88
+BRD-A17883755	Anticancer agent	BRD-A17883755	lenalidomide	trt_cp	CRBN|TNF	0.23	0.2	0.17	0.06	-666	0.88
+BRD-K18613660	-666	BRD-K18613660	mexeneone	trt_cp	-666	0.12	0.1	0.07	0.05	-666	0.88
+BRD-K92991072	Caspase activator	BRD-K92991072	PAC-1	trt_cp	CASP3	0.19	0.16	0.13	0.06	-666	0.88
+BRD-K94455792	Beta-catenin inhibitor	BRD-K94455792	ICG-001	trt_cp	CTNNB1	0.21	0.18	0.14	0.07	-666	0.88
+BRD-K60237333	NAD precursor with lipid lowering effects|Vitamin B	BRD-K60237333	niacin	trt_cp	HCAR2|HCAR3	0.15	0.12	0.09	0.06	-666	0.88
+BRD-A47953250	-666	BRD-A47953250	ecamsule-triethanolamine	trt_cp	-666	0.19	0.15	0.12	0.07	-666	0.87
+BRD-K21673112	-666	BRD-K21673112	pitolisant	trt_cp	-666	0.15	0.13	0.1	0.05	-666	0.87
+BRD-K95763993	PDGFR tyrosine kinase receptor inhibitor	BRD-K95763993	trapidil	trt_cp	PDGFRA	0.19	0.17	0.15	0.05	-666	0.87
+BRD-K76180386	Histone lysine demethylase inhibitor	BRD-K76180386	JIB04	trt_cp	KDM4E	0.35	0.31	0.27	0.08	-666	0.87
+BRD-K56844688	Topoisomerase inhibitor	BRD-K56844688	epirubicin	trt_cp	TOP2A	0.56	0.5	0.45	0.11	-666	0.87
+BRD-K53581288	JAK inhibitor	BRD-K53581288	baricitinib	trt_cp	JAK1|JAK2	0.25	0.22	0.18	0.07	-666	0.87
+BRD-K59831625	Bone morphogenic protein inhibitor	BRD-K59831625	LDN-212854	trt_cp	ABL1|ACVR1|RIPK2	0.4	0.35	0.31	0.08	-666	0.87
+BRD-K12502280	FLT3 inhibitor|JAK inhibitor	BRD-K12502280	TG-101348	trt_cp	FLT3|JAK2	0.27	0.24	0.21	0.06	-666	0.87
+BRD-A53244165	ARF inhibitor	BRD-A53244165	golgicide-a	trt_cp	GBF1	0.25	0.22	0.18	0.06	-666	0.87
+BRD-A58564983	Nematocide	BRD-A58564983	selamectin	trt_cp	-666	0.14	0.11	0.09	0.04	-666	0.87
+BRD-K27217864	Sodium channel blocker	BRD-K27217864	butamben	trt_cp	-666	0.21	0.18	0.15	0.06	-666	0.87
+BRD-K85554912	GABA receptor agonist	BRD-K85554912	ivermectin	trt_cp	-666	0.29	0.26	0.22	0.06	-666	0.87
+BRD-A07704283	Dopamine receptor antagonist	BRD-A07704283	isofloxythepin	trt_cp	-666	0.16	0.14	0.12	0.04	-666	0.87
+BRD-K75352575	Exportin antagonist	BRD-K75352575	KPT-276	trt_cp	XPO1	0.41	0.36	0.3	0.12	-666	0.87
+BRD-K80700417	Pim kinase inhibitor	BRD-K80700417	SGI-1776	trt_cp	PIM1|FLT3|PIM2|PIM3	0.2	0.16	0.13	0.08	-666	0.86
+BRD-K87031376	Microtubule stabilizing agent	BRD-K87031376	epothilone-a	trt_cp	-666	0.62	0.54	0.47	0.15	-666	0.86
+BRD-K26823213	Cannabinoid receptor agonist	BRD-K26823213	GW-842166	trt_cp	-666	0.13	0.11	0.09	0.05	-666	0.86
+BRD-A66419424	Proteasome inhibitor	BRD-A66419424	ixazomib-citrate	trt_cp	-666	0.48	0.44	0.4	0.08	-666	0.86
+BRD-A83650191	-666	BRD-A83650191	A-61603	trt_cp	-666	0.33	0.28	0.23	0.09	-666	0.86
+BRD-A13133631	Glucocorticoid receptor agonist	BRD-A13133631	fluorometholone	trt_cp	NR3C1	0.32	0.27	0.22	0.1	-666	0.86
+BRD-K94420399	CC chemokine receptor antagonist	BRD-K94420399	PF-04136309	trt_cp	-666	0.13	0.11	0.08	0.05	-666	0.86
+BRD-K32372024	-666	BRD-K32372024	D-7193	trt_cp	-666	0.28	0.24	0.2	0.08	-666	0.86
+BRD-K49031386	Atherosclerosis formation inhibitor	BRD-K49031386	hyodeoxycholic-acid	trt_cp	-666	0.12	0.09	0.07	0.05	-666	0.86
+BRD-K77908580	HDAC inhibitor	BRD-K77908580	entinostat	trt_cp	HDAC1	0.27	0.22	0.18	0.09	-666	0.85
+BRD-K78318619	Cytochrome P450 inhibitor	BRD-K78318619	PF-4981517	trt_cp	CYP3A4	0.19	0.16	0.12	0.07	-666	0.85
+BRD-A50311610	Constitutive androstane receptor (CAR) agonist	BRD-A50311610	meclizine	trt_cp	NR1I3	0.28	0.26	0.23	0.05	-666	0.85
+BRD-K28570407	Sodium channel blocker	BRD-K28570407	A-803467	trt_cp	SCN10A	0.18	0.16	0.13	0.05	-666	0.85
+BRD-K58770988	HSP90 Inhibitor	BRD-K58770988	NMS-E973	trt_cp	-666	0.47	0.41	0.35	0.12	-666	0.85
+BRD-A25687296	Protein synthesis inhibitor	BRD-A25687296	emetine	trt_cp	RPS2	0.53	0.48	0.44	0.1	-666	0.85
+BRD-K08791496	-666	BRD-K08791496	fenaclon	trt_cp	-666	0.1	0.08	0.05	0.05	-666	0.85
+BRD-A68304895	Dopamine reuptake inhibitor|Adrenergic transmitter uptake inhibitor|Norepinephrine reputake inhibitor|Serotonin reuptake inhibitor	BRD-A68304895	BTS-54505	trt_cp	SLC6A2|SLC6A3|SLC6A4	0.19	0.15	0.12	0.06	-666	0.85
+BRD-K51967704	HSP inhibitor	BRD-K51967704	BIIB-021	trt_cp	HSP90AA1	0.44	0.4	0.34	0.1	-666	0.85
+BRD-K74305673	IKK inhibitor|NFkB pathway inhibitor	BRD-K74305673	IKK-2-inhibitor-V	trt_cp	IKBKB	0.3	0.26	0.22	0.08	-666	0.85
+BRD-K86525559	CHK inhibitor	BRD-K86525559	AZD-7762	trt_cp	CHEK1|CHEK2	0.48	0.43	0.39	0.09	-666	0.85
+BRD-A24514565	Vitamin K antagonist	BRD-A24514565	warfarin	trt_cp	VKORC1	0.17	0.14	0.11	0.07	-666	0.85
+BRD-A25569250	Lysophosphatidic acid receptor antagonist	BRD-A25569250	KI-16425	trt_cp	LPAR1|LPAR3	0.19	0.16	0.13	0.06	-666	0.84
+BRD-K31698212	EGFR inhibitor	BRD-K31698212	icotinib	trt_cp	EGFR	0.18	0.14	0.1	0.07	-666	0.84
+BRD-K59573506	Androgen receptor antagonist|Progesterone receptor agonist|Testosterone receptor antagonist	BRD-K59573506	cyproterone-acetate	trt_cp	AR	0.28	0.26	0.23	0.05	-666	0.84
+BRD-K95292280	Urotensin receptor antagonist	BRD-K95292280	SB-657510	trt_cp	UTS2R	0.2	0.17	0.14	0.06	-666	0.84
+BRD-K58632460	Penicillin binding protein inhibitor	BRD-K58632460	amoxicillin	trt_cp	CYP2C19|SLC15A1|SLC15A2|SLC22A6	0.13	0.1	0.08	0.05	-666	0.84
+BRD-K38860038	Hedgehog pathway inhibitor	BRD-K38860038	JK-184	trt_cp	-666	0.49	0.43	0.37	0.12	-666	0.84
+BRD-K23301018	Antiprotozoal agent	BRD-K23301018	broxyquinoline	trt_cp	-666	0.25	0.21	0.17	0.07	-666	0.84
+BRD-A69651145	Bacterial 30S ribosomal subunit inhibitor	BRD-A69651145	minocycline	trt_cp	-666	0.14	0.12	0.09	0.05	-666	0.84
+BRD-K35520305	DNA alkylating agent	BRD-K35520305	dacarbazine	trt_cp	-666	0.22	0.18	0.15	0.06	-666	0.84
+BRD-K08078237	Calcium channel blocker	BRD-K08078237	tetrandrine	trt_cp	-666	0.28	0.26	0.24	0.04	-666	0.84
+BRD-A30886737	Protein synthesis inhibitor	BRD-A30886737	florfenicol	trt_cp	-666	0.21	0.19	0.16	0.05	-666	0.84
+BRD-K79259477	Ephrin inhibitor	BRD-K79259477	NVP-BHG712	trt_cp	EPHB4	0.21	0.18	0.15	0.06	-666	0.84
+BRD-A64092382	Sodium channel blocker	BRD-A64092382	mexiletine	trt_cp	SCN5A	0.39	0.34	0.29	0.1	-666	0.84
+BRD-A06426627	Antiprotozoal agent	BRD-A06426627	diclazuril	trt_cp	-666	0.36	0.31	0.26	0.1	-666	0.83
+BRD-K74227499	-666	BRD-K74227499	se-methylselenocysteine	trt_cp	-666	0.12	0.1	0.07	0.05	-666	0.83
+BRD-K39252998	Adrenergic receptor antagonist	BRD-K39252998	atipamezole	trt_cp	-666	0.2	0.17	0.13	0.06	-666	0.83
+BRD-K79145628	Bacterial DNA inhibitor	BRD-K79145628	nimorazole	trt_cp	-666	0.22	0.19	0.17	0.05	-666	0.83
+BRD-K87349682	Adrenergic receptor agonist	BRD-K87349682	norepinephrine	trt_cp	ADRA1A|ADRA1B|ADRA1D|ADRA2A|ADRA2B|ADRA2C|ADRB1|ADRB3	0.23	0.2	0.16	0.07	-666	0.83
+BRD-K26833429	Telomerase inhibitor	BRD-K26833429	costunolide	trt_cp	-666	0.18	0.16	0.13	0.05	-666	0.83
+BRD-K28822270	HDAC inhibitor	BRD-K28822270	resminostat	trt_cp	HDAC1	0.27	0.24	0.2	0.07	-666	0.83
+BRD-A74208568	GABA receptor antagonist	BRD-A74208568	CGP-54626	trt_cp	GABBR1|GABBR2	0.17	0.15	0.13	0.05	-666	0.83
+BRD-K24593301	ALK tyrosine kinase receptor inhibitor|Insulin growth factor receptor inhibitor	BRD-K24593301	AZD-3463	trt_cp	-666	0.44	0.4	0.35	0.09	-666	0.83
+BRD-K52313696	HDAC inhibitor	BRD-K52313696	tacedinaline	trt_cp	-666	0.23	0.19	0.16	0.07	-666	0.83
+BRD-K28578425	Phosphodiesterase inhibitor	BRD-K28578425	cilostamide	trt_cp	PDE3A|PDE3B	0.17	0.15	0.12	0.05	-666	0.83
+BRD-K61536336	TRPV antagonist	BRD-K61536336	SB-366791	trt_cp	TRPV1	0.23	0.19	0.16	0.07	-666	0.83
+BRD-A91733352	-666	BRD-A91733352	camylofine-chlorhydrate	trt_cp	-666	0.12	0.09	0.06	0.05	-666	0.83
+BRD-K12867552	HDAC inhibitor	BRD-K12867552	PCI-24781	trt_cp	HDAC1|HDAC10|HDAC2|HDAC3|HDAC6	0.42	0.38	0.34	0.08	-666	0.82
+BRD-K90947825	DNA alkylating drug|DNA inhibitor	BRD-K90947825	carboplatin	trt_cp	-666	0.23	0.19	0.16	0.07	-666	0.82
+BRD-K66788707	DNA synthesis inhibitor	BRD-K66788707	fludarabine	trt_cp	RRM1	0.22	0.19	0.16	0.07	-666	0.82
+BRD-K87124298	MTOR inhibitor	BRD-K87124298	OSI-027	trt_cp	MTOR	0.34	0.3	0.27	0.07	-666	0.82
+BRD-K81916719	Microtubule inhibitor	BRD-K81916719	triclabendazole	trt_cp	DNMT1	0.34	0.29	0.26	0.08	-666	0.82
+BRD-K46392623	PI3K inhibitor	BRD-K46392623	TG-100713	trt_cp	-666	0.22	0.18	0.15	0.07	-666	0.82
+BRD-A91831168	-666	BRD-A91831168	tetrahydropapaverine	trt_cp	-666	0.16	0.13	0.1	0.06	-666	0.82
+BRD-K08109215	Bromodomain inhibitor	BRD-K08109215	I-BET-762	trt_cp	BRD2|BRD3|BRD4	0.38	0.34	0.28	0.1	-666	0.82
+BRD-K01614093	-666	BRD-K01614093	dihydromyricetin	trt_cp	-666	0.25	0.21	0.17	0.08	-666	0.82
+BRD-K79131256	Tubulin inhibitor	BRD-K79131256	albendazole	trt_cp	-666	0.36	0.31	0.25	0.12	-666	0.82
+BRD-K77008974	MTOR inhibitor	BRD-K77008974	WYE-354	trt_cp	MTOR	0.24	0.21	0.18	0.06	-666	0.82
+BRD-K24844714	RNA synthesis inhibitor|Thymidylate synthase inhibitor	BRD-K24844714	fluorouracil	trt_cp	TYMS|DPYD	0.26	0.22	0.18	0.08	-666	0.82
+BRD-K07612980	Bacterial DNA gyrase inhibitor	BRD-K07612980	sparfloxacin	trt_cp	-666	0.22	0.19	0.15	0.07	-666	0.82
+BRD-K47000838	Microtubule inhibitor	BRD-K47000838	cytochalasin-b	trt_cp	ACTB	0.28	0.25	0.21	0.07	-666	0.82
+BRD-K82823804	PKC inhibitor	BRD-K82823804	PD-407824	trt_cp	-666	0.22	0.19	0.16	0.06	-666	0.81
+BRD-K61642990	ErbB2 inhibitor	BRD-K61642990	FERb-033	trt_cp	ERBB2	0.28	0.25	0.22	0.05	-666	0.81
+BRD-K90374350	Other antibiotic	BRD-K90374350	chlorquinaldol	trt_cp	-666	0.22	0.19	0.16	0.06	-666	0.81
+BRD-A93093700	GABA receptor agonist	BRD-A93093700	temazepam	trt_cp	GABRA1|GABRA2|GABRA3|GABRA5|GABRA4|GABRA6|GABRB1|GABRB2|GABRB3|GABRD|GABRE|GABRG1|GABRG2|GABRG3|GABRP|GABRQ	0.25	0.23	0.2	0.05	-666	0.81
+BRD-K52075715	Tubulin inhibitor	BRD-K52075715	oxibendazole	trt_cp	TUBB	0.35	0.3	0.26	0.09	-666	0.81
+BRD-K40109029	ALK tyrosine kinase receptor inhibitor	BRD-K40109029	SB-505124	trt_cp	TGFBR1	0.19	0.17	0.14	0.05	-666	0.81
+BRD-K23228615	MTOR inhibitor|PI3K inhibitor	BRD-K23228615	GDC-0980	trt_cp	MTOR|PIK3CG	0.38	0.34	0.31	0.07	-666	0.81
+BRD-K36234266	DNA alkylating drug|DNA inhibitor	BRD-K36234266	carmustine	trt_cp	GSR	0.14	0.12	0.09	0.06	-666	0.81
+BRD-K64888243	JAK inhibitor	BRD-K64888243	AZ-960	trt_cp	-666	0.34	0.3	0.25	0.09	-666	0.81
+BRD-K49954789	Antioxidant	BRD-K49954789	mesna	trt_cp	-666	0.22	0.16	0.12	0.1	-666	0.81
+BRD-K59929863	DNA inhibitor|DNA synthesis inhibitor	BRD-K59929863	CB-10-277-(free-acid)	trt_cp	-666	0.12	0.09	0.07	0.05	-666	0.81
+BRD-K44665581	Bromodomain inhibitor	BRD-K44665581	bromosporine	trt_cp	-666	0.19	0.15	0.11	0.07	-666	0.81
+BRD-K30867024	Serotonin receptor antagonist	BRD-K30867024	SB-216641	trt_cp	HTR1B|HTR1D	0.25	0.22	0.19	0.06	-666	0.81
+BRD-K50388907	PPAR receptor agonist	BRD-K50388907	fenofibrate	trt_cp	PPARA	0.11	0.08	0.06	0.05	-666	0.8
+BRD-K45528773	HDAC inhibitor	BRD-K45528773	M-344	trt_cp	-666	0.45	0.4	0.35	0.1	-666	0.8
+BRD-K30431096	-666	BRD-K30431096	domiphen	trt_cp	-666	0.26	0.23	0.2	0.06	-666	0.8
+BRD-K52233191	CDK inhibitor	BRD-K52233191	R-547	trt_cp	-666	0.41	0.37	0.33	0.09	-666	0.8
+BRD-K42981054	Glutamate receptor modulator	BRD-K42981054	mibampator	trt_cp	GRIA1	0.21	0.18	0.15	0.06	-666	0.8
+BRD-K73838513	Calcium channel activator	BRD-K73838513	cinacalcet	trt_cp	CASR	0.24	0.22	0.19	0.05	-666	0.8
+BRD-K81548480	PAR agonist	BRD-K81548480	AC-264613	trt_cp	F2RL1	0.24	0.2	0.16	0.07	-666	0.8
+BRD-A03932035	Acetylcholine receptor antagonist	BRD-A03932035	methscopolamine	trt_cp	CHRM1|CHRM2|CHRM3	0.2	0.17	0.13	0.07	-666	0.8
+BRD-K74193284	Other antifungal	BRD-K74193284	phenylmercuric-acetate	trt_cp	-666	0.44	0.4	0.36	0.08	-666	0.8
+BRD-A42746051	Progesterone receptor agonist	BRD-A42746051	melengestrol-acetate	trt_cp	-666	0.15	0.12	0.08	0.07	-666	0.8
+BRD-K87774949	Adenosine receptor antagonist	BRD-K87774949	istradefylline	trt_cp	ADORA2A|ADORA1	0.19	0.16	0.13	0.06	-666	0.8
+BRD-A64064900	DNA inhibitor	BRD-A64064900	sangivamycin	trt_cp	-666	0.63	0.58	0.52	0.1	-666	0.8
+BRD-K78659596	Proteasome inhibitor	BRD-K78659596	ixazomib	trt_cp	PSMB1	0.53	0.47	0.41	0.12	-666	0.8
+BRD-K37379014	Kinesin inhibitor	BRD-K37379014	filanesib	trt_cp	KIF11	0.55	0.45	0.37	0.18	-666	0.8
+BRD-K76703230	Survivin inhibitor	BRD-K76703230	YM-155	trt_cp	BIRC5	0.63	0.57	0.5	0.13	-666	0.79
+BRD-A72716251	Cardiac glycoside	BRD-A72716251	peruvoside	trt_cp	-666	0.54	0.48	0.42	0.12	-666	0.79
+BRD-K89839824	Thymidylate synthase inhibitor	BRD-K89839824	raltitrexed	trt_cp	TYMS	0.5	0.44	0.37	0.13	-666	0.79
+BRD-K26997899	Microtubule inhibitor	BRD-K26997899	D-64131	trt_cp	TUBB	0.43	0.36	0.3	0.12	-666	0.79
+BRD-K15916496	Cytochrome P450 inhibitor|Imidazoline ligand	BRD-K15916496	clotrimazole	trt_cp	KCNN4	0.14	0.12	0.1	0.04	-666	0.79
+BRD-K03109492	CDC inhibitor	BRD-K03109492	NSC-663284	trt_cp	CDC25A|CDC25B	0.32	0.29	0.25	0.07	-666	0.79
+BRD-A92872453	-666	BRD-A92872453	N-acetylmannosamine	trt_cp	-666	0.2	0.16	0.13	0.07	-666	0.79
+BRD-A98299281	Cholinesterase inhibitor	BRD-A98299281	"hydroxytacrine-maleate-(r,s)"	trt_cp	-666	0.16	0.12	0.09	0.08	-666	0.79
+BRD-K56343971	RAF inhibitor	BRD-K56343971	vemurafenib	trt_cp	BRAF	0.15	0.11	0.08	0.07	-666	0.79
+BRD-K71281111	HSP inhibitor	BRD-K71281111	SNX-2112	trt_cp	-666	0.52	0.46	0.42	0.1	-666	0.79
+BRD-A23072235	Histamine receptor antagonist	BRD-A23072235	pheniramine	trt_cp	HRH1	0.28	0.23	0.19	0.09	-666	0.79
+BRD-K52256627	Membrane integrity inhibitor	BRD-K52256627	chlorhexidine	trt_cp	-666	0.3	0.27	0.24	0.06	-666	0.79
+BRD-A73556557	Phosphorylase inhibitor	BRD-A73556557	tagatose	trt_cp	PYGL	0.1	0.08	0.05	0.05	-666	0.79
+BRD-K13810148	HDAC inhibitor	BRD-K13810148	givinostat	trt_cp	HDAC2	0.43	0.38	0.33	0.1	-666	0.79
+BRD-K12829205	DNA inhibitor	BRD-K12829205	mechlorethamine	trt_cp	-666	0.26	0.23	0.2	0.06	-666	0.78
+BRD-K55026842	DNA methyltransferase inhibitor	BRD-K55026842	azacitidine	trt_cp	DNMT1	0.21	0.18	0.14	0.08	-666	0.78
+BRD-K95926480	SIRT activator	BRD-K95926480	SRT-1720	trt_cp	SIRT1	0.24	0.22	0.2	0.03	-666	0.78
+BRD-K68164687	Microtubule stabilizing agent|Tubulin inhibitor|Microtubule stimulant	BRD-K68164687	epothilone-b	trt_cp	TUBB	0.56	0.5	0.43	0.13	-666	0.78
+BRD-K19295594	BCL inhibitor|MCL1 inhibitor	BRD-K19295594	gossypol	trt_cp	BCL2|BCL2L1|MCL1	0.35	0.33	0.3	0.06	-666	0.78
+BRD-K13566078	IKK inhibitor	BRD-K13566078	BMS-345541	trt_cp	IKBKB	0.26	0.22	0.19	0.06	-666	0.78
+BRD-K35329391	Bcr-Abl kinase inhibitor	BRD-K35329391	GZD-824	trt_cp	-666	0.47	0.41	0.36	0.11	-666	0.78
+BRD-K77638923	PI3K inhibitor	BRD-K77638923	CUDC-907	trt_cp	HDAC2|PIK3R1	0.64	0.59	0.54	0.1	-666	0.78
+BRD-K20755323	Sphingosine kinase inhibitor	BRD-K20755323	SKI-II	trt_cp	SPHK1	0.2	0.17	0.14	0.05	-666	0.78
+BRD-K81197548	Ubiquitin specific protease inhibitor	BRD-K81197548	NSC-632839	trt_cp	SENP2|USP1|USP2|USP7	0.3	0.27	0.25	0.05	-666	0.78
+BRD-K90382497	PLK inhibitor	BRD-K90382497	GW-843682X	trt_cp	PLK1|PLK3	0.36	0.31	0.25	0.11	-666	0.78
+BRD-K60348325	-666	BRD-K60348325	brilliant-green	trt_cp	-666	0.62	0.57	0.53	0.09	-666	0.78
+BRD-K59436580	Bacterial 50S ribosomal subunit inhibitor	BRD-K59436580	tedizolid	trt_cp	-666	0.24	0.21	0.18	0.07	-666	0.78
+BRD-K81473043	HSP inhibitor	BRD-K81473043	tanespimycin	trt_cp	HSP90AA1	0.67	0.59	0.52	0.15	-666	0.77
+BRD-K78815826	Cyclooxygenase inhibitor	BRD-K78815826	suxibuzone	trt_cp	-666	0.2	0.17	0.15	0.05	-666	0.77
+BRD-K93123848	RAF inhibitor|VEGFR inhibitor	BRD-K93123848	RAF-265	trt_cp	-666	0.28	0.23	0.19	0.09	-666	0.77
+BRD-K02241333	CHK inhibitor	BRD-K02241333	CHIR-124	trt_cp	CHEK1	0.45	0.38	0.33	0.12	-666	0.77
+BRD-K70401845	EGFR inhibitor	BRD-K70401845	erlotinib	trt_cp	EGFR	0.32	0.26	0.2	0.12	-666	0.77
+BRD-K14175878	CC chemokine receptor antagonist	BRD-K14175878	MK-0812	trt_cp	CCR2	0.11	0.09	0.06	0.05	-666	0.77
+BRD-K81645907	-666	BRD-K81645907	captamine	trt_cp	-666	0.25	0.2	0.16	0.09	-666	0.77
+BRD-K72420232	EGFR inhibitor	BRD-K72420232	WZ-4002	trt_cp	EGFR|ERBB2	0.18	0.15	0.12	0.06	-666	0.77
+BRD-K61228301	DNA methyltransferase inhibitor	BRD-K61228301	SGI-1027	trt_cp	DNMT1|DNMT3A|DNMT3B	0.34	0.3	0.24	0.1	-666	0.77
+BRD-K90497590	Phosphoinositide dependent kinase inhibitor	BRD-K90497590	AR-12	trt_cp	PDPK1	0.3	0.26	0.23	0.08	-666	0.77
+BRD-K99792991	Potassium channel activator	BRD-K99792991	hexachlorophene	trt_cp	-666	0.3	0.26	0.21	0.09	-666	0.77
+BRD-K96233303	-666	BRD-K96233303	TMS	trt_cp	-666	0.17	0.14	0.12	0.05	-666	0.77
+BRD-K54395039	DUB inhibitor	BRD-K54395039	PR-619	trt_cp	-666	0.3	0.27	0.24	0.07	-666	0.77
+BRD-K16277217	Dopamine receptor antagonist	BRD-K16277217	piperacetazine	trt_cp	-666	0.18	0.15	0.12	0.07	-666	0.77
+BRD-K38332599	AKT inhibitor	BRD-K38332599	uprosertib	trt_cp	AKT1|AKT2|AKT3	0.3	0.27	0.23	0.07	-666	0.77
+BRD-A76641868	-666	BRD-A76641868	BRD-A76641868	trt_cp	-666	0.24	0.21	0.18	0.06	-666	0.77
+BRD-K36386086	HIV integrase inhibitor	BRD-K36386086	dolutegravir	trt_cp	CYP3A4|CYP3A5|CYP3A7|POU2F2|UGT1A1	0.28	0.25	0.21	0.07	-666	0.77
+BRD-K11244467	DNA damage inducer	BRD-K11244467	ambazone	trt_cp	-666	0.12	0.1	0.08	0.04	-666	0.77
+BRD-K98203492	Histone lysine demethylase inhibitor	BRD-K98203492	GSK-J4	trt_cp	KDM6A|KDM6B	0.32	0.28	0.24	0.07	-666	0.77
+BRD-A93477898	Caspase activator	BRD-A93477898	PETCM	trt_cp	-666	0.21	0.18	0.16	0.05	-666	0.76
+BRD-K07955840	MTOR inhibitor|PI3K inhibitor	BRD-K07955840	PF-05212384	trt_cp	MTOR|PIK3CA	0.5	0.45	0.4	0.11	-666	0.76
+BRD-K66956375	Cannabinoid receptor agonist|Glucose dependent insulinotropic receptor agonist|Potassium channel blocker|PPAR receptor agonist	BRD-K66956375	oleoylethanolamide	trt_cp	GPR119|PPARA	0.2	0.17	0.14	0.06	-666	0.76
+BRD-K35189033	Estrogen receptor agonist|Glucocorticoid receptor antagonist|Progesterone receptor agonist|Progesterone receptor antagonist	BRD-K35189033	levonorgestrel	trt_cp	PGR	0.18	0.15	0.12	0.05	-666	0.76
+BRD-K87510569	CC chemokine receptor antagonist	BRD-K87510569	RS-504393	trt_cp	CCR2	0.17	0.15	0.12	0.05	-666	0.76
+BRD-A27887842	Glucocorticoid receptor agonist	BRD-A27887842	prednisolone	trt_cp	-666	0.19	0.16	0.11	0.08	-666	0.76
+BRD-K20958582	DNA alkylating drug	BRD-K20958582	TH-302	trt_cp	-666	0.27	0.24	0.19	0.08	-666	0.76
+BRD-K48578705	Adrenergic receptor agonist	BRD-K48578705	methyldopa	trt_cp	ADRA2A|DDC	0.13	0.11	0.08	0.05	-666	0.76
+BRD-K48195801	Histamine receptor antagonist	BRD-K48195801	tecastemizole	trt_cp	HRH1	0.16	0.14	0.11	0.05	-666	0.76
+BRD-K26712974	Caspase inhibitor	BRD-K26712974	VX-765	trt_cp	CASP1	0.22	0.19	0.16	0.06	-666	0.76
+BRD-K68202742	HDAC inhibitor|CDK expression enhancer|ID1 expression inhibitor	BRD-K68202742	trichostatin-a	trt_cp	HDAC1|HDAC10|HDAC3|HDAC4|HDAC6|HDAC7|HDAC8	0.59	0.54	0.48	0.1	-666	0.76
+BRD-K46690591	-666	BRD-K46690591	KP-1212	trt_cp	-666	0.23	0.2	0.16	0.07	-666	0.76
+BRD-K00312224	Estrogen receptor agonist	BRD-K00312224	PPT	trt_cp	ESR1	0.21	0.18	0.15	0.06	-666	0.76
+BRD-A45498368	MTOR inhibitor	BRD-A45498368	WYE-125132	trt_cp	MTOR	0.37	0.33	0.29	0.08	-666	0.76
+BRD-K95435023	C-Met inhibitor	BRD-K95435023	PHA-665752	trt_cp	MET	0.33	0.3	0.27	0.07	-666	0.76
+BRD-K57080016	MEK inhibitor	BRD-K57080016	selumetinib	trt_cp	MAP2K1	0.21	0.13	0.07	0.13	-666	0.76
+BRD-K51474575	Antioxidant	BRD-K51474575	taurine	trt_cp	-666	0.12	0.1	0.07	0.05	-666	0.75
+BRD-A05821830	Tubulin inhibitor	BRD-A05821830	docetaxel	trt_cp	TUBB	0.62	0.54	0.45	0.16	-666	0.75
+BRD-K61097567	Tachykinin antagonist	BRD-K61097567	SB-218795	trt_cp	TACR3	0.24	0.21	0.17	0.06	-666	0.75
+BRD-K09090949	Cannabinoid receptor antagonist	BRD-K09090949	CP-945598	trt_cp	-666	0.23	0.19	0.17	0.06	-666	0.75
+BRD-K47976015	RNA polymerase inhibitor	BRD-K47976015	balapiravir	trt_cp	-666	0.21	0.17	0.14	0.07	-666	0.75
+BRD-K36467523	NFkB pathway inhibitor	BRD-K36467523	bindarit	trt_cp	CCL2|CCL7|CCL8	0.13	0.11	0.08	0.05	-666	0.75
+BRD-A11132253	Electron acceptor	BRD-A11132253	nadide	trt_cp	-666	0.15	0.13	0.1	0.05	-666	0.75
+BRD-K36788280	CDK inhibitor	BRD-K36788280	ribociclib	trt_cp	CDK4|CDK6	0.24	0.19	0.15	0.08	-666	0.75
+BRD-K25837718	Bacterial 50S ribosomal subunit inhibitor	BRD-K25837718	josamycin	trt_cp	-666	0.13	0.11	0.09	0.04	-666	0.75
+BRD-K78789465	CCK receptor agonist	BRD-K78789465	pentagastrin	trt_cp	CCKBR	0.32	0.29	0.26	0.07	-666	0.74
+BRD-K08893438	G protein signaling inhibitor	BRD-K08893438	CCG-50014	trt_cp	-666	0.33	0.3	0.27	0.06	-666	0.74
+BRD-K85849709	Glycogen synthase kinase inhibitor	BRD-K85849709	AZD-2858	trt_cp	-666	0.29	0.24	0.19	0.1	-666	0.74
+BRD-K83699324	PLK inhibitor	BRD-K83699324	NMS-1286937	trt_cp	PLK1	0.5	0.44	0.38	0.12	-666	0.74
+BRD-K13314656	Histamine receptor antagonist	BRD-K13314656	ebastine	trt_cp	HRH1|CYP3A4	0.23	0.21	0.19	0.05	-666	0.74
+BRD-M97302542	Pyruvate dehydrogenase kinase inhibitor	BRD-M97302542	dichloroacetate	trt_cp	-666	0.25	0.22	0.19	0.06	-666	0.74
+BRD-K07572174	Cyclooxygenase inhibitor|Histone acetyltransferase inhibitor|Lipoxygenase inhibitor|NFkB pathway inhibitor	BRD-K07572174	curcumin	trt_cp	PTGS1|PTGS2	0.32	0.29	0.26	0.06	-666	0.74
+BRD-K19761926	Cytochrome P450 inhibitor	BRD-K19761926	eplerenone	trt_cp	NR3C2	0.28	0.25	0.22	0.07	-666	0.74
+BRD-K49350383	Purine antagonist	BRD-K49350383	thioguanine	trt_cp	IMPDH1|IMPDH2	0.37	0.33	0.28	0.08	-666	0.74
+BRD-A31095847	Vasopressin receptor antagonist	BRD-A31095847	mozavaptan	trt_cp	AVPR2|AVPR1A|AVPR1B	0.23	0.2	0.18	0.05	-666	0.74
+BRD-A81129465	Prostagladin inhibitor	BRD-A81129465	fenoprofen	trt_cp	PTGS1	0.24	0.22	0.19	0.06	-666	0.73
+BRD-K92428153	Hydroxycarboxylic acid receptor agonist|Immunosuppressant|Inosine monophosphate dehydrogenase inhibitor|Dehydrogenase inhibitor|Inositol monophosphatase inhibitor	BRD-K92428153	mycophenolate-mofetil	trt_cp	IMPDH1|IMPDH2	0.28	0.24	0.21	0.07	-666	0.73
+BRD-K08859203	Structural glycoprotein antagonist	BRD-K08859203	DU-728	trt_cp	ITGA2B|ITGB3	0.12	0.1	0.08	0.04	-666	0.73
+BRD-K80343549	EGFR inhibitor	BRD-K80343549	TAK-285	trt_cp	ERBB2	0.24	0.2	0.15	0.09	-666	0.73
+BRD-A13964793	-666	BRD-A13964793	BRD-A13964793	trt_cp	-666	0.25	0.22	0.19	0.06	-666	0.73
+BRD-A39845846	L-type calcium channel blocker|T-type calcium channel blocker	BRD-A39845846	efonidipine-monoethanolate	trt_cp	CACNA1C|CACNA1G	0.16	0.14	0.11	0.04	-666	0.73
+BRD-K36198571	Metalloproteinase inhibitor	BRD-K36198571	WAY-170523	trt_cp	MMP13	0.23	0.19	0.16	0.07	-666	0.73
+BRD-A41304429	Adrenergic receptor antagonist	BRD-A41304429	practolol	trt_cp	ADRB1	0.19	0.16	0.14	0.05	-666	0.73
+BRD-A85651701	Sodium/chloride cotransporter inhibitor	BRD-A85651701	clopamide	trt_cp	-666	0.18	0.14	0.11	0.07	-666	0.73
+BRD-K82818427	Matrix metalloprotease inhibitor	BRD-K82818427	batimastat	trt_cp	-666	0.33	0.28	0.24	0.09	-666	0.73
+BRD-K41859756	HSP inhibitor	BRD-K41859756	NVP-AUY922	trt_cp	HSP90AA1|HSP90AB1	0.58	0.52	0.46	0.12	-666	0.72
+BRD-K06753942	MEK inhibitor	BRD-K06753942	nobiletin	trt_cp	MAP2K1	0.2	0.16	0.12	0.09	-666	0.72
+BRD-K53720352	Leukotriene receptor antagonist	BRD-K53720352	cinalukast	trt_cp	CYSLTR1	0.18	0.15	0.13	0.06	-666	0.72
+BRD-K90574421	Serotonin receptor agonist	BRD-K90574421	ipsapirone	trt_cp	HTR1A	0.11	0.09	0.07	0.04	-666	0.72
+BRD-K61195623	Tubulin inhibitor|Angiogenesis inhibitor|Apoptosis stimulant|Tubulin polymerisation inhibitor	BRD-K61195623	combretastatin-A-4	trt_cp	-666	0.47	0.39	0.33	0.14	-666	0.72
+BRD-K65877271	Glucocorticoid receptor agonist|Immunosuppressant	BRD-K65877271	halobetasol-propionate	trt_cp	NR3C1	0.2	0.16	0.11	0.09	-666	0.72
+BRD-K18157228	DNA methyltransferase inhibitor	BRD-K18157228	fdcyd	trt_cp	-666	0.41	0.35	0.3	0.11	-666	0.72
+BRD-A03506276	HSP inhibitor	BRD-A03506276	XL-888	trt_cp	-666	0.51	0.44	0.39	0.12	-666	0.72
+BRD-K02407574	Tubulin inhibitor	BRD-K02407574	parbendazole	trt_cp	TUBB	0.46	0.4	0.34	0.12	-666	0.72
+BRD-K06543683	PKC inhibitor	BRD-K06543683	bisindolylmaleimide-ix	trt_cp	SIRT1	0.39	0.35	0.31	0.08	-666	0.71
+BRD-K39558284	Adenosine receptor agonist	BRD-K39558284	SDZ-WAG-994	trt_cp	ADORA1	0.2	0.17	0.14	0.06	-666	0.71
+BRD-K28192623	Opioid receptor agonist	BRD-K28192623	spiradoline	trt_cp	OPRK1	0.27	0.22	0.18	0.09	-666	0.71
+BRD-K59197931	Cyclooxygenase inhibitor	BRD-K59197931	naproxen	trt_cp	PTGS1|PTGS2	0.16	0.13	0.11	0.05	-666	0.71
+BRD-A49765801	Glucocorticoid receptor agonist	BRD-A49765801	fludroxycortide	trt_cp	NR3C1	0.23	0.2	0.17	0.06	-666	0.71
+BRD-K72093121	Antiviral	BRD-K72093121	vidarabine	trt_cp	ADA	0.23	0.2	0.17	0.06	-666	0.71
+BRD-A02146479	-666	BRD-A02146479	STOCK4S-02706	trt_cp	-666	0.3	0.26	0.22	0.08	-666	0.71
+BRD-K58772419	PI3K inhibitor	BRD-K58772419	AZD-6482	trt_cp	PIK3CB|PIK3CD|PIK3CG	0.34	0.29	0.25	0.09	-666	0.71
+BRD-K47878171	Acetylcholine receptor agonist	BRD-K47878171	bephenium	trt_cp	-666	0.15	0.12	0.1	0.05	-666	0.7
+BRD-A00077618	PKA activator	BRD-A00077618	8-bromo-cGMP	trt_cp	PRKG1	0.16	0.13	0.11	0.05	-666	0.7
+BRD-A97701745	Adrenergic receptor antagonist	BRD-A97701745	pindolol	trt_cp	ADRB1|ADRB2|HTR1A	0.16	0.14	0.11	0.05	-666	0.7
+BRD-K11630072	Thymidylate synthase inhibitor	BRD-K11630072	carmofur	trt_cp	TYMS	0.35	0.31	0.26	0.08	-666	0.7
+BRD-K11663430	HDAC inhibitor	BRD-K11663430	pyroxamide	trt_cp	-666	0.22	0.18	0.14	0.07	-666	0.7
+BRD-K82122102	Cyclooxygenase inhibitor	BRD-K82122102	amfenac	trt_cp	PTGS1|PTGS2	0.22	0.19	0.16	0.05	-666	0.7
+BRD-K56707426	-666	BRD-K56707426	nitarsone	trt_cp	-666	0.22	0.18	0.15	0.06	-666	0.7
+BRD-K64504314	Progesterone receptor agonist	BRD-K64504314	dienogest	trt_cp	PGR	0.2	0.17	0.14	0.06	-666	0.7
+BRD-K89714990	Cyclooxygenase inhibitor|Lipoxygenase inhibitor	BRD-K89714990	tepoxalin	trt_cp	ALOX5	0.21	0.18	0.15	0.06	-666	0.7
+BRD-K47200824	IGF-1 inhibitor	BRD-K47200824	BMS-754807	trt_cp	IGF1R	0.22	0.19	0.15	0.07	-666	0.7
+BRD-A44090213	Cyclooxygenase inhibitor|Prostanoid receptor antagonist	BRD-A44090213	indoprofen	trt_cp	PTGS1|PTGS2	0.31	0.26	0.23	0.09	-666	0.7
+BRD-K33882852	Benzodiazepine receptor agonist	BRD-K33882852	ZK-93423	trt_cp	GABRA1|GABRA2|GABRA3|GABRA5	0.25	0.22	0.19	0.06	-666	0.7
+BRD-K05674516	HCV inhibitor	BRD-K05674516	PSI-7976	trt_cp	-666	0.17	0.15	0.12	0.05	-666	0.7
+BRD-K00494077	Bacterial DNA gyrase inhibitor	BRD-K00494077	trovafloxacin	trt_cp	-666	0.26	0.21	0.18	0.08	-666	0.7
+BRD-A28467416	MTOR inhibitor|PI3K inhibitor	BRD-A28467416	PKI-179	trt_cp	MTOR	0.44	0.4	0.35	0.08	-666	0.7
+BRD-K53417444	Maternal embryonic leucine zipper kinase inhibitor	BRD-K53417444	OTS-167	trt_cp	-666	0.63	0.59	0.55	0.09	-666	0.7
+BRD-K46937689	Cyclooxygenase inhibitor	BRD-K46937689	phenazone	trt_cp	-666	0.16	0.13	0.11	0.06	-666	0.69
+BRD-K73088654	DNA synthesis inhibitor	BRD-K73088654	floxuridine	trt_cp	-666	0.47	0.39	0.32	0.14	-666	0.69
+BRD-K80608265	Estrogen receptor agonist	BRD-K80608265	erteberel	trt_cp	ESR2	0.16	0.13	0.1	0.06	-666	0.69
+BRD-K25412176	AKT inhibitor	BRD-K25412176	GSK-2110183	trt_cp	-666	0.2	0.17	0.14	0.06	-666	0.69
+BRD-K07972848	PI3K inhibitor|MTOR inhibitor	BRD-K07972848	GSK-2126458	trt_cp	-666	0.52	0.46	0.41	0.11	-666	0.69
+BRD-K68532323	Kinesin-like spindle protein inhibitor	BRD-K68532323	SB-743921	trt_cp	KIF11	0.61	0.54	0.46	0.16	-666	0.69
+BRD-K09443272	Aurora kinase inhibitor	BRD-K09443272	PHA-680632	trt_cp	AURKA|AURKB|AURKC	0.35	0.31	0.27	0.08	-666	0.69
+BRD-K82181219	-666	BRD-K82181219	pyritinol	trt_cp	-666	0.11	0.08	0.05	0.06	-666	0.69
+BRD-K97365803	PI3K inhibitor	BRD-K97365803	PI-828	trt_cp	-666	0.23	0.2	0.17	0.06	-666	0.69
+BRD-K95785345	Vitamin B	BRD-K95785345	thiamine	trt_cp	SLC19A2	0.23	0.2	0.18	0.05	-666	0.68
+BRD-K45724504	Protein synthesis inhibitor	BRD-K45724504	anguidine	trt_cp	SLC5A1	0.54	0.48	0.44	0.11	-666	0.68
+BRD-K37249724	Histamine receptor antagonist	BRD-K37249724	astemizole	trt_cp	HRH1|KCNH2	0.16	0.12	0.1	0.06	-666	0.68
+BRD-K47114202	Antioxidant	BRD-K47114202	chlorogenic-acid	trt_cp	-666	0.23	0.19	0.16	0.07	-666	0.68
+BRD-K56032964	ALK tyrosine kinase receptor inhibitor	BRD-K56032964	AP-26113	trt_cp	-666	0.22	0.19	0.15	0.07	-666	0.68
+BRD-K73073971	-666	BRD-K73073971	ZLN-005	trt_cp	-666	0.15	0.12	0.09	0.06	-666	0.68
+BRD-K72723676	Sodium channel blocker	BRD-K72723676	benzethonium	trt_cp	SCN10A	0.28	0.24	0.2	0.08	-666	0.68
+BRD-K31866293	RAF inhibitor	BRD-K31866293	TAK-632	trt_cp	BRAF	0.35	0.31	0.27	0.08	-666	0.68
+BRD-K51040301	Cytochrome P450 inhibitor	BRD-K51040301	cobicistat	trt_cp	CYP3A4	0.18	0.15	0.13	0.05	-666	0.68
+BRD-K68336408	EGFR inhibitor	BRD-K68336408	tyrphostin-AG-1478	trt_cp	EGFR	0.35	0.3	0.25	0.1	-666	0.68
+BRD-K99113996	MTOR inhibitor	BRD-K99113996	AZD-2014	trt_cp	-666	0.4	0.36	0.31	0.09	-666	0.68
+BRD-K13409143	-666	BRD-K13409143	isopropyl-myristate	trt_cp	-666	0.28	0.25	0.21	0.07	-666	0.68
+BRD-K24696047	IGF-1 inhibitor	BRD-K24696047	NVP-AEW541	trt_cp	IGF1R	0.3	0.28	0.24	0.06	-666	0.68
+BRD-A13561534	NFkB pathway modulator	BRD-A13561534	ornithine	trt_cp	-666	0.14	0.11	0.09	0.05	-666	0.67
+BRD-K15071410	Histamine receptor antagonist	BRD-K15071410	tiotidine	trt_cp	HRH2	0.19	0.16	0.14	0.05	-666	0.67
+BRD-K69116396	Dopamine receptor antagonist|Serotonin receptor antagonist	BRD-K69116396	sertindole	trt_cp	DRD2|HTR2A|HTR2C	0.26	0.23	0.2	0.06	-666	0.67
+BRD-K35960502	DNA replication inhibitor|STAT inhibitor	BRD-K35960502	niclosamide	trt_cp	STAT3	0.26	0.22	0.19	0.07	-666	0.67
+BRD-K61443650	Other antibiotic	BRD-K61443650	thiomersal	trt_cp	-666	0.28	0.27	0.25	0.03	-666	0.67
+BRD-A25234499	Glucocorticoid receptor antagonist	BRD-A25234499	aminoglutethimide	trt_cp	CYP11A1|CYP19A1	0.14	0.12	0.08	0.06	-666	0.67
+BRD-K68567222	Tyrosine phosphatase inhibitor	BRD-K68567222	BVT-948	trt_cp	PTPN1|PTPN11|PTPN2	0.27	0.24	0.21	0.07	-666	0.67
+BRD-K20482099	Antioxidant|Capillary stabilizing agent|Nitric oxide scavenger	BRD-K20482099	rutin	trt_cp	AKR1C3	0.23	0.19	0.17	0.07	-666	0.67
+BRD-K33813875	Bacterial 50S ribosomal subunit inhibitor	BRD-K33813875	valnemulin	trt_cp	-666	0.33	0.29	0.24	0.09	-666	0.67
+BRD-K28352084	PI3K inhibitor	BRD-K28352084	CH-5132799	trt_cp	-666	0.3	0.27	0.23	0.07	-666	0.67
+BRD-K07310275	MTOR inhibitor|PI3K inhibitor	BRD-K07310275	PF-04691502	trt_cp	MTOR|PIK3CA	0.41	0.37	0.33	0.08	-666	0.67
+BRD-K68693535	Adrenergic receptor agonist	BRD-K68693535	lidamidine	trt_cp	-666	0.17	0.13	0.09	0.08	-666	0.67
+BRD-K01653460	-666	BRD-K01653460	chlorindanol	trt_cp	-666	0.18	0.16	0.13	0.06	-666	0.67
+BRD-K68103045	Benzodiazepine receptor agonist	BRD-K68103045	CGS-20625	trt_cp	GABRA1|GABRA2|GABRA3|GABRA4|GABRA5|GABRA6	0.15	0.12	0.1	0.05	-666	0.67
+BRD-K22025381	Oxidosqualene cyclase inhibitor	BRD-K22025381	U-18666A	trt_cp	-666	0.17	0.14	0.11	0.06	-666	0.66
+BRD-K15424032	Serotonin receptor antagonist	BRD-K15424032	SB-228357	trt_cp	HTR2C	0.17	0.13	0.11	0.07	-666	0.66
+BRD-K61936403	SHIP2 phosphatase inhibitor	BRD-K61936403	AS-1949490	trt_cp	INPP5D	0.18	0.15	0.13	0.06	-666	0.66
+BRD-K19412355	P38 MAPK inhibitor	BRD-K19412355	SB-242235	trt_cp	-666	0.13	0.11	0.08	0.05	-666	0.66
+BRD-A55424491	Dihydrofolate reductase inhibitor	BRD-A55424491	methotrexate	trt_cp	DHFR	0.4	0.35	0.29	0.11	-666	0.66
+BRD-K77791657	-666	BRD-K77791657	3-deazaneplanocin-a	trt_cp	-666	0.33	0.27	0.22	0.11	-666	0.66
+BRD-K61314889	PARP inhibitor	BRD-K61314889	endo-IWR-1	trt_cp	TNKS|TNKS2	0.27	0.24	0.2	0.07	-666	0.66
+BRD-K98548675	NFkB pathway inhibitor	BRD-K98548675	parthenolide	trt_cp	-666	0.27	0.24	0.21	0.06	-666	0.65
+BRD-K83607951	P38 MAPK inhibitor	BRD-K83607951	skepinone-l	trt_cp	MAPK14	0.15	0.12	0.09	0.06	-666	0.65
+BRD-K81801188	Receptor tyrosine protein kinase inhibitor	BRD-K81801188	PP-121	trt_cp	SRC	0.51	0.46	0.41	0.1	-666	0.65
+BRD-K96253961	Adrenergic receptor agonist	BRD-K96253961	metaraminol	trt_cp	-666	0.41	0.37	0.33	0.08	-666	0.65
+BRD-K23204545	DNA inhibitor	BRD-K23204545	busulfan	trt_cp	-666	0.29	0.26	0.22	0.07	-666	0.65
+BRD-K91825936	CC chemokine receptor antagonist	BRD-K91825936	ZK-811752	trt_cp	-666	0.25	0.23	0.2	0.06	-666	0.65
+BRD-A42699921	Dihydroorotate dehydrogenase inhibitor	BRD-A42699921	teriflunomide	trt_cp	DHODH	0.27	0.24	0.21	0.06	-666	0.64
+BRD-K86797399	HDAC inhibitor	BRD-K86797399	SB-939	trt_cp	HDAC1|HDAC2|HDAC10|HDAC3|HDAC4|HDAC5|HDAC9	0.46	0.43	0.38	0.08	-666	0.64
+BRD-K79555887	-666	BRD-K79555887	RI-1	trt_cp	RAD51	0.14	0.12	0.09	0.04	-666	0.64
+BRD-A07986123	Androgen receptor modulator	BRD-A07986123	galeterone	trt_cp	AR|CYP17A1	0.28	0.25	0.21	0.07	-666	0.64
+BRD-K51575138	IKK inhibitor	BRD-K51575138	TPCA-1	trt_cp	IKBKB	0.25	0.23	0.2	0.06	-666	0.64
+BRD-K92000912	Cannabinoid receptor antagonist	BRD-K92000912	AM-251	trt_cp	CNR1	0.2	0.17	0.14	0.05	-666	0.64
+BRD-K04111260	Dopamine receptor antagonist	BRD-K04111260	raclopride	trt_cp	DRD2|DRD3	0.19	0.16	0.13	0.06	-666	0.64
+BRD-A39415247	Progesterone receptor agonist	BRD-A39415247	norethisterone	trt_cp	-666	0.14	0.11	0.07	0.07	-666	0.64
+BRD-K97714174	Ubiquitin specific protease inhibitor	BRD-K97714174	P-22077	trt_cp	-666	0.17	0.14	0.11	0.06	-666	0.64
+BRD-K09877029	Focal adhesion kinase inhibitor	BRD-K09877029	VS-4718	trt_cp	-666	0.21	0.18	0.15	0.07	-666	0.64
+BRD-K21670884	Sodium/hydrogen exchanger inhibitor	BRD-K21670884	cariporide	trt_cp	-666	0.27	0.21	0.17	0.1	-666	0.63
+BRD-K08525451	Bacterial DNA gyrase inhibitor	BRD-K08525451	sarafloxacin	trt_cp	-666	0.28	0.25	0.22	0.05	-666	0.63
+BRD-A75726477	Adrenergic receptor agonist	BRD-A75726477	clenbuterol	trt_cp	ADRB2	0.21	0.18	0.15	0.06	-666	0.63
+BRD-A72711497	Bacterial permeability inducer	BRD-A72711497	lasalocid	trt_cp	-666	0.35	0.32	0.28	0.07	-666	0.63
+BRD-K78126613	Mitochondrial DNA polymerase inhibitor|Phosphatase inhibitor	BRD-K78126613	menadione	trt_cp	-666	0.28	0.27	0.24	0.04	-666	0.63
+BRD-K68507560	Acetylcholine receptor antagonist	BRD-K68507560	dicycloverine	trt_cp	CHRM1|CHRM2	0.2	0.17	0.15	0.05	-666	0.63
+BRD-K77634909	HSP inducer|Protein kinase inhibitor	BRD-K77634909	BRD-K77634909	trt_cp	-666	0.23	0.19	0.15	0.07	-666	0.63
+BRD-K29656036	Stearoyl-CoA desaturase inhibitor	BRD-K29656036	MK-8245	trt_cp	SCD	0.3	0.25	0.2	0.1	-666	0.63
+BRD-K37793595	Anxiolytic	BRD-K37793595	afobazole	trt_cp	-666	0.15	0.13	0.1	0.05	-666	0.63
+BRD-K59317601	MTOR inhibitor	BRD-K59317601	MLN-0128	trt_cp	-666	0.54	0.49	0.44	0.1	-666	0.63
+BRD-K41599323	Farnesyltransferase inhibitor	BRD-K41599323	lonafarnib	trt_cp	FNTA	0.23	0.18	0.14	0.08	-666	0.63
+BRD-K67772619	Protein tyrosine kinase inhibitor	BRD-K67772619	rheochrysidin	trt_cp	PTPN1	0.22	0.19	0.16	0.06	-666	0.63
+BRD-K69932463	MTOR inhibitor	BRD-K69932463	AZD-8055	trt_cp	MTOR	0.4	0.36	0.31	0.09	-666	0.63
+BRD-K81458380	Casein kinase inhibitor	BRD-K81458380	CX-4945	trt_cp	CSNK2A1|CSNK2A2	0.2	0.15	0.1	0.09	-666	0.63
+BRD-K68065987	AKT inhibitor	BRD-K68065987	MK-2206	trt_cp	AKT1	0.27	0.24	0.19	0.08	-666	0.62
+BRD-K38350380	Cyclooxygenase inhibitor	BRD-K38350380	FK-3311	trt_cp	PTGS2	0.21	0.18	0.16	0.05	-666	0.62
+BRD-K17849083	Angiogenesis inhibitor	BRD-K17849083	tranilast	trt_cp	-666	0.31	0.26	0.22	0.09	-666	0.62
+BRD-A50157456	Adrenergic receptor agonist	BRD-A50157456	terbutaline	trt_cp	ADRB2	0.19	0.15	0.11	0.07	-666	0.62
+BRD-K65781196	Phosphodiesterase inhibitor	BRD-K65781196	avanafil	trt_cp	PDE5A	0.18	0.16	0.13	0.05	-666	0.62
+BRD-K63736853	Cholesterol inhibitor	BRD-K63736853	acipimox	trt_cp	-666	0.21	0.17	0.14	0.07	-666	0.62
+BRD-K26011976	Topoisomerase inhibitor	BRD-K26011976	licochalcone-a	trt_cp	-666	0.24	0.22	0.18	0.06	-666	0.62
+BRD-K24601397	Sodium/glucose cotransporter inhibitor	BRD-K24601397	phlorizin	trt_cp	SLC5A1|SLC5A2	0.21	0.19	0.17	0.05	-666	0.62
+BRD-A80213327	Ras GTPase inhibitor	BRD-A80213327	NSC-23766	trt_cp	-666	0.17	0.14	0.11	0.06	-666	0.62
+BRD-K54256913	WEE1 kinase inhibitor	BRD-K54256913	MK-1775	trt_cp	WEE1	0.39	0.35	0.28	0.11	-666	0.62
+BRD-K19859123	Acetylcholine receptor allosteric modulator	BRD-K19859123	CCMI	trt_cp	CHRNA7	0.15	0.12	0.1	0.05	-666	0.62
+BRD-K31476763	Elastase inhibitor	BRD-K31476763	AZD-9668	trt_cp	-666	0.16	0.14	0.11	0.05	-666	0.62
+BRD-K43389698	CDK inhibitor|Cell cycle inhibitor|MCL1 inhibitor	BRD-K43389698	BMS-387032	trt_cp	CDK2|CDK7|CDK9	0.57	0.52	0.47	0.09	-666	0.62
+BRD-K32405725	Carnitine palmitoyltransferase inhibitor	BRD-K32405725	etomoxir	trt_cp	CPT1A	0.09	0.08	0.06	0.04	-666	0.62
+BRD-A72703248	Calcium channel blocker	BRD-A72703248	SKF-96365	trt_cp	CYP3A4|TRPC1	0.36	0.31	0.27	0.09	-666	0.61
+BRD-K28143534	Histamine receptor antagonist	BRD-K28143534	cyproheptadine	trt_cp	HRH1	0.17	0.15	0.12	0.06	-666	0.61
+BRD-K07202345	Immunosuppressant	BRD-K07202345	frentizole	trt_cp	-666	0.28	0.23	0.2	0.08	-666	0.61
+BRD-K11510141	Mucus protecting agent	BRD-K11510141	teprenone	trt_cp	-666	0.24	0.22	0.19	0.06	-666	0.61
+BRD-A60594020	Dopamine receptor ligand	BRD-A60594020	8-hydroxy-PIPAT	trt_cp	-666	0.2	0.17	0.14	0.06	-666	0.61
+BRD-K38548312	HSP inhibitor	BRD-K38548312	VER-49009	trt_cp	HSP90AA1	0.33	0.28	0.24	0.09	-666	0.61
+BRD-K25630527	JAK inhibitor	BRD-K25630527	LY-2784544	trt_cp	-666	0.28	0.25	0.22	0.06	-666	0.61
+BRD-K38183498	GABA benzodiazepine site receptor agonist	BRD-K38183498	clonazepam	trt_cp	GABRA1|GABRA2|GABRA3|GABRA5|GABRA4|GABRA6|GABRB1|GABRB2|GABRB3|GABRD|GABRE|GABRG1|GABRG2|GABRG3|GABRP|GABRQ	0.51	0.45	0.38	0.12	-666	0.61
+BRD-A84174393	Cyclooxygenase inhibitor	BRD-A84174393	meloxicam	trt_cp	PTGS1|PTGS2	0.16	0.14	0.11	0.05	-666	0.61
+BRD-K95773607	Acetylcholine receptor antagonist	BRD-K95773607	darifenacin	trt_cp	CHRM3|CHRM1|CHRM2|CHRM4|CHRM5	0.2	0.18	0.15	0.06	-666	0.61
+BRD-K81418486	HDAC inhibitor	BRD-K81418486	vorinostat	trt_cp	HDAC1|HDAC2|HDAC3|HDAC6|HDAC8	0.39	0.35	0.3	0.09	-666	0.61
+BRD-K34851558	NFkB pathway inhibitor|Adiponectin receptor agonist	BRD-K34851558	parthenolide-(-)	trt_cp	HDAC1	0.23	0.21	0.18	0.05	-666	0.61
+BRD-A29485665	Androgen receptor antagonist	BRD-A29485665	bicalutamide	trt_cp	AR	0.14	0.11	0.09	0.05	-666	0.61
+BRD-K45462423	Glutamate receptor positive allosteric modulator	BRD-K45462423	VU-0361737	trt_cp	-666	0.18	0.14	0.11	0.06	-666	0.61
+BRD-K94485812	Ubiquitin C-terminal hydrolase inhibitor	BRD-K94485812	LDN-57444	trt_cp	-666	0.28	0.26	0.24	0.04	-666	0.61
+BRD-K71075609	Carbonic anhydrase inhibitor	BRD-K71075609	dorzolamide	trt_cp	CA2|CA1	0.21	0.18	0.15	0.07	-666	0.6
+BRD-K07487750	JAK inhibitor	BRD-K07487750	WHI-P154	trt_cp	EGFR|JAK3	0.21	0.17	0.13	0.08	-666	0.6
+BRD-K00317371	MDM inhibitor	BRD-K00317371	RITA	trt_cp	MDM2	0.39	0.27	0.2	0.19	-666	0.6
+BRD-K80480517	TGF beta receptor inhibitor	BRD-K80480517	repsox	trt_cp	TGFBR1	0.22	0.18	0.14	0.08	-666	0.6
+BRD-K13249881	GABA receptor agonist	BRD-K13249881	piperazine	trt_cp	-666	0.18	0.16	0.13	0.05	-666	0.6
+BRD-K25224017	Serotonin receptor antagonist	BRD-K25224017	pirenperone	trt_cp	HTR2A	0.4	0.35	0.29	0.1	-666	0.6
+BRD-A28970875	Protein synthesis inhibitor	BRD-A28970875	puromycin	trt_cp	-666	0.46	0.41	0.35	0.11	-666	0.6
+BRD-K03601870	Microtubule stabilizing agent	BRD-K03601870	ixabepilone	trt_cp	TUBB|TUBB3	0.51	0.45	0.39	0.12	-666	0.6
+BRD-A27883417	Phosphatidylglycerophosphatase inhibitor	BRD-A27883417	alexidine	trt_cp	PTPMT1	0.28	0.27	0.25	0.04	-666	0.6
+BRD-A51571244	IKK inhibitor	BRD-A51571244	hypoestoxide	trt_cp	IKBKB|IL1B|TNF	0.21	0.18	0.16	0.05	-666	0.6
+BRD-K08619838	Acetylcholine receptor agonist	BRD-K08619838	tremorine	trt_cp	-666	0.32	0.28	0.24	0.08	-666	0.59
+BRD-A51964809	Antimalarial agent	BRD-A51964809	halofantrine	trt_cp	-666	0.15	0.12	0.1	0.05	-666	0.59
+BRD-K87112191	-666	BRD-K87112191	PP242	trt_cp	MTOR	0.34	0.3	0.26	0.08	-666	0.59
+BRD-K82846253	Insulin secretagogue	BRD-K82846253	repaglinide	trt_cp	ABCC8|KCNJ11	0.14	0.12	0.1	0.04	-666	0.59
+BRD-K17743125	HDAC inhibitor	BRD-K17743125	belinostat	trt_cp	HDAC1|HDAC2|HDAC3|HDAC4|HDAC5|HDAC6|HDAC7|HDAC8|HDAC9	0.39	0.35	0.3	0.09	-666	0.59
+BRD-K51911221	Topoisomerase inhibitor	BRD-K51911221	nemorubicin	trt_cp	TOP1|TOP2A	0.69	0.64	0.58	0.11	-666	0.59
+BRD-K92657060	Benzodiazepine receptor agonist	BRD-K92657060	zaleplon	trt_cp	GABRA1	0.18	0.16	0.13	0.05	-666	0.59
+BRD-K19540840	Src inhibitor	BRD-K19540840	saracatinib	trt_cp	ABL1|SRC	0.3	0.25	0.21	0.09	-666	0.59
+BRD-K12787259	RNA polymerase inhibitor	BRD-K12787259	CX-5461	trt_cp	-666	0.29	0.24	0.2	0.08	-666	0.59
+BRD-K37237504	JAK inhibitor	BRD-K37237504	CEP-33779	trt_cp	JAK2	0.21	0.19	0.16	0.05	-666	0.59
+BRD-K69172251	DNA alkylating agent|DNA synthesis inhibitor	BRD-K69172251	cisplatin	trt_cp	XIAP	0.21	0.18	0.16	0.05	-666	0.59
+BRD-K80060353	-666	BRD-K80060353	IEM-1754	trt_cp	-666	0.2	0.17	0.15	0.05	-666	0.58
+BRD-K45293975	CDK inhibitor|CHK inhibitor|PKC inhibitor	BRD-K45293975	7-hydroxystaurosporine	trt_cp	CHEK1|PDPK1|CDK1|CDK4|CHEK2|PRKCA	0.41	0.37	0.33	0.08	-666	0.58
+BRD-K43187018	Pim kinase inhibitor	BRD-K43187018	GDC-0349	trt_cp	PIK3CA	0.44	0.39	0.34	0.1	-666	0.58
+BRD-K87782578	Bruton's tyrosine kinase (BTK) inhibitor	BRD-K87782578	AVL-292	trt_cp	BTK	0.21	0.19	0.16	0.06	-666	0.58
+BRD-K00673382	Histamine receptor antagonist	BRD-K00673382	famotidine	trt_cp	HRH2	0.15	0.12	0.09	0.06	-666	0.58
+BRD-K60025295	Other antibiotic	BRD-K60025295	crystal-violet	trt_cp	-666	0.52	0.48	0.44	0.08	-666	0.58
+BRD-K63828191	Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)	BRD-K63828191	raloxifene	trt_cp	ESR1|ESR2	0.13	0.11	0.08	0.05	-666	0.58
+BRD-A82156122	Dipeptidyl peptidase inhibitor	BRD-A82156122	saxagliptin	trt_cp	DPP4	0.27	0.22	0.18	0.09	-666	0.58
+BRD-A99888680	Dopamine receptor antagonist|Serotonin receptor antagonist	BRD-A99888680	paliperidone	trt_cp	DRD2|HTR2A	0.19	0.16	0.13	0.06	-666	0.58
+BRD-K49294207	EGFR inhibitor	BRD-K49294207	BIBU-1361	trt_cp	EGFR	0.23	0.18	0.13	0.1	-666	0.58
+BRD-K05638300	Membrane integrity inhibitor	BRD-K05638300	sevoflurane	trt_cp	GABRA1|GABRA2|GABRA3|GABRA4|GABRA5|GABRA6|GABRB1|GABRB2|GABRB3|GABRD|GABRE|GABRG1|GABRG2|GABRG3|GABRP|GABRQ|GLRA1	0.24	0.2	0.17	0.07	-666	0.58
+BRD-K15600710	BCL inhibitor	BRD-K15600710	obatoclax	trt_cp	BCL2	0.43	0.38	0.33	0.1	-666	0.58
+BRD-K18375018	-666	BRD-K18375018	spermine	trt_cp	CASR	0.22	0.19	0.17	0.05	-666	0.57
+BRD-K13662825	CDK inhibitor	BRD-K13662825	dinaciclib	trt_cp	CDK1|CDK2|CDK9|CDK5	0.6	0.56	0.51	0.09	-666	0.57
+BRD-K08996725	Histamine receptor antagonist	BRD-K08996725	zolantidine	trt_cp	-666	0.16	0.14	0.1	0.06	-666	0.57
+BRD-K56957086	HDAC inhibitor	BRD-K56957086	dacinostat	trt_cp	HDAC1	0.54	0.49	0.44	0.09	-666	0.57
+BRD-K68392338	Benzodiazepine receptor antagonist	BRD-K68392338	ZK-93426	trt_cp	GABRA1	0.19	0.16	0.12	0.06	-666	0.57
+BRD-K16478699	RAF inhibitor	BRD-K16478699	PLX-4720	trt_cp	BRAF	0.29	0.23	0.19	0.1	-666	0.57
+BRD-K81225797	Adenosine receptor antagonist	BRD-K81225797	SCH-58261	trt_cp	ADORA1|ADORA2A	0.15	0.12	0.09	0.06	-666	0.57
+BRD-K96153583	DNA polymerase inhibitor	BRD-K96153583	cidofovir	trt_cp	-666	0.18	0.15	0.12	0.06	-666	0.57
+BRD-K16136380	ATP synthase inhibitor	BRD-K16136380	pyrithione-zinc	trt_cp	-666	0.57	0.54	0.5	0.07	-666	0.57
+BRD-K80431395	AKT inhibitor	BRD-K80431395	triciribine	trt_cp	AKT1|AKT2|AKT3	0.32	0.27	0.22	0.09	-666	0.57
+BRD-K84783599	Guanylate cyclase stimulant	BRD-K84783599	riociguat	trt_cp	GUCY1A3|GUCY1B3	0.16	0.13	0.09	0.07	-666	0.56
+BRD-K20605374	Ubiquitin-conjugating enzyme inhibitor	BRD-K20605374	NSC-697923	trt_cp	UBE2N	0.36	0.33	0.3	0.06	-666	0.56
+BRD-K82091397	P38 MAPK inhibitor	BRD-K82091397	SB-239063	trt_cp	MAPK11|MAPK14	0.29	0.25	0.22	0.07	-666	0.56
+BRD-A01346607	Glucocorticoid receptor agonist	BRD-A01346607	flumetasone	trt_cp	NR3C1	0.23	0.18	0.13	0.1	-666	0.56
+BRD-A66861218	-666	BRD-A66861218	BRD-A66861218	trt_cp	-666	0.22	0.17	0.12	0.1	-666	0.56
+BRD-K14560436	CDK inhibitor|FLT3 inhibitor|JAK inhibitor	BRD-K14560436	TG-02	trt_cp	CDK9|FLT3|JAK2|CDK1|CDK2|CDK7	0.42	0.38	0.35	0.08	-666	0.55
+BRD-K84663978	Phosphodiesterase inhibitor	BRD-K84663978	trequinsin	trt_cp	-666	0.17	0.15	0.13	0.05	-666	0.55
+BRD-K06152156	Membrane permeability inhibitor	BRD-K06152156	methoxyflurane	trt_cp	GABRA1|GABRA2|GABRA3|GABRA4|GABRA5|GABRA6|GABRB1|GABRB2|GABRB3|GABRD|GABRE|GABRG1|GABRG2|GABRG3|GABRP|GABRQ|GLRA1	0.29	0.25	0.21	0.09	-666	0.55
+BRD-K83988098	HSP inhibitor	BRD-K83988098	alvespimycin	trt_cp	HSP90AA1	0.8	0.71	0.63	0.17	-666	0.55
+BRD-K83837640	HDAC inhibitor	BRD-K83837640	JNJ-26481585	trt_cp	HDAC1|MDM2	0.63	0.58	0.53	0.1	-666	0.55
+BRD-K81074237	Angiotensin receptor antagonist	BRD-K81074237	azilsartan	trt_cp	AGTR1|AGTR2	0.24	0.22	0.18	0.06	-666	0.55
+BRD-A67097164	DNA alkylating agent	BRD-A67097164	ifosfamide	trt_cp	CYP2B6|CYP3A5|CYP2A6|CYP2C18|CYP2C19|CYP2C8|CYP2C9|CYP3A4|CYP3A7|PTGS1	0.14	0.12	0.09	0.05	-666	0.55
+BRD-A36331462	Proteasome inhibitor	BRD-A36331462	oprozomib	trt_cp	-666	0.59	0.54	0.49	0.09	-666	0.54
+BRD-K17555800	P38 MAPK inhibitor	BRD-K17555800	talmapimod	trt_cp	MAPK14	0.2	0.18	0.15	0.05	-666	0.54
+BRD-A49358627	PPAR receptor agonist	BRD-A49358627	ciprofibrate	trt_cp	PPARA	0.24	0.2	0.17	0.07	-666	0.54
+BRD-A65248799	Phosphodiesterase inhibitor	BRD-A65248799	EMD-53998	trt_cp	-666	0.21	0.19	0.15	0.06	-666	0.54
+BRD-K04623885	Telomerase inhibitor	BRD-K04623885	BIBR-1532	trt_cp	TERT	0.25	0.21	0.17	0.08	-666	0.54
+BRD-K82850175	CC chemokine receptor antagonist	BRD-K82850175	navarixin	trt_cp	CXCR1|CXCR2	0.22	0.19	0.15	0.07	-666	0.54
+BRD-K67578145	RAF inhibitor	BRD-K67578145	GDC-0879	trt_cp	BRAF	0.16	0.13	0.11	0.05	-666	0.53
+BRD-K18834913	Farnesyltransferase inhibitor	BRD-K18834913	LB-42708	trt_cp	-666	0.36	0.31	0.26	0.1	-666	0.53
+BRD-K80129304	-666	BRD-K80129304	uracil	trt_cp	DPYD	0.16	0.14	0.11	0.05	-666	0.53
+BRD-K54847683	Estrogen receptor agonist	BRD-K54847683	equol	trt_cp	ESR1|ESR2	0.18	0.15	0.12	0.06	-666	0.53
+BRD-K70505054	Histamine receptor antagonist	BRD-K70505054	ranitidine	trt_cp	HRH2	0.26	0.23	0.2	0.06	-666	0.53
+BRD-A14344385	Glutamate receptor positive allosteric modulator	BRD-A14344385	IDRA-21	trt_cp	-666	0.19	0.16	0.12	0.07	-666	0.53
+BRD-K33720171	Glucocorticoid receptor agonist	BRD-K33720171	difluprednate	trt_cp	NR3C1	0.29	0.24	0.2	0.09	-666	0.52
+BRD-K59325863	Proteasome inhibitor	BRD-K59325863	delanzomib	trt_cp	-666	0.55	0.5	0.46	0.09	-666	0.52
+BRD-A57798112	MEK inhibitor	BRD-A57798112	PD-318088	trt_cp	-666	0.28	0.21	0.15	0.13	-666	0.52
+BRD-K76239644	EGFR inhibitor|VEGFR inhibitor	BRD-K76239644	BMS-690514	trt_cp	EGFR|ERBB2|KDR|ERBB4|FLT1|FLT4	0.23	0.18	0.14	0.1	-666	0.52
+BRD-A43671941	Adrenergic receptor antagonist	BRD-A43671941	oxprenolol	trt_cp	ADRB1	0.26	0.22	0.19	0.07	-666	0.52
+BRD-K41783120	Interleukin synthesis inhibitor	BRD-K41783120	STA-5326	trt_cp	IL12A	0.22	0.17	0.12	0.09	-666	0.52
+BRD-K84163249	Vitamin D receptor agonist	BRD-K84163249	ercalcitriol	trt_cp	VDR	0.19	0.15	0.12	0.07	-666	0.52
+BRD-K53561341	Aurora kinase inhibitor	BRD-K53561341	aurora-a-inhibitor-i	trt_cp	AURKA	0.28	0.26	0.23	0.05	-666	0.52
+BRD-K54247840	Collagenase inhibitor	BRD-K54247840	halofuginone	trt_cp	-666	0.59	0.54	0.48	0.11	-666	0.52
+BRD-K60585088	Vitamin D receptor agonist	BRD-K60585088	paricalcitol	trt_cp	VDR	0.23	0.19	0.15	0.07	-666	0.52
+BRD-K73293050	EGFR inhibitor	BRD-K73293050	WZ-3146	trt_cp	EGFR	0.37	0.33	0.29	0.08	-666	0.52
+BRD-K76210423	Toll-like receptor agonist	BRD-K76210423	resiquimod	trt_cp	TLR7|TLR8	0.22	0.18	0.15	0.07	-666	0.52
+BRD-A10977446	Adrenergic receptor antagonist	BRD-A10977446	carvedilol	trt_cp	ADRA1A|ADRA1B|ADRA1D|ADRB1|ADRB2|ADRB3	0.23	0.2	0.16	0.07	-666	0.51
+BRD-A84228258	Protein synthesis inhibitor|Brefeldin A inhibited guanine nucleotide exchange protein inhibitors|Golgi-specific brefeldin A-resistance guanine nucleotide exchange factor inhibitor	BRD-A84228258	brefeldin-a	trt_cp	-666	0.54	0.49	0.43	0.11	-666	0.51
+BRD-K60230970	Proteasome inhibitor	BRD-K60230970	MG-132	trt_cp	PSMB1	0.59	0.55	0.51	0.09	-666	0.51
+BRD-K59522102	Monoamine oxidase inhibitor	BRD-K59522102	piperine	trt_cp	MAOA|MAOB	0.14	0.12	0.08	0.06	-666	0.51
+BRD-K21396683	Matrix metalloprotease inhibitor	BRD-K21396683	marimastat	trt_cp	MMP1|MMP2|MMP7	0.27	0.24	0.21	0.06	-666	0.51
+BRD-A68969091	DNA intercalating agent	BRD-A68969091	echinomycin	trt_cp	-666	0.71	0.66	0.61	0.1	-666	0.51
+BRD-K70344361	-666	BRD-K70344361	NH-125	trt_cp	-666	0.35	0.32	0.29	0.06	-666	0.51
+BRD-K12068470	Glucokinase activator	BRD-K12068470	LY-2608204	trt_cp	-666	0.39	0.34	0.3	0.08	-666	0.5
+BRD-K03549949	MTOR inhibitor	BRD-K03549949	XL-388	trt_cp	-666	0.28	0.24	0.21	0.07	-666	0.5
+BRD-K67298865	TGF beta receptor inhibitor	BRD-K67298865	SB-431542	trt_cp	ACVR1C|TGFBR1	0.36	0.32	0.28	0.08	-666	0.5
+BRD-K13571841	Aspartic protease inhibitor	BRD-K13571841	pepstatin	trt_cp	-666	0.22	0.19	0.16	0.06	-666	0.5
+BRD-K18787491	MEK inhibitor	BRD-K18787491	U-0126	trt_cp	MAP2K1|MAP2K2	0.19	0.16	0.13	0.06	-666	0.5
+BRD-K34157611	Histamine receptor antagonist	BRD-K34157611	cimetidine	trt_cp	HRH2	0.26	0.22	0.19	0.07	-666	0.49
+BRD-K11433652	Cyclooxygenase inhibitor	BRD-K11433652	aspirin	trt_cp	PTGS1|PTGS2|TP53	0.23	0.2	0.17	0.06	-666	0.49
+BRD-K66097663	RSV fusion inhibitor	BRD-K66097663	TMC-353121	trt_cp	-666	0.24	0.21	0.18	0.06	-666	0.49
+BRD-K19284129	Opioid receptor agonist	BRD-K19284129	salvinorin-a	trt_cp	OPRK1	0.17	0.14	0.12	0.05	-666	0.48
+BRD-K42436189	ATR kinase inhibitor	BRD-K42436189	AZ-20	trt_cp	-666	0.33	0.29	0.25	0.08	-666	0.48
+BRD-K24603946	Acetylcholine receptor antagonist	BRD-K24603946	5-hydroxymethyl-tolterodine	trt_cp	CHRM3	0.29	0.24	0.2	0.09	-666	0.48
+BRD-K11973162	Thymidine phosphorylase inhibitor	BRD-K11973162	tipiracil	trt_cp	TYMP	0.34	0.29	0.26	0.08	-666	0.48
+BRD-K43449605	Apoptosis stimulant	BRD-K43449605	oncrasin-1	trt_cp	-666	0.33	0.27	0.22	0.11	-666	0.48
+BRD-A14395271	Dopamine receptor antagonist	BRD-A14395271	mesoridazine	trt_cp	DRD2|HTR2A	0.17	0.14	0.1	0.07	-666	0.48
+BRD-K28965160	MAP kinase inhibitor	BRD-K28965160	BVD-523	trt_cp	-666	0.23	0.19	0.15	0.07	-666	0.48
+BRD-K71164191	ACAT inhibitor	BRD-K71164191	KD-023	trt_cp	ACACA|ACACB	0.23	0.2	0.16	0.07	-666	0.48
+BRD-K74141488	Fungal squalene epoxidase inhibitor	BRD-K74141488	naftifine	trt_cp	-666	0.17	0.15	0.12	0.05	-666	0.47
+BRD-A78303415	Acetylcholine receptor antagonist	BRD-A78303415	hyoscyamine	trt_cp	-666	0.27	0.24	0.21	0.06	-666	0.47
+BRD-K50000283	CDC inhibitor	BRD-K50000283	PHA-767491	trt_cp	-666	0.27	0.24	0.2	0.07	-666	0.47
+BRD-A70649075	Sterol demethylase inhibitor	BRD-A70649075	sulconazole	trt_cp	-666	0.25	0.23	0.21	0.04	-666	0.47
+BRD-K16485616	HDAC inhibitor	BRD-K16485616	mocetinostat	trt_cp	HDAC1|HDAC11|HDAC2|HDAC3	0.48	0.43	0.39	0.09	-666	0.47
+BRD-K67537649	Insulin growth factor receptor inhibitor|IGF-1 inhibitor	BRD-K67537649	PQ-401	trt_cp	IGF1R	0.15	0.13	0.1	0.05	-666	0.47
+BRD-K05524748	Adrenergic receptor antagonist	BRD-K05524748	dronedarone	trt_cp	-666	0.32	0.29	0.26	0.06	-666	0.47
+BRD-K36739687	Aryl hydrocarbon receptor antagonist	BRD-K36739687	stemregenin-1	trt_cp	AHR	0.21	0.18	0.16	0.06	-666	0.47
+BRD-K10705233	Cannabinoid receptor agonist	BRD-K10705233	GW-405833	trt_cp	CNR2	0.17	0.14	0.12	0.05	-666	0.46
+BRD-K19669037	GGTase inhibitor	BRD-K19669037	GGTI-298	trt_cp	CDKN1A	0.19	0.16	0.13	0.06	-666	0.46
+BRD-A92630576	Opioid receptor agonist	BRD-A92630576	trimebutine	trt_cp	OPRD1|OPRK1|OPRM1	0.23	0.19	0.15	0.08	-666	0.46
+BRD-K62607865	Bacterial cell wall synthesis inhibitor	BRD-K62607865	aztreonam	trt_cp	-666	0.18	0.15	0.13	0.05	-666	0.45
+BRD-K07762753	Tyrosine kinase inhibitor|CDK inhibitor	BRD-K07762753	aminopurvalanol-a	trt_cp	CDK1|CDK2|CDK5	0.26	0.23	0.19	0.06	-666	0.45
+BRD-K68174511	MTOR inhibitor	BRD-K68174511	torin-2	trt_cp	MTOR	0.43	0.39	0.36	0.08	-666	0.45
+BRD-K13756951	Glycine transporter inhibitor|GlyT-1 inhibitor	BRD-K13756951	bitopertin	trt_cp	SLC6A9	0.19	0.17	0.14	0.05	-666	0.45
+BRD-K53097745	Cyclooxygenase inhibitor|PPAR receptor agonist	BRD-K53097745	pterostilbene	trt_cp	PTGS2	0.26	0.24	0.21	0.06	-666	0.44
+BRD-K36021395	Adenosine kinase inhibitor	BRD-K36021395	ABT-702	trt_cp	ADK	0.2	0.17	0.14	0.07	-666	0.44
+BRD-K29415052	PI3K inhibitor	BRD-K29415052	BGT-226	trt_cp	-666	0.61	0.57	0.52	0.09	-666	0.44
+BRD-K88510285	NFkB pathway inhibitor|Proteasome inhibitor	BRD-K88510285	bortezomib	trt_cp	PSMB5|PSMB1|PSMB2	0.69	0.64	0.6	0.1	-666	0.44
+BRD-K21025364	Protein tyrosine kinase inhibitor	BRD-K21025364	NVP-TAE226	trt_cp	-666	0.44	0.39	0.33	0.1	-666	0.43
+BRD-K02130563	HDAC inhibitor	BRD-K02130563	panobinostat	trt_cp	HDAC1|HDAC2	0.65	0.6	0.55	0.1	-666	0.43
+BRD-K31491153	Serotonin receptor agonist	BRD-K31491153	1-phenylbiguanide	trt_cp	-666	0.19	0.16	0.13	0.06	-666	0.42
+BRD-K36269323	Dimethylarginine dimethylaminohydrolase inhibitor|Nitric oxide synthase inhibitor	BRD-K36269323	asymmetrical-dimethylarginine	trt_cp	NOS2|NOS3	0.23	0.2	0.16	0.07	-666	0.42
+BRD-K51324732	Potassium channel blocker	BRD-K51324732	meglitinide	trt_cp	-666	0.13	0.11	0.08	0.05	-666	0.41
+BRD-K73982490	JNK inhibitor	BRD-K73982490	BI-78D3	trt_cp	MAPK8	0.3	0.27	0.24	0.06	-666	0.41
+BRD-K91701654	MEK inhibitor	BRD-K91701654	U-0126	trt_cp	MAP2K1|MAP2K2	0.23	0.19	0.16	0.07	-666	0.39
+BRD-K76973696	Cyclooxygenase inhibitor	BRD-K76973696	tryptanthrin	trt_cp	-666	0.31	0.27	0.24	0.07	-666	0.39
+BRD-K33743361	-666	BRD-K33743361	BRD-K33743361	trt_cp	-666	0.24	0.22	0.18	0.06	-666	0.38
+BRD-K98521173	Mineralocorticoid receptor agonist	BRD-K98521173	desoxycortone	trt_cp	NR3C2	0.19	0.16	0.13	0.06	-666	0.38
+BRD-K18163608	BCL inhibitor	BRD-K18163608	HA-14-1	trt_cp	BCL2	0.28	0.26	0.24	0.04	-666	0.38
+BRD-K34073885	AP inhibitor	BRD-K34073885	tanshinone-i	trt_cp	IFNG	0.24	0.21	0.19	0.06	-666	0.37
+BRD-K28453807	Cholinergic receptor antagonist	BRD-K28453807	nitrocaramiphen	trt_cp	CHRM1	0.13	0.11	0.08	0.05	-666	0.37
+BRD-K90027355	Mineralocorticoid receptor antagonist	BRD-K90027355	spironolactone	trt_cp	NR3C2	0.38	0.34	0.29	0.09	-666	0.26
+BRD-K13387373	ATPase inhibitor	BRD-K13387373	thonzonium	trt_cp	-666	0.41	0.38	0.34	0.07	-666	-0.47
+BRD-K89014967	MEK inhibitor	BRD-K89014967	AS-703026	trt_cp	MAP2K1|MAP2K2	0.38	0.3	0.24	0.14	-666	-0.49
+BRD-K13606314	Ubiquitin specific protease inhibitor	BRD-K13606314	P-5091	trt_cp	-666	0.22	0.18	0.15	0.07	-666	-0.55
+BRD-K17061841	-666	BRD-K17061841	stattic	trt_cp	-666	0.3	0.28	0.25	0.04	-666	-0.56
+BRD-K61397605	HDAC inhibitor	BRD-K61397605	romidepsin	trt_cp	HDAC1|HDAC2	0.81	0.76	0.68	0.13	-666	-0.63
+BRD-K17705806	Opioid receptor antagonist	BRD-K17705806	JTC-801	trt_cp	OPRL1	0.29	0.27	0.24	0.04	-666	-0.64
+BRD-K81332461	Vitamin D receptor agonist	BRD-K81332461	maxacalcitol	trt_cp	VDR	0.17	0.13	0.1	0.07	-666	-0.65
+BRD-K60446698	Proteasome inhibitor	BRD-K60446698	ONX-0914	trt_cp	-666	0.56	0.52	0.48	0.09	-666	-0.66
+BRD-K22848513	"Apoptosis stimulant|BCL inhibitor|Glutathione Reductase (NADPH) Activators|Heme Oxygenase Activators|IKK-1 (IKK-alpha) Inhibitors|NFkB pathway inhibitor|Nitric oxide production inhibitor|PPAR receptor agonist|Reducing agent|Nuclear factor erythroid derived, like (NRF2) activator"	BRD-K22848513	bardoxolone-methyl	trt_cp	NFE2L2|PPARG	0.44	0.4	0.37	0.07	-666	-0.67
+BRD-K49371609	DNA protein kinase inhibitor|PI3K inhibitor	BRD-K49371609	PIK-75	trt_cp	PIK3CA	0.58	0.55	0.5	0.08	-666	-0.68
+BRD-K95573441	Phosphofructokinase inhibitor	BRD-K95573441	PFK-015	trt_cp	PFKFB3	0.29	0.27	0.25	0.04	-666	-0.69
+BRD-K51791723	-666	BRD-K51791723	riviciclib	trt_cp	-666	0.39	0.35	0.31	0.07	-666	-0.69
+BRD-K33379087	Tyrosine kinase inhibitor	BRD-K33379087	tivantinib	trt_cp	MET	0.36	0.32	0.28	0.07	-666	-0.71
+BRD-K23779958	Acetylcholinesterase inhibitor	BRD-K23779958	dichlorvos	trt_cp	-666	0.41	0.36	0.32	0.1	-666	-0.71
+BRD-K78055238	Glycogen synthase kinase inhibitor	BRD-K78055238	LY-2090314	trt_cp	-666	0.33	0.26	0.22	0.11	-666	-0.72
+BRD-K70301465	BTK inhibitor	BRD-K70301465	ibrutinib	trt_cp	BTK	0.31	0.27	0.23	0.08	-666	-0.72
+BRD-A71033472	Calcium channel blocker	BRD-A71033472	fendiline	trt_cp	-666	0.16	0.14	0.11	0.05	-666	-0.72
+BRD-K21164796	-666	BRD-K21164796	beta-naphthol	trt_cp	-666	0.21	0.18	0.15	0.05	-666	-0.73
+BRD-K40331046	CDK inhibitor	BRD-K40331046	CR8-(R)	trt_cp	-666	0.5	0.46	0.41	0.09	-666	-0.73
+BRD-K26657438	Interferon inducer|TLR agonist	BRD-K26657438	imiquimod	trt_cp	TLR7|TLR8	0.16	0.13	0.1	0.06	-666	-0.73
+BRD-K47079459	-666	BRD-K47079459	cetrimonium	trt_cp	-666	0.32	0.28	0.24	0.08	-666	-0.73
+BRD-K24869513	EGFR inhibitor	BRD-K24869513	CNX-2006	trt_cp	EGFR	0.16	0.13	0.11	0.05	-666	-0.73
+BRD-K03390685	MEK inhibitor	BRD-K03390685	cobimetinib	trt_cp	-666	0.33	0.26	0.21	0.12	-666	-0.74
+BRD-K95581532	TRPV antagonist	BRD-K95581532	RN-1734	trt_cp	TRPV4	0.34	0.3	0.25	0.09	-666	-0.75
+BRD-K10843433	Cyclooxygenase inhibitor|Prostanoid receptor antagonist	BRD-K10843433	phenylbutazone	trt_cp	PTGS1|PTGS2	0.23	0.2	0.18	0.05	-666	-0.75
+BRD-A05906449	Sodium channel blocker	BRD-A05906449	lappaconite	trt_cp	-666	0.28	0.25	0.21	0.07	-666	-0.76
+BRD-K70358946	Serotonin receptor agonist|Serotonin receptor antagonist	BRD-K70358946	aripiprazole	trt_cp	DRD2|HRH1|HTR1A|HTR1B|HTR1D|HTR2A|HTR2C	0.18	0.15	0.13	0.05	-666	-0.76
+BRD-K81258678	RNA polymerase inhibitor	BRD-K81258678	triptolide	trt_cp	-666	0.74	0.68	0.62	0.12	-666	-0.76
+BRD-K14109347	CHK inhibitor	BRD-K14109347	LY-2603618	trt_cp	-666	0.19	0.16	0.13	0.07	-666	-0.77
+BRD-K08799216	EGFR inhibitor	BRD-K08799216	pelitinib	trt_cp	EGFR	0.37	0.32	0.28	0.09	-666	-0.77
+BRD-K76840893	Adrenergic receptor antagonist	BRD-K76840893	RS-17053	trt_cp	ADRA1A	0.27	0.25	0.23	0.04	-666	-0.77
+BRD-K06749501	Insulin growth factor receptor inhibitor	BRD-K06749501	GSK-1838705A	trt_cp	-666	0.23	0.19	0.16	0.06	-666	-0.78
+BRD-K26305185	K-ras inhibitor	BRD-K26305185	K-Ras(G12C)-inhibitor-6	trt_cp	-666	0.19	0.15	0.13	0.06	-666	-0.78
+BRD-K71106091	DNA synthesis inhibitor|DNA repair enzyme inhibitor|Purine antagonist	BRD-K71106091	fludarabine-phosphate	trt_cp	POLA1|RRM1	0.23	0.2	0.17	0.07	-666	-0.79
+BRD-K96104201	Bacterial 50S ribosomal subunit inhibitor	BRD-K96104201	azalomycin-b	trt_cp	-666	0.49	0.46	0.42	0.07	-666	-0.79
+BRD-K45662124	Dopamine receptor ligand	BRD-K45662124	3'-fluorobenzylspiperone	trt_cp	DRD2	0.23	0.2	0.17	0.05	-666	-0.79
+BRD-K33610132	EGFR inhibitor	BRD-K33610132	rociletinib	trt_cp	EGFR	0.22	0.2	0.17	0.05	-666	-0.8
+BRD-K05445342	STAT inhibitor	BRD-K05445342	WP-1066	trt_cp	-666	0.37	0.35	0.32	0.05	-666	-0.8
+BRD-K19034817	FLT3 inhibitor|JAK inhibitor	BRD-K19034817	pacritinib	trt_cp	FLT3|JAK2	0.25	0.23	0.21	0.04	-666	-0.8
+BRD-K86972824	"Nuclear factor erythroid derived, like (NRF2) activator"	BRD-K86972824	oltipraz	trt_cp	-666	0.14	0.12	0.1	0.05	-666	-0.81
+BRD-K66175015	EGFR inhibitor	BRD-K66175015	afatinib	trt_cp	EGFR|ERBB2|ERBB4	0.33	0.27	0.23	0.1	-666	-0.82
+BRD-K86816506	FAAH inhibitor	BRD-K86816506	PF-04457845	trt_cp	FAAH	0.18	0.16	0.14	0.05	-666	-0.82
+BRD-K53734668	Syk inhibitor	BRD-K53734668	PRT-062607	trt_cp	-666	0.28	0.26	0.24	0.04	-666	-0.83
+BRD-K43644456	Deubiquitinase inhibitor	BRD-K43644456	WP-1130	trt_cp	-666	0.5	0.46	0.43	0.08	-666	-0.83
+BRD-K73309154	EGFR inhibitor	BRD-K73309154	OSI-420	trt_cp	EGFR	0.26	0.22	0.18	0.08	-666	-0.84
+BRD-K32501161	Dopamine uptake inhibitor	BRD-K32501161	vanoxerine	trt_cp	SLC6A3	0.32	0.28	0.24	0.07	-666	-0.85
+BRD-K40438880	Glutamate receptor modulator	BRD-K40438880	spermidine	trt_cp	-666	0.23	0.2	0.17	0.06	-666	-0.85
+BRD-K72827473	ALK tyrosine kinase receptor inhibitor	BRD-K72827473	CEP-37440	trt_cp	ALK	0.27	0.24	0.21	0.06	-666	-0.85
+BRD-K32730239	JNK inhibitor	BRD-K32730239	SU-3327	trt_cp	-666	0.29	0.27	0.25	0.05	-666	-0.86
+BRD-K43002771	Calcium channel blocker	BRD-K43002771	SR-33805	trt_cp	-666	0.32	0.28	0.25	0.07	-666	-0.86
+BRD-K38852836	HSP inhibitor	BRD-K38852836	ganetespib	trt_cp	HSP90AA1	0.53	0.47	0.42	0.1	-666	-0.86
+BRD-K58435339	HSP antagonist	BRD-K58435339	AT-13387	trt_cp	-666	0.43	0.39	0.35	0.08	-666	-0.87
+BRD-A53955690	-666	BRD-A53955690	STOCK4S-14556	trt_cp	-666	0.26	0.23	0.2	0.06	-666	-0.87
+BRD-K26667523	MEK inhibitor	BRD-K26667523	TAK-733	trt_cp	MAP2K1	0.34	0.27	0.21	0.13	-666	-0.88
+BRD-K65678996	Acetylcholine receptor agonist|GABA receptor agonist	BRD-K65678996	nefiracetam	trt_cp	CHRM1	0.19	0.15	0.12	0.07	-666	-0.88
+BRD-K99964838	Abl kinase inhibitor|Bcr-Abl kinase inhibitor|Src inhibitor	BRD-K99964838	bosutinib	trt_cp	ABL1|BCR|CAMK2G|HCK|LYN|SRC	0.21	0.17	0.13	0.08	-666	-0.89
+BRD-K29950728	Estrogen receptor antagonist	BRD-K29950728	clomifene	trt_cp	ESR1	0.23	0.2	0.16	0.07	-666	-0.91
+BRD-K79930101	Receptor tyrosine protein kinase inhibitor|EGFR inhibitor|ErbB2 inhibitor	BRD-K79930101	GW-583340	trt_cp	EGFR|ERBB2	0.25	0.22	0.18	0.07	-666	-0.92
+BRD-K82861010	HCV inhibitor	BRD-K82861010	daclatasvir	trt_cp	-666	0.22	0.2	0.18	0.04	-666	-0.93
+BRD-K59574735	Leukotriene inhibitor	BRD-K59574735	ubenimex	trt_cp	LTA4H|RNPEP	0.23	0.21	0.18	0.05	-666	-0.93
+BRD-K42938903	Dopamine receptor antagonist	BRD-K42938903	acetophenazine	trt_cp	DRD2	0.22	0.19	0.17	0.05	-666	-0.94
+BRD-K55703048	Glutamate receptor antagonist	BRD-K55703048	latrepirdine	trt_cp	HTR6	0.13	0.11	0.09	0.04	-666	-0.94
+BRD-K64052750	EGFR inhibitor	BRD-K64052750	gefitinib	trt_cp	EGFR	0.26	0.22	0.17	0.09	-666	-0.95
+BRD-K86118762	IGF-1 inhibitor	BRD-K86118762	linsitinib	trt_cp	IGF1R|INSR	0.2	0.17	0.14	0.06	-666	-0.95
+BRD-K19687926	EGFR inhibitor|ErbB2 inhibitor	BRD-K19687926	lapatinib	trt_cp	EGFR|ERBB2	0.25	0.21	0.17	0.08	-666	-0.98
+BRD-K94559059	Serotonin receptor antagonist|Serotonin release inhibitor	BRD-K94559059	telotristat	trt_cp	TPH1	0.29	0.26	0.23	0.06	-666	-0.98
+BRD-A90547603	Platelet aggregation inhibitor	BRD-A90547603	eptifibatide	trt_cp	ITGA2B|ITGB3	0.19	0.16	0.13	0.05	-666	-0.99
+BRD-K28383148	-666	BRD-K28383148	AP-1903	trt_cp	-666	0.17	0.13	0.09	0.08	-666	-1
+BRD-K20655524	Psychoactive drug	BRD-K20655524	mefexamide	trt_cp	-666	0.52	0.45	0.38	0.14	-666	-1
+BRD-K64538373	MEK inhibitor	BRD-K64538373	Ro-4987655	trt_cp	MAP2K1	0.33	0.25	0.17	0.16	-666	-1
+BRD-K26818574	DNA methyltransferase inhibitor|Histone lysine methyltransferase inhibitor	BRD-K26818574	BIX-01294	trt_cp	EHMT2	0.29	0.27	0.24	0.05	-666	-1.01
+BRD-A64553394	Sodium channel activator	BRD-A64553394	DPI-201106	trt_cp	-666	0.31	0.27	0.24	0.07	-666	-1.02
+BRD-K82244583	-666	BRD-K82244583	binimetinib	trt_cp	-666	0.33	0.26	0.21	0.12	-666	-1.02
+BRD-A43885598	-666	BRD-A43885598	BRD-A43885598	trt_cp	-666	0.2	0.17	0.14	0.06	-666	-1.03
+BRD-K05104363	MEK inhibitor	BRD-K05104363	PD-184352	trt_cp	MAP2K1	0.21	0.17	0.13	0.08	-666	-1.04
+BRD-K97883416	HIV attachment inhibitor	BRD-K97883416	BMS-626529	trt_cp	-666	0.22	0.19	0.16	0.05	-666	-1.05
+BRD-K49865102	MAP kinase inhibitor|Protein kinase inhibitor|MEK inhibitor	BRD-K49865102	PD-0325901	trt_cp	MAP2K1	0.38	0.3	0.22	0.16	-666	-1.05
+BRD-K26603252	EGFR inhibitor	BRD-K26603252	PD-153035	trt_cp	-666	0.25	0.2	0.16	0.09	-666	-1.05
+BRD-K39467894	Bacterial DNA inhibitor	BRD-K39467894	nithiamide	trt_cp	-666	0.15	0.12	0.1	0.05	-666	-1.06
+BRD-A31521121	Muscle relaxant	BRD-A31521121	methocarbamol	trt_cp	CA1	0.13	0.1	0.08	0.05	-666	-1.07
+BRD-K98384930	Bacterial DNA gyrase inhibitor	BRD-K98384930	finafloxacin	trt_cp	-666	0.18	0.14	0.1	0.08	-666	-1.09
+BRD-K80725821	Serotonin receptor antagonist	BRD-K80725821	RS-16566	trt_cp	-666	0.22	0.19	0.17	0.06	-666	-1.11
+BRD-K63123526	-666	BRD-K63123526	S-methylcysteine	trt_cp	CTSD|MGMT	0.18	0.16	0.13	0.05	-666	-1.12
+BRD-K78496197	-666	BRD-K78496197	SCS	trt_cp	-666	0.2	0.17	0.14	0.06	-666	-1.13
+BRD-K56301217	BCL inhibitor	BRD-K56301217	ABT-737	trt_cp	BCL2|BCL2L1|BCL2L2	0.15	0.13	0.1	0.06	-666	-1.14
+BRD-A55913614	Antimalarial agent|DNA inhibitor	BRD-A55913614	primaquine	trt_cp	-666	0.18	0.15	0.13	0.05	-666	-1.14
+BRD-K17702546	EGFR inhibitor	BRD-K17702546	PD-168393	trt_cp	-666	0.29	0.25	0.22	0.07	-666	-1.15
+BRD-K81728688	EGFR inhibitor	BRD-K81728688	WZ-8040	trt_cp	-666	0.27	0.24	0.21	0.06	-666	-1.16
+BRD-K40718343	-666	BRD-K40718343	AEE-788	trt_cp	-666	0.22	0.18	0.14	0.08	-666	-1.16
+BRD-K29582115	Dopamine receptor antagonist|Serotonin receptor antagonist	BRD-K29582115	ziprasidone	trt_cp	DRD2|HRH1|HTR1A|HTR1B|HTR1D|HTR1E|HTR2A|HTR2C|HTR7	0.25	0.22	0.18	0.07	-666	-1.2
+BRD-K70914287	Tyrosine kinase inhibitor|EGFR inhibitor	BRD-K70914287	BIBX-1382	trt_cp	EGFR	0.14	0.11	0.08	0.06	-666	-1.2
+BRD-K50168500	EGFR inhibitor	BRD-K50168500	canertinib	trt_cp	EGFR|ERBB2|ERBB4	0.21	0.16	0.12	0.08	-666	-1.2
+BRD-K46386702	EGFR inhibitor	BRD-K46386702	ARRY-334543	trt_cp	ERBB2|EGFR	0.26	0.22	0.17	0.09	-666	-1.2
+BRD-K01253243	RAF inhibitor	BRD-K01253243	SB-590885	trt_cp	BRAF	0.17	0.12	0.08	0.09	-666	-1.22
+BRD-K09900591	HIV integrase inhibitor|Lipoxygenase inhibitor|Nitric oxide production inhibitor|NFkB pathway inhibitor|PPAR receptor modulator|Tumor necrosis factor production inhibitor|TNF production inhibitor	BRD-K09900591	caffeic-acid	trt_cp	ALOX5	0.11	0.08	0.05	0.06	-666	-1.22
+BRD-K12343256	MEK inhibitor	BRD-K12343256	trametinib	trt_cp	MAP2K1|MAP2K2	0.4	0.32	0.25	0.15	-666	-1.22
+BRD-K67261995	Contrast agent	BRD-K67261995	adipiodone	trt_cp	-666	0.27	0.23	0.19	0.08	-666	-1.23
+BRD-K85751432	MEK inhibitor	BRD-K85751432	refametinib	trt_cp	MAP2K1|MAP2K2	0.24	0.2	0.15	0.08	-666	-1.23
+BRD-K12244279	MEK inhibitor	BRD-K12244279	MEK1-2-inhibitor	trt_cp	MAP2K1|MAP2K2	0.27	0.24	0.21	0.06	-666	-1.3
+BRD-K72414522	CDK inhibitor	BRD-K72414522	AZD-5438	trt_cp	-666	0.31	0.28	0.25	0.06	-666	-1.3
+BRD-K83057217	Thymidylate synthase inhibitor	BRD-K83057217	doxifluridine	trt_cp	TYMS	0.26	0.23	0.2	0.05	-666	-1.3
+BRD-K92213669	Microsomal trigylceride transfer protein inhibitor	BRD-K92213669	lomitapide	trt_cp	MTTP	0.2	0.17	0.14	0.06	-666	-1.32
+BRD-K37687095	MEK inhibitor	BRD-K37687095	AZD-8330	trt_cp	-666	0.47	0.37	0.29	0.18	-666	-1.32
+BRD-K42805893	-666	BRD-K42805893	osimertinib	trt_cp	EGFR	0.26	0.22	0.18	0.08	-666	-1.33
+BRD-K87700323	-666	BRD-K87700323	cetylpyridinium	trt_cp	-666	0.31	0.27	0.24	0.07	-666	-1.34
+BRD-K07106112	EGFR inhibitor|Receptor tyrosine protein kinase inhibitor	BRD-K07106112	BMS-599626	trt_cp	EGFR|ERBB2|ERBB4	0.11	0.08	0.05	0.06	-666	-1.36
+BRD-K48443249	Bruton's tyrosine kinase (BTK) inhibitor	BRD-K48443249	CNX-774	trt_cp	BTK	0.22	0.18	0.15	0.07	-666	-1.37
+BRD-K03294269	CDK inhibitor	BRD-K03294269	NU-6027	trt_cp	-666	0.18	0.15	0.12	0.06	-666	-1.38
+BRD-K97440753	Adrenergic receptor antagonist|Prolactin inhibitor	BRD-K97440753	dihydroergocristine	trt_cp	ADRA1A|ADRB1|DRD1|DRD2|DRD3|DRD4|DRD5|HTR1A|HTR2A|HTR3A|HTR4|HTR5A|HTR6|HTR7	0.14	0.12	0.09	0.05	-666	-1.41
+BRD-A55484088	Opioid receptor antagonist	BRD-A55484088	BNTX	trt_cp	OPRD1	0.31	0.28	0.26	0.05	-666	-1.42
+BRD-K44590731	-666	BRD-K44590731	TU-2100	trt_cp	-666	0.14	0.12	0.09	0.05	-666	-1.42
+BRD-K57169635	EGFR inhibitor	BRD-K57169635	dacomitinib	trt_cp	EGFR|ERBB2|ERBB4	0.32	0.28	0.26	0.06	-666	-1.43
+BRD-A48300215	Sodium channel blocker	BRD-A48300215	ajmaline	trt_cp	-666	0.21	0.19	0.16	0.05	-666	-1.44
+BRD-K09951645	RAF inhibitor	BRD-K09951645	dabrafenib	trt_cp	BRAF	0.24	0.19	0.14	0.1	-666	-1.44
+BRD-K23190681	Receptor tyrosine protein kinase inhibitor	BRD-K23190681	AV-412	trt_cp	EGFR|ERBB2	0.28	0.25	0.22	0.05	-666	-1.48
+BRD-K50590187	TRPV agonist	BRD-K50590187	capsaicin	trt_cp	TRPV1	0.12	0.09	0.06	0.06	-666	-1.49
+BRD-K98572433	EGFR inhibitor	BRD-K98572433	AZD-8931	trt_cp	-666	0.32	0.27	0.22	0.1	-666	-1.53
+BRD-K87909389	CDK inhibitor	BRD-K87909389	alvocidib	trt_cp	CDK1|CDK2|CDK4|CDK5|CDK6|CDK7|CDK8|CDK9|EGFR|PYGM	0.47	0.44	0.41	0.06	-666	-1.57
+BRD-K88677950	MAP kinase inhibitor|MEK inhibitor	BRD-K88677950	PD-198306	trt_cp	MAP2K1|MAP2K2	0.25	0.21	0.17	0.07	-666	-1.63
+BRD-A90272038	Glutamate receptor antagonist	BRD-A90272038	CGP-37849	trt_cp	-666	0.16	0.14	0.11	0.05	-666	-1.63
+BRD-K26838195	EGFR inhibitor	BRD-K26838195	AST-1306	trt_cp	EGFR|ERBB2	0.25	0.21	0.18	0.07	-666	-1.65
+BRD-K04833372	Insulin growth factor receptor inhibitor|Insulin receptor ligand|IGF-1 inhibitor	BRD-K04833372	GSK-1904529A	trt_cp	IGF1R|INSR	0.23	0.19	0.16	0.07	-666	-1.92

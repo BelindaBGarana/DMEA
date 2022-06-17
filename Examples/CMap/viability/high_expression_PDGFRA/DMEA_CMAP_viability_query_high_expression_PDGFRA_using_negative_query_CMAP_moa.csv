@@ -1,0 +1,8 @@
+"","Rank_metric","Drug_set","ES","NES","p_value","Position_at_max","FDR_q_value"
+"1","neg_query","PDGFR tyrosine kinase receptor inhibitor",-0.82143,-1.99,0,161,0.00114
+"2","neg_query","VEGFR inhibitor",-0.79725,-1.93,0.00133,173,0.00171
+"3","neg_query","MEK inhibitor",0.26558,0.786,0.693,55,0.698
+"4","neg_query","HDAC inhibitor",-0.27454,-0.661,0.875,129,0.869
+"5","neg_query","Adrenergic receptor antagonist",0.31312,0.897,0.546,21,0.728
+"6","neg_query","EGFR inhibitor",0.52951,1.54,0.0882,28,0.163
+"7","neg_query","CDK inhibitor",0.57287,1.62,0.0558,29,0.257
