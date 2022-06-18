@@ -560,7 +560,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     myName <- Gene.Set.A
 
     GSEA.results <- GSEA.list$GSEA.Results
-    GSEA.results <- GSEA.results[GSEA.results$Sample == Sample.Name,]
+    GSEA.results <- GSEA.results[GSEA.results$Rank_metric == Sample.Name,]
     GSEA.results$p_value <- as.numeric(as.character(GSEA.results$p_value))
     GSEA.results$FDR_q_value <- as.numeric(as.character(GSEA.results$FDR_q_value))
 
@@ -646,7 +646,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
   if (nrow(significant.hits) > 0){
     for (i in 1:nrow(significant.hits)){
       temp <- gsea_mountain_plot(GSEA.list = EA, Sample.Name = est.name, Gene.Set.A = significant.hits$Drug_set[i])
-      temp.plot[i] <- list(temp)
+      temp.plot[significant.hits$Drug_set[i]] <- list(temp)
     }
   } else {print("No enrichments met the FDR cut-off to produce mountain plots")}
   
