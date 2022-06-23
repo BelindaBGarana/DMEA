@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220616
+#BG 20201203; last edit: BG 20220623
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -38,8 +38,10 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
   library(dplyr);library(qvalue);library(ggplot2);
   
   cores <- parallel::detectCores() #number of cores available
-  cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
-  doSNOW::registerDoSNOW(cl) #register cluster
+  if(cores[1] > 1){
+    cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
+    doSNOW::registerDoSNOW(cl) #register cluster
+  }
   
   #Correlations
   not_all_na <- function(x) any(!is.na(x))
@@ -176,8 +178,10 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
     }
   }else{scatter.plots <- NA}
   
-  snow::stopCluster(cl) #stop cluster
-  rm(cl)
+  if(cores[1] > 1){
+    snow::stopCluster(cl) #stop cluster
+    rm(cl)
+  }
   
   outputs <- list(result=corr.no.na, scatter.plots = scatter.plots)
   return(outputs)
@@ -191,8 +195,10 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
   elements <- list()
   
   cores <- parallel::detectCores() #number of cores available
-  cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
-  doSNOW::registerDoSNOW(cl) #register cluster
+  if(cores[1] > 1){
+    cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
+    doSNOW::registerDoSNOW(cl) #register cluster
+  }
   
   final.sets <- c()
   final.elements <- list()
@@ -210,8 +216,10 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
   }
   rm(elements)
   rm(all.sets)
-  snow::stopCluster(cl) #stop cluster
-  rm(cl)
+  if(cores[1] > 1){
+    snow::stopCluster(cl) #stop cluster
+    rm(cl)
+  }
   
   if(!is.null(descriptions)){
     final.set.info <- distinct(data[data[,c(set.names)] %in% final.sets, c(set.names, descriptions)])
@@ -395,11 +403,10 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     
     #Find out how many cores are available (if you don't already know)
     cores<-parallel::detectCores()
-    #Create cluster with desired number of cores, leave one open for the machine
-    #core processes
-    cl <- snow::makeCluster(cores[1]-1)
-    #Register cluster
-    doSNOW::registerDoSNOW(cl)
+    if(cores[1] > 1){
+      cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
+      doSNOW::registerDoSNOW(cl) #register cluster
+    }
 
     GSEA.Results <- matrix(data = NA, nrow = length(Drug.Sets.All), ncol = 7)
     colnames(GSEA.Results) <- c("Rank_metric","Drug_set","ES","NES",
@@ -529,8 +536,10 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.neg.stronger, digits = 3) < 1, signif(percent.temp / percent.neg.stronger, digits = 3), 1) #BG
       }
     }
-    snow::stopCluster(cl)
-    rm(cl)
+    if(cores[1] > 1){
+      snow::stopCluster(cl) #stop cluster
+      rm(cl)
+    }
 
     return(list(GSEA.Results = GSEA.Results,
                 Mountain.Plot.Info = Mountain.Plot.Info,
