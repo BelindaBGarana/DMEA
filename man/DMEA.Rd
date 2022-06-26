@@ -8,10 +8,10 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-DMEA(drug.sensitivity, gmt, expression, weights, value="AUC", expr.sample.names=colnames(expression)[1],
+DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.names=colnames(expression)[1],
                  gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
                  rank.metric="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted",
-                 drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]", exclusions=c("-666", "NA", "NaN", "NULL"), descriptions=NULL,
+                 drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]", exclusions=c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL,
                  min.per.corr=3, scatter.plots=TRUE, scatter.plot.type="pearson", FDR.scatter.plots=0.05,
                  xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE)
 }
@@ -95,7 +95,8 @@ Output gmt can be saved for future use as an R object using saveRDS(DMEA.output$
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
-\section{Warning }{The column name for your samples must be the same in your drug sensitivity dataframe as in your expression dataframe. You can set the name of the column containing your samples using the parameter sample.names.}
+\section{Warning }{The column name for your samples must be the same in your drug sensitivity dataframe as in your expression dataframe. You can set the name of the column containing your samples using the parameter sample.names.
+If no gmt is provided, then drug.info with set.type annotations must be provided. Either the gmt or set.type column must provide annotations for 2+ drug sets.}
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~

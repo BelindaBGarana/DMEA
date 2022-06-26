@@ -10,7 +10,7 @@
 \usage{
 drugSEA(data, gmt, drug="Drug", rank.metric="Pearson.est", set.type="moa", direction.adjust=NULL,
                     FDR=0.25, num.permutations=1000, stat.type="Weighted", min.per.set=6,
-                    sep = "[|]", exclusions = c("-666", "NA", "NaN", "NULL"), descriptions=NULL)
+                    sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -67,6 +67,7 @@ Output gmt can be saved for future use as an R object using saveRDS(DMEA.output$
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
+\section{Warning }{Each drug must have 1 non-zero, numeric rank.metric value to be included in the analysis (NA values will be omitted). If no gmt is provided, then set.type must be provided in the input data. Either the gmt or set.type column must provide annotations for 2+ drug sets.}
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
