@@ -6,7 +6,8 @@
 rm(list=ls(all=TRUE))
 
 WV <- function(expression, weights, sample.names=colnames(expression)[1],
-                gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){#data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
+                gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){
+  #data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
   print("Calculating Weighted Voting scores...")
   #check expression for gene names
   filtered.expr <- expression %>% dplyr::select(c(tidyselect::all_of(sample.names),tidyselect::all_of(weights[,c(gene.names)])))
@@ -28,7 +29,7 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
     scores[,c(sample.names)] <- rownames(scores)
     scores <- scores %>% relocate(colnames(scores)[2], .before=WV)
    }else{
-    print("Error: expression dataframe does not contain data for the gene names provided.")
+    stop("expression dataframe does not contain data for the gene names provided")
   }
   return(scores)
 }
@@ -191,66 +192,61 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
                    sep = "[|]", exclusions = c("-666", "NA", "NaN", "NULL"), descriptions = NULL){
   print("Generating gmt object for enrichment analysis...")
   all.sets <- unique(data[,c(set.names)])
-  all.sets <- all.sets[all.sets %in% exclusions == FALSE]
-  elements <- list()
-  
-  cores <- parallel::detectCores() #number of cores available
-  if(cores[1] > 1){
-    cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
-    doSNOW::registerDoSNOW(cl) #register cluster
-  }
-  
-  final.sets <- c()
-  final.elements <- list()
-  for(i in 1:length(all.sets)){
-    elements[[all.sets[i]]] <- list()
-    for(j in 1:nrow(data)){ 
-      sets <- strsplit(as.character(data[j, c(set.names)]), sep)[[1]]
-      if(all.sets[i] %in% sets){elements[[all.sets[i]]] <- c(elements[[all.sets[i]]], data[j, c(element.names)])}
+  if(length(all.sets) > 0){
+    all.sets <- all.sets[all.sets %in% exclusions == FALSE]
+    if(length(all.sets) > 0){
+      elements <- list()
+      
+      cores <- parallel::detectCores() #number of cores available
+      if(cores[1] > 1){
+        cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
+        doSNOW::registerDoSNOW(cl) #register cluster
+      }
+      
+      final.sets <- c()
+      final.elements <- list()
+      for(i in 1:length(all.sets)){
+        elements[[all.sets[i]]] <- list()
+        for(j in 1:nrow(data)){ 
+          sets <- strsplit(as.character(data[j, c(set.names)]), sep)[[1]]
+          if(all.sets[i] %in% sets){elements[[all.sets[i]]] <- c(elements[[all.sets[i]]], data[j, c(element.names)])}
+        }
+        # store sets with elements
+        if(length(elements[[all.sets[i]]])>=min.per.set){
+          final.sets <- c(final.sets, all.sets[i])
+          final.elements[[all.sets[i]]] <- elements[[all.sets[i]]]
+        }
+      }
+      rm(elements)
+      rm(all.sets)
+      if(cores[1] > 1){
+        snow::stopCluster(cl) #stop cluster
+        rm(cl)
+      }
+      
+      if(!is.null(descriptions)){
+        final.set.info <- distinct(data[data[,c(set.names)] %in% final.sets, c(set.names, descriptions)])
+        final.set.info <- final.set.info[, c(descriptions)]
+      }else{
+        final.set.info <- final.sets
+      }
+      
+      gmt <- list(genesets=final.elements, geneset.names=final.sets, geneset.descriptions=final.set.info) 
+    }else{
+      stop("no set annotations were left after exclusions were removed")
     }
-    # store sets with elements
-    if(length(elements[[all.sets[i]]])>=min.per.set){
-      final.sets <- c(final.sets, all.sets[i])
-      final.elements[[all.sets[i]]] <- elements[[all.sets[i]]]
-    }
-  }
-  rm(elements)
-  rm(all.sets)
-  if(cores[1] > 1){
-    snow::stopCluster(cl) #stop cluster
-    rm(cl)
-  }
-  
-  if(!is.null(descriptions)){
-    final.set.info <- distinct(data[data[,c(set.names)] %in% final.sets, c(set.names, descriptions)])
-    final.set.info <- final.set.info[, c(descriptions)]
   }else{
-    final.set.info <- final.sets
+    stop("set annotations must be provided to generate a gmt object")
   }
-  
-  gmt <- list(genesets=final.elements, geneset.names=final.sets, geneset.descriptions=final.set.info)
   return(gmt)
 }
 
 drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.type="moa", direction.adjust=NULL,
                     FDR=0.25, num.permutations=1000, stat.type="Weighted", min.per.set=6,
-                    sep = "[|]", exclusions = c("-666", "NA", "NaN", "NULL"), descriptions=NULL){
+                    sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL){
   library(sjmisc);library(dplyr);
-  #if needed, adjust rank metrics
-  if(length(direction.adjust)>0){
-    info <- distinct(data[,c(drug, rank.metric, set.type)])
-    info$adjust <- 1
-    info[grep(direction.adjust, info[,c(set.type)], value = T), "adjust"] <- -1
-    info$adjusted.est <- as.numeric(info[,c(rank.metric)])*as.numeric(info$adjust)
-    input <- info[,c(drug,"adjusted.est")]
-    est.name <- paste0(rank.metric, " direction-adjusted")
-  }else{
-    input <- data[,c(drug,rank.metric)]
-    est.name <- rank.metric
-  }
-  colnames(input) <- c(drug, est.name)
 
-  #load GSEA_custom function
+  # load GSEA_custom function
   GSEA_custom <- function(input.df, gmt.list,
                           num.permutations = 1000,
                            stat.type = "Weighted", min.per.set){
@@ -262,9 +258,9 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       score.weight = 1
     }
 
-    #Read in gene expression data
-    #drug names should be first column
-    #rank metric name should be second column
+    # Read in gene expression data
+    # drug names should be first column
+    # rank metric name should be second column
     data_in <- input.df
 
     # find biggest drug set
@@ -391,17 +387,18 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     row.names(num.hits.pathways.df) = Drug.Sets.All
     Drug.Sets.under <- which(num.hits.pathways.df < min.per.set)
     Drug.Sets.over <- which(num.hits.pathways.df >= min.per.set)
-    Drug.Sets.All <- Drug.Sets.All[Drug.Sets.over] # write over gene sets all to keep >= min.per.set
-    if (length(Drug.Sets.under) > 0){
-      print(paste0("Warning: Removing drug sets with less than ",min.per.set," drugs observed in data set."))
+    Drug.Sets.All <- Drug.Sets.All[Drug.Sets.over] # only keep drug sets with >= min.per.set drugs
+    if(length(Drug.Sets.under) > 0){
+      warning(paste0("removing drug sets with less than ",min.per.set," drugs observed in data set"))
       annotations <- annotations[,c(colnames(data_in)[1],Drug.Sets.All)]
     }
+    if(length(Drug.Sets.over) < 2){stop("annotations for 2+ drug sets are required")} # BG 2022-06-25
     annotations <- as.data.frame(annotations)
     data_in <- merge(data_in, annotations, by = colnames(data_in)[1])
     data_in <- stats::na.omit(data_in)
     rm(annotations)
     
-    #Find out how many cores are available (if you don't already know)
+    # Find out how many cores are available (if you don't already know)
     cores<-parallel::detectCores()
     if(cores[1] > 1){
       cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
@@ -546,7 +543,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
                 ranking.metric = rank_metric))
   }
   
-  #load mountain plot function
+  # load mountain plot function
   gsea_mountain_plot <- function(GSEA.list, Sample.Name, Gene.Set.A, color = TRUE){
     library(ggplot2);
     if (color == TRUE){
@@ -639,10 +636,34 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     return(assembled)
   }
   
+  ## remove any drugs with rank.metric = 0, NA (signed ranks are required for enrichment analysis)
+  data[,c(rank.metric)] <- as.numeric(data[,c(rank.metric)])
+  data <- data[data[,c(rank.metric)]!=0 & !is.na(data[,c(rank.metric)]),]
+  
+  ## check for duplicate entries for each drug (only 1 rank metric allowed per drug)
+  drug.names <- unique(data[,c(drug)])
+  if(length(drug.names) < nrow(data)){
+    stop("each drug must have only 1 rank.metric value")
+  }
+  
   ## if necessary, generate gmt object
   if(is.null(gmt)){
     gmt <- as.gmt(data, element.names=drug, set.names=set.type, min.per.set, sep, exclusions, descriptions)
   }
+  
+  ## if necessary, adjust rank metrics
+  if(length(direction.adjust)>0){
+    info <- distinct(data[,c(drug, rank.metric, set.type)])
+    info$adjust <- 1
+    info[grep(direction.adjust, info[,c(set.type)], value = T), "adjust"] <- -1
+    info$adjusted.est <- as.numeric(info[,c(rank.metric)])*as.numeric(info$adjust)
+    input <- info[,c(drug,"adjusted.est")]
+    est.name <- paste0(rank.metric, " direction-adjusted")
+  }else{
+    input <- data[,c(drug,rank.metric)]
+    est.name <- rank.metric
+  }
+  colnames(input) <- c(drug, est.name)
   
   ## perform enrichment analysis using GSEA_custom
   print("Running enrichment analysis...")
@@ -695,7 +716,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
 DMEA <- function(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", sample.names=colnames(expression)[1],
                  gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
                  rank.metric="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted", 
-                 drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]", exclusions=c("-666", "NA", "NaN", "NULL"), descriptions=NULL,
+                 drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]", exclusions=c("-666", "NA", "na","NaN", "NULL"), descriptions=NULL,
                  min.per.corr=3, scatter.plots=TRUE, scatter.plot.type="pearson",FDR.scatter.plots=0.05, 
                  xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
   # WV
@@ -711,14 +732,7 @@ DMEA <- function(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", s
   # if necessary, generate gmt object
   if(is.null(gmt)){
     if(is.null(drug.info)){
-      print("Error: drug.info dataframe containing set membership information must be provided as input if no gmt object is provided")
-      return(list(WV.scores = WV.result,
-                  corr.result = corr.results$result,
-                  corr.scatter.plots = corr.results$scatter.plots,
-                  gmt = NULL,
-                  DMEA.result = NULL,
-                  DMEA.mtn.plots = NULL,
-                  DMEA.volcano.plot = NULL))
+      stop("drug.info dataframe containing set membership information must be provided as input if no gmt object is provided")
       }else{
       corr.output <- merge(corr.results$result, drug.info, by=drug)
       gmt <- as.gmt(data=corr.output, element.names=drug, set.names=set.type, min.per.set, sep, exclusions, descriptions)
