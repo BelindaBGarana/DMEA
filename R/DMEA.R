@@ -1,5 +1,5 @@
 #DMEA
-#BG 20201203; last edit: BG 20220623
+#Author: Belinda B. Garana (BG), Date: 2020-12-03; last edit: BG 2022-06-25
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -695,7 +695,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
             legend.text=element_text(size=10),axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
             panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10),
-            legend.position = "bottom")
+            legend.position = "bottom", legend.key = element_blank())
   }else{
     volc <- ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10))) + geom_point(size = 4, color="azure4") + 
       xlim(-limit.x,limit.x) + ylim(0,limit.y) + xlab("Normalized Enrichment Score") + ylab("-Log(p-value)") +
