@@ -1,0 +1,2 @@
+query_id	desc	url
+TAG	(GSE35230) MEK inhibitor GSK212 treated A375 clones (30nM at 24H) vs. DMSO treated	TAG
