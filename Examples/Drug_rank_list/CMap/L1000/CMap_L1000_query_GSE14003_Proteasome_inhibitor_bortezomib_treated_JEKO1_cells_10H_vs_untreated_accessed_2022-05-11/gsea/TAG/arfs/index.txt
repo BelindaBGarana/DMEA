@@ -1,0 +1,2 @@
+query_id	desc	url
+norm_cs	(GSE14003) Proteasome inhibitor bortezomib treated JEKO1 cells (10H) vs. untreated	NORM_CS

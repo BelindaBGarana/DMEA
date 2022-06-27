@@ -1,0 +1,2 @@
+query_id	desc	url
+norm_cs	(GSE32547) Pitavastatin treated HUVEC cells (1 uM at 4H) vs. DMSO treated	NORM_CS
