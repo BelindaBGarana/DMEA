@@ -7,13 +7,13 @@ rm(list=ls(all=TRUE))
 
 WV <- function(expression, weights, sample.names=colnames(expression)[1],
                 gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){
-  #data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
+  # data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
   print("Calculating Weighted Voting scores...")
-  #check expression for gene names
+  # check expression for gene names
   filtered.expr <- expression %>% dplyr::select(c(tidyselect::all_of(sample.names),tidyselect::all_of(weights[,c(gene.names)])))
   filtered.expr <- na.omit(filtered.expr)
   if(nrow(filtered.expr)>0){
-    #prep for matrix multiplication
+    # prep for matrix multiplication
     rownames(filtered.expr) <- filtered.expr[,c(sample.names)] #store sample names in row names
     filtered.expr.data <- dplyr::select(filtered.expr, -c(tidyselect::all_of(sample.names))) #remove sample names from expression
     filtered.weights <- weights[weights[,c(gene.names)] %in% colnames(filtered.expr.data),c(gene.names, weight.values)] #reduce weights for overlap with expression
@@ -21,10 +21,10 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
     weight.matrix <- as.matrix(weight.data)
     expr.matrix <- as.matrix(filtered.expr.data)
     
-    #perform matrix multiplication
+    # perform matrix multiplication
     scores <- as.data.frame(expr.matrix %*% weight.matrix)
     
-    #format dataframe for output
+    # format dataframe for output
     colnames(scores)[1] <- "WV"
     scores[,c(sample.names)] <- rownames(scores)
     scores <- scores %>% relocate(colnames(scores)[2], .before=WV)
@@ -38,13 +38,13 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
   print("Running correlations and regressions...")
   library(dplyr);library(qvalue);library(ggplot2);
   
-  cores <- parallel::detectCores() #number of cores available
+  cores <- parallel::detectCores() # number of cores available
   if(cores[1] > 1){
-    cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
-    doSNOW::registerDoSNOW(cl) #register cluster
+    cl <- snow::makeCluster(cores[1]-1) # cluster using all but 1 core
+    doSNOW::registerDoSNOW(cl) # register cluster
   }
   
-  #Correlations
+  # correlations and regressions
   not_all_na <- function(x) any(!is.na(x))
   all.data.corr <- data
   all.data.corr <- all.data.corr %>% select_if(not_all_na)
@@ -58,10 +58,10 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
   data.corr <- list()
   for (j in 3:ncol(all.data.corr)){
     data.corr[[j-2]] <- na.omit(all.data.corr[,c(2,j)])
-    a <- nrow(data.corr[[j-2]]) #number of samples in the correlation (N)
+    a <- nrow(data.corr[[j-2]]) # number of samples in the correlation (N)
     if (a >= min.per.corr) {corr$N[j-2] <- a
-    x <- as.numeric(data.corr[[j-2]][,1]) #list of rank metric
-    y <- as.numeric(data.corr[[j-2]][,2]) #list of gene expression (for each gene j)
+    x <- as.numeric(data.corr[[j-2]][,1]) # list of rank metric
+    y <- as.numeric(data.corr[[j-2]][,2]) # list of gene expression (for each gene j)
 
     Regression <- lm(y ~ x)
     corr$Slope[j-2] <- Regression$coeff[[2]]
@@ -87,10 +87,10 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
   corr.no.na$Pearson.q <- qobj.pearson$qvalues
   corr.no.na$Spearman.q <- qobj.spearman$qvalues
 
-  #Scatter plots for significant results
+  # scatter plots for significant results
   if (plots==TRUE){
     library(reshape2); library(ggplot2); library(gridExtra);
-    #Load themes for plots
+    # load themes for plots
     ng.theme <- theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                       panel.border = element_rect(fill=NA), panel.background = element_blank(),
                       axis.line = element_line(colour = "black"), axis.text.x = element_text(colour = "black"),
@@ -102,7 +102,7 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
                       axis.title.x = element_text(size=20), axis.text.x  = element_text(size=16),
                       axis.title.y = element_text(size=20), axis.text.y  = element_text(size=16),
                       plot.title = element_text(lineheight=.8, face="bold", size=36))
-    #Prepare dataframe for plots
+    # prepare dataframe for plots
     id.var <- colnames(data)[1]
     rank.var <- colnames(data)[2]
     plot.data <- reshape2::melt(all.data.corr, id=c(id.var,rank.var), variable.name = variable, value.name = value, na.rm=TRUE)
@@ -171,16 +171,17 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
         }
         scatter.plots <- marrangeGrob(a, nrow=1, ncol=1)
       }else{
+        warning("no correlations met the FDR cut-off to produce scatter plots")
         scatter.plots <- NA
-        print("No correlations met the FDR cut-off to produce scatter plots")
       }
     }else{
-      print("type must be specified as either spearman or pearson to produce scatter plots")
+      warning("type must be specified as either spearman or pearson to produce scatter plots")
+      scatter.plots <- NA
     }
   }else{scatter.plots <- NA}
   
   if(cores[1] > 1){
-    snow::stopCluster(cl) #stop cluster
+    snow::stopCluster(cl) # stop cluster
     rm(cl)
   }
   
@@ -189,7 +190,7 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
 }
 
 as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=6, 
-                   sep = "[|]", exclusions = c("-666", "NA", "NaN", "NULL"), descriptions = NULL){
+                   sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions = NULL){
   print("Generating gmt object for enrichment analysis...")
   all.sets <- unique(data[,c(set.names)])
   if(length(all.sets) > 0){
@@ -197,10 +198,10 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
     if(length(all.sets) > 0){
       elements <- list()
       
-      cores <- parallel::detectCores() #number of cores available
+      cores <- parallel::detectCores() # number of cores available
       if(cores[1] > 1){
-        cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
-        doSNOW::registerDoSNOW(cl) #register cluster
+        cl <- snow::makeCluster(cores[1]-1) # cluster using all but 1 core
+        doSNOW::registerDoSNOW(cl) # register cluster
       }
       
       final.sets <- c()
@@ -232,13 +233,13 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
       }
       
       gmt <- list(genesets=final.elements, geneset.names=final.sets, geneset.descriptions=final.set.info) 
+      return(gmt)
     }else{
       stop("no set annotations were left after exclusions were removed")
     }
   }else{
     stop("set annotations must be provided to generate a gmt object")
   }
-  return(gmt)
 }
 
 drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.type="moa", direction.adjust=NULL,
@@ -250,11 +251,11 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
   GSEA_custom <- function(input.df, gmt.list,
                           num.permutations = 1000,
                            stat.type = "Weighted", min.per.set){
-    nperm = num.permutations #number of permutations
-    if (stat.type == "Classic"){
+    nperm = num.permutations # number of permutations
+    if(stat.type == "Classic"){
       score.weight = 0
     }
-    if (stat.type == "Weighted"){
+    if(stat.type == "Weighted"){
       score.weight = 1
     }
 
@@ -301,16 +302,14 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       max.ES <- max(RES)
       min.ES <- min(RES)
       if (max.ES > - min.ES) {
-        #      ES <- max.ES
         ES <- signif(max.ES, digits = 5)
         arg.ES <- which.max(RES)
       } else {
-        #      ES <- min.ES
         ES <- signif(min.ES, digits=5)
         arg.ES <- which.min(RES)
       }
       return(list(ES = ES, arg.ES = arg.ES, RES = RES, indicator = tag.indicators))
-    } #for real ES
+    } # for real ES
 
     GSEA.EnrichmentScore2 <- function(gene.list, gene.set, weighted.score.type = score.weight, correl.vector = NULL) {
 
@@ -330,15 +329,15 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
 
       tag.loc.vector <- sort(tag.loc.vector, decreasing = F)
 
-      if (weighted.score.type == 0) {
+      if(weighted.score.type == 0){
         tag.correl.vector <- rep(1, Nh)
-      } else if (weighted.score.type == 1) {
+      }else if(weighted.score.type == 1){
          tag.correl.vector <- correl.vector[tag.loc.vector]
          tag.correl.vector <- abs(tag.correl.vector)
-      } else if (weighted.score.type == 2) {
+      }else if(weighted.score.type == 2){
          tag.correl.vector <- correl.vector[tag.loc.vector]*correl.vector[tag.loc.vector]
          tag.correl.vector <- abs(tag.correl.vector)
-       } else {
+       }else{
          tag.correl.vector <- correl.vector[tag.loc.vector]**weighted.score.type
          tag.correl.vector <- abs(tag.correl.vector)
       }
@@ -354,7 +353,6 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       max.ES <- max(peak.res.vector)
       min.ES <- min(valley.res.vector)
       ES <- signif(ifelse(max.ES > - min.ES, max.ES, min.ES), digits=5)
-
       return(ES)
     } #for permutation ES
 
@@ -401,8 +399,8 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     # Find out how many cores are available (if you don't already know)
     cores<-parallel::detectCores()
     if(cores[1] > 1){
-      cl <- snow::makeCluster(cores[1]-1) #cluster using all but 1 core
-      doSNOW::registerDoSNOW(cl) #register cluster
+      cl <- snow::makeCluster(cores[1]-1) # cluster using all but 1 core
+      doSNOW::registerDoSNOW(cl) # register cluster
     }
 
     GSEA.Results <- matrix(data = NA, nrow = length(Drug.Sets.All), ncol = 7)
@@ -414,8 +412,8 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
 
     ## Assuming first two columns in data table are drug names and rank metric (e.g. Foldchange, SNR)
     data_in[,Samples] <- as.numeric(as.character(data_in[,Samples]))
-    data_in <- data_in[order(-data_in[,Samples]),] #sort by descending order for the rank metric
-    rownames(data_in) <- 1:nrow(data_in) #reorder row indices for counting in for loop below
+    data_in <- data_in[order(-data_in[,Samples]),] # sort by descending order for the rank metric
+    rownames(data_in) <- 1:nrow(data_in) # reorder row indices for counting in for loop below
     ions <- nrow(data_in)
     
     #for plotting
@@ -430,7 +428,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     ## Calculate Real KS Statistic
     for (i in 1:length(Drug.Sets.All)){
       data_in3 <- data_in[,Drug.Sets.All[i]]
-      numhits_pathway <- sum(data_in3 == "X"); #check to see if there is anything in the column (e.g. X)
+      numhits_pathway <- sum(data_in3 == "X"); # check to see if there is anything in the column (e.g. X)
       if (numhits_pathway > 1){
         pos_gene_set <- which(data_in[,Drug.Sets.All[i]] %in% c("X"))
         KS_real <- GSEA.EnrichmentScore(gene.list, pos_gene_set, weighted.score.type = score.weight, correl.vector = rank_metric)
@@ -466,7 +464,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     KSRandomArray <- stats::na.omit(KSRandomArray)
     
     KSRandomArray <- as.data.frame(KSRandomArray)
-    ###normalize the GSEA distribution
+    ### normalize the GSEA distribution
     KSRandomArray.Norm <- matrix(data = NA, nrow = nrow(KSRandomArray), ncol = ncol(KSRandomArray))
     colnames(KSRandomArray.Norm) <- colnames(KSRandomArray)
     avg <- 0
@@ -500,16 +498,16 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     for (i in 1:length(Drug.Sets.All)){
       temp.gene.set <- Drug.Sets.All[i]
       temp.ES <- GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$ES
-      if (temp.ES >= 0){ #BG OR EQUAL TO
+      if (temp.ES >= 0){ # BG OR EQUAL TO
         pos.perms <- KSRandomArray[,temp.gene.set]
-        pos.perms <- pos.perms[which(pos.perms >= 0)] #BG OR EQUAL TO
+        pos.perms <- pos.perms[which(pos.perms >= 0)] # BG OR EQUAL TO
         #p-val
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$p_value = signif(sum(pos.perms >= temp.ES) / length(pos.perms),digits = 3) #BG OR EQUAL TO
         #NES
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES = signif(temp.ES / mean(pos.perms), digits = 3)
-      } else if (temp.ES <= 0){ #BG OR EQUAL TO
+      } else if (temp.ES <= 0){ # BG OR EQUAL TO
         neg.perms <- KSRandomArray[,temp.gene.set]
-        neg.perms <- neg.perms[which(neg.perms <= 0)] #BG OR EQUAL TO
+        neg.perms <- neg.perms[which(neg.perms <= 0)] # BG OR EQUAL TO
         #p-val
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$p_value = signif(sum(neg.perms <= temp.ES) / length(neg.perms),digits = 3) #BG OR EQUAL TO
         #NES
@@ -518,23 +516,21 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     }
     
     # Calculate GSEA FDR
-    for (i in 1:length(Drug.Sets.All)){
+    for(i in 1:length(Drug.Sets.All)){
       temp.gene.set <- Drug.Sets.All[i]
       temp.NES <- GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES
-      if (temp.NES >= 0){ #BG OR EQUAL TO
-        #FDR
+      if(temp.NES >= 0){ # BG OR EQUAL TO
         percent.temp <- sum(GSEA.NES.perms.pos >= GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES) / length(GSEA.NES.perms.pos) #BG OR EQUAL TO
         percent.pos.stronger <- sum(GSEA.Results$NES >= GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES) / sum(GSEA.Results$NES >= 0) #BG
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.pos.stronger, digits = 3) < 1, signif(percent.temp / percent.pos.stronger, digits = 3), 1) #BG
-      } else if (temp.NES <= 0){ #BG OR EQUAL TO
-        #FDR
+      }else if(temp.NES <= 0){ # BG OR EQUAL TO
         percent.temp <- sum(GSEA.NES.perms.neg <= temp.NES) / length(GSEA.NES.perms.neg) #BG OR EQUAL TO
         percent.neg.stronger <- sum(GSEA.Results$NES <= temp.NES) / sum(GSEA.Results$NES <= 0) #BG
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.neg.stronger, digits = 3) < 1, signif(percent.temp / percent.neg.stronger, digits = 3), 1) #BG
       }
     }
     if(cores[1] > 1){
-      snow::stopCluster(cl) #stop cluster
+      snow::stopCluster(cl) # stop cluster
       rm(cl)
     }
 
@@ -546,9 +542,9 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
   # load mountain plot function
   gsea_mountain_plot <- function(GSEA.list, Sample.Name, Gene.Set.A, color = TRUE){
     library(ggplot2);
-    if (color == TRUE){
+    if(color == TRUE){
       color.palette <- c("red")
-    } else if (color == FALSE){
+    }else if(color == FALSE){
       color.palette <- c("black")
     }
 
@@ -603,10 +599,10 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
         plot.title = ggplot2::element_text(hjust = 0.5)
       )
 
-    if (!is.null(gsea.normalized.enrichment.score) & length(gsea.normalized.enrichment.score) > 0){
-      if (gsea.normalized.enrichment.score > 0){
+    if(!is.null(gsea.normalized.enrichment.score) & length(gsea.normalized.enrichment.score) > 0){
+      if(gsea.normalized.enrichment.score > 0){
         mtn.plot <- mtn.plot + ggplot2::annotate("text",label = results.as.text, x = ngenes * 0.90, y= max.ES * 0.70, color = "black")
-      } else if (gsea.normalized.enrichment.score < 0){
+      }else if(gsea.normalized.enrichment.score < 0){
         mtn.plot <- mtn.plot + ggplot2::annotate("text",label = results.as.text, x = ngenes * 0.10, y= min.ES * 0.30, color = "black")
       }
     }
@@ -678,7 +674,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       temp <- gsea_mountain_plot(GSEA.list = EA, Sample.Name = est.name, Gene.Set.A = significant.hits$Drug_set[i])
       temp.plot[significant.hits$Drug_set[i]] <- list(temp)
     }
-  } else {print("No enrichments met the FDR cut-off to produce mountain plots")}
+  }else{warning("no enrichments met the FDR cut-off to produce mountain plots")}
   
   ## produce volcano plot
   plot.data <- EA.Results
@@ -700,7 +696,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
             legend.text=element_text(size=10),axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
             panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10),
             legend.position = "bottom")
-  } else {
+  }else{
     volc <- ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10))) + geom_point(size = 4, color="azure4") + 
       xlim(-limit.x,limit.x) + ylim(0,limit.y) + xlab("Normalized Enrichment Score") + ylab("-Log(p-value)") +
       geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
