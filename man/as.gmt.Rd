@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-as.gmt(data, element.names = "Drug", set.names = "moa", min.per.set = 6, sep = "[|]", exclusions = c("-666", "NA", "NaN", "NULL"), descriptions = NULL)
+as.gmt(data, element.names = "Drug", set.names = "moa", min.per.set = 6, sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
