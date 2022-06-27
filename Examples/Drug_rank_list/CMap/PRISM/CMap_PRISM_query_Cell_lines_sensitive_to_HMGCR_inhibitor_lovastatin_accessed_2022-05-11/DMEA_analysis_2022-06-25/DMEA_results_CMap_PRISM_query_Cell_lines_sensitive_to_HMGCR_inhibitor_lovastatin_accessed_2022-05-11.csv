@@ -1,0 +1,66 @@
+"","Rank_metric","Drug_set","ES","NES","p_value","Position_at_max","FDR_q_value"
+"1","query","Glucocorticoid receptor agonist",-0.20485,-0.799,0.67,427,0.763
+"2","query","Estrogen receptor antagonist",0.36596,1.23,0.236,502,0.815
+"3","query","HSP inhibitor",0.27016,0.935,0.515,815,0.832
+"4","query","Acetylcholine receptor antagonist",0.31401,1.09,0.359,686,0.771
+"5","query","Tubulin inhibitor",0.34605,1.16,0.316,739,0.739
+"6","query","Sodium channel blocker",-0.24443,-0.932,0.519,285,0.729
+"7","query","Histamine receptor antagonist",-0.24837,-0.906,0.534,696,0.71
+"8","query","CHK inhibitor",-0.32391,-1.21,0.226,378,0.466
+"9","query","Dopamine receptor antagonist",0.1977,0.673,0.817,24,0.942
+"10","query","DNA alkylating agent",0.20737,0.709,0.788,932,0.965
+"11","query","BCL inhibitor",-0.52517,-2.02,0.0191,786,0.119
+"12","query","Adrenergic receptor antagonist",0.19806,0.672,0.818,175,0.921
+"13","query","Progesterone receptor agonist",0.23483,0.814,0.662,384,0.882
+"14","query","Adrenergic receptor agonist",0.50284,1.73,0.0365,293,0.572
+"15","query","Adenosine receptor antagonist",-0.30768,-1.16,0.283,883,0.486
+"16","query","Bacterial DNA gyrase inhibitor",0.31175,1.02,0.419,317,0.754
+"17","query","Protein synthesis inhibitor",0.24222,0.831,0.643,764,0.879
+"18","query","Glutamate receptor antagonist",0.20686,0.7,0.798,698,0.93
+"19","query","Topoisomerase inhibitor",0.33384,1.15,0.301,537,0.722
+"20","query","Proteasome inhibitor",-0.36192,-1.37,0.129,422,0.831
+"21","query","DNA inhibitor",0.31885,1.08,0.374,376,0.758
+"22","query","MTOR inhibitor",0.097877,0.334,0.997,492,0.998
+"23","query","Bacterial 50S ribosomal subunit inhibitor",0.30932,1.05,0.404,318,0.786
+"24","query","PPAR receptor agonist",-0.36343,-1.36,0.146,986,0.431
+"25","query","NFkB pathway inhibitor",-0.2352,-0.895,0.566,915,0.675
+"26","query","ATPase inhibitor",0.2505,0.853,0.6,590,0.869
+"27","query","MEK inhibitor",0.38375,1.31,0.169,730,0.68
+"28","query","Phosphodiesterase inhibitor",0.26837,0.905,0.572,374,0.858
+"29","query","DNA alkylating drug",0.34608,1.16,0.296,210,0.739
+"30","query","TGF beta receptor inhibitor",0.2169,0.729,0.769,229,0.988
+"31","query","DNA synthesis inhibitor",0.18594,0.62,0.87,909,0.931
+"32","query","Serotonin receptor antagonist",-0.33297,-1.25,0.21,942,0.462
+"33","query","Cyclooxygenase inhibitor",-0.21198,-0.792,0.712,545,0.723
+"34","query","GABA receptor agonist",0.35325,1.2,0.256,471,0.78
+"35","query","Acetylcholine receptor agonist",0.48372,1.63,0.0604,466,0.529
+"36","query","Retinoid receptor agonist",0.31086,1.04,0.396,112,0.744
+"37","query","Microtubule inhibitor",0.35343,1.22,0.239,458,0.784
+"38","query","Estrogen receptor agonist",-0.27822,-1.05,0.412,768,0.598
+"39","query","PARP inhibitor",0.52097,1.75,0.0341,468,0.779
+"40","query","RAF inhibitor",0.13656,0.461,0.972,940,0.994
+"41","query","Aurora kinase inhibitor",0.41346,1.41,0.134,473,0.62
+"42","query","HDAC inhibitor",-0.35534,-1.36,0.136,623,0.431
+"43","query","Glycogen synthase kinase inhibitor",0.50987,1.7,0.0379,223,0.491
+"44","query","CDK inhibitor",0.20692,0.7,0.812,678,0.93
+"45","query","VEGFR inhibitor",0.28209,0.955,0.505,552,0.823
+"46","query","HCV inhibitor",0.21062,0.726,0.782,928,0.967
+"47","query","JAK inhibitor",0.30967,1.04,0.39,523,0.744
+"48","query","P38 MAPK inhibitor",0.38112,1.31,0.173,291,0.68
+"49","query","EGFR inhibitor",0.25353,0.855,0.624,759,0.892
+"50","query","HMGCR inhibitor",0.99829,3.36,0,8,0
+"51","query","ALK tyrosine kinase receptor inhibitor",0.32603,1.11,0.349,288,0.767
+"52","query","Thymidylate synthase inhibitor",-0.16881,-0.627,0.88,197,0.868
+"53","query","CC chemokine receptor antagonist",0.18159,0.61,0.876,591,0.92
+"54","query","DNA methyltransferase inhibitor",0.29791,1.01,0.418,526,0.746
+"55","query","Src inhibitor",0.46959,1.59,0.0704,320,0.448
+"56","query","PDGFR tyrosine kinase receptor inhibitor",0.34748,1.17,0.276,334,0.803
+"57","query","RET tyrosine kinase inhibitor",0.25174,0.872,0.58,396,0.889
+"58","query","AKT inhibitor",-0.32628,-1.25,0.198,791,0.462
+"59","query","Bcr-Abl kinase inhibitor",0.40089,1.37,0.159,409,0.648
+"60","query","Vitamin D receptor agonist",-0.37018,-1.36,0.176,432,0.431
+"61","query","PI3K inhibitor",0.19474,0.655,0.842,660,0.917
+"62","query","Tyrosine kinase inhibitor",0.40956,1.41,0.134,130,0.62
+"63","query","Apoptosis stimulant",-0.5762,-2.21,0.0127,673,0.0834
+"64","query","PLK inhibitor",0.47028,1.59,0.0592,496,0.448
+"65","query","FLT3 inhibitor",0.44453,1.52,0.0833,523,0.515

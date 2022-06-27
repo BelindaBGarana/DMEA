@@ -1,0 +1,22 @@
+undef_action: warn
+out: /mnt/production/compute-daemon/utils/my_analysis.sig_queryl1k_tool.627c44dadece3200121a5f6e
+runtests: false
+rundemo: false
+rpt: (GSE28896) Glucocorticoid agonist dexamethasone treated CD34+ cells (24H) vs. untreated
+create_subdir: false
+verbose: true
+encode_url: false
+config: http://data.clue.io/api/bgarana@usc.edu/results/May_11_2022/my_analysis.sig_queryl1k_tool.627c44dadece3200121a5f6e/config.yaml
+up: http://data.clue.io/api/bgarana%40usc.edu/results/May_11_2022/my_analysis.sig_queryl1k_tool.627c44dadece3200121a5f6e/up.gmt
+down: http://data.clue.io/api/bgarana%40usc.edu/results/May_11_2022/my_analysis.sig_queryl1k_tool.627c44dadece3200121a5f6e/down.gmt
+score: /cmap/data/M2/level5_modz_n1165466x12328.gctx
+rank: /cmap/data/M2/level5_rank_bing_n1165466x10174.gctx
+sig_meta: /cmap/data/M2/siginfo.txt
+metric: wtcs
+es_tail: both
+query_meta: []
+ncs_group: []
+save_minimal: true
+save_digests: true
+exemplar_field: is_exemplar_sig
+max_col: 50000.0
