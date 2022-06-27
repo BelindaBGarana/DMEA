@@ -50,7 +50,7 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.n
 }
   \item{sep}{Character(s) to use for splitting drug set names. Optional unless gmt is not provided. Default: "[|]".
 }
-  \item{exclusions}{A vector of drug set names to be excluded from the generated gmt. Optional unless gmt is not provided. Default: c("-666", "NA", "NaN", "NULL").
+  \item{exclusions}{A vector of drug set names to be excluded from the generated gmt. Optional unless gmt is not provided. Default: c("-666", "NA", "na", "NaN", "NULL").
 }
   \item{descriptions}{Optional: column name in drug.info containing descriptions for each drug set. If not provided and gmt is also not provided, set.type will be used for the descriptions instead. Default: NULL.
 }

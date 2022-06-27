@@ -22,7 +22,7 @@ as.gmt(data, element.names = "Drug", set.names = "moa", min.per.set = 6, sep = "
 }
   \item{sep}{Character(s) to use for splitting set names. Default: "[|]".
 }
-  \item{exclusions}{A vector of set names to be excluded from the output. Default: c("-666", "NA", "NaN", "NULL").
+  \item{exclusions}{A vector of set names to be excluded from the output. Default: c("-666", "NA", "na", "NaN", "NULL").
 }
   \item{descriptions}{Optional: column name in data containing descriptions for each set. If not provided, set names will be used instead. Default: NULL.
 }
