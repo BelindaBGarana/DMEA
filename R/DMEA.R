@@ -3,8 +3,6 @@
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
-rm(list=ls(all=TRUE))
-
 WV <- function(expression, weights, sample.names=colnames(expression)[1],
                 gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){
   # data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
