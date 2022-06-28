@@ -1,5 +1,5 @@
 #DMEA
-#Author: Belinda B. Garana (BG), Date: 2020-12-03; last edit: BG 2022-06-25
+#Author: Belinda B. Garana (BG), Date: 2020-12-03; last edit: BG 2022-06-28
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -36,7 +36,7 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
 
 rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
   print("Running correlations and regressions...")
-  library(dplyr);library(qvalue);library(ggplot2);
+  library(dplyr);library(qvalue);library(ggplot2);library(stats);
   
   cores <- parallel::detectCores() # number of cores available
   if(cores[1] > 1){
@@ -169,7 +169,7 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
             geom_text(x = pos.x, y = pos.y, label = as.character(as.expression(stats_spearman)), colour="blue",
                       size = 8, parse=TRUE) + ng.theme + bg.theme
         }
-        scatter.plots <- marrangeGrob(a, nrow=1, ncol=1)
+        scatter.plots <- gridExtra::marrangeGrob(a, nrow=1, ncol=1)
       }else{
         warning("no correlations met the FDR cut-off to produce scatter plots")
         scatter.plots <- NA
@@ -192,6 +192,7 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
 as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=6, 
                    sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions = NULL){
   print("Generating gmt object for enrichment analysis...")
+  library(dplyr);
   all.sets <- unique(data[,c(set.names)])
   if(length(all.sets) > 0){
     all.sets <- all.sets[all.sets %in% exclusions == FALSE]
