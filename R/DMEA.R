@@ -36,7 +36,8 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
 
 rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
   print("Running correlations and regressions...")
-  library(dplyr);library(qvalue);library(ggplot2);library(stats);library(reshape2);library(gridExtra);
+  library(dplyr);library(qvalue);library(ggplot2);library(stats);library(reshape2);library(gridExtra)
+  ;library(parallel);library(snow);library(doSNOW);
   
   cores <- parallel::detectCores() # number of cores available
   if(cores[1] > 1){
