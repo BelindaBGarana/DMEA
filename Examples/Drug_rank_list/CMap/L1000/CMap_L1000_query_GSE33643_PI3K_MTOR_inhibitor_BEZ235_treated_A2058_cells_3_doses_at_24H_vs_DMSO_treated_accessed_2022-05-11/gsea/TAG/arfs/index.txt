@@ -1,2 +1,0 @@
-query_id	desc	url
-norm_cs	(GSE33643) PI3K/MTOR inhibitor BEZ235 treated A2058 cells (3 doses at 24H) vs. DMSO treated	NORM_CS
