@@ -1,2 +1,0 @@
-query_id	desc	url
-norm_cs	(GSE28896) Glucocorticoid agonist dexamethasone treated CD34+ cells (24H) vs. untreated	NORM_CS
