@@ -9,6 +9,8 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
                 gene.names=colnames(weights)[1], weight.values=colnames(weights)[2]){
   # data: cells should be rows, genes should be columns; weights: one column should be gene names, another column should be gene weights
   print("Calculating Weighted Voting scores...")
+  library(dplyr);library(tidyselect);
+  
   # check expression for gene names
   filtered.expr <- expression %>% dplyr::select(c(tidyselect::all_of(sample.names),tidyselect::all_of(weights[,c(gene.names)])))
   filtered.expr <- na.omit(filtered.expr)
@@ -36,7 +38,7 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
 
 rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
   print("Running correlations and regressions...")
-  library(dplyr);library(qvalue);library(ggplot2);library(stats);
+  library(dplyr);library(qvalue);library(ggplot2);library(stats);library(reshape2);library(gridExtra);
   
   cores <- parallel::detectCores() # number of cores available
   if(cores[1] > 1){
@@ -63,21 +65,21 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
     x <- as.numeric(data.corr[[j-2]][,1]) # list of rank metric
     y <- as.numeric(data.corr[[j-2]][,2]) # list of gene expression (for each gene j)
 
-    Regression <- lm(y ~ x)
+    Regression <- stats::lm(y ~ x)
     corr$Slope[j-2] <- Regression$coeff[[2]]
     corr$Intercept[j-2] <- Regression$coeff[[1]]
     corr$R.squared[j-2] <- summary(Regression)$r.squared
 
-    Rank.regression <- lm(rank(y) ~ rank(x))
+    Rank.regression <- stats::lm(rank(y) ~ rank(x))
     corr$Rank.slope[j-2] <- Rank.regression$coeff[[2]]
     corr$Rank.intercept[j-2] <- Rank.regression$coeff[[1]]
     corr$Rank.R.squared[j-2] <- summary(Rank.regression)$r.squared
 
-    Pearson <- cor.test(x, y, method="pearson")
+    Pearson <- stats::cor.test(x, y, method="pearson")
     corr$Pearson.est[j-2] <- Pearson$estimate
     corr$Pearson.p[j-2] <- Pearson$p.value
 
-    Spearman <- cor.test(x, y, method="spearman", exact=FALSE)
+    Spearman <- stats::cor.test(x, y, method="spearman", exact=FALSE)
     corr$Spearman.est[j-2] <- Spearman$estimate
     corr$Spearman.p[j-2] <- Spearman$p.value}
   }
@@ -89,16 +91,15 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
 
   # scatter plots for significant results
   if (plots==TRUE){
-    library(reshape2); library(ggplot2); library(gridExtra);
     # load themes for plots
-    ng.theme <- theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+    ng.theme <- ggplot2::theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                       panel.border = element_rect(fill=NA), panel.background = element_blank(),
                       axis.line = element_line(colour = "black"), axis.text.x = element_text(colour = "black"),
                       axis.text.y = element_text(colour = "black"), axis.ticks.x = element_line(colour="black"),
                       axis.ticks.y = element_line(colour="black"), legend.title = element_blank(),
                       axis.title.y = element_text(size=8, colour="black"))
 
-    bg.theme <- theme(legend.background = element_rect(), legend.position="top", legend.text = element_text(size=14), legend.key = element_blank(),
+    bg.theme <- ggplot2::theme(legend.background = element_rect(), legend.position="top", legend.text = element_text(size=14), legend.key = element_blank(),
                       axis.title.x = element_text(size=20), axis.text.x  = element_text(size=16),
                       axis.title.y = element_text(size=20), axis.text.y  = element_text(size=16),
                       plot.title = element_text(lineheight=.8, face="bold", size=36))
@@ -129,16 +130,16 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
                                       list(est = format(Pearson.est, digits = 3),
                                            p = format(Pearson.p, digits = 3)))
 
-          a[[i]] <- ggplot(data=sig.data, aes_string(x=rank.var, y=value)) +
-            geom_point() + labs(x = xlab, y = ylab) + ggtitle(results[i]) + 
-            geom_smooth(method="lm",size = 1.5,linetype = 'solid',color="blue",se = se,na.rm = TRUE) +
-            geom_text(x=pos.x,y=pos.y,vjust="inward",hjust="inward", colour="blue", parse=TRUE,
+          a[[i]] <- ggplot2::ggplot(data=sig.data, aes_string(x=rank.var, y=value)) +
+            ggplot2::geom_point() + ggplot2::labs(x = xlab, y = ylab) + ggplot2::ggtitle(results[i]) + 
+            ggplot2::geom_smooth(method="lm",size = 1.5,linetype = 'solid',color="blue",se = se,na.rm = TRUE) +
+            ggplot2::geom_text(x=pos.x,y=pos.y,vjust="inward",hjust="inward", colour="blue", parse=TRUE,
                        label = as.character(as.expression(stats_pearson)), size = 8) + ng.theme + bg.theme
         }
-        scatter.plots <- marrangeGrob(a, nrow=1, ncol=1)
+        scatter.plots <- gridExtra::marrangeGrob(a, nrow=1, ncol=1)
       }else{
         scatter.plots <- NA
-        print("No correlations met the FDR cut-off to produce scatter plots")
+        warning("No correlations met the FDR cut-off to produce scatter plots")
       }
     } else if (type=="spearman"){
       results <- unique(corr.no.na[which(corr.no.na$Spearman.q<=FDR),1])
@@ -171,11 +172,11 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
         }
         scatter.plots <- gridExtra::marrangeGrob(a, nrow=1, ncol=1)
       }else{
-        warning("no correlations met the FDR cut-off to produce scatter plots")
+        warning("No correlations met the FDR cut-off to produce scatter plots")
         scatter.plots <- NA
       }
     }else{
-      warning("type must be specified as either spearman or pearson to produce scatter plots")
+      warning("Type must be specified as either spearman or pearson to produce scatter plots")
       scatter.plots <- NA
     }
   }else{scatter.plots <- NA}
@@ -192,7 +193,8 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
 as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=6, 
                    sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions = NULL){
   print("Generating gmt object for enrichment analysis...")
-  library(dplyr);
+  library(dplyr);library(parallel);library(snow);library(doSNOW);
+  
   all.sets <- unique(data[,c(set.names)])
   if(length(all.sets) > 0){
     all.sets <- all.sets[all.sets %in% exclusions == FALSE]
@@ -227,7 +229,7 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
       }
       
       if(!is.null(descriptions)){
-        final.set.info <- distinct(data[data[,c(set.names)] %in% final.sets, c(set.names, descriptions)])
+        final.set.info <- dplyr::distinct(data[data[,c(set.names)] %in% final.sets, c(set.names, descriptions)])
         final.set.info <- final.set.info[, c(descriptions)]
       }else{
         final.set.info <- final.sets
@@ -246,8 +248,10 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
 drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.type="moa", direction.adjust=NULL,
                     FDR=0.25, num.permutations=1000, stat.type="Weighted", min.per.set=6,
                     sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL){
-  library(sjmisc);library(dplyr);
-
+  library(dplyr);library(parallel);library(snow);library(doSNOW);library(stats);
+  library(sjmisc);library(testthat);library(foreach);
+  library(ggplot2);library(cowplot);library(aplot);library(ggrepel);
+  
   # load GSEA_custom function
   GSEA_custom <- function(input.df, gmt.list,
                           num.permutations = 1000,
@@ -255,8 +259,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     nperm = num.permutations # number of permutations
     if(stat.type == "Classic"){
       score.weight = 0
-    }
-    if(stat.type == "Weighted"){
+    }else if(stat.type == "Weighted"){
       score.weight = 1
     }
 
@@ -388,7 +391,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     Drug.Sets.over <- which(num.hits.pathways.df >= min.per.set)
     Drug.Sets.All <- Drug.Sets.All[Drug.Sets.over] # only keep drug sets with >= min.per.set drugs
     if(length(Drug.Sets.under) > 0){
-      warning(paste0("removing drug sets with less than ",min.per.set," drugs observed in data set"))
+      warning(paste0("Removing drug sets with less than ",min.per.set," drugs observed in data set"))
       annotations <- annotations[,c(colnames(data_in)[1],Drug.Sets.All)]
     }
     if(length(Drug.Sets.over) < 2){stop("annotations for 2+ drug sets are required")} # BG 2022-06-25
@@ -525,8 +528,8 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
         percent.pos.stronger <- sum(GSEA.Results$NES >= GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES) / sum(GSEA.Results$NES >= 0) #BG
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.pos.stronger, digits = 3) < 1, signif(percent.temp / percent.pos.stronger, digits = 3), 1) #BG
       }else if(temp.NES <= 0){ # BG OR EQUAL TO
-        percent.temp <- sum(GSEA.NES.perms.neg <= temp.NES) / length(GSEA.NES.perms.neg) #BG OR EQUAL TO
-        percent.neg.stronger <- sum(GSEA.Results$NES <= temp.NES) / sum(GSEA.Results$NES <= 0) #BG
+        percent.temp <- sum(GSEA.NES.perms.neg <= temp.NES) / length(GSEA.NES.perms.neg) # BG OR EQUAL TO
+        percent.neg.stronger <- sum(GSEA.Results$NES <= temp.NES) / sum(GSEA.Results$NES <= 0) # BG
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$FDR_q_value = ifelse(signif(percent.temp / percent.neg.stronger, digits = 3) < 1, signif(percent.temp / percent.neg.stronger, digits = 3), 1) #BG
       }
     }
@@ -650,14 +653,14 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
   
   ## if necessary, adjust rank metrics
   if(length(direction.adjust)>0){
-    info <- distinct(data[,c(drug, rank.metric, set.type)])
+    info <- dplyr::distinct(data[,c(drug, rank.metric, set.type)])
     info$adjust <- 1
     info[grep(direction.adjust, info[,c(set.type)], value = T), "adjust"] <- -1
     info$adjusted.est <- as.numeric(info[,c(rank.metric)])*as.numeric(info$adjust)
     input <- info[,c(drug,"adjusted.est")]
     est.name <- paste0(rank.metric, " direction-adjusted")
   }else{
-    input <- data[,c(drug,rank.metric)]
+    input <- data[,c(drug, rank.metric)]
     est.name <- rank.metric
   }
   colnames(input) <- c(drug, est.name)
@@ -675,7 +678,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       temp <- gsea_mountain_plot(GSEA.list = EA, Sample.Name = est.name, Gene.Set.A = significant.hits$Drug_set[i])
       temp.plot[significant.hits$Drug_set[i]] <- list(temp)
     }
-  }else{warning("no enrichments met the FDR cut-off to produce mountain plots")}
+  }else{warning("No enrichments met the FDR cut-off to produce mountain plots")}
   
   ## produce volcano plot
   plot.data <- EA.Results
@@ -688,20 +691,20 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     plot.data$Significance <- paste0("FDR > ", FDR)
     plot.data[plot.data$FDR_q_value < FDR,]$Significance <- paste0("FDR < ", FDR)
     plot.data$Significance <- factor(plot.data$Significance,levels=c(paste0("FDR < ", FDR), paste0("FDR > ", FDR)))
-    volc <- ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10), color=Significance)) + geom_point(size = 4) + 
+    volc <- ggplot2::ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10), color=Significance)) + ggplot2::geom_point(size = 4) + 
       ggrepel::geom_text_repel(data=subset(plot.data,Significance==paste0("FDR < ", FDR)),mapping=aes(label=Drug_set,size=I(4)),nudge_y = 0.25) +
-      scale_color_manual(values=c("red","azure4"),name="Significance",breaks=c(paste0("FDR < ", FDR), paste0("FDR > ", FDR))) +
-      xlim(-limit.x,limit.x) + ylim(0,limit.y) + xlab("Normalized Enrichment Score") + ylab("-Log(p-value)") +
-      geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
-      theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
+      ggplot2::scale_color_manual(values=c("red","azure4"),name="Significance",breaks=c(paste0("FDR < ", FDR), paste0("FDR > ", FDR))) +
+      ggplot2::xlim(-limit.x,limit.x) + ylim(0,limit.y) + ggplot2::xlab("Normalized Enrichment Score") + ggplot2::ylab("-Log(p-value)") +
+      ggplot2::geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
+      ggplot2::theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
             legend.text=element_text(size=10),axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
             panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10),
             legend.position = "bottom", legend.key = element_blank())
   }else{
-    volc <- ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10))) + geom_point(size = 4, color="azure4") + 
-      xlim(-limit.x,limit.x) + ylim(0,limit.y) + xlab("Normalized Enrichment Score") + ylab("-Log(p-value)") +
-      geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
-      theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
+    volc <- ggplot2::ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10))) + ggplot2::geom_point(size = 4, color="azure4") + 
+      ggplot2::xlim(-limit.x,limit.x) + ggplot2::ylim(0,limit.y) + ggplot2::xlab("Normalized Enrichment Score") + ggplot2::ylab("-Log(p-value)") +
+      ggplot2::geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
+      ggplot2::theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
             axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
             panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10))
   }
@@ -716,13 +719,13 @@ DMEA <- function(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", s
                  drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]", exclusions=c("-666", "NA", "na","NaN", "NULL"), descriptions=NULL,
                  min.per.corr=3, scatter.plots=TRUE, scatter.plot.type="pearson",FDR.scatter.plots=0.05, 
                  xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE){
-  # WV
+  # Weighted Voting (WV)
   WV.result <- WV(expression=expression,weights=weights,sample.names=sample.names,gene.names=gene.names,weight.values=weight.values)
 
-  # merge PRISM with WV
+  # merge drug sensitivity dataframe with WV
   WV.result.drug.sensitivity <- merge(WV.result,drug.sensitivity,by=sample.names)
 
-  # rank.corr
+  # rank.corr 
   corr.results <- rank.corr(data=WV.result.drug.sensitivity,variable="Drug",value=value,type=scatter.plot.type,min.per.corr=min.per.corr,
                             plots=scatter.plots,FDR=FDR.scatter.plots,xlab=xlab,ylab=ylab,position.x=position.x,position.y=position.y,se=se)
 
@@ -738,7 +741,7 @@ DMEA <- function(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", s
     corr.output <- corr.results$result
   }
   
-  # drugSEA
+  # Drug Mechanism Enrichment Analysis (DMEA)
   DMEA.results <- drugSEA(data=corr.output, gmt, rank.metric=rank.metric, stat.type=stat.type, num.permutations=num.permutations, FDR=FDR)
 
   return(list(WV.scores = WV.result,
