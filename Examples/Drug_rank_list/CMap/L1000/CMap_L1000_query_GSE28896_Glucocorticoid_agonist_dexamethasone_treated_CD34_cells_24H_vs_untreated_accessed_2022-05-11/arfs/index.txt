@@ -1,2 +1,0 @@
-query_id	desc	url
-TAG	(GSE28896) Glucocorticoid agonist dexamethasone treated CD34+ cells (24H) vs. untreated	TAG

@@ -1,2 +1,0 @@
-query_id	desc	url
-TAG	(GSE32547) Pitavastatin treated HUVEC cells (1 uM at 4H) vs. DMSO treated	TAG
