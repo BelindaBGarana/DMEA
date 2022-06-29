@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    Josh Hong
+    why.html
+    Jun 2, 2022
+-->
+<html lang="en">
+<head>
+    <title>DMEA: Why Use DMEA</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+                <a href="index.html"><h1>DMEA</h1></a>
+                <h2>Drug Mechanism Enrichment Analysis</h2>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="howtouse.html">How to Use</a></li>
+                <li><a href="why.html">Why Use DMEA</a></li>
+                <li><a href="methods.html">Methods</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Use the main area to add the main content to the webpage -->
+        <main>
+            <div id="why">
+                <h2>Why use DMEA</h2>
+                <p>
+                    Even though many methods have been developed to predict beneficial drugs, 
+                    most patients remain ineligible for targeted therapies and to our knowledge 
+                    no other method groups drugs by common mechanism-of-action. The power of DMEA 
+                    lies in aggregating information from drugs that share a common mechanism-of-action, 
+                    rather than relying on a result from just a single drug. Simply put, if most of 
+                    the drugs annotated with a mechanism-of-action are strong candidates, then we can 
+                    be more confident the mechanism may truly be beneficial.
+                </p>
+
+                <p>
+                    However, there are still limitations to DMEA. Perhaps the greatest limitation is 
+                    that DMEA relies on the known mechanism-of-action annotations for each drug. 
+                    Nevertheless, DMEA mitigates the risk of false positives by evaluating groups of 
+                    drugs which share a mechanism-of-action rather than relying on a result for a 
+                    single drug. Even if a drug is mis-annotated with a mechanism-of-action, that 
+                    mechanism will not be significantly enriched unless most of the drugs in that 
+                    mechanism set are strong candidates based on their rank in the input list. Also, 
+                    even if DMEA works as intended to identify drug mechanisms for one phenotype 
+                    versus another, not all samples represented by one phenotype may respond similarly 
+                    to the same drug and other factors should be considered such as tissue type or tumor 
+                    heterogeneity.
+                </p>
+
+                <p id="video">To learn more about the limitations of enrichment analysis, you can watch this YouTube video: </p>
+                <iframe class="bottom" width="756" height="425" src="https://www.youtube.com/embed/n1aNG_NwGOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+            </div>
+        </main>
+    
+        <footer>
+            <p>&copy; Copyright 2022. All Rights Reserved</p>
+            <p><a href="mailto:nagraham@usc.edu">nagraham@usc.edu</a></p>
+        </footer>
+    </div>
+</body>
+</html>
