@@ -79,9 +79,9 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.n
   \item{corr.result }{Dataframe with Pearson & Spearman correlation estimates, p-values, and FDR q-values (Benjamini-Hochberg method) for each variable item.}
   \item{corr.scatter.plots }{ggplot object with a scatter plot for each significant correlation on each page.}
   \item{gmt }{gmt object containing list of elements (genesets), set names (geneset.names), and set descriptions (geneset.descriptions).}
-  \item{DMEA.result }{Dataframe containing GSEA results for drug sets.}
-  \item{DMEA.mtn.plots }{ggplot object list of mountain plots for drug sets with enrichment which meet the FDR threshold.}
-  \item{DMEA.volcano.plot }{ggplot object for volcano plot summarizing enrichment of all drug sets evaluated.}
+  \item{result }{Dataframe containing GSEA results for drug sets.}
+  \item{mtn.plots }{ggplot object list of mountain plots for drug sets with enrichment which meet the FDR threshold.}
+  \item{volcano.plot }{ggplot object for volcano plot summarizing enrichment of all drug sets evaluated.}
 }
 \references{
 %% ~put references to the literature/web site here ~
