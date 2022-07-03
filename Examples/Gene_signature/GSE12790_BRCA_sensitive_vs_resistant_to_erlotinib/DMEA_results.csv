@@ -1,4 +1,4 @@
-Estimate,Drug_set,ES,NES,p_value,Position_at_max,FDR_q_value
+Rank_metric,Drug_set,ES,NES,p_value,Position_at_max,FDR_q_value
 Pearson.est,EGFR inhibitor,-0.87664,-2.11,0.00418,1246,0.0173
 Pearson.est,Abl kinase inhibitor,-0.63893,-1.55,0.0832,1320,0.405
 Pearson.est,acetylcholine receptor agonist,0.55942,1.4,0.111,329,0.541
