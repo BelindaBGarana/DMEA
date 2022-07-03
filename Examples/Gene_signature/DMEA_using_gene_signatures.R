@@ -1,5 +1,5 @@
 # DMEA using gene signatures
-# Author: Belinda B. Garana (BG), Date: 2022-05-05; last edit: BG 2022-07-02
+# Author: Belinda B. Garana (BG), Date: 2022-05-05; last edit: BG 2022-07-03
 
 # How to recreate this? Change path in line 12 and press run through the whole script
 # Steps for each dataset:
@@ -126,7 +126,7 @@ rownames(RNA.df.nooverlap) <- RNA.df.nooverlap$CCLE_ID
 if(nrow(filtered.weights) > 500){
   filtered.weights <- filtered.weights %>% slice_max(abs(Log2FC), n=500)
 }
-DMEA.results <- DMEA(AUC.df, gmt, RNA.df.nooverlap, filtered.weights, gene.names = "Gene", weight.values = "Log2FC")
+DMEA.results <- DMEA(AUC.df, gmt, RNA.df.nooverlap, filtered.weights, gene.names = "Gene", weight.values = "Log2FC", xlab="EGFRi Sensitivity Score", ylab="Drug AUC")
 write.csv(DMEA.results$result, file="DMEA_results.csv", row.names=FALSE)
 ggsave(file="DMEA_volcano_plot.pdf", DMEA.results$volcano.plot, device="pdf")
 write.csv(DMEA.output$WV.scores, "DMEA_WGV_scores.csv", row.names = FALSE)
@@ -244,7 +244,7 @@ rownames(RNA.df.nooverlap) <- RNA.df.nooverlap$CCLE_ID
 if(nrow(filtered.weights) > 500){
   filtered.weights <- filtered.weights %>% slice_max(abs(Log2FC), n=500)
 }
-DMEA.results <- DMEA(AUC.df, gmt, RNA.df.nooverlap, filtered.weights, gene.names = "Gene", weight.values = "Log2FC")
+DMEA.results <- DMEA(AUC.df, gmt, RNA.df.nooverlap, filtered.weights, gene.names = "Gene", weight.values = "Log2FC", xlab="EGFRi Sensitivity Score", ylab="Drug AUC")
 ggsave(file="DMEA_volcano_plot.pdf", DMEA.results$volcano.plot, device="pdf")
 write.csv(DMEA.output$WV.scores, "DMEA_WGV_scores.csv", row.names = FALSE)
 write.csv(DMEA.output$corr.result, "DMEA_correlation_results.csv", row.names = FALSE)
@@ -357,7 +357,7 @@ rownames(RNA.df.nooverlap) <- RNA.df.nooverlap$CCLE_ID
 if(nrow(filtered.weights) > 500){
   filtered.weights <- filtered.weights %>% slice_max(abs(Log2FC), n=500)
 }
-DMEA.results <- DMEA(AUC.df, gmt, RNA.df.nooverlap, filtered.weights, gene.names = "Gene", weight.values = "Log2FC")
+DMEA.results <- DMEA(AUC.df, gmt, RNA.df.nooverlap, filtered.weights, gene.names = "Gene", weight.values = "Log2FC", xlab="EGFRi Sensitivity Score", ylab="Drug AUC")
 write.csv(DMEA.results$result, file="DMEA_results.csv", row.names=FALSE)
 ggsave(file="DMEA_volcano_plot.pdf", DMEA.results$volcano.plot, device="pdf")
 write.csv(DMEA.output$WV.scores, "DMEA_WGV_scores.csv", row.names = FALSE)
@@ -422,7 +422,7 @@ write.csv(filtered.weights, file="Filtered_gene_signature_no_duplicates.csv", ro
 if(nrow(filtered.weights) > 500){
   filtered.weights <- filtered.weights %>% slice_max(abs(Log2FC), n=500)
 }
-DMEA.results <- DMEA(AUC.df, gmt, RNA.df, filtered.weights, gene.names = "Gene", weight.values = "Log2FC")
+DMEA.results <- DMEA(AUC.df, gmt, RNA.df, filtered.weights, gene.names = "Gene", weight.values = "Log2FC", xlab="RAFi Sensitivity Score", ylab="Drug AUC")
 write.csv(DMEA.results$result, file="DMEA_results.csv", row.names=FALSE)
 ggsave(file="DMEA_volcano_plot.pdf", DMEA.results$volcano.plot, device="pdf")
 write.csv(DMEA.output$WV.scores, "DMEA_WGV_scores.csv", row.names = FALSE)
