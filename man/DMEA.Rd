@@ -89,7 +89,7 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.n
 \author{Belinda B. Garana, James H. Joly
 %%  ~~who you are~~
 }
-\note{Mountain plots can be saved individually using for(i in 1:length(DMEA.output$DMEA.mtn.plots)){ggsave(filename, DMEA.output$DMEA.mtn.plots[[i]])}.
+\note{Mountain plots can be saved individually using for(i in 1:length(DMEA.output$mtn.plots)){ggsave(filename, DMEA.output$mtn.plots[[i]])}.
 Output gmt can be saved for future use as an R object using saveRDS(DMEA.output$gmt, file).
 %%  ~~further notes~~
 }
