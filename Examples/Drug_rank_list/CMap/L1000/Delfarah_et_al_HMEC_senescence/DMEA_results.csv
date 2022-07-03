@@ -1,172 +1,172 @@
-"","Rank_metric","Drug_set","ES","NES","p_value","Position_at_max","FDR_q_value"
-"1","norm_cs","P-glycoprotein inhibitor",0.52076,1.36,0.154,586,0.431
-"2","norm_cs","Serotonin receptor agonist",-0.20163,-0.536,0.982,2521,0.984
-"3","norm_cs","AKT inhibitor",0.40816,1.06,0.393,791,0.602
-"4","norm_cs","Nitric oxide synthase inhibitor",-0.45018,-1.18,0.287,2796,0.762
-"5","norm_cs","Glutamate receptor antagonist",-0.37502,-0.977,0.449,2472,0.834
-"6","norm_cs","Adrenergic receptor antagonist",-0.22025,-0.581,0.939,2722,0.985
-"7","norm_cs","PARP inhibitor",0.31706,0.836,0.636,309,0.843
-"8","norm_cs","Purinergic receptor antagonist",0.44919,1.15,0.309,208,0.545
-"9","norm_cs","Thymidylate synthase inhibitor",-0.30199,-0.797,0.695,2358,0.897
-"10","norm_cs","Opioid receptor antagonist",0.31421,0.826,0.673,312,0.848
-"11","norm_cs","Histone lysine methyltransferase inhibitor",-0.34441,-0.922,0.511,3391,0.798
-"12","norm_cs","Adrenergic receptor agonist",-0.36073,-0.96,0.465,2785,0.818
-"13","norm_cs","PI3K inhibitor",0.4703,1.21,0.259,918,0.517
-"14","norm_cs","Acetylcholine receptor agonist",-0.24626,-0.662,0.844,2609,0.945
-"15","norm_cs","Histamine receptor antagonist",-0.20849,-0.553,0.947,2914,0.984
-"16","norm_cs","Dopamine receptor agonist",-0.29853,-0.768,0.716,2412,0.892
-"17","norm_cs","BCL inhibitor",0.49837,1.28,0.179,561,0.465
-"18","norm_cs","Tubulin inhibitor",0.53575,1.4,0.133,843,0.402
-"19","norm_cs","Retinoid receptor agonist",-0.39783,-1.02,0.435,2035,0.804
-"20","norm_cs","BTK inhibitor",0.25125,0.658,0.845,800,0.91
-"21","norm_cs","Glucosidase inhibitor",-0.35736,-0.942,0.492,1264,0.82
-"22","norm_cs","Cyclooxygenase inhibitor",-0.28384,-0.76,0.73,3342,0.879
-"23","norm_cs","Dopamine receptor antagonist",0.2339,0.607,0.91,563,0.93
-"24","norm_cs","Carbonic anhydrase inhibitor",-0.33947,-0.897,0.556,1199,0.816
-"25","norm_cs","ATP channel blocker",-0.5656,-1.47,0.0796,2748,0.919
-"26","norm_cs","Cholesterol inhibitor",-0.24795,-0.654,0.874,876,0.943
-"27","norm_cs","Acetylcholine receptor antagonist",-0.28045,-0.722,0.772,3082,0.9
-"28","norm_cs","Interleukin inhibitor",-0.52393,-1.37,0.163,3112,0.691
-"29","norm_cs","HDAC inhibitor",0.81083,2.09,0.00188,393,0.0688
-"30","norm_cs","DNA inhibitor",0.2778,0.711,0.768,367,0.877
-"31","norm_cs","Adenosine receptor agonist",-0.64553,-1.69,0.0374,2356,0.565
-"32","norm_cs","Radiopaque medium",0.76495,1.99,0.00384,169,0.0948
-"33","norm_cs","Opioid receptor agonist",0.30547,0.798,0.695,627,0.856
-"34","norm_cs","EGFR inhibitor",0.42242,1.07,0.362,887,0.598
-"35","norm_cs","Carcinogen",0.36016,0.939,0.514,498,0.745
-"36","norm_cs","PDGFR inhibitor",0.3101,0.797,0.675,703,0.845
-"37","norm_cs","Tyrosine kinase inhibitor",0.40383,1.02,0.408,931,0.631
-"38","norm_cs","Protein tyrosine kinase inhibitor",-0.34833,-0.936,0.512,2984,0.802
-"39","norm_cs","SIRT inhibitor",-0.40802,-1.05,0.355,3170,0.798
-"40","norm_cs","Membrane integrity inhibitor",0.4501,1.19,0.241,990,0.523
-"41","norm_cs","Serotonin receptor antagonist",0.14617,0.395,1,581,0.998
-"42","norm_cs","Glucocorticoid receptor agonist",0.27454,0.713,0.784,1060,0.886
-"43","norm_cs","ALK inhibitor",0.59925,1.58,0.0741,504,0.323
-"44","norm_cs","GABA receptor agonist",-0.34862,-0.918,0.516,2862,0.792
-"45","norm_cs","Histamine receptor agonist",-0.33472,-0.881,0.563,3506,0.819
-"46","norm_cs","Aurora kinase inhibitor",0.6571,1.74,0.0191,457,0.268
-"47","norm_cs","Dipeptidyl peptidase inhibitor",-0.53999,-1.41,0.141,2538,0.88
-"48","norm_cs","Estrogen receptor agonist",-0.30005,-0.788,0.668,2063,0.885
-"49","norm_cs","Prostanoid receptor agonist",-0.30869,-0.82,0.633,2361,0.871
-"50","norm_cs","Aldose reductase inhibitor",0.35479,0.919,0.532,649,0.754
-"51","norm_cs","Diuretic",-0.75934,-1.98,0.00833,2697,0.143
-"52","norm_cs","Muscle relaxant",-0.37991,-0.995,0.451,3398,0.835
-"53","norm_cs","HSP inhibitor",0.54605,1.4,0.134,909,0.402
-"54","norm_cs","CDK inhibitor",0.51497,1.35,0.161,1004,0.431
-"55","norm_cs","Lipoxygenase inhibitor",-0.27139,-0.713,0.772,2121,0.889
-"56","norm_cs","Cannabinoid receptor antagonist",0.40725,1.05,0.409,1285,0.605
-"57","norm_cs","Potassium channel antagonist",-0.38522,-1.03,0.418,3099,0.819
-"58","norm_cs","Endothelin receptor antagonist",-0.40272,-1.07,0.389,3136,0.796
-"59","norm_cs","Sodium channel inhibitor",-0.30307,-0.792,0.659,3043,0.892
-"60","norm_cs","CC chemokine receptor antagonist",-0.36704,-0.986,0.429,2245,0.834
-"61","norm_cs","MDM inhibitor",0.77481,2.02,0.00551,52,0.0954
-"62","norm_cs","TRPV antagonist",0.42444,1.11,0.33,459,0.561
-"63","norm_cs","Bacterial 30S ribosomal subunit inhibitor",-0.47465,-1.23,0.232,3278,0.726
-"64","norm_cs","Src inhibitor",0.28422,0.747,0.763,291,0.86
-"65","norm_cs","Calcium channel blocker",0.30594,0.778,0.732,1016,0.838
-"66","norm_cs","Topoisomerase inhibitor",0.49758,1.3,0.193,508,0.476
-"67","norm_cs","Norepinephrine inhibitor",0.44414,1.15,0.29,577,0.545
-"68","norm_cs","Glutamate receptor agonist",-0.56707,-1.49,0.103,2563,0.946
-"69","norm_cs","Bacterial cell wall synthesis inhibitor",-0.28564,-0.763,0.718,3477,0.887
-"70","norm_cs","Phosphodiesterase inhibitor",-0.31879,-0.849,0.613,2783,0.833
-"71","norm_cs","Caspase activator",0.53817,1.4,0.134,551,0.402
-"72","norm_cs","Anesthetic - local",-0.45927,-1.22,0.226,2811,0.723
-"73","norm_cs","Cannabinoid receptor agonist",-0.35907,-0.96,0.498,2735,0.818
-"74","norm_cs","Aromatase inhibitor",-0.56878,-1.51,0.0895,3026,0.976
-"75","norm_cs","Androgen receptor antagonist",-0.40838,-1.07,0.349,2497,0.796
-"76","norm_cs","Cytochrome P450 inhibitor",-0.27466,-0.718,0.773,3425,0.894
-"77","norm_cs","GABA receptor antagonist",-0.48156,-1.27,0.208,2482,0.755
-"78","norm_cs","Angiogenesis inhibitor",0.32812,0.851,0.6,1186,0.831
-"79","norm_cs","Antimalarial",-0.67052,-1.78,0.0302,3308,0.492
-"80","norm_cs","Sigma receptor antagonist",0.44029,1.14,0.298,1003,0.549
-"81","norm_cs","Tachykinin antagonist",0.56792,1.45,0.11,483,0.426
-"82","norm_cs","GSK inhibitor",0.19762,0.511,0.981,2846,0.987
-"83","norm_cs","MEK inhibitor",0.67348,1.75,0.0291,204,0.284
-"84","norm_cs","Farnesyltransferase inhibitor",0.69392,1.75,0.0264,18,0.284
-"85","norm_cs","Phospholipase inhibitor",0.43649,1.12,0.317,279,0.568
-"86","norm_cs","TRPV agonist",0.24118,0.629,0.895,712,0.92
-"87","norm_cs","JNK inhibitor",-0.52903,-1.4,0.114,2992,0.698
-"88","norm_cs","Apoptosis stimulant",0.42295,1.09,0.348,100,0.579
-"89","norm_cs","Integrin inhibitor",-0.54182,-1.4,0.133,2610,0.698
-"90","norm_cs","HMGCR inhibitor",0.75464,1.92,0.00363,681,0.142
-"91","norm_cs","NFKB inhibitor",0.36613,0.961,0.495,759,0.719
-"92","norm_cs","Nitric oxide production inhibitor",-0.32706,-0.868,0.584,2560,0.814
-"93","norm_cs","Nucleophosmin inhibitor",0.57335,1.53,0.0979,223,0.359
-"94","norm_cs","Gamma secretase inhibitor",-0.48189,-1.28,0.21,3054,0.8
-"95","norm_cs","ACAT inhibitor",-0.50526,-1.32,0.176,2311,0.736
-"96","norm_cs","Caspase inhibitor",-0.48506,-1.27,0.204,2192,0.755
-"97","norm_cs","RAF inhibitor",0.29466,0.779,0.703,1012,0.848
-"98","norm_cs","JAK inhibitor",0.51222,1.34,0.161,564,0.432
-"99","norm_cs","MTOR inhibitor",0.64236,1.66,0.0571,823,0.289
-"100","norm_cs","FGFR inhibitor",0.54678,1.41,0.134,687,0.452
-"101","norm_cs","Angiotensin receptor antagonist",-0.22108,-0.581,0.918,2817,0.985
-"102","norm_cs","Bacterial 50S ribosomal subunit inhibitor",-0.22286,-0.575,0.938,2261,0.978
-"103","norm_cs","ATPase inhibitor",0.27619,0.716,0.776,1332,0.894
-"104","norm_cs","RNA polymerase inhibitor",0.62228,1.63,0.0495,652,0.292
-"105","norm_cs","HIV inhibitor",0.42822,1.11,0.309,350,0.561
-"106","norm_cs","Matrix metalloprotease inhibitor",-0.75366,-2.05,0.00442,2832,0.113
-"107","norm_cs","Syk inhibitor",0.49569,1.29,0.196,855,0.478
-"108","norm_cs","Calcium channel activator",-0.3482,-0.937,0.5,2548,0.814
-"109","norm_cs","ACE inhibitor",0.25247,0.653,0.872,579,0.904
-"110","norm_cs","Chloride channel blocker",-0.55619,-1.4,0.137,2249,0.698
-"111","norm_cs","Anti-inflammatory",0.63265,1.67,0.0503,1145,0.298
-"112","norm_cs","Prostanoid receptor antagonist",-0.54899,-1.44,0.117,2708,0.936
-"113","norm_cs","Calmodulin inhibitor",0.26583,0.685,0.809,779,0.9
-"114","norm_cs","PPAR receptor agonist",-0.32957,-0.878,0.588,2101,0.811
-"115","norm_cs","PLK inhibitor",0.57451,1.49,0.102,678,0.402
-"116","norm_cs","Sterol demethylase inhibitor",0.46247,1.18,0.265,696,0.526
-"117","norm_cs","PKC inhibitor",0.28577,0.748,0.756,887,0.871
-"118","norm_cs","Potassium channel activator",-0.46849,-1.23,0.248,2466,0.726
-"119","norm_cs","IKK inhibitor",0.39773,1.02,0.428,842,0.631
-"120","norm_cs","IGF-1 inhibitor",0.67878,1.73,0.0271,443,0.257
-"121","norm_cs","Smoothened receptor antagonist",0.33533,0.854,0.602,691,0.839
-"122","norm_cs","Progesterone receptor agonist",0.30393,0.795,0.701,714,0.836
-"123","norm_cs","Sigma receptor agonist",-0.42404,-1.1,0.345,2178,0.796
-"124","norm_cs","Protein kinase inhibitor",-0.37153,-0.949,0.466,2579,0.823
-"125","norm_cs","Tyrosine phosphatase inhibitor",-0.2799,-0.729,0.753,990,0.901
-"126","norm_cs","Protein synthesis inhibitor",-0.59998,-1.55,0.0727,2743,0.937
-"127","norm_cs","TNF inhibitor",-0.2922,-0.768,0.703,3340,0.892
-"128","norm_cs","Acetylcholinesterase inhibitor",-0.43011,-1.13,0.317,2706,0.755
-"129","norm_cs","Rho associated kinase inhibitor",0.35963,0.932,0.501,307,0.745
-"130","norm_cs","Thromboxane receptor antagonist",-0.4633,-1.23,0.251,2315,0.726
-"131","norm_cs","Beta amyloid inhibitor",-0.4388,-1.15,0.289,2858,0.756
-"132","norm_cs","STAT inhibitor",-0.46132,-1.23,0.204,3112,0.726
-"133","norm_cs","Bromodomain inhibitor",0.59435,1.54,0.0765,857,0.363
-"134","norm_cs","Bacterial DNA inhibitor",-0.37975,-0.969,0.473,3029,0.834
-"135","norm_cs","VEGFR inhibitor",0.48716,1.28,0.19,730,0.465
-"136","norm_cs","MAP kinase inhibitor",0.45218,1.2,0.233,569,0.519
-"137","norm_cs","FLT3 inhibitor",0.56053,1.45,0.114,931,0.426
-"138","norm_cs","Kinesin inhibitor",0.31258,0.823,0.663,761,0.84
-"139","norm_cs","Casein kinase inhibitor",-0.4005,-1.05,0.381,2591,0.798
-"140","norm_cs","Imidazoline receptor agonist",-0.54061,-1.43,0.12,2398,0.889
-"141","norm_cs","Na/K-ATPase inhibitor",-0.81558,-2.16,0,3169,0.0547
-"142","norm_cs","Vitamin D receptor agonist",-0.21612,-0.581,0.943,764,0.985
-"143","norm_cs","Cholinesterase inhibitor",-0.4356,-1.15,0.288,3474,0.756
-"144","norm_cs","Proteasome inhibitor",0.88458,2.3,0,417,0.00367
-"145","norm_cs","Antioxidant",0.34599,0.906,0.546,462,0.763
-"146","norm_cs","Insulin sensitizer",0.26617,0.667,0.846,456,0.911
-"147","norm_cs","Adenosine receptor antagonist",-0.18501,-0.486,0.985,2534,0.984
-"148","norm_cs","Benzodiazepine receptor agonist",-0.50037,-1.34,0.181,3264,0.726
-"149","norm_cs","Bacterial DNA Gyrase inhibitor",-0.43455,-1.14,0.314,3235,0.755
-"150","norm_cs","HCV inhibitor",0.31475,0.809,0.684,1002,0.851
-"151","norm_cs","Chelating agent",-0.34483,-0.884,0.559,3039,0.826
-"152","norm_cs","Ribonucleoside reductase inhibitor",0.6431,1.67,0.0424,953,0.298
-"153","norm_cs","Estrogen receptor antagonist",0.5308,1.37,0.15,996,0.431
-"154","norm_cs","Monoamine oxidase inhibitor",-0.46536,-1.21,0.24,2496,0.721
-"155","norm_cs","P38 MAPK inhibitor",-0.1859,-0.488,0.979,2278,0.995
-"156","norm_cs","DNA alkylating agent",-0.38459,-1.02,0.397,2695,0.804
-"157","norm_cs","TGF-beta receptor inhibitor",-0.63913,-1.72,0.0298,3151,0.572
-"158","norm_cs","Tricyclic antidepressant",0.62578,1.63,0.0629,1330,0.292
-"159","norm_cs","CCK receptor antagonist",0.47493,1.25,0.217,956,0.484
-"160","norm_cs","Androgen receptor agonist",-0.52316,-1.37,0.166,3221,0.691
-"161","norm_cs","Platelet aggregation inhibitor",-0.40525,-1.07,0.362,2606,0.796
-"162","norm_cs","Bcr-Abl inhibitor",0.54571,1.4,0.131,629,0.402
-"163","norm_cs","Leukotriene receptor antagonist",-0.35148,-0.928,0.535,2593,0.802
-"164","norm_cs","Insulin secretagogue",-0.28337,-0.746,0.753,2829,0.888
-"165","norm_cs","CDC inhibitor",-0.43956,-1.17,0.278,2059,0.76
-"166","norm_cs","FAAH inhibitor",0.60067,1.59,0.064,679,0.328
-"167","norm_cs","MET inhibitor",0.47731,1.25,0.216,999,0.484
-"168","norm_cs","Anthelmintic",0.55532,1.43,0.128,565,0.439
-"169","norm_cs","Immunosuppressant",0.46869,1.21,0.249,492,0.517
-"170","norm_cs","Dihydrofolate reductase inhibitor",0.68578,1.81,0.0239,976,0.262
-"171","norm_cs","Reverse transcriptase inhibitor",-0.53983,-1.4,0.129,3234,0.698
+Rank_metric,Drug_set,ES,NES,p_value,Position_at_max,FDR_q_value
+norm_cs,P-glycoprotein inhibitor,0.52076,1.36,0.154,586,0.431
+norm_cs,Serotonin receptor agonist,-0.20163,-0.536,0.982,2521,0.984
+norm_cs,AKT inhibitor,0.40816,1.06,0.393,791,0.602
+norm_cs,Nitric oxide synthase inhibitor,-0.45018,-1.18,0.287,2796,0.762
+norm_cs,Glutamate receptor antagonist,-0.37502,-0.977,0.449,2472,0.834
+norm_cs,Adrenergic receptor antagonist,-0.22025,-0.581,0.939,2722,0.985
+norm_cs,PARP inhibitor,0.31706,0.836,0.636,309,0.843
+norm_cs,Purinergic receptor antagonist,0.44919,1.15,0.309,208,0.545
+norm_cs,Thymidylate synthase inhibitor,-0.30199,-0.797,0.695,2358,0.897
+norm_cs,Opioid receptor antagonist,0.31421,0.826,0.673,312,0.848
+norm_cs,Histone lysine methyltransferase inhibitor,-0.34441,-0.922,0.511,3391,0.798
+norm_cs,Adrenergic receptor agonist,-0.36073,-0.96,0.465,2785,0.818
+norm_cs,PI3K inhibitor,0.4703,1.21,0.259,918,0.517
+norm_cs,Acetylcholine receptor agonist,-0.24626,-0.662,0.844,2609,0.945
+norm_cs,Histamine receptor antagonist,-0.20849,-0.553,0.947,2914,0.984
+norm_cs,Dopamine receptor agonist,-0.29853,-0.768,0.716,2412,0.892
+norm_cs,BCL inhibitor,0.49837,1.28,0.179,561,0.465
+norm_cs,Tubulin inhibitor,0.53575,1.4,0.133,843,0.402
+norm_cs,Retinoid receptor agonist,-0.39783,-1.02,0.435,2035,0.804
+norm_cs,BTK inhibitor,0.25125,0.658,0.845,800,0.91
+norm_cs,Glucosidase inhibitor,-0.35736,-0.942,0.492,1264,0.82
+norm_cs,Cyclooxygenase inhibitor,-0.28384,-0.76,0.73,3342,0.879
+norm_cs,Dopamine receptor antagonist,0.2339,0.607,0.91,563,0.93
+norm_cs,Carbonic anhydrase inhibitor,-0.33947,-0.897,0.556,1199,0.816
+norm_cs,ATP channel blocker,-0.5656,-1.47,0.0796,2748,0.919
+norm_cs,Cholesterol inhibitor,-0.24795,-0.654,0.874,876,0.943
+norm_cs,Acetylcholine receptor antagonist,-0.28045,-0.722,0.772,3082,0.9
+norm_cs,Interleukin inhibitor,-0.52393,-1.37,0.163,3112,0.691
+norm_cs,HDAC inhibitor,0.81083,2.09,0.00188,393,0.0688
+norm_cs,DNA inhibitor,0.2778,0.711,0.768,367,0.877
+norm_cs,Adenosine receptor agonist,-0.64553,-1.69,0.0374,2356,0.565
+norm_cs,Radiopaque medium,0.76495,1.99,0.00384,169,0.0948
+norm_cs,Opioid receptor agonist,0.30547,0.798,0.695,627,0.856
+norm_cs,EGFR inhibitor,0.42242,1.07,0.362,887,0.598
+norm_cs,Carcinogen,0.36016,0.939,0.514,498,0.745
+norm_cs,PDGFR inhibitor,0.3101,0.797,0.675,703,0.845
+norm_cs,Tyrosine kinase inhibitor,0.40383,1.02,0.408,931,0.631
+norm_cs,Protein tyrosine kinase inhibitor,-0.34833,-0.936,0.512,2984,0.802
+norm_cs,SIRT inhibitor,-0.40802,-1.05,0.355,3170,0.798
+norm_cs,Membrane integrity inhibitor,0.4501,1.19,0.241,990,0.523
+norm_cs,Serotonin receptor antagonist,0.14617,0.395,1,581,0.998
+norm_cs,Glucocorticoid receptor agonist,0.27454,0.713,0.784,1060,0.886
+norm_cs,ALK inhibitor,0.59925,1.58,0.0741,504,0.323
+norm_cs,GABA receptor agonist,-0.34862,-0.918,0.516,2862,0.792
+norm_cs,Histamine receptor agonist,-0.33472,-0.881,0.563,3506,0.819
+norm_cs,Aurora kinase inhibitor,0.6571,1.74,0.0191,457,0.268
+norm_cs,Dipeptidyl peptidase inhibitor,-0.53999,-1.41,0.141,2538,0.88
+norm_cs,Estrogen receptor agonist,-0.30005,-0.788,0.668,2063,0.885
+norm_cs,Prostanoid receptor agonist,-0.30869,-0.82,0.633,2361,0.871
+norm_cs,Aldose reductase inhibitor,0.35479,0.919,0.532,649,0.754
+norm_cs,Diuretic,-0.75934,-1.98,0.00833,2697,0.143
+norm_cs,Muscle relaxant,-0.37991,-0.995,0.451,3398,0.835
+norm_cs,HSP inhibitor,0.54605,1.4,0.134,909,0.402
+norm_cs,CDK inhibitor,0.51497,1.35,0.161,1004,0.431
+norm_cs,Lipoxygenase inhibitor,-0.27139,-0.713,0.772,2121,0.889
+norm_cs,Cannabinoid receptor antagonist,0.40725,1.05,0.409,1285,0.605
+norm_cs,Potassium channel antagonist,-0.38522,-1.03,0.418,3099,0.819
+norm_cs,Endothelin receptor antagonist,-0.40272,-1.07,0.389,3136,0.796
+norm_cs,Sodium channel inhibitor,-0.30307,-0.792,0.659,3043,0.892
+norm_cs,CC chemokine receptor antagonist,-0.36704,-0.986,0.429,2245,0.834
+norm_cs,MDM inhibitor,0.77481,2.02,0.00551,52,0.0954
+norm_cs,TRPV antagonist,0.42444,1.11,0.33,459,0.561
+norm_cs,Bacterial 30S ribosomal subunit inhibitor,-0.47465,-1.23,0.232,3278,0.726
+norm_cs,Src inhibitor,0.28422,0.747,0.763,291,0.86
+norm_cs,Calcium channel blocker,0.30594,0.778,0.732,1016,0.838
+norm_cs,Topoisomerase inhibitor,0.49758,1.3,0.193,508,0.476
+norm_cs,Norepinephrine inhibitor,0.44414,1.15,0.29,577,0.545
+norm_cs,Glutamate receptor agonist,-0.56707,-1.49,0.103,2563,0.946
+norm_cs,Bacterial cell wall synthesis inhibitor,-0.28564,-0.763,0.718,3477,0.887
+norm_cs,Phosphodiesterase inhibitor,-0.31879,-0.849,0.613,2783,0.833
+norm_cs,Caspase activator,0.53817,1.4,0.134,551,0.402
+norm_cs,Anesthetic - local,-0.45927,-1.22,0.226,2811,0.723
+norm_cs,Cannabinoid receptor agonist,-0.35907,-0.96,0.498,2735,0.818
+norm_cs,Aromatase inhibitor,-0.56878,-1.51,0.0895,3026,0.976
+norm_cs,Androgen receptor antagonist,-0.40838,-1.07,0.349,2497,0.796
+norm_cs,Cytochrome P450 inhibitor,-0.27466,-0.718,0.773,3425,0.894
+norm_cs,GABA receptor antagonist,-0.48156,-1.27,0.208,2482,0.755
+norm_cs,Angiogenesis inhibitor,0.32812,0.851,0.6,1186,0.831
+norm_cs,Antimalarial,-0.67052,-1.78,0.0302,3308,0.492
+norm_cs,Sigma receptor antagonist,0.44029,1.14,0.298,1003,0.549
+norm_cs,Tachykinin antagonist,0.56792,1.45,0.11,483,0.426
+norm_cs,GSK inhibitor,0.19762,0.511,0.981,2846,0.987
+norm_cs,MEK inhibitor,0.67348,1.75,0.0291,204,0.284
+norm_cs,Farnesyltransferase inhibitor,0.69392,1.75,0.0264,18,0.284
+norm_cs,Phospholipase inhibitor,0.43649,1.12,0.317,279,0.568
+norm_cs,TRPV agonist,0.24118,0.629,0.895,712,0.92
+norm_cs,JNK inhibitor,-0.52903,-1.4,0.114,2992,0.698
+norm_cs,Apoptosis stimulant,0.42295,1.09,0.348,100,0.579
+norm_cs,Integrin inhibitor,-0.54182,-1.4,0.133,2610,0.698
+norm_cs,HMGCR inhibitor,0.75464,1.92,0.00363,681,0.142
+norm_cs,NFKB inhibitor,0.36613,0.961,0.495,759,0.719
+norm_cs,Nitric oxide production inhibitor,-0.32706,-0.868,0.584,2560,0.814
+norm_cs,Nucleophosmin inhibitor,0.57335,1.53,0.0979,223,0.359
+norm_cs,Gamma secretase inhibitor,-0.48189,-1.28,0.21,3054,0.8
+norm_cs,ACAT inhibitor,-0.50526,-1.32,0.176,2311,0.736
+norm_cs,Caspase inhibitor,-0.48506,-1.27,0.204,2192,0.755
+norm_cs,RAF inhibitor,0.29466,0.779,0.703,1012,0.848
+norm_cs,JAK inhibitor,0.51222,1.34,0.161,564,0.432
+norm_cs,MTOR inhibitor,0.64236,1.66,0.0571,823,0.289
+norm_cs,FGFR inhibitor,0.54678,1.41,0.134,687,0.452
+norm_cs,Angiotensin receptor antagonist,-0.22108,-0.581,0.918,2817,0.985
+norm_cs,Bacterial 50S ribosomal subunit inhibitor,-0.22286,-0.575,0.938,2261,0.978
+norm_cs,ATPase inhibitor,0.27619,0.716,0.776,1332,0.894
+norm_cs,RNA polymerase inhibitor,0.62228,1.63,0.0495,652,0.292
+norm_cs,HIV inhibitor,0.42822,1.11,0.309,350,0.561
+norm_cs,Matrix metalloprotease inhibitor,-0.75366,-2.05,0.00442,2832,0.113
+norm_cs,Syk inhibitor,0.49569,1.29,0.196,855,0.478
+norm_cs,Calcium channel activator,-0.3482,-0.937,0.5,2548,0.814
+norm_cs,ACE inhibitor,0.25247,0.653,0.872,579,0.904
+norm_cs,Chloride channel blocker,-0.55619,-1.4,0.137,2249,0.698
+norm_cs,Anti-inflammatory,0.63265,1.67,0.0503,1145,0.298
+norm_cs,Prostanoid receptor antagonist,-0.54899,-1.44,0.117,2708,0.936
+norm_cs,Calmodulin inhibitor,0.26583,0.685,0.809,779,0.9
+norm_cs,PPAR receptor agonist,-0.32957,-0.878,0.588,2101,0.811
+norm_cs,PLK inhibitor,0.57451,1.49,0.102,678,0.402
+norm_cs,Sterol demethylase inhibitor,0.46247,1.18,0.265,696,0.526
+norm_cs,PKC inhibitor,0.28577,0.748,0.756,887,0.871
+norm_cs,Potassium channel activator,-0.46849,-1.23,0.248,2466,0.726
+norm_cs,IKK inhibitor,0.39773,1.02,0.428,842,0.631
+norm_cs,IGF-1 inhibitor,0.67878,1.73,0.0271,443,0.257
+norm_cs,Smoothened receptor antagonist,0.33533,0.854,0.602,691,0.839
+norm_cs,Progesterone receptor agonist,0.30393,0.795,0.701,714,0.836
+norm_cs,Sigma receptor agonist,-0.42404,-1.1,0.345,2178,0.796
+norm_cs,Protein kinase inhibitor,-0.37153,-0.949,0.466,2579,0.823
+norm_cs,Tyrosine phosphatase inhibitor,-0.2799,-0.729,0.753,990,0.901
+norm_cs,Protein synthesis inhibitor,-0.59998,-1.55,0.0727,2743,0.937
+norm_cs,TNF inhibitor,-0.2922,-0.768,0.703,3340,0.892
+norm_cs,Acetylcholinesterase inhibitor,-0.43011,-1.13,0.317,2706,0.755
+norm_cs,Rho associated kinase inhibitor,0.35963,0.932,0.501,307,0.745
+norm_cs,Thromboxane receptor antagonist,-0.4633,-1.23,0.251,2315,0.726
+norm_cs,Beta amyloid inhibitor,-0.4388,-1.15,0.289,2858,0.756
+norm_cs,STAT inhibitor,-0.46132,-1.23,0.204,3112,0.726
+norm_cs,Bromodomain inhibitor,0.59435,1.54,0.0765,857,0.363
+norm_cs,Bacterial DNA inhibitor,-0.37975,-0.969,0.473,3029,0.834
+norm_cs,VEGFR inhibitor,0.48716,1.28,0.19,730,0.465
+norm_cs,MAP kinase inhibitor,0.45218,1.2,0.233,569,0.519
+norm_cs,FLT3 inhibitor,0.56053,1.45,0.114,931,0.426
+norm_cs,Kinesin inhibitor,0.31258,0.823,0.663,761,0.84
+norm_cs,Casein kinase inhibitor,-0.4005,-1.05,0.381,2591,0.798
+norm_cs,Imidazoline receptor agonist,-0.54061,-1.43,0.12,2398,0.889
+norm_cs,Na/K-ATPase inhibitor,-0.81558,-2.16,0,3169,0.0547
+norm_cs,Vitamin D receptor agonist,-0.21612,-0.581,0.943,764,0.985
+norm_cs,Cholinesterase inhibitor,-0.4356,-1.15,0.288,3474,0.756
+norm_cs,Proteasome inhibitor,0.88458,2.3,0,417,0.00367
+norm_cs,Antioxidant,0.34599,0.906,0.546,462,0.763
+norm_cs,Insulin sensitizer,0.26617,0.667,0.846,456,0.911
+norm_cs,Adenosine receptor antagonist,-0.18501,-0.486,0.985,2534,0.984
+norm_cs,Benzodiazepine receptor agonist,-0.50037,-1.34,0.181,3264,0.726
+norm_cs,Bacterial DNA Gyrase inhibitor,-0.43455,-1.14,0.314,3235,0.755
+norm_cs,HCV inhibitor,0.31475,0.809,0.684,1002,0.851
+norm_cs,Chelating agent,-0.34483,-0.884,0.559,3039,0.826
+norm_cs,Ribonucleoside reductase inhibitor,0.6431,1.67,0.0424,953,0.298
+norm_cs,Estrogen receptor antagonist,0.5308,1.37,0.15,996,0.431
+norm_cs,Monoamine oxidase inhibitor,-0.46536,-1.21,0.24,2496,0.721
+norm_cs,P38 MAPK inhibitor,-0.1859,-0.488,0.979,2278,0.995
+norm_cs,DNA alkylating agent,-0.38459,-1.02,0.397,2695,0.804
+norm_cs,TGF-beta receptor inhibitor,-0.63913,-1.72,0.0298,3151,0.572
+norm_cs,Tricyclic antidepressant,0.62578,1.63,0.0629,1330,0.292
+norm_cs,CCK receptor antagonist,0.47493,1.25,0.217,956,0.484
+norm_cs,Androgen receptor agonist,-0.52316,-1.37,0.166,3221,0.691
+norm_cs,Platelet aggregation inhibitor,-0.40525,-1.07,0.362,2606,0.796
+norm_cs,Bcr-Abl inhibitor,0.54571,1.4,0.131,629,0.402
+norm_cs,Leukotriene receptor antagonist,-0.35148,-0.928,0.535,2593,0.802
+norm_cs,Insulin secretagogue,-0.28337,-0.746,0.753,2829,0.888
+norm_cs,CDC inhibitor,-0.43956,-1.17,0.278,2059,0.76
+norm_cs,FAAH inhibitor,0.60067,1.59,0.064,679,0.328
+norm_cs,MET inhibitor,0.47731,1.25,0.216,999,0.484
+norm_cs,Anthelmintic,0.55532,1.43,0.128,565,0.439
+norm_cs,Immunosuppressant,0.46869,1.21,0.249,492,0.517
+norm_cs,Dihydrofolate reductase inhibitor,0.68578,1.81,0.0239,976,0.262
+norm_cs,Reverse transcriptase inhibitor,-0.53983,-1.4,0.129,3234,0.698
