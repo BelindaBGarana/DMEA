@@ -1,5 +1,5 @@
 #DMEA
-#Author: Belinda B. Garana (BG), Date: 2020-12-03; last edit: BG 2022-06-28
+#Author: Belinda B. Garana (BG), Date: 2020-12-03; last edit: BG 2022-07-03
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -36,8 +36,8 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
 
 rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
   print("Running correlations and regressions...")
-  library(dplyr);library(qvalue);library(ggplot2);library(stats);library(reshape2);library(gridExtra);
-  library(parallel);library(snow);library(doSNOW);
+  library(dplyr);library(qvalue);library(ggplot2);library(stats);library(reshape2);library(gridExtra)
+  ;library(parallel);library(snow);library(doSNOW);
   
   cores <- parallel::detectCores() # number of cores available
   if(cores[1] > 1){
@@ -57,30 +57,31 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
           "Slope","Intercept","R.squared",
           "Rank.slope","Rank.intercept","Rank.R.squared","N")] <- NA
   data.corr <- list()
-  for (j in 3:ncol(all.data.corr)){
+  for(j in 3:ncol(all.data.corr)){
     data.corr[[j-2]] <- na.omit(all.data.corr[,c(2,j)])
     a <- nrow(data.corr[[j-2]]) # number of samples in the correlation (N)
-    if (a >= min.per.corr) {corr$N[j-2] <- a
-    x <- as.numeric(data.corr[[j-2]][,1]) # list of rank metric
-    y <- as.numeric(data.corr[[j-2]][,2]) # list of gene expression (for each gene j)
-
-    Regression <- stats::lm(y ~ x)
-    corr$Slope[j-2] <- Regression$coeff[[2]]
-    corr$Intercept[j-2] <- Regression$coeff[[1]]
-    corr$R.squared[j-2] <- summary(Regression)$r.squared
-
-    Rank.regression <- stats::lm(rank(y) ~ rank(x))
-    corr$Rank.slope[j-2] <- Rank.regression$coeff[[2]]
-    corr$Rank.intercept[j-2] <- Rank.regression$coeff[[1]]
-    corr$Rank.R.squared[j-2] <- summary(Rank.regression)$r.squared
-
-    Pearson <- stats::cor.test(x, y, method="pearson")
-    corr$Pearson.est[j-2] <- Pearson$estimate
-    corr$Pearson.p[j-2] <- Pearson$p.value
-
-    Spearman <- stats::cor.test(x, y, method="spearman", exact=FALSE)
-    corr$Spearman.est[j-2] <- Spearman$estimate
-    corr$Spearman.p[j-2] <- Spearman$p.value}
+    if(a >= min.per.corr){
+      corr$N[j-2] <- a
+      x <- as.numeric(data.corr[[j-2]][,1]) # list of rank metric
+      y <- as.numeric(data.corr[[j-2]][,2]) # list of gene expression (for each gene j)
+      
+      Regression <- stats::lm(y ~ x)
+      corr$Slope[j-2] <- Regression$coeff[[2]]
+      corr$Intercept[j-2] <- Regression$coeff[[1]]
+      corr$R.squared[j-2] <- summary(Regression)$r.squared
+      
+      Rank.regression <- stats::lm(rank(y) ~ rank(x))
+      corr$Rank.slope[j-2] <- Rank.regression$coeff[[2]]
+      corr$Rank.intercept[j-2] <- Rank.regression$coeff[[1]]
+      corr$Rank.R.squared[j-2] <- summary(Rank.regression)$r.squared
+      
+      Pearson <- stats::cor.test(x, y, method="pearson")
+      corr$Pearson.est[j-2] <- Pearson$estimate
+      corr$Pearson.p[j-2] <- Pearson$p.value
+      
+      Spearman <- stats::cor.test(x, y, method="spearman", exact=FALSE)
+      corr$Spearman.est[j-2] <- Spearman$estimate
+      corr$Spearman.p[j-2] <- Spearman$p.value}
   }
   corr.no.na <- corr[!is.na(corr$N), ]
   qobj.pearson <- qvalue(p=corr.no.na$Pearson.p,pi0=1)
@@ -89,7 +90,7 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
   corr.no.na$Spearman.q <- qobj.spearman$qvalues
 
   # scatter plots for significant results
-  if (plots==TRUE){
+  if(plots){
     # load themes for plots
     ng.theme <- ggplot2::theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                       panel.border = element_rect(fill=NA), panel.background = element_blank(),
@@ -106,11 +107,11 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
     id.var <- colnames(data)[1]
     rank.var <- colnames(data)[2]
     plot.data <- reshape2::melt(all.data.corr, id=c(id.var,rank.var), variable.name = variable, value.name = value, na.rm=TRUE)
-    if (type=="pearson"){
+    if(type=="pearson"){
       results <- unique(corr.no.na[which(corr.no.na$Pearson.q<=FDR),1])
-      if (length(results)>0){
+      if(length(results)>0){
         a <- list()
-        for (i in 1:length(results)) {
+        for(i in 1:length(results)){
           sig.data <- plot.data[plot.data[,3]==results[i],]
           min.x <- min(sig.data[,c(rank.var)])
           max.x <- max(sig.data[,c(rank.var)])
@@ -118,10 +119,10 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
           min.y <- min(sig.data[,c(value)])
           max.y <- max(sig.data[,c(value)])
           mid.y <- 0.5*(min.y+max.y)
-          if (position.x=="min"){pos.x=min.x} else if(position.x=="mid"){pos.x=mid.x
-          } else if(position.x=="max"){pos.x=max.x} else if(is.numeric(position.x)==TRUE){pos.x==position.x}
-          if (position.y=="min"){pos.y=min.y} else if(position.y=="mid"){pos.y=mid.y
-          } else if(position.y=="max"){pos.y=max.y} else if(is.numeric(position.y)==TRUE){pos.y==position.y}
+          if(position.x=="min"){pos.x <- min.x}else if(position.x=="mid"){pos.x <- mid.x
+          }else if(position.x=="max"){pos.x <- max.x}else if(is.numeric(position.x)){pos.x <- position.x}
+          if(position.y=="min"){pos.y <- min.y}else if(position.y=="mid"){pos.y <- mid.y
+          }else if(position.y=="max"){pos.y <- max.y}else if(is.numeric(position.y)){pos.y <- position.y}
 
           Pearson.est <- corr.no.na[corr.no.na[,1]==results[i],]$Pearson.est
           Pearson.p <- corr.no.na[corr.no.na[,1]==results[i],]$Pearson.p
@@ -140,11 +141,11 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
         scatter.plots <- NA
         warning("No correlations met the FDR cut-off to produce scatter plots")
       }
-    } else if (type=="spearman"){
+    }else if(type=="spearman"){
       results <- unique(corr.no.na[which(corr.no.na$Spearman.q<=FDR),1])
-      if (length(results)>0){
+      if(length(results)>0){
         a <- list()
-        for (i in 1:length(results)) {
+        for(i in 1:length(results)){
           sig.data <- plot.data[plot.data[,3]==results[i],]
           min.x <- 1
           mid.x <- 0.5*length(sig.data[,c(rank.var)])
@@ -152,10 +153,10 @@ rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
           min.y <- 1
           mid.y <- 0.5*length(sig.data[,c(value)])
           max.y <- length(sig.data[,c(value)])
-          if (position.x=="min"){pos.x=min.x} else if(position.x=="mid"){pos.x=mid.x
-          } else if(position.x=="max"){pos.x=max.x} else if(is.numeric(position.x)==TRUE){pos.x==position.x}
-          if (position.y=="min"){pos.y=min.y} else if(position.y=="mid"){pos.y=mid.y
-          } else if(position.y=="max"){pos.y=max.y} else if(is.numeric(position.y)==TRUE){pos.y==position.y}
+          if(position.x=="min"){pos.x <- min.x}else if(position.x=="mid"){pos.x <- mid.x
+          }else if(position.x=="max"){pos.x <- max.x}else if(is.numeric(position.x)){pos.x <- position.x}
+          if(position.y=="min"){pos.y <- min.y}else if(position.y=="mid"){pos.y <- mid.y
+          }else if(position.y=="max"){pos.y <- max.y}else if(is.numeric(position.y)){pos.y <- position.y}
 
           Spearman.est <- corr.no.na[corr.no.na[,1]==results[i],]$Spearman.est
           Spearman.p <- corr.no.na[corr.no.na[,1]==results[i],]$Spearman.p
@@ -293,7 +294,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       N <- length(gene.list)
       Nh <- numhits_pathway
       Nm <- N - Nh
-      if (weighted.score.type == 0){
+      if(weighted.score.type == 0){
         correl.vector <- rep(1,N)
       }
       alpha <- weighted.score.type
@@ -304,17 +305,17 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       RES <- cumsum(tag.indicators * correl.vector * norm.tag - no.tag.indicator * norm.no.tag)
       max.ES <- max(RES)
       min.ES <- min(RES)
-      if (max.ES > - min.ES) {
+      if(max.ES > - min.ES){
         ES <- signif(max.ES, digits = 5)
         arg.ES <- which.max(RES)
-      } else {
+      }else{
         ES <- signif(min.ES, digits=5)
         arg.ES <- which.min(RES)
       }
       return(list(ES = ES, arg.ES = arg.ES, RES = RES, indicator = tag.indicators))
     } # for real ES
 
-    GSEA.EnrichmentScore2 <- function(gene.list, gene.set, weighted.score.type = score.weight, correl.vector = NULL) {
+    GSEA.EnrichmentScore2 <- function(gene.list, gene.set, weighted.score.type = score.weight, correl.vector = NULL){
       N <- length(gene.list)
       Nh <- numhits_pathway
       Nm <-  N - Nh
@@ -373,10 +374,10 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     num.hits.pathways <- list()
 
     ### Annotate drug sets
-    for (j in 1:length(Drug.Sets.All)){
+    for(j in 1:length(Drug.Sets.All)){
       temp.pathway <- Drug.Sets[,Drug.Sets.All[j]]
-      for (i in 1:nrow(annotations)){
-        if (annotations[i,1] %in% temp.pathway){
+      for(i in 1:nrow(annotations)){
+        if(annotations[i,1] %in% temp.pathway){
           annotations[i,j+1] = "X";
         }
       }
@@ -428,10 +429,10 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     pos_gene_set <- array(data = 0, dim = nrow(data_in), dimnames = NULL);
     
     ## Calculate Real KS Statistic
-    for (i in 1:length(Drug.Sets.All)){
+    for(i in 1:length(Drug.Sets.All)){
       data_in3 <- data_in[,Drug.Sets.All[i]]
       numhits_pathway <- sum(data_in3 == "X"); # check to see if there is anything in the column (e.g. X)
-      if (numhits_pathway > 1){
+      if(numhits_pathway > 1){
         pos_gene_set <- which(data_in[,Drug.Sets.All[i]] %in% c("X"))
         KS_real <- GSEA.EnrichmentScore(gene.list, pos_gene_set, weighted.score.type = score.weight, correl.vector = rank_metric)
         GSEA.Results[GSEA.Results$Drug_set == Drug.Sets.All[i],]$ES <- KS_real$ES;
@@ -471,7 +472,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     colnames(KSRandomArray.Norm) <- colnames(KSRandomArray)
     avg <- 0
     KSRandomArray.temp <- 0
-    for (i in 1:ncol(KSRandomArray.Norm)){
+    for(i in 1:ncol(KSRandomArray.Norm)){
       avg <- 0
       KSRandomArray.temp <- KSRandomArray[,i]
       pos.temp <- KSRandomArray.temp[which(KSRandomArray.temp >= 0)]
@@ -497,17 +498,17 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     percent.neg.GSEA <- sum(GSEA.Results$ES <= 0) / length(GSEA.Results$ES) #BG OR EQUAL TO
     
     # Calculate GSEA NES and p-value
-    for (i in 1:length(Drug.Sets.All)){
+    for(i in 1:length(Drug.Sets.All)){
       temp.gene.set <- Drug.Sets.All[i]
       temp.ES <- GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$ES
-      if (temp.ES >= 0){ # BG OR EQUAL TO
+      if(temp.ES >= 0){ # BG OR EQUAL TO
         pos.perms <- KSRandomArray[,temp.gene.set]
         pos.perms <- pos.perms[which(pos.perms >= 0)] # BG OR EQUAL TO
         #p-val
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$p_value = signif(sum(pos.perms >= temp.ES) / length(pos.perms),digits = 3) #BG OR EQUAL TO
         #NES
         GSEA.Results[GSEA.Results$Drug_set == temp.gene.set,]$NES = signif(temp.ES / mean(pos.perms), digits = 3)
-      } else if (temp.ES <= 0){ # BG OR EQUAL TO
+      }else if(temp.ES <= 0){ # BG OR EQUAL TO
         neg.perms <- KSRandomArray[,temp.gene.set]
         neg.perms <- neg.perms[which(neg.perms <= 0)] # BG OR EQUAL TO
         #p-val
@@ -670,8 +671,8 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
   ## select results which meet FDR threshold and produce mountain plots
   significant.hits <- EA.Results[which(EA.Results$FDR_q_value < FDR),]
   temp.plot <- list()
-  if (nrow(significant.hits) > 0){
-    for (i in 1:nrow(significant.hits)){
+  if(nrow(significant.hits) > 0){
+    for(i in 1:nrow(significant.hits)){
       temp <- gsea_mountain_plot(GSEA.list = EA, Sample.Name = est.name, Gene.Set.A = significant.hits$Drug_set[i])
       temp.plot[significant.hits$Drug_set[i]] <- list(temp)
     }
@@ -745,7 +746,7 @@ DMEA <- function(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", s
               corr.result = corr.results$result,
               corr.scatter.plots = corr.results$scatter.plots,
               gmt = gmt,
-              DMEA.result = DMEA.results$result,
-              DMEA.mtn.plots = DMEA.results$mtn.plots,
-              DMEA.volcano.plot = DMEA.results$volcano.plot))
+              result = DMEA.results$result,
+              mtn.plots = DMEA.results$mtn.plots,
+              volcano.plot = DMEA.results$volcano.plot))
 }
