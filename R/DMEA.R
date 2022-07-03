@@ -315,7 +315,6 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     } # for real ES
 
     GSEA.EnrichmentScore2 <- function(gene.list, gene.set, weighted.score.type = score.weight, correl.vector = NULL) {
-
       N <- length(gene.list)
       Nh <- numhits_pathway
       Nm <-  N - Nh
@@ -544,7 +543,6 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
   
   # load mountain plot function
   gsea_mountain_plot <- function(GSEA.list, Sample.Name, Gene.Set.A, color = TRUE){
-    library(ggplot2);
     if(color == TRUE){
       color.palette <- c("red")
     }else if(color == FALSE){
