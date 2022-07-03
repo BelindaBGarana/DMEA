@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-drugSEA(data, gmt, drug="Drug", rank.metric="Pearson.est", set.type="moa", direction.adjust=NULL,
+drugSEA(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.type="moa", direction.adjust=NULL,
               FDR=0.25, num.permutations=1000, stat.type="Weighted", min.per.set=6,
               sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL)
 }
