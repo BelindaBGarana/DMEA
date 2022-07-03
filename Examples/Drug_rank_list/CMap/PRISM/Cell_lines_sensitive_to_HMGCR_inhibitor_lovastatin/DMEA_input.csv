@@ -1,1175 +1,1175 @@
-"","pert_iname","query","moa"
-"1","8-bromo-cGMP",-1.0074,"PKA activator"
-"2","noretynodrel",1.107,"Progestogen hormone"
-"3","flumetasone",0.7799,"Glucocorticoid receptor agonist"
-"4","betamethasone",1.0552,"Glucocorticoid receptor agonist"
-"5","ethinyl-estradiol",0.8507,"Estrogen receptor agonist|DNA directed DNA polymerase stimunlant|Estrogenic component in oral contraceptives"
-"6","mepivacaine",1.0706,"Potassium channel blocker|Sodium channel blocker"
-"7","fulvestrant",1.286,"Estrogen receptor antagonist"
-"8","XL-888",0.8574,"HSP inhibitor"
-"9","methscopolamine",1.1634,"Acetylcholine receptor antagonist"
-"10","docetaxel",1.1712,"Tubulin inhibitor"
-"11","lappaconite",0.9861,"Sodium channel blocker"
-"12","terfenadine",1.1328,"Histamine receptor antagonist"
-"13","SB-218078",1.1077,"CHK inhibitor"
-"14","diclazuril",0.8061,"Antiprotozoal agent"
-"15","isofloxythepin",1.5783,"Dopamine receptor antagonist"
-"16","galeterone",1.0613,"Androgen receptor modulator"
-"17","racecadotril",0.8424,"Enkephalinase inhibitor"
-"18","doxycycline",0.61,"Metalloproteinase inhibitor"
-"19","CID-5458317",1.0835,"MAP kinase phosphatase inhibitor"
-"20","cyclophosphamide",0.7842,"DNA alkylating agent"
-"21","oridonin",0.8296,"BCL inhibitor"
-"22","monensin",0.6635,"Bacterial permeability inducer"
-"23","tipranavir",1.2767,"HIV protease inhibitor"
-"24","propranolol",1.3218,"Adrenergic receptor antagonist"
-"25","GSK-429286A",0.7947,"Rho associated kinase inhibitor"
-"26","imiloxan",1.0158,"Adrenergic receptor antagonist"
-"27","carvedilol",0.9454,"Adrenergic receptor antagonist"
-"28","nadide",0.7997,"Electron acceptor"
-"29","beclomethasone-dipropionate",0.8812,"Immunosuppressant|Glucocorticoid receptor agonist"
-"30","lorazepam",0.9942,"Benzodiazepine receptor agonist"
-"31","nutlin-3",1.6848,"MDM inhibitor"
-"32","usniacin-(+)",0.8608,"MAP kinase activator"
-"33","fluorometholone",1.0788,"Glucocorticoid receptor agonist"
-"34","ornithine",1.057,"NFkB pathway modulator"
-"35","IDRA-21",0.9836,"Glutamate receptor positive allosteric modulator"
-"36","mesoridazine",1.0098,"Dopamine receptor antagonist"
-"37","norgestrel",1.2135,"Progesterone receptor agonist"
-"38","isoxsuprine",1.561,"Adrenergic receptor agonist"
-"39","trolox",0.9361,"Antioxidant"
-"40","lenalidomide",0.7542,"Anticancer agent"
-"41","idazoxan",1.3514,"Adrenergic receptor antagonist"
-"42","atenolol-(+/-)",-1.3903,"Adrenergic receptor antagonist"
-"43","canrenone",1.0274,"Mineralocorticoid receptor antagonist"
-"44","sulmazole",0.7153,"Adenosine receptor antagonist"
-"45","SB-205384",1.3291,"GABA receptor modulator"
-"46","pheniramine",1.1442,"Histamine receptor antagonist"
-"47","naloxone",0.918,"Opioid receptor antagonist"
-"48","nadifloxacin",1.148,"Bacterial DNA gyrase inhibitor"
-"49","warfarin",0.8893,"Vitamin K antagonist"
-"50","erastin",1.4642,"Ion channel antagonist"
-"51","aminoglutethimide",1.0467,"Glucocorticoid receptor antagonist"
-"52","KI-16425",1.329,"Lysophosphatidic acid receptor antagonist"
-"53","narasin",0.7095,"Antiprotozoal agent"
-"54","emetine",0.8911,"Protein synthesis inhibitor"
-"55","zaldaride",1.2327,"Calmodulin antagonist"
-"56","lestaurtinib",1.1495,"FLT3 inhibitor|Growth factor receptor inhibitor|JAK inhibitor"
-"57","alexidine",1.1523,"Phosphatidylglycerophosphatase inhibitor"
-"58","prednisolone",0.942,"Glucocorticoid receptor agonist"
-"59","MTPG",0.9585,"Glutamate receptor antagonist"
-"60","PKI-179",0.7983,"MTOR inhibitor|PI3K inhibitor"
-"61","paclitaxel",1.213,"Tubulin inhibitor"
-"62","puromycin",1.4236,"Protein synthesis inhibitor"
-"63","bicalutamide",0.6323,"Androgen receptor antagonist"
-"64","florfenicol",0.9189,"Protein synthesis inhibitor"
-"65","mozavaptan",0.9595,"Vasopressin receptor antagonist"
-"66","methocarbamol",1.0068,"Muscle relaxant"
-"67","etoposide",1.3786,"Topoisomerase inhibitor"
-"68","lacitol",1.617,"Osmosis stimulant"
-"69","teniposide",1.1486,"Topoisomerase inhibitor"
-"70","bruceantin",0.9938,"Protein synthesis inhibitor"
-"71","buphenine",1.1644,"Adrenergic receptor agonist"
-"72","oprozomib",0.5266,"Proteasome inhibitor"
-"73","ketoconazole",0.7881,"Sterol demethylase inhibitor"
-"74","rabeprazole",0.8525,"ATPase inhibitor|Gastrin inhibitor"
-"75","norethisterone",1.1067,"Progesterone receptor agonist"
-"76","efonidipine-monoethanolate",0.9023,"L-type calcium channel blocker|T-type calcium channel blocker"
-"77","teroxirone",1.0637,"DNA inhibitor"
-"78","cefpiramide",1.2406,"Bacterial cell wall synthesis inhibitor"
-"79","practolol",1.3198,"Adrenergic receptor antagonist"
-"80","teriflunomide",1.5093,"Dihydroorotate dehydrogenase inhibitor"
-"81","melengestrol-acetate",0.8582,"Progesterone receptor agonist"
-"82","linalool",0.9394,"Anticonvulsant"
-"83","oxprenolol",0.7622,"Adrenergic receptor antagonist"
-"84","indoprofen",0.9301,"Cyclooxygenase inhibitor|Prostanoid receptor antagonist"
-"85","FLI-06",1.0133,"Notch signaling inhibitor"
-"86","WYE-125132",0.8843,"MTOR inhibitor"
-"87","iododexetimide",1.3425,"Acetylcholine receptor antagonist"
-"88","mitomycin-c",0.9297,"DNA alkylating drug|DNA inhibitor|DNA alkylating agent|DNA synthesis inhibitor"
-"89","ajmaline",0.7648,"Sodium channel blocker"
-"90","metacycline",0.7792,"Bacterial 50S ribosomal subunit inhibitor"
-"91","ciprofibrate",0.7261,"PPAR receptor agonist"
-"92","fludroxycortide",0.5139,"Glucocorticoid receptor agonist"
-"93","oxazepam",0.8888,"GABA benzodiazepine site receptor agonist"
-"94","terbutaline",1.2296,"Adrenergic receptor agonist"
-"95","meclizine",0.6933,"Constitutive androstane receptor (CAR) agonist"
-"96","hypoestoxide",1.225,"IKK inhibitor"
-"97","thiostrepton",0.9717,"FOXM1 inhibitor|Protein synthesis inhibitor"
-"98","halofantrine",0.6712,"Antimalarial agent"
-"99","Ro-106-9920",0.7818,"NFkB pathway inhibitor"
-"100","golgicide-a",0.4636,"ARF inhibitor"
-"101","butylscopolamine-bromide",0.8311,"Cholinergic receptor antagonist"
-"102","lanoconazole",1.67,"Sterol demethylase inhibitor"
-"103","KF-38789",1.0928,"P selectin inhibitor"
-"104","methotrexate",0.9423,"Dihydrofolate reductase inhibitor"
-"105","BNTX",0.7639,"Opioid receptor antagonist"
-"106","primaquine",1.2572,"Antimalarial agent|DNA inhibitor"
-"107","omeprazole",0.9918,"ATPase inhibitor"
-"108","PD-318088",1.1368,"MEK inhibitor"
-"109","oxyphencyclimine",1.2588,"Cholinergic receptor antagonist"
-"110","selamectin",1.2349,"Nematocide"
-"111","amisulpride",1.1736,"Dopamine receptor antagonist"
-"112","8-hydroxy-PIPAT",1.0581,"Dopamine receptor ligand"
-"113","sodium-stibogluconate",0.8728,"Tyrosine phosphatase inhibitor"
-"114","Ro-04-5595",1.1533,"Glutamate receptor antagonist"
-"115","sangivamycin",0.8524,"DNA inhibitor"
-"116","mexiletine",1.1666,"Sodium channel blocker"
-"117","lanatoside-c",0.7444,"Cardiac glycoside"
-"118","DPI-201106",0.8147,"Sodium channel activator"
-"119","EMD-53998",0.6265,"Phosphodiesterase inhibitor"
-"120","ixazomib-citrate",1.0316,"Proteasome inhibitor"
-"121","ifosfamide",0.7748,"DNA alkylating agent"
-"122","lafutidine",0.9155,"Histamine receptor antagonist"
-"123","K-858",1.0346,"Kinesin-like spindle protein inhibitor"
-"124","daunorubicin",1.0544,"RNA synthesis inhibitor|Topoisomerase inhibitor"
-"125","pranidipine",1.1875,"Calcium channel blocker"
-"126","BTS-54505",1.1235,"Dopamine reuptake inhibitor|Adrenergic transmitter uptake inhibitor|Norepinephrine reputake inhibitor|Serotonin reuptake inhibitor"
-"127","nanchangmycin",0.7746,"Other antibiotic"
-"128","evodiamine",1.1302,"ATPase inhibitor|TRPV agonist"
-"129","ouabain",1.0372,"ATPase inhibitor"
-"130","echinomycin",0.6772,"DNA intercalating agent"
-"131","minocycline",0.9206,"Bacterial 30S ribosomal subunit inhibitor"
-"132","cyclosporin-a",1.1896,"Calcineurin inhibitor"
-"133","secnidazole",1.0605,"Acetylcholinesterase inhibitor|Microtubule inhibitor"
-"134","sulconazole",0.7288,"Sterol demethylase inhibitor"
-"135","estramustine",1.083,"DNA alkylating drug"
-"136","fendiline",0.5336,"Calcium channel blocker"
-"137","SKF-96365",1.1274,"Calcium channel blocker"
-"138","lasalocid",1.1033,"Bacterial permeability inducer"
-"139","peruvoside",1.3052,"Cardiac glycoside"
-"140","adaprev",0.9599,"TGF beta receptor inhibitor"
-"141","tagatose",0.8465,"Phosphorylase inhibitor"
-"142","exemestane",0.8129,"Aromatase inhibitor"
-"143","CGP-54626",1.0149,"GABA receptor antagonist"
-"144","ibutilide",0.9564,"Potassium channel blocker"
-"145","pralatrexate",0.6468,"Dihydrofolate reductase inhibitor"
-"146","clenbuterol",1.0244,"Adrenergic receptor agonist"
-"147","lomefloxacin",1.2849,"Bacterial DNA gyrase inhibitor"
-"148","gambogic-acid",0.482,"Caspase activator|HSP inhibitor|MYC expression inhibitor|Telomerase reverse transcriptase expression inhibitor|Topoisomerase inhibitor"
-"149","enocitabine",0.8163,"DNA synthesis inhibitor"
-"150","hyoscyamine",1.0285,"Acetylcholine receptor antagonist"
-"151","prednisolone-hemisuccinate",1.1747,"Glucocorticoid receptor agonist"
-"152","tropisetron",0.9585,"Serotonin receptor antagonist"
-"153","midodrine",1.4709,"Adrenergic receptor agonist"
-"154","NSC-23766",-1.027,"Ras GTPase inhibitor"
-"155","fenoprofen",0.5122,"Prostagladin inhibitor"
-"156","BI-D1870",1.0419,"Ribosomal protein inhibitor"
-"157","saxagliptin",0.754,"Dipeptidyl peptidase inhibitor"
-"158","mephenytoin",0.5585,"Hydantoin antiepileptic"
-"159","meloxicam",0.904,"Cyclooxygenase inhibitor"
-"160","brefeldin-a",0.9569,"Protein synthesis inhibitor|Brefeldin A inhibited guanine nucleotide exchange protein inhibitors|Golgi-specific brefeldin A-resistance guanine nucleotide exchange factor inhibitor"
-"161","idoxuridin",0.9941,"DNA synthesis inhibitor"
-"162","clopamide",1.2872,"Sodium/chloride cotransporter inhibitor"
-"163","tetrahydrouridine",0.5204,"Cytidine deaminase inhibitor"
-"164","CGP-37849",0.5088,"Glutamate receptor antagonist"
-"165","eptifibatide",0.5096,"Platelet aggregation inhibitor"
-"166","eprinomectin",1.2457,"GABA receptor agonist"
-"167","capecitabine",0.7249,"DNA synthesis inhibitor|Thymidylate synthase inhibitor"
-"168","danazol",0.6979,"Estrogen receptor antagonist|Progesterone receptor agonist"
-"169","trimebutine",1.097,"Opioid receptor agonist"
-"170","temazepam",0.6953,"GABA receptor agonist"
-"171","digitoxin",1.255,"ATPase inhibitor"
-"172","PETCM",1.0797,"Caspase activator"
-"173","nicotine",1.2049,"Acetylcholine receptor agonist"
-"174","bucladesine",0.9313,"Adenosine receptor agonist|CAMP stimulant"
-"175","ginkgolide-a",1.3203,"GABA receptor antagonist"
-"176","digoxin",1.0119,"ATPase inhibitor"
-"177","colfosceril-palmitate",0.549,"Pulmonary surfactant"
-"178","tacrolimus",1.2891,"Calcineurin inhibitor"
-"179","pindolol",0.5565,"Adrenergic receptor antagonist"
-"180","ketoprofen",0.9103,"Cyclooxygenase inhibitor"
-"181","hydroxytacrine-maleate-(r,s)",1.0892,"Cholinesterase inhibitor"
-"182","paliperidone",1.0745,"Dopamine receptor antagonist|Serotonin receptor antagonist"
-"183","estramustine-phosphate",1.3959,"DNA synthesis inhibitor|Microtubule inhibitor|DNA alkylating drug|DNA inhibitor|Estrogen receptor agonist"
-"184","adarotene",0.5912,"Retinoid receptor agonist"
-"185","colchicine",0.7366,"Microtubule inhibitor"
-"186","PPT",0.8755,"Estrogen receptor agonist"
-"187","RITA",0.912,"MDM inhibitor"
-"188","trovafloxacin",0.8948,"Bacterial DNA gyrase inhibitor"
-"189","AG-14361",1.4057,"PARP inhibitor"
-"190","CL-218872",1.2097,"GABA receptor agonist"
-"191","famotidine",1.1847,"Histamine receptor antagonist"
-"192","nitisinone",0.4593,"Hydroxyphenylpyruvate dioxygenase inhibitor"
-"193","SB-590885",0.9773,"RAF inhibitor"
-"194","triapine",1.0111,"Ribonucleoside reductase inhibitor"
-"195","TAK-901",1.5319,"Aurora kinase inhibitor"
-"196","artemisinin",0.8812,"DNA synthesis inhibitor"
-"197","UNC-2250",1.3439,"MER tyrosine kinase inhibitor"
-"198","olaparib",1.1897,"PARP inhibitor"
-"199","panobinostat",0.8855,"HDAC inhibitor"
-"200","CHIR-124",0.7948,"CHK inhibitor"
-"201","parbendazole",1.1197,"Tubulin inhibitor"
-"202","sulfanilamide",1.0057,"Carbonic anhydrase inhibitor"
-"203","methiazole",1.0109,"Anthelmintic agent"
-"204","kifunensine",1.467,"Mannosidase inhibitor"
-"205","clofoctol",1.0967,"Protein synthesis inhibitor"
-"206","PF-477736",0.9432,"CHK inhibitor"
-"207","NSC-663284",0.9724,"CDC inhibitor"
-"208","trifluridine",1.2405,"DNA directed DNA polymerase inhibitor|Thymidylate synthase inhibitor"
-"209","1-azakenpaullone",0.8812,"Glycogen synthase kinase inhibitor"
-"210","CCT-137690",1.1692,"Aurora kinase inhibitor"
-"211","NU-6027",-1.5505,"CDK inhibitor"
-"212","roquinimex",0.6722,"Angiogenesis inhibitor|TNF production inhibitor"
-"213","cobimetinib",1.108,"MEK inhibitor"
-"214","foretinib",1.1393,"VEGFR inhibitor"
-"215","XL-388",0.5917,"MTOR inhibitor"
-"216","ixabepilone",1.2169,"Microtubule stabilizing agent"
-"217","raclopride",0.8875,"Dopamine receptor antagonist"
-"218","drospirenone",1.1952,"Mineralocorticoid receptor antagonist"
-"219","octenidine",1.1732,"Membrane integrity inhibitor"
-"220","YO-01027",1.1395,"Gamma secretase inhibitor"
-"221","BIBR-1532",1.4134,"Telomerase inhibitor"
-"222","GSK-1904529A",1.1225,"Insulin growth factor receptor inhibitor|Insulin receptor ligand|IGF-1 inhibitor"
-"223","GSK-3-inhibitor-IX",0.9022,"Glycogen synthase kinase inhibitor|Lipoxygenase inhibitor"
-"224","LY-2334737",1.1295,"Antitumor agent|Ribonucleoside reductase inhibitor"
-"225","PD-184352",1.0126,"MEK inhibitor"
-"226","E-7449",1.0929,"PARP inhibitor"
-"227","WP-1066",0.44,"STAT inhibitor"
-"228","dronedarone",0.6876,"Adrenergic receptor antagonist"
-"229","sevoflurane",1.1182,"Membrane integrity inhibitor"
-"230","PSI-7976",0.8636,"HCV inhibitor"
-"231","AZ-628",0.8114,"RAF inhibitor"
-"232","methoxyflurane",1.4337,"Membrane permeability inhibitor"
-"233","posaconazole",0.9532,"Sterol demethylase inhibitor"
-"234","LY-364947",1.2152,"P38 MAPK inhibitor|TGF beta receptor inhibitor"
-"235","UK-383367",0.7935,"Procollagen C-Endopeptidase Inhibitors"
-"236","ryuvidine",0.8557,"Histone lysine methyltransferase inhibitor"
-"237","bisindolylmaleimide-ix",0.8063,"PKC inhibitor"
-"238","LE-135",0.9469,"Retinoid receptor agonist"
-"239","GSK-1838705A",0.4962,"Insulin growth factor receptor inhibitor"
-"240","nobiletin",1.0434,"MEK inhibitor"
-"241","fosbretabulin",1.1203,"Tubulin inhibitor|VE-cadherin antagonist"
-"242","AM-580",0.9008,"Retinoid receptor agonist"
-"243","cabazitaxel",1.268,"Microtubule inhibitor"
-"244","BMS-599626",1.2842,"EGFR inhibitor|Receptor tyrosine protein kinase inhibitor"
-"245","frentizole",1.2209,"Immunosuppressant"
-"246","dexrazoxane",1.0963,"Chelating agent|Topoisomerase inhibitor"
-"247","PF-04691502",1.2224,"MTOR inhibitor|PI3K inhibitor"
-"248","BAM7",1.3355,"BAX activator"
-"249","WHI-P154",1.199,"JAK inhibitor"
-"250","curcumin",0.729,"Cyclooxygenase inhibitor|Histone acetyltransferase inhibitor|Lipoxygenase inhibitor|NFkB pathway inhibitor"
-"251","sparfloxacin",1.0206,"Bacterial DNA gyrase inhibitor"
-"252","VX-702",1.1623,"P38 MAPK inhibitor"
-"253","aminopurvalanol-a",0.9809,"Tyrosine kinase inhibitor|CDK inhibitor"
-"254","danusertib",0.9668,"Aurora kinase inhibitor|Growth factor receptor inhibitor"
-"255","PF-05212384",0.803,"MTOR inhibitor|PI3K inhibitor"
-"256","GSK-2126458",0.7346,"PI3K inhibitor|MTOR inhibitor"
-"257","tetrandrine",1.0259,"Calcium channel blocker"
-"258","I-BET-762",0.7018,"Bromodomain inhibitor"
-"259","LCL-161",1.2635,"XIAP inhibitor"
-"260","chlorpyrifos",1.1418,"Acetylcholinesterase inhibitor"
-"261","sarafloxacin",0.8616,"Bacterial DNA gyrase inhibitor"
-"262","irinotecan",1.0458,"Topoisomerase inhibitor"
-"263","ramatroban",1.2432,"Prostanoid receptor antagonist"
-"264","thioproperazine",1.0561,"Dopamine receptor antagonist"
-"265","tremorine",1.0571,"Acetylcholine receptor agonist"
-"266","3-amino-benzamide",0.739,"PARP inhibitor"
-"267","pelitinib",0.5976,"EGFR inhibitor"
-"268","DU-728",0.8209,"Structural glycoprotein antagonist"
-"269","CCG-50014",0.5416,"G protein signaling inhibitor"
-"270","zolantidine",0.9168,"Histamine receptor antagonist"
-"271","deforolimus",1.1526,"MTOR inhibitor"
-"272","CP-945598",1.2425,"Cannabinoid receptor antagonist"
-"273","D-4476",1.2114,"TGF beta receptor inhibitor"
-"274","merimepodib",0.8638,"Inosine monophosphate dehydrogenase inhibitor"
-"275","SR-57227A",1.0385,"Serotonin receptor agonist"
-"276","lovastatin",2.1062,"HMGCR inhibitor"
-"277","TAS-103",1.0231,"Topoisomerase inhibitor"
-"278","PHA-680632",0.734,"Aurora kinase inhibitor"
-"279","mibefradil",1.1164,"T-type calcium channel blocker"
-"280","forskolin",1.5623,"Adenylyl cyclase activator"
-"281","VS-4718",1.0093,"Focal adhesion kinase inhibitor"
-"282","caffeic-acid",0.959,"HIV integrase inhibitor|Lipoxygenase inhibitor|Nitric oxide production inhibitor|NFkB pathway inhibitor|PPAR receptor modulator|Tumor necrosis factor production inhibitor|TNF production inhibitor"
-"283","dabrafenib",1.1747,"RAF inhibitor"
-"284","sulfasalazine",1.3427,"Antirheumatic drug|NFkB pathway inhibitor"
-"285","GW-405833",1.0919,"Cannabinoid receptor agonist"
-"286","temocapril",1.0397,"Angiotensin converting enzyme inhibitor"
-"287","phenylbutazone",0.9764,"Cyclooxygenase inhibitor|Prostanoid receptor antagonist"
-"288","tiludronate",1.0839,"Bone resorption inhibitor|Osteoclast inhibitor"
-"289","latanoprost",0.922,"Prostanoid receptor agonist"
-"290","CPI-1189",0.8344,"Tumor necrosis factor release inhibitor"
-"291","norfloxacin",0.6929,"Bacterial DNA gyrase inhibitor"
-"292","tazemetostat",0.9456,"Histone lysine methyltransferase inhibitor"
-"293","ambazone",1.3021,"DNA damage inducer"
-"294","alectinib",1.073,"ALK tyrosine kinase receptor inhibitor"
-"295","aspirin",0.9476,"Cyclooxygenase inhibitor"
-"296","teprenone",0.915,"Mucus protecting agent"
-"297","carmofur",0.9877,"Thymidylate synthase inhibitor"
-"298","JNJ-7706621",0.6682,"CDK inhibitor"
-"299","pyroxamide",1.1272,"HDAC inhibitor"
-"300","PJ-34",1.0845,"PARP inhibitor"
-"301","ER-27319",1.0422,"Mediator release inhibitor|SYK inhibitor"
-"302","tipiracil",0.8758,"Thymidine phosphorylase inhibitor"
-"303","LY-2608204",0.9762,"Glucokinase activator"
-"304","NVP-BEZ235",1.0523,"MTOR inhibitor|PI3K inhibitor"
-"305","MEK1-2-inhibitor",0.9515,"MEK inhibitor"
-"306","trametinib",1.1068,"MEK inhibitor"
-"307","TG-101348",1.2547,"FLT3 inhibitor|JAK inhibitor"
-"308","nocodazole",1.0268,"Tubulin inhibitor"
-"309","CX-5461",1.1921,"RNA polymerase inhibitor"
-"310","mechlorethamine",0.7818,"DNA inhibitor"
-"311","PCI-24781",0.8512,"HDAC inhibitor"
-"312","dapivirine",1.0395,"Non-nucleoside reverse transcriptase inhibitor"
-"313","YM-976",1.3859,"Phosphodiesterase inhibitor"
-"314","ciclopirox",0.9444,"Membrane integrity inhibitor"
-"315","uridine",1.5963,"Dopamine receptor agonist"
-"316","acivicin",0.8902,"Gamma glutamyltransferase Inhibitors"
-"317","CGP-52411",1.1186,"EGFR inhibitor"
-"318","PFI-1",0.9207,"Bromodomain inhibitor"
-"319","everolimus",1.5049,"MTOR inhibitor"
-"320","AR-42",0.9668,"HDAC inhibitor"
-"321","NSC-3852",0.8227,"HDAC inhibitor"
-"322","pentamidine",1.3091,"Anti-pneumocystis agent"
-"323","piperazine",0.4057,"GABA receptor agonist"
-"324","ebastine",0.7374,"Histamine receptor antagonist"
-"325","thonzonium",1.0233,"ATPase inhibitor"
-"326","AT-7519",0.9354,"CDK inhibitor|Cell cycle inhibitor"
-"327","BMS-345541",0.6605,"IKK inhibitor"
-"328","pepstatin",1.0069,"Aspartic protease inhibitor"
-"329","P-5091",0.682,"Ubiquitin specific protease inhibitor"
-"330","midostaurin",1.5332,"FLT3 inhibitor|KIT inhibitor|PKC inhibitor"
-"331","dinaciclib",0.7775,"CDK inhibitor"
-"332","bitopertin",0.8788,"Glycine transporter inhibitor|GlyT-1 inhibitor"
-"333","givinostat",0.9486,"HDAC inhibitor"
-"334","tenovin-6",1.0233,"SIRT inhibitor"
-"335","ritodrine",1.5445,"Adrenergic receptor agonist"
-"336","LY-2603618",0.6635,"CHK inhibitor"
-"337","MK-0812",0.9907,"CC chemokine receptor antagonist"
-"338","TG-02",1.0279,"CDK inhibitor|FLT3 inhibitor|JAK inhibitor"
-"339","IKK-16",0.8692,"IKK inhibitor"
-"340","berberine",0.5624,"LDL receptor activator"
-"341","GSK-650394",1.2913,"Serum/glucocorticoid regulated kinase inhibitor"
-"342","BAY-11-7082",0.4243,"NFkB pathway inhibitor"
-"343","tiotidine",0.8142,"Histamine receptor antagonist"
-"344","gemcitabine",1.0625,"Ribonucleotide reductase inhibitor"
-"345","carfilzomib",0.6073,"Proteasome inhibitor"
-"346","penfluridol",0.7713,"T-type calcium channel blocker"
-"347","SB-228357",0.6877,"Serotonin receptor antagonist"
-"348","papaverine",0.9365,"Phosphodiesterase inhibitor"
-"349","obatoclax",0.6749,"BCL inhibitor"
-"350","clotrimazole",1.148,"Cytochrome P450 inhibitor|Imidazoline ligand"
-"351","abiraterone-acetate",0.6972,"17,20 lyase inhibitor|Cytochrome P450 inhibitor|Steroid sulfatase inhibitor|Androgen biosynthesis inhibitor"
-"352","pyrithione-zinc",-1.0577,"ATP synthase inhibitor"
-"353","CHIR-99021",1.3645,"Glycogen synthase kinase inhibitor"
-"354","oxymetazoline",1.5456,"Adrenergic receptor agonist"
-"355","piperacetazine",1.0475,"Dopamine receptor antagonist"
-"356","PLX-4720",1.3273,"RAF inhibitor"
-"357","mocetinostat",0.8852,"HDAC inhibitor"
-"358","evacetrapib",1.3409,"Cholesteryl ester transfer protein inhibitor"
-"359","GTP-14564",1.3123,"FLT3 inhibitor|Tyrosine kinase inhibitor"
-"360","regorafenib",0.7701,"FGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RAF inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor"
-"361","pibenzimol",1.1922,"DNA inhibitor"
-"362","bendamustine",0.948,"DNA inhibitor"
-"363","chloroxine",0.9321,"Opioid receptor antagonist"
-"364","LY-2874455",1.1508,"FGFR antagonist"
-"365","penicillamine-(D)",0.8673,"Chelating agent"
-"366","talmapimod",0.9743,"P38 MAPK inhibitor"
-"367","PD-168393",1.1595,"EGFR inhibitor"
-"368","JTC-801",0.8885,"Opioid receptor antagonist"
-"369","belinostat",1.2136,"HDAC inhibitor"
-"370","tranilast",0.9172,"Angiogenesis inhibitor"
-"371","indirubin",1.5766,"CDK inhibitor|Glycogen synthase kinase inhibitor"
-"372","artesunate",1.074,"DNA synthesis inhibitor"
-"373","eprobemide",0.7884,"Monoamine oxidase inhibitor"
-"374","fdcyd",1.144,"DNA methyltransferase inhibitor"
-"375","HA-14-1",0.6945,"BCL inhibitor"
-"376","propoxycaine",0.831,"Local anesthetic"
-"377","TG-100572",0.9382,"Src inhibitor|VEGFR inhibitor"
-"378","digitoxigenin",0.899,"ATPase inhibitor"
-"379","nafcillin",0.9057,"Bacterial cell wall synthesis inhibitor"
-"380","digoxigenin",0.9863,"Steroid"
-"381","bifemelane",0.8106,"Acetylcholine release stimulant"
-"382","U-0126",1.0463,"MEK inhibitor"
-"383","LB-42708",1.4421,"Farnesyltransferase inhibitor"
-"384","estradiol",0.8885,"Estrogen receptor agonist"
-"385","LY-2801653",0.9145,"MET inhibitor"
-"386","pacritinib",0.3906,"FLT3 inhibitor|JAK inhibitor"
-"387","mubritinib",1.2409,"Receptor tyrosine protein kinase inhibitor"
-"388","darapladib",0.7229,"Phospholipase inhibitor"
-"389","salvinorin-a",0.7985,"Opioid receptor agonist"
-"390","gossypol",0.7118,"BCL inhibitor|MCL1 inhibitor"
-"391","FR-139317",0.7964,"Endothelin receptor antagonist"
-"392","RKI-1447",1.3104,"Rho associated kinase inhibitor"
-"393","colforsin-daproate",1.4289,"Adenylyl cyclase activator|Adenylate cyclase stimulant"
-"394","SB-242235",0.5161,"P38 MAPK inhibitor"
-"395","saracatinib",1.4525,"Src inhibitor"
-"396","GGTI-298",1.0254,"GGTase inhibitor"
-"397","lapatinib",0.8958,"EGFR inhibitor|ErbB2 inhibitor"
-"398","eplerenone",0.8157,"Cytochrome P450 inhibitor"
-"399","sonidegib",0.8332,"Smoothened receptor antagonist"
-"400","CCMI",1.2187,"Acetylcholine receptor allosteric modulator"
-"401","fostamatinib",1.4791,"SYK inhibitor"
-"402","BIX-02188",0.9341,"MEK inhibitor"
-"403","rutin",0.8562,"Antioxidant|Capillary stabilizing agent|Nitric oxide scavenger"
-"404","bardoxolone",1.0117,"Nuclear factor erythroid derived, like (NRF2) activator"
-"405","NSC-697923",-0.6324,"Ubiquitin-conjugating enzyme inhibitor"
-"406","mefexamide",1.0326,"Psychoactive drug"
-"407","CEP-32496",1.1043,"RAF inhibitor"
-"408","SKI-II",1.0119,"Sphingosine kinase inhibitor"
-"409","TH-302",0.9223,"DNA alkylating drug"
-"410","NVP-TAE226",0.7574,"Protein tyrosine kinase inhibitor"
-"411","riluzole",1.3391,"Glutamate inhibitor"
-"412","selinexor",0.8557,"Exportin antagonist"
-"413","marimastat",1.0364,"Matrix metalloprotease inhibitor"
-"414","desonide",0.5675,"Glucocorticoid receptor agonist"
-"415","cariporide",1.6554,"Sodium/hydrogen exchanger inhibitor"
-"416","mitoxantrone",1.5039,"Topoisomerase inhibitor"
-"417","KW-2449",1.0551,"Abl kinase inhibitor|Aurora kinase inhibitor|FLT3 inhibitor"
-"418","AMG-900",1.3094,"Aurora kinase inhibitor"
-"419","AMG-458",1.1122,"MET inhibitor"
-"420","loxistatin-acid",1.1627,"Cysteine peptidase inhibitor"
-"421","U-18666A",0.8593,"Oxidosqualene cyclase inhibitor"
-"422","crenolanib",1.4059,"PDGFR tyrosine kinase receptor inhibitor"
-"423","simvastatin",1.8024,"HMGCR inhibitor"
-"424","LY-303511",1.0922,"Casein kinase inhibitor|PI3K inhibitor"
-"425","scriptaid",0.5805,"HDAC inhibitor"
-"426","odanacatib",0.8762,"Cathepsin inhibitor"
-"427","bardoxolone-methyl",0.5622,"Apoptosis stimulant|BCL inhibitor|Glutathione Reductase (NADPH) Activators|Heme Oxygenase Activators|IKK-1 (IKK-alpha) Inhibitors|NFkB pathway inhibitor|Nitric oxide production inhibitor|PPAR receptor agonist|Reducing agent|Nuclear factor erythroid derived, like (NRF2) activator"
-"428","AV-412",0.6489,"Receptor tyrosine protein kinase inhibitor"
-"429","busulfan",1.1546,"DNA inhibitor"
-"430","GDC-0980",0.9574,"MTOR inhibitor|PI3K inhibitor"
-"431","broxyquinoline",0.9925,"Antiprotozoal agent"
-"432","CYT-997",0.9666,"Tubulin inhibitor"
-"433","benzyldimethylhexadecylammonium",0.6743,"Cationic surfactant"
-"434","nilutamide",-1.4656,"Androgen receptor antagonist"
-"435","voreloxin",1.279,"Topoisomerase inhibitor"
-"436","dichlorvos",1.1305,"Acetylcholinesterase inhibitor"
-"437","sorafenib",0.8597,"FLT3 inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RAF inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor"
-"438","VU-0238429",1.0605,"Acetylcholine receptor allosteric modulator"
-"439","deoxycorticosterone-acetate",1.187,"Progestogen hormone"
-"440","ETP-46464",0.737,"ATR kinase inhibitor"
-"441","AT-9283",1.0924,"Aurora kinase inhibitor|JAK inhibitor|Abl kinase inhibitor|Bcr-Abl kinase inhibitor|FLT3 inhibitor|Mitotic inhibitor|Protein kinase inhibitor"
-"442","AZD-3463",1.1875,"ALK tyrosine kinase receptor inhibitor|Insulin growth factor receptor inhibitor"
-"443","phlorizin",1.2949,"Sodium/glucose cotransporter inhibitor"
-"444","5-hydroxymethyl-tolterodine",1.5183,"Acetylcholine receptor antagonist"
-"445","NVP-AEW541",0.6729,"IGF-1 inhibitor"
-"446","ethacridine-lactate-monohydrate",0.9791,"DNA intercalating agent"
-"447","fluorouracil",1.1046,"RNA synthesis inhibitor|Thymidylate synthase inhibitor"
-"448","CNX-2006",0.9377,"EGFR inhibitor"
-"449","pirenperone",1.1223,"Serotonin receptor antagonist"
-"450","apatinib",0.9191,"RET tyrosine kinase inhibitor"
-"451","MK-8745",1.0077,"Aurora kinase inhibitor"
-"452","OSI-930",1.0604,"KIT inhibitor|VEGFR inhibitor"
-"453","GSK-2110183",0.797,"AKT inhibitor"
-"454","maprotiline",1.1014,"Norepinephrine reputake inhibitor|Tricyclic antidepressant"
-"455","LY-2784544",0.7258,"JAK inhibitor"
-"456","4-iodo-6-phenylpyrimidine",1.0961,"Macrophage inhibitor"
-"457","josamycin",1.1917,"Bacterial 50S ribosomal subunit inhibitor"
-"458","licochalcone-a",1.0718,"Topoisomerase inhibitor"
-"459","NMS-873",1.1809,"ATPase inhibitor"
-"460","K-Ras(G12C)-inhibitor-6",1.3576,"K-ras inhibitor"
-"461","PD-153035",0.8959,"EGFR inhibitor"
-"462","thiocolchicoside",1.0272,"GABA receptor antagonist"
-"463","imiquimod",0.741,"Interferon inducer|TLR agonist"
-"464","TAK-733",1.1385,"MEK inhibitor"
-"465","VX-765",0.9038,"Caspase inhibitor"
-"466","VE-821",0.4746,"ATR kinase inhibitor"
-"467","BIX-01294",1.1268,"DNA methyltransferase inhibitor|Histone lysine methyltransferase inhibitor"
-"468","GW-842166",1.08,"Cannabinoid receptor agonist"
-"469","azomycin-(2-nitroimidazole)",0.3539,"Protein synthesis inhibitor"
-"470","costunolide",0.8051,"Telomerase inhibitor"
-"471","AST-1306",0.9722,"EGFR inhibitor"
-"472","D-64131",1.0759,"Microtubule inhibitor"
-"473","metatinib",0.853,"Bcr-Abl kinase inhibitor"
-"474","levocetirizine",1.147,"Histamine receptor antagonist"
-"475","butamben",0.9081,"Sodium channel blocker"
-"476","calcitriol",0.8252,"Vitamin D receptor agonist"
-"477","nomegestrol-acetate",1.2366,"Progesterone receptor agonist"
-"478","cyclovirobuxin-d",1.2412,"Calcium channel modulator"
-"479","cyproheptadine",-1.1056,"Histamine receptor antagonist"
-"480","spiradoline",0.8354,"Opioid receptor agonist"
-"481","flutamide",1.056,"Androgen receptor antagonist"
-"482","CH-5132799",0.9459,"PI3K inhibitor"
-"483","TW-37",0.6826,"BCL inhibitor"
-"484","nitrocaramiphen",0.7412,"Cholinergic receptor antagonist"
-"485","benzydamine",0.8557,"Prostanoid receptor antagonist"
-"486","A-803467",0.7325,"Sodium channel blocker"
-"487","cilostamide",0.5987,"Phosphodiesterase inhibitor"
-"488","resminostat",0.511,"HDAC inhibitor"
-"489","genipin",1.2932,"Choleretic agent"
-"490","CD-437",0.6287,"Retinoid receptor agonist"
-"491","BVD-523",0.7859,"MAP kinase inhibitor"
-"492","isoflupredone-acetate",0.7157,"Glucocorticoid receptor agonist"
-"493","BGT-226",0.6761,"PI3K inhibitor"
-"494","chlorambucil",0.9203,"DNA inhibitor"
-"495","1-naphthyl-PP1",1.0466,"Src inhibitor"
-"496","ziprasidone",0.7112,"Dopamine receptor antagonist|Serotonin receptor antagonist"
-"497","MK-8245",0.9063,"Stearoyl-CoA desaturase inhibitor"
-"498","hypericin",0.5486,"Tyrosine kinase inhibitor"
-"499","axitinib",1.0294,"PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"500","clomifene",0.5595,"Estrogen receptor antagonist"
-"501","KX2-391",1.2419,"Src inhibitor|Tubulin inhibitor"
-"502","torasemide",1.047,"Electrolyte reabsorption inhibitor|Thromboxane receptor antagonist"
-"503","homoquinolinic-acid",1.183,"Glutamate receptor agonist"
-"504","SB-216641",0.4558,"Serotonin receptor antagonist"
-"505","UNBS-5162",1.1975,"CC chemokine receptor antagonist"
-"506","lucitanib",0.8533,"FGFR inhibitor|VEGFR inhibitor"
-"507","AZD-9668",0.9313,"Elastase inhibitor"
-"508","1-phenylbiguanide",1.4691,"Serotonin receptor agonist"
-"509","rimexolone",0.8917,"Glucocorticoid receptor agonist"
-"510","icotinib",1.2501,"EGFR inhibitor"
-"511","levobunolol",0.8492,"Adrenergic receptor antagonist"
-"512","TAK-632",0.7731,"RAF inhibitor"
-"513","barasertib",1.0058,"Aurora kinase inhibitor"
-"514","temozolomide",1.2287,"DNA alkylating drug"
-"515","AMG-208",1.4709,"Tyrosine kinase inhibitor"
-"516","etomoxir",0.7081,"Carnitine palmitoyltransferase inhibitor"
-"517","vanoxerine",0.9776,"Dopamine uptake inhibitor"
-"518","SU-3327",0.7362,"JNK inhibitor"
-"519","disulfiram",0.7224,"Aldehyde dehydrogenase inhibitor|DNA methyltransferase inhibitor|TRPV agonist"
-"520","azathioprine",1.7138,"Dehydrogenase inhibitor"
-"521","adapalene",0.9025,"Retinoid receptor agonist"
-"522","tivantinib",0.9901,"Tyrosine kinase inhibitor"
-"523","obidoxime",0.9741,"Cholinesterase reactivator"
-"524","rociletinib",0.8488,"EGFR inhibitor"
-"525","LY-2835219",1.6019,"CDK inhibitor"
-"526","difluprednate",0.6411,"Glucocorticoid receptor agonist"
-"527","valnemulin",1.2224,"Bacterial 50S ribosomal subunit inhibitor"
-"528","GW-3965",0.9398,"ABC transporter expression enhancer|LXR agonist"
-"529","ZK-93423",1.0676,"Benzodiazepine receptor agonist"
-"530","clofarabine",1.0453,"Ribonucleoside reductase inhibitor"
-"531","tanshinone-i",0.4109,"AP inhibitor"
-"532","cimetidine",0.7608,"Histamine receptor antagonist"
-"533","imidapril",1.0254,"Angiotensin converting enzyme inhibitor"
-"534","streptozotocin",1.1452,"DNA alkylating agent"
-"535","parthenolide-(-)",0.5415,"NFkB pathway inhibitor|Adiponectin receptor agonist"
-"536","levonorgestrel",0.3399,"Estrogen receptor agonist|Glucocorticoid receptor antagonist|Progesterone receptor agonist|Progesterone receptor antagonist"
-"537","ciclesonide",0.6198,"Glucocorticoid receptor agonist"
-"538","GZD-824",1.2453,"Bcr-Abl kinase inhibitor"
-"539","dacarbazine",1.0308,"DNA alkylating agent"
-"540","niclosamide",0.9213,"DNA replication inhibitor|STAT inhibitor"
-"541","ABT-702",0.719,"Adenosine kinase inhibitor"
-"542","cycloheximide",1.4112,"Protein synthesis inhibitor"
-"543","WAY-170523",1.135,"Metalloproteinase inhibitor"
-"544","carmustine",1.2332,"DNA alkylating drug|DNA inhibitor"
-"545","asymmetrical-dimethylarginine",0.494,"Dimethylarginine dimethylaminohydrolase inhibitor|Nitric oxide synthase inhibitor"
-"546","dolutegravir",0.9721,"HIV integrase inhibitor"
-"547","bindarit",0.7852,"NFkB pathway inhibitor"
-"548","PU-H71",1.1302,"HSP inhibitor"
-"549","tamibarotene",1.363,"Retinoid receptor agonist"
-"550","stemregenin-1",0.8305,"Aryl hydrocarbon receptor antagonist"
-"551","GSK-1070916",1.2542,"Aurora kinase inhibitor"
-"552","ribociclib",1.0464,"CDK inhibitor"
-"553","CEP-33779",0.8151,"JAK inhibitor"
-"554","astemizole",0.8236,"Histamine receptor antagonist"
-"555","mifepristone",0.8729,"Glucocorticoid receptor antagonist|Progesterone receptor antagonist"
-"556","kenpaullone",1.2157,"CDK inhibitor|Glycogen synthase kinase inhibitor"
-"557","filanesib",1.1004,"Kinesin inhibitor"
-"558","zardaverine",1.1778,"Phosphodiesterase inhibitor"
-"559","GSK-256066",1.4303,"Phosphodiesterase inhibitor"
-"560","MRS-1220",0.8042,"Adenosine receptor antagonist"
-"561","AZD-8330",1.0439,"MEK inhibitor"
-"562","SB-525334",0.7696,"TGF beta receptor inhibitor"
-"563","dioscin",0.9218,"Apoptosis stimulant"
-"564","PF-03758309",1.1216,"P21 activated kinase inhibitor"
-"565","afobazole",0.7546,"Anxiolytic"
-"566","LY-2183240",1.0301,"FAAH reuptake inhibitor|FAAH inhibitor"
-"567","camptothecin",0.7351,"Topoisomerase inhibitor"
-"568","clonazepam",1.0054,"GABA benzodiazepine site receptor agonist"
-"569","narlaprevir",1.3782,"HCV inhibitor"
-"570","domperidone",1.2474,"Dopamine receptor antagonist"
-"571","uprosertib",0.6098,"AKT inhibitor"
-"572","FK-3311",0.5297,"Cyclooxygenase inhibitor"
-"573","diazooxonorleucine",1.1283,"Glutamate receptor antagonist"
-"574","VER-49009",0.9598,"HSP inhibitor"
-"575","ganetespib",0.9158,"HSP inhibitor"
-"576","JK-184",1.0491,"Hedgehog pathway inhibitor"
-"577","MK-0773",0.9806,"Androgen receptor modulator"
-"578","SAR-131675",1.0524,"VEGFR inhibitor"
-"579","STF-118804",1.071,"NAMPT inhibitor"
-"580","atipamezole",1.1189,"Adrenergic receptor antagonist"
-"581","DMH1",1.1637,"ALK tyrosine kinase receptor inhibitor"
-"582","nithiamide",1.2508,"Bacterial DNA inhibitor"
-"583","SDZ-WAG-994",0.9422,"Adenosine receptor agonist"
-"584","TG-101209",0.8641,"JAK inhibitor"
-"585","lenvatinib",1.264,"FGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"586","bisacodyl",1.0893,"Laxative"
-"587","SB-505124",0.7976,"ALK tyrosine kinase receptor inhibitor"
-"588","torin-1",0.7745,"MTOR inhibitor|PI3K inhibitor"
-"589","tyrphostin-A9",0.9292,"Protein tyrosine kinase inhibitor|Tyrosine kinase inhibitor"
-"590","crizotinib-(S)",1.0467,"MTH1 inhibitor"
-"591","CR8-(R)",0.7234,"CDK inhibitor"
-"592","spermidine",0.4408,"Glutamate receptor modulator"
-"593","eltrombopag",0.9688,"Thrombopoietin receptor agonist"
-"594","SC-12267",1.1886,"Dihydroorotate dehydrogenase inhibitor"
-"595","parachlorophenol",1.1538,"Antiinfective drug"
-"596","GSK-2656157",0.8755,"PERK inhibitor"
-"597","KW-2478",0.9704,"HSP inhibitor"
-"598","CUDC-101",0.9044,"EGFR inhibitor"
-"599","GW-441756",0.8529,"Growth factor receptor inhibitor"
-"600","ZM-306416",0.9235,"Abl kinase inhibitor|Src inhibitor|VEGFR inhibitor"
-"601","lonafarnib",1.4823,"Farnesyltransferase inhibitor"
-"602","STA-5326",0.6459,"Interleukin synthesis inhibitor"
-"603","NVP-AUY922",0.9308,"HSP inhibitor"
-"604","tioxolone",0.9161,"Carbonic anhydrase inhibitor"
-"605","buparlisib",1.0983,"PI3K inhibitor"
-"606","AZ-20",0.6683,"ATR kinase inhibitor"
-"607","tasisulam",0.4705,"Apoptosis stimulant"
-"608","satraplatin",0.8764,"DNA alkylating drug"
-"609","epiandrosterone",1.6171,"Steroid"
-"610","sunitinib",1.0994,"FLT3 inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor"
-"611","temsirolimus",1.2807,"MTOR inhibitor"
-"612","acetophenazine",0.6487,"Dopamine receptor antagonist"
-"613","CHIR-98014",0.6772,"GSK inhibitor"
-"614","mibampator",1.2569,"Glutamate receptor modulator"
-"615","SR-33805",1.0212,"Calcium channel blocker"
-"616","GDC-0349",0.642,"Pim kinase inhibitor"
-"617","polydatin",1.1275,"ICAM1 expression inhibitor"
-"618","BMS-387032",0.644,"CDK inhibitor|Cell cycle inhibitor|MCL1 inhibitor"
-"619","oncrasin-1",0.9378,"Apoptosis stimulant"
-"620","OTX-015",1.1968,"Bromodomain inhibitor"
-"621","defactinib",0.9745,"Focal adhesion kinase inhibitor"
-"622","CP-673451",1.927,"PDGFR tyrosine kinase receptor inhibitor"
-"623","WP-1130",0.6644,"Deubiquitinase inhibitor"
-"624","iobenguane",1.0147,"Antineoplastic agent"
-"625","flufenamic-acid",1.1205,"Chloride channel blocker"
-"626","Y-27632",0.8629,"Rho associated kinase inhibitor"
-"627","ponatinib",0.7579,"Bcr-Abl kinase inhibitor|FLT3 inhibitor|PDGFR tyrosine kinase receptor inhibitor"
-"628","2-methoxyestradiol",0.8966,"Hypoxia inducible factor inhibitor"
-"629","bromosporine",0.9106,"Bromodomain inhibitor"
-"630","vismodegib",1.3856,"Hedgehog pathway inhibitor|Smoothened receptor antagonist"
-"631","taselisib",1.0738,"PI3K inhibitor"
-"632","atenolol",1.2572,"Adrenergic receptor antagonist"
-"633","famciclovir",1.3136,"DNA polymerase inhibitor"
-"634","clofibrate",1.1777,"PPAR receptor agonist"
-"635","7-hydroxystaurosporine",1.0602,"CDK inhibitor|CHK inhibitor|PKC inhibitor"
-"636","betulinic-acid",0.9218,"Apoptosis stimulant|Caspase activator|Diacylglycerol O acyltransferase inhibitor|HIV integrase inhibitor|NFkB pathway activator|SARS coronavirus 3C-like protease inhibitor|Topoisomerase inhibitor"
-"637","JZL-184",1.3036,"Monoacylglucerol lipase inhibitor"
-"638","VU-0361737",1.1894,"Glutamate receptor positive allosteric modulator"
-"639","M-344",0.9535,"HDAC inhibitor"
-"640","MPI-0479605",1.0226,"Mitotic kinase inhibitor"
-"641","3'-fluorobenzylspiperone",0.5712,"Dopamine receptor ligand"
-"642","anguidine",0.8024,"Protein synthesis inhibitor"
-"643","ARRY-334543",1.0401,"EGFR inhibitor"
-"644","TG-100713",1.0056,"PI3K inhibitor"
-"645","acetylsalicylsalicylic-acid",1.3741,"Cyclooxygenase inhibitor"
-"646","phenazone",0.3917,"Cyclooxygenase inhibitor"
-"647","cytochalasin-b",1.2813,"Microtubule inhibitor"
-"648","chlorogenic-acid",1.1698,"Antioxidant"
-"649","KI-8751",1.1617,"VEGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor"
-"650","BMS-754807",1.133,"IGF-1 inhibitor"
-"651","4-(4-fluorobenzoyl)-1-(4-phenylbutyl)-piperidine",0.7669,"Serotonin receptor antagonist"
-"652","PP-1",1.6616,"Abl kinase inhibitor|Src inhibitor"
-"653","podophyllotoxin",1.1695,"Microtubule inhibitor|Tubulin inhibitor"
-"654","bephenium",1.2536,"Acetylcholine receptor agonist"
-"655","balapiravir",0.922,"RNA polymerase inhibitor"
-"656","cebranopadol",1.1838,"Opioid receptor agonist"
-"657","tecastemizole",0.3083,"Histamine receptor antagonist"
-"658","CNX-774",1.1993,"Bruton's tyrosine kinase (BTK) inhibitor"
-"659","YM-201636",1.36,"PI3K inhibitor"
-"660","methyldopa",-1.0118,"Adrenergic receptor agonist"
-"661","BAY-11-7085",0.7781,"NFkB pathway inhibitor"
-"662","PSB-1115",1.3438,"Adenosine receptor antagonist"
-"663","hyodeoxycholic-acid",1.0221,"Atherosclerosis formation inhibitor"
-"664","securinine",1.3314,"GABA receptor antagonist|TP53 activator"
-"665","nintedanib",1.3291,"FGFR inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"666","prazosin",0.2626,"Adrenergic receptor antagonist"
-"667","vincristine",1.3335,"Tubulin inhibitor"
-"668","BIBU-1361",0.9455,"EGFR inhibitor"
-"669","dasatinib",1.5845,"Bcr-Abl kinase inhibitor|Ephrin inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|Src inhibitor|Tyrosine kinase inhibitor"
-"670","thioguanine",1.0229,"Purine antagonist"
-"671","PIK-75",1.0741,"DNA protein kinase inhibitor|PI3K inhibitor"
-"672","pilaralisib",1.1493,"PI3K inhibitor"
-"673","BX-912",1.1867,"Pyruvate dehydrogenase kinase inhibitor"
-"674","PD-0325901",1.1286,"MAP kinase inhibitor|Protein kinase inhibitor|MEK inhibitor"
-"675","mesna",1.0357,"Antioxidant"
-"676","PHA-767491",1.1025,"CDC inhibitor"
-"677","NVP-TAE684",0.8478,"ALK tyrosine kinase receptor inhibitor"
-"678","canertinib",0.998,"EGFR inhibitor"
-"679","fenofibrate",1.2507,"PPAR receptor agonist"
-"680","capsaicin",1.1032,"TRPV agonist"
-"681","oxiracetam",1.4449,"Acetylcholine receptor agonist"
-"682","cobicistat",1.2001,"Cytochrome P450 inhibitor"
-"683","lurasidone",0.5464,"Dopamine receptor antagonist|Serotonin receptor antagonist"
-"684","palbociclib",1.177,"CDK inhibitor"
-"685","fenbendazole",0.9838,"Tubulin inhibitor"
-"686","meglitinide",1.1272,"Potassium channel blocker"
-"687","toremifene",1.0415,"Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)"
-"688","taurine",1.5998,"Antioxidant"
-"689","cabozantinib",1.3824,"RET tyrosine kinase inhibitor|VEGFR inhibitor"
-"690","TPCA-1",0.9626,"IKK inhibitor"
-"691","ilomastat",1.0798,"Matrix metalloprotease inhibitor"
-"692","hydroxyurea",0.7023,"Ribonucleoside reductase inhibitor"
-"693","nemorubicin",0.9089,"Topoisomerase inhibitor"
-"694","BIIB-021",1.1312,"HSP inhibitor"
-"695","oxibendazole",1.2355,"Tubulin inhibitor"
-"696","R-547",1.3022,"CDK inhibitor"
-"697","chlorhexidine",0.6625,"Membrane integrity inhibitor"
-"698","tacedinaline",0.7932,"HDAC inhibitor"
-"699","oligomycin-a",0.7735,"ATP synthase inhibitor|ATPase inhibitor"
-"700","clindamycin-phosphate",0.5739,"Bacterial 50S ribosomal subunit inhibitor|Protein synthesis inhibitor"
-"701","TAK-715",1.2882,"P38 MAPK inhibitor"
-"702","dirithromycin",1.4099,"Bacterial 50S ribosomal subunit inhibitor"
-"703","epothilone-d",1.1565,"Microtubule stabilizing agent|Microtubule stimulant|Tubulin polymerisation inhibitor|Tubulin inhibitor"
-"704","GDC-0941",0.868,"PI3K inhibitor"
-"705","pterostilbene",0.6065,"Cyclooxygenase inhibitor|PPAR receptor agonist"
-"706","tivozanib",1.1413,"VEGFR inhibitor"
-"707","OTS-167",0.8469,"Maternal embryonic leucine zipper kinase inhibitor"
-"708","arctigenin",0.9131,"MEK inhibitor"
-"709","aurora-a-inhibitor-i",0.4392,"Aurora kinase inhibitor"
-"710","baricitinib",1.0514,"JAK inhibitor"
-"711","MK-5108",1.391,"Aurora kinase inhibitor"
-"712","cinalukast",0.8806,"Leukotriene receptor antagonist"
-"713","PRT-062607",0.7927,"Syk inhibitor"
-"714","ruxolitinib",1.4614,"JAK inhibitor"
-"715","remoxipride",0.9082,"Dopamine receptor antagonist"
-"716","CMPD-1",1.257,"P38 MAPK inhibitor"
-"717","halofuginone",1.0548,"Collagenase inhibitor"
-"718","MK-1775",0.7397,"WEE1 kinase inhibitor"
-"719","monobenzone",0.5882,"Melanin inhibitor"
-"720","zolmitriptan",0.8385,"Serotonin receptor agonist"
-"721","PR-619",1.0885,"DUB inhibitor"
-"722","JQ1-(+)",1.2315,"Bromodomain inhibitor"
-"723","fudosteine",1.2769,"Mucolytic agent"
-"724","equol",-1.0432,"Estrogen receptor agonist"
-"725","alpelisib",0.945,"PI3K inhibitor"
-"726","azacitidine",1.184,"DNA methyltransferase inhibitor"
-"727","rigosertib",1.1438,"Cell cycle inhibitor|PLK inhibitor"
-"728","SC-144",1.0601,"P-glycoprotein inhibitor"
-"729","AM-404",1.0829,"Cyclooxygenase inhibitor|FAAH inhibitor|TRPV antagonist"
-"730","latrepirdine",0.9236,"Glutamate receptor antagonist"
-"731","AP-26113",1.2036,"ALK tyrosine kinase receptor inhibitor"
-"732","rifampin",1.0096,"RNA polymerase inhibitor"
-"733","MGCD-265",1.0134,"VEGFR inhibitor"
-"734","voxtalisib",1.0745,"MTOR inhibitor|PI3K inhibitor"
-"735","ABT-737",1.0227,"BCL inhibitor"
-"736","amonafide",1.3989,"Topoisomerase inhibitor"
-"737","vemurafenib",1.191,"RAF inhibitor"
-"738","MK-2461",1.4323,"FGFR inhibitor|VEGFR inhibitor"
-"739","chicago-sky-blue-6b",1.3968,"Glutamate transporter modulator|Macrophage migration inhibiting factor inhibitor|Glutamate inhibitor|Macrophage inhibitor"
-"740","clofazimine",0.5387,"GK0582 inhibitor"
-"741","Y-39983",1.2384,"Rho associated kinase inhibitor"
-"742","epirubicin",1.3107,"Topoisomerase inhibitor"
-"743","fluroxene",1.199,"Local anesthetic"
-"744","dacinostat",0.6806,"HDAC inhibitor"
-"745","selumetinib",1.5122,"MEK inhibitor"
-"746","CCT-129202",0.8435,"Aurora kinase inhibitor"
-"747","dacomitinib",1.2133,"EGFR inhibitor"
-"748","Ro-9187",0.9039,"HCV inhibitor"
-"749","hesperadin",1.1217,"Aurora kinase inhibitor"
-"750","Ro-90-7501",1.5372,"Beta amyloid inhibitor"
-"751","AT-13387",1.0645,"HSP antagonist"
-"752","palmatine-chloride",0.7831,"Dopamine synthesis inhibitor"
-"753","FK-866",0.9051,"Niacinamide phosphoribosyltransferase inhibitor"
-"754","amoxicillin",0.6198,"Penicillin binding protein inhibitor"
-"755","NMS-E973",0.8626,"HSP90 Inhibitor"
-"756","AZD-6482",1.1069,"PI3K inhibitor"
-"757","acetylcysteine",0.7812,"Mucolytic agent"
-"758","AZ-3146",0.9169,"Monopolar spindle 1 kinase inhibitor"
-"759","naproxen",-0.7614,"Cyclooxygenase inhibitor"
-"760","MLN-0128",0.6808,"MTOR inhibitor"
-"761","delanzomib",0.7665,"Proteasome inhibitor"
-"762","tozasertib",1.2574,"Aurora kinase inhibitor|Bcr-Abl kinase inhibitor|FLT3 inhibitor|JAK inhibitor"
-"763","tedizolid",0.9666,"Bacterial 50S ribosomal subunit inhibitor"
-"764","piperine",0.6036,"Monoamine oxidase inhibitor"
-"765","cyproterone-acetate",0.7723,"Androgen receptor antagonist|Progesterone receptor agonist|Testosterone receptor antagonist"
-"766","ubenimex",0.4995,"Leukotriene inhibitor"
-"767","LDN-212854",0.9005,"Bone morphogenic protein inhibitor"
-"768","CB-10-277-(free-acid)",1.1088,"DNA inhibitor|DNA synthesis inhibitor"
-"769","sulfabenzamide",0.9871,"Bacterial antifolate"
-"770","crystal-violet",0.6757,"Other antibiotic"
-"771","tiagabine",0.6318,"GABA uptake inhibitor"
-"772","tyrphostin-AG-99",1.0817,"Tyrosine kinase inhibitor"
-"773","MG-132",0.6648,"Proteasome inhibitor"
-"774","niacin",0.9176,"NAD precursor with lipid lowering effects|Vitamin B"
-"775","GSK-1292263",0.6073,"Glucose-Dependent Insulinotropic Receptor (GDIR, GPR119) Agonists"
-"776","chlormidazole",0.9327,"Fungal lanosterol demethylase inhibitor"
-"777","ONX-0914",0.9106,"Proteasome inhibitor"
-"778","paricalcitol",0.5369,"Vitamin D receptor agonist"
-"779","idelalisib",1.2225,"PI3K inhibitor"
-"780","PHA-848125",1.1563,"CDK inhibitor|Growth factor receptor inhibitor"
-"781","SB-218795",0.946,"Tachykinin antagonist"
-"782","combretastatin-A-4",0.9073,"Tubulin inhibitor|Angiogenesis inhibitor|Apoptosis stimulant|Tubulin polymerisation inhibitor"
-"783","SGI-1027",1.0271,"DNA methyltransferase inhibitor"
-"784","endo-IWR-1",1.0565,"PARP inhibitor"
-"785","SB-225002",0.8456,"CC chemokine receptor antagonist"
-"786","romidepsin",0.9379,"HDAC inhibitor"
-"787","thiomersal",0.7537,"Other antibiotic"
-"788","SB-366791",1.087,"TRPV antagonist"
-"789","resatorvid",1.1075,"Toll-like receptor antagonist"
-"790","FERb-033",0.7629,"ErbB2 inhibitor"
-"791","RGFP-966",0.856,"HDAC inhibitor"
-"792","fleroxacin",1.3878,"Topoisomerase inhibitor"
-"793","2,3-DCPE",1.0975,"Bcl-XL downregulator"
-"794","AS-1949490",0.7728,"SHIP2 phosphatase inhibitor"
-"795","AVN-944",0.9301,"Inosine monophosphate dehydrogenase inhibitor"
-"796","anagrelide",0.7469,"Phosphodiesterase inhibitor"
-"797","fluticasone-propionate",1.289,"Glucocorticoid receptor agonist"
-"798","venetoclax",0.873,"BCL inhibitor"
-"799","lerisetron",0.9479,"Serotonin receptor antagonist"
-"800","aztreonam",0.4304,"Bacterial cell wall synthesis inhibitor"
-"801","idasanutlin",0.9782,"MDM inhibitor"
-"802","G-1",1.1056,"G protein-coupled receptor agonist"
-"803","BMS-265246",0.9442,"CDK inhibitor"
-"804","tipifarnib-P2",1.5103,"Farnesyltransferase inhibitor"
-"805","ZSTK-474",0.9895,"PI3K inhibitor"
-"806","idarubicin",1.2196,"Topoisomerase inhibitor"
-"807","epinephrine",1.5655,"Adrenergic receptor agonist|Neurotransmitter"
-"808","EPZ-5676",1.3726,"DOT1L inhibitor"
-"809","semaxanib",1.1433,"VEGFR inhibitor"
-"810","temoporfin",1.2466,"Radical formation stimulant"
-"811","acipimox",0.7899,"Cholesterol inhibitor"
-"812","mycophenolic-acid",0.8429,"Dehydrogenase inhibitor|Inositol monophosphatase inhibitor"
-"813","10-hydroxycamptothecin",0.253,"Topoisomerase inhibitor"
-"814","raloxifene",1.4287,"Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)"
-"815","barasertib-HQPA",1.2504,"Aurora kinase inhibitor"
-"816","2'-MeCCPA",1.1061,"Adenosine receptor agonist"
-"817","gefitinib",0.9699,"EGFR inhibitor"
-"818","dienogest",1.127,"Progesterone receptor agonist"
-"819","Ro-4987655",1.2165,"MEK inhibitor"
-"820","torcetrapib",1.151,"Cholesteryl ester transfer protein inhibitor"
-"821","PHA-793887",1.4163,"CDK inhibitor"
-"822","CYC-116",1.4373,"Aurora kinase inhibitor"
-"823","ispinesib",1.1727,"Kinesin inhibitor"
-"824","AZ-960",1.2312,"JAK inhibitor"
-"825","BI-2536",1.4165,"PLK inhibitor"
-"826","AMG-232",1.3804,"MDM inhibitor"
-"827","nefiracetam",0.8459,"Acetylcholine receptor agonist|GABA receptor agonist"
-"828","avanafil",1.1102,"Phosphodiesterase inhibitor"
-"829","diphenyleneiodonium",0.9706,"Nitric oxide synthase inhibitor"
-"830","halobetasol-propionate",1.0269,"Glucocorticoid receptor agonist|Immunosuppressant"
-"831","serdemetan",1.0441,"MDM inhibitor"
-"832","AZD-1480",0.7267,"JAK inhibitor"
-"833","salidroside",1.0531,"Beta amyloid protein neurotoxicity inhibitor"
-"834","CPP",0.3779,"Glutamate receptor antagonist"
-"835","TMC-353121",0.9692,"RSV fusion inhibitor"
-"836","afatinib",1.0079,"EGFR inhibitor"
-"837","fluvastatin",2.0434,"HMGCR inhibitor"
-"838","VU-0364770",1.2693,"Glutamate receptor positive allosteric modulator"
-"839","fludarabine",1.0714,"DNA synthesis inhibitor"
-"840","oxyquinoline",0.5379,"Chelating agent"
-"841","oleoylethanolamide",-0.7461,"Cannabinoid receptor agonist|Glucose dependent insulinotropic receptor agonist|Potassium channel blocker|PPAR receptor agonist"
-"842","altretamine",0.8092,"DNA synthesis inhibitor"
-"843","4E1RCat",0.9241,"Protein synthesis inhibitor"
-"844","adipiodone",1.2585,"Contrast agent"
-"845","SB-431542",0.7272,"TGF beta receptor inhibitor"
-"846","PQ-401",0.78,"Insulin growth factor receptor inhibitor|IGF-1 inhibitor"
-"847","KU-0063794",0.7856,"MTOR inhibitor"
-"848","GDC-0879",0.6734,"RAF inhibitor"
-"849","rheochrysidin",0.8431,"Protein tyrosine kinase inhibitor"
-"850","pevonedistat",0.6464,"Nedd activating enzyme inhibitor"
-"851","PI-103",0.9115,"MTOR inhibitor|PI3K inhibitor"
-"852","eprosartan",0.7936,"Angiotensin receptor antagonist"
-"853","MK-2206",-1.1745,"AKT inhibitor"
-"854","palmitoylethanolamide",0.8045,"Cannabinoid receptor agonist"
-"855","CGS-20625",1.3171,"Benzodiazepine receptor agonist"
-"856","epothilone-b",1.1168,"Microtubule stabilizing agent|Tubulin inhibitor|Microtubule stimulant"
-"857","torin-2",0.6675,"MTOR inhibitor"
-"858","trichostatin-a",0.6602,"HDAC inhibitor|CDK expression enhancer|ID1 expression inhibitor"
-"859","tyrphostin-AG-1478",1.092,"EGFR inhibitor"
-"860","amsacrine",1.0608,"Topoisomerase inhibitor"
-"861","ZK-93426",0.7782,"Benzodiazepine receptor antagonist"
-"862","EVP-4593",0.8709,"NFkB pathway inhibitor"
-"863","proflavine-hemisulfate",0.6531,"Topical anesthetic"
-"864","ENMD-2076",1.1866,"Aurora kinase inhibitor|FLT3 inhibitor|VEGFR inhibitor"
-"865","dianhydrogalactitol",0.8669,"DNA alkylating drug"
-"866","dicycloverine",0.9309,"Acetylcholine receptor antagonist"
-"867","SB-743921",0.8996,"Kinesin-like spindle protein inhibitor"
-"868","BVT-948",0.6796,"Tyrosine phosphatase inhibitor"
-"869","ACDPP",0.9996,"Glutamate receptor antagonist"
-"870","lidamidine",1.1612,"Adrenergic receptor agonist"
-"871","PF-03814735",1.1081,"Aurora kinase inhibitor"
-"872","GDC-0152",1.2893,"XIAP inhibitor"
-"873","PF-3845",1.1488,"FAAH inhibitor"
-"874","golvatinib",0.7875,"VEGFR inhibitor"
-"875","sertindole",-0.696,"Dopamine receptor antagonist|Serotonin receptor antagonist"
-"876","cisplatin",0.9901,"DNA alkylating agent|DNA synthesis inhibitor"
-"877","vinorelbine",1.336,"Tubulin inhibitor"
-"878","atorvastatin",2.3697,"HMGCR inhibitor"
-"879","mericitabine",0.9924,"HCV inhibitor"
-"880","volasertib",1.0977,"PLK inhibitor"
-"881","AZD-8055",0.5433,"MTOR inhibitor"
-"882","SMI-4a",1.2257,"Pim kinase inhibitor"
-"883","vatalanib",0.8086,"KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"884","INH1",1.0606,"Hec1 inhibitor"
-"885","ibrutinib",0.7668,"BTK inhibitor"
-"886","aripiprazole",0.6738,"Serotonin receptor agonist|Serotonin receptor antagonist"
-"887","erlotinib",1.2259,"EGFR inhibitor"
-"888","nexturastat-a",0.6635,"HDAC inhibitor"
-"889","BAY-87-2243",1.0547,"Hypoxia inducible factor inhibitor"
-"890","ranitidine",0.717,"Histamine receptor antagonist"
-"891","HMN-214",1.1603,"PLK inhibitor"
-"892","BIBX-1382",1.352,"Tyrosine kinase inhibitor|EGFR inhibitor"
-"893","dorzolamide",0.7927,"Carbonic anhydrase inhibitor"
-"894","fludarabine-phosphate",0.7908,"DNA synthesis inhibitor|DNA repair enzyme inhibitor|Purine antagonist"
-"895","KD-023",1.089,"ACAT inhibitor"
-"896","birinapant",1.3779,"XIAP inhibitor"
-"897","SNX-2112",0.8849,"HSP inhibitor"
-"898","KPT-185",1.093,"Exportin antagonist"
-"899","SNS-314",1.3969,"Aurora kinase inhibitor"
-"900","vidarabine",-1.29,"Antiviral"
-"901","cefditoren-pivoxil",0.8754,"Bacterial cell wall synthesis inhibitor"
-"902","baicalein",1.2669,"Lipoxygenase inhibitor"
-"903","AZD-5438",0.943,"CDK inhibitor"
-"904","WZ-4002",1.5024,"EGFR inhibitor"
-"905","ZM-447439",1.4316,"Aurora kinase inhibitor"
-"906","benzethonium",0.8159,"Sodium channel blocker"
-"907","arcyriaflavin-a",1.0223,"CDK inhibitor"
-"908","xanomeline",1.1508,"Acetylcholine receptor agonist"
-"909","CEP-37440",0.8711,"ALK tyrosine kinase receptor inhibitor"
-"910","valrubicin",1.109,"DNA inhibitor|Topoisomerase inhibitor"
-"911","floxuridine",1.2744,"DNA synthesis inhibitor"
-"912","SNX-5422",1.0388,"HSP inhibitor"
-"913","tacalcitol",1.0263,"Vitamin D receptor agonist"
-"914","WZ-3146",1.1283,"EGFR inhibitor"
-"915","4-methylgenistein",1.4665,"Protein tyrosine kinase inhibitor"
-"916","OSI-420",1.2442,"EGFR inhibitor"
-"917","quinisocaine",1.3529,"Local anesthetic"
-"918","bekanamycin",1.2166,"Bacterial 30S ribosomal subunit inhibitor"
-"919","nizatidine",0.9237,"Histamine receptor antagonist"
-"920","azithromycin",0.3792,"Bacterial 50S ribosomal subunit inhibitor"
-"921","cinacalcet",0.5241,"Calcium channel activator"
-"922","BI-78D3",-0.7376,"JNK inhibitor"
-"923","indibulin",1.0805,"Tubulin inhibitor"
-"924","naftifine",0.9527,"Fungal squalene epoxidase inhibitor"
-"925","phenylmercuric-acetate",0.8457,"Other antifungal"
-"926","IKK-2-inhibitor-V",0.95,"IKK inhibitor|NFkB pathway inhibitor"
-"927","pazopanib",1.271,"KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"928","bosentan",1.0126,"Endothelin receptor antagonist"
-"929","SCH-900776",1.0264,"CHK inhibitor"
-"930","carbachol",1.3175,"Cholinergic receptor agonist"
-"931","alisertib",1.1958,"Aurora kinase inhibitor"
-"932","KPT-276",1.3447,"Exportin antagonist"
-"933","tioguanine",1.4594,"Purine antagonist"
-"934","SU-014813",1.3329,"PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"935","pitavastatin",1.9894,"HMGCR inhibitor"
-"936","guanidine",1.3887,"HSP inhibitor"
-"937","tyrphostin-AG-1296",1.0786,"FLT3 inhibitor"
-"938","JIB04",1.1169,"Histone lysine demethylase inhibitor"
-"939","ulipristal",0.8162,"Progesterone receptor antagonist"
-"940","resiquimod",0.81,"Toll-like receptor agonist"
-"941","BMS-690514",1.0969,"EGFR inhibitor|VEGFR inhibitor"
-"942","CCT-128930",0.5956,"AKT inhibitor"
-"943","homoharringtonine",0.919,"Protein synthesis inhibitor"
-"944","YM-155",0.9182,"Survivin inhibitor"
-"945","RS-17053",0.3598,"Adrenergic receptor antagonist"
-"946","CP-724714",0.7959,"Tyrosine kinase inhibitor|EGFR inhibitor"
-"947","tryptanthrin",0.6316,"Cyclooxygenase inhibitor"
-"948","WYE-354",1.0461,"MTOR inhibitor"
-"949","gamma-aminobutyric-acid",1.3623,"GABA receptor agonist"
-"950","triamcinolone",1.0804,"Glucocorticoid receptor agonist"
-"951","vandetanib",1.1592,"EGFR inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor"
-"952","BRD-K77634909",1.1493,"HSP inducer|Protein kinase inhibitor"
-"953","CUDC-907",0.7966,"PI3K inhibitor"
-"954","SB-200646",1.1941,"Serotonin receptor antagonist"
-"955","dequalinium",1.1429,"PKC inhibitor"
-"956","entinostat",1.1805,"HDAC inhibitor"
-"957","NVP-BVU972",0.8083,"MET inhibitor"
-"958","mebendazole",0.7763,"Tubulin inhibitor"
-"959","LY-2090314",0.3771,"Glycogen synthase kinase inhibitor"
-"960","oxiperomide",0.8202,"Dopamine receptor antagonist"
-"961","menadione",0.7447,"Mitochondrial DNA polymerase inhibitor|Phosphatase inhibitor"
-"962","A-674563",0.8705,"AKT inhibitor"
-"963","PF-4981517",1.3509,"Cytochrome P450 inhibitor"
-"964","crizotinib",1.1955,"ALK tyrosine kinase receptor inhibitor"
-"965","dolastatin-10",0.9633,"Tubulin inhibitor|Immunostimulant|Microtubule inhibitor|Tubulin polymerisation inhibitor"
-"966","ixazomib",1.083,"Proteasome inhibitor"
-"967","pentagastrin",0.7753,"CCK receptor agonist"
-"968","suxibuzone",1.2767,"Cyclooxygenase inhibitor"
-"969","oxaliplatin",0.8442,"DNA inhibitor"
-"970","albendazole",1.1346,"Tubulin inhibitor"
-"971","nimorazole",-0.9206,"Bacterial DNA inhibitor"
-"972","PF-573228",1.8893,"Focal adhesion kinase inhibitor"
-"973","decitabine",0.8131,"DNA methyltransferase inhibitor"
-"974","NVP-BHG712",0.9461,"Ephrin inhibitor"
-"975","inosine",0.9955,"Neurotrophic agent"
-"976","Ro-10-5824",0.9658,"Dopamine receptor agonist"
-"977","GW-583340",1.0006,"Receptor tyrosine protein kinase inhibitor|EGFR inhibitor|ErbB2 inhibitor"
-"978","TAK-285",0.6576,"EGFR inhibitor"
-"979","triciribine",1.0479,"AKT inhibitor"
-"980","repsox",1.0172,"TGF beta receptor inhibitor"
-"981","erteberel",1.0353,"Estrogen receptor agonist"
-"982","SGI-1776",1.6504,"Pim kinase inhibitor"
-"983","RS-16566",0.5949,"Serotonin receptor antagonist"
-"984","INC-280",1.658,"C-Met inhibitor"
-"985","cyclocytidine",0.925,"DNA synthesis inhibitor|RNA synthesis inhibitor"
-"986","azilsartan",0.8604,"Angiotensin receptor antagonist"
-"987","NSC-632839",0.6681,"Ubiquitin specific protease inhibitor"
-"988","SCH-58261",0.7488,"Adenosine receptor antagonist"
-"989","triptolide",0.563,"RNA polymerase inhibitor"
-"990","tideglusib",1.2745,"Glycogen synthase kinase inhibitor"
-"991","maxacalcitol",0.7006,"Vitamin D receptor agonist"
-"992","vorinostat",0.7562,"HDAC inhibitor"
-"993","CX-4945",0.8011,"Casein kinase inhibitor"
-"994","tanespimycin",1.0631,"HSP inhibitor"
-"995","nilotinib",0.9464,"Abl kinase inhibitor|Bcr-Abl kinase inhibitor"
-"996","AC-264613",1.0632,"PAR agonist"
-"997","VTP-27999",1.5547,"Renin inhibitor"
-"998","WZ-8040",0.5656,"EGFR inhibitor"
-"999","PP-121",1.1683,"Receptor tyrosine protein kinase inhibitor"
-"1000","triclabendazole",0.8291,"Microtubule inhibitor"
-"1001","SB-239063",0.5213,"P38 MAPK inhibitor"
-"1002","amfenac",1.0197,"Cyclooxygenase inhibitor"
-"1003","elesclomol",0.5643,"Oxidative stress inducer"
-"1004","navitoclax",0.8287,"BCL inhibitor"
-"1005","batimastat",1.0283,"Matrix metalloprotease inhibitor"
-"1006","PD-407824",0.529,"PKC inhibitor"
-"1007","repaglinide",-1.3994,"Insulin secretagogue"
-"1008","navarixin",1.0808,"CC chemokine receptor antagonist"
-"1009","daclatasvir",0.7777,"HCV inhibitor"
-"1010","ACY-1215",0.5596,"HDAC inhibitor"
-"1011","doxercalciferol",1.0786,"Vitamin D receptor agonist"
-"1012","doxifluridine",0.831,"Thymidylate synthase inhibitor"
-"1013","chloropyramine",0.5852,"Histamine receptor antagonist"
-"1014","skepinone-l",0.9135,"P38 MAPK inhibitor"
-"1015","NMS-1286937",1.044,"PLK inhibitor"
-"1016","PTC-209",0.9346,"BMI-1 inhibitor"
-"1017","JNJ-26481585",0.8219,"HDAC inhibitor"
-"1018","MLN-8054",1.0632,"Mitotic inhibitor|Protein kinase inhibitor|Aurora kinase inhibitor"
-"1019","alvespimycin",0.8676,"HSP inhibitor"
-"1020","nizofenone",0.8437,"Ion channel antagonist"
-"1021","candesartan",1.2337,"Angiotensin receptor antagonist"
-"1022","ercalcitriol",1.0212,"Vitamin D receptor agonist"
-"1023","telatinib",0.8629,"KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"1024","trequinsin",0.698,"Phosphodiesterase inhibitor"
-"1025","radezolid",1.1476,"Bacterial 30S ribosomal subunit inhibitor|Bacterial 50S ribosomal subunit inhibitor"
-"1026","riociguat",0.7946,"Guanylate cyclase stimulant"
-"1027","almorexant",1.0187,"Orexin receptor antagonist"
-"1028","sirolimus",1.1935,"MTOR inhibitor"
-"1029","AZD-2461",1.1057,"PARP inhibitor"
-"1030","aphidicolin",0.9186,"RNA synthesis inhibitor"
-"1031","foscarnet",1.3855,"DNA polymerase inhibitor"
-"1032","novobiocin",1.1781,"Bacterial DNA gyrase inhibitor"
-"1033","ramifenazone",0.6253,"Cyclooxygenase inhibitor"
-"1034","dovitinib",1.1354,"EGFR inhibitor|FGFR inhibitor|FLT3 inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"1035","ivermectin",1.0557,"GABA receptor agonist"
-"1036","neratinib",0.9339,"EGFR inhibitor"
-"1037","refametinib",1.2795,"MEK inhibitor"
-"1038","AZD-2858",0.7956,"Glycogen synthase kinase inhibitor"
-"1039","kynurenic-acid",0.764,"Glutamate receptor antagonist"
-"1040","WAY-600",0.993,"MTOR inhibitor"
-"1041","flubendazole",0.9245,"Tubulin inhibitor"
-"1042","linsitinib",0.8531,"IGF-1 inhibitor"
-"1043","terconazole",1.1812,"Sterol demethylase inhibitor"
-"1044","AZD-7762",0.4216,"CHK inhibitor"
-"1045","R-306465",0.7524,"HDAC inhibitor"
-"1046","embelin",1.1861,"HCV inhibitor|XIAP inhibitor"
-"1047","SB-939",0.8004,"HDAC inhibitor"
-"1048","PF-04457845",0.6174,"FAAH inhibitor"
-"1049","dofetilide",1.3126,"Potassium channel blocker"
-"1050","cediranib",1.3812,"KIT inhibitor|VEGFR inhibitor"
-"1051","oltipraz",0.73,"Nuclear factor erythroid derived, like (NRF2) activator"
-"1052","phenelzine",1.1528,"Monoamine oxidase inhibitor"
-"1053","epothilone-a",1.2026,"Microtubule stabilizing agent"
-"1054","azodicarbonamide",1.5308,"DNA synthesis inhibitor"
-"1055","OSI-027",1.1816,"MTOR inhibitor"
-"1056","norepinephrine",1.1033,"Adrenergic receptor agonist"
-"1057","RS-504393",1.4152,"CC chemokine receptor antagonist"
-"1058","taltobulin",1.187,"Tubulin inhibitor"
-"1059","LY-456236",1.4746,"Glutamate receptor antagonist"
-"1060","istradefylline",0.7468,"Adenosine receptor antagonist"
-"1061","AVL-292",1.0985,"Bruton's tyrosine kinase (BTK) inhibitor"
-"1062","melphalan",1.3466,"DNA alkylating agent|DNA inhibitor"
-"1063","alvocidib",0.4905,"CDK inhibitor"
-"1064","piretanide",0.8971,"Glucocorticoid receptor agonist"
-"1065","naltrexone",1.2837,"Opioid receptor antagonist"
-"1066","pyrimethamine",0.7851,"Dihydrofolate reductase inhibitor"
-"1067","KD-025",1.0047,"Rho associated kinase inhibitor"
-"1068","bortezomib",1.06,"NFkB pathway inhibitor|Proteasome inhibitor"
-"1069","nonoxynol-9",1.1129,"Membrane integrity inhibitor"
-"1070","PD-198306",1.0037,"MAP kinase inhibitor|MEK inhibitor"
-"1071","AS-703026",0.9711,"MEK inhibitor"
-"1072","GSK-923295",1.235,"Centromere associated protein inhibitor"
-"1073","VLX-600",0.7688,"USP14 inhibitor"
-"1074","DCEBIO",0.8686,"Potassium channel activator"
-"1075","SN-38",0.7947,"Topoisomerase inhibitor"
-"1076","vincamine",0.9217,"Adrenergic receptor antagonist"
-"1077","tepoxalin",0.861,"Cyclooxygenase inhibitor|Lipoxygenase inhibitor"
-"1078","raltitrexed",0.6692,"Thymidylate synthase inhibitor"
-"1079","spironolactone",0.8427,"Mineralocorticoid receptor antagonist"
-"1080","chlorquinaldol",0.9505,"Other antibiotic"
-"1081","GW-843682X",0.8634,"PLK inhibitor"
-"1082","AR-12",1.1191,"Phosphoinositide dependent kinase inhibitor"
-"1083","ipsapirone",0.9303,"Serotonin receptor agonist"
-"1084","oleanolic-acid",1.0052,"G protein-coupled receptor agonist"
-"1085","carboplatin",1.2696,"DNA alkylating drug|DNA inhibitor"
-"1086","indiplon",1.0588,"Benzodiazepine receptor agonist|GABA receptor agonist"
-"1087","anisomycin",0.9174,"DNA synthesis inhibitor"
-"1088","mercaptopurine",1.7094,"Immunosuppressant|Protein synthesis inhibitor|Purine antagonist"
-"1089","ABT-751",0.9515,"Tubulin inhibitor"
-"1090","ZK-811752",0.5691,"CC chemokine receptor antagonist"
-"1091","AM-251",-0.9118,"Cannabinoid receptor antagonist"
-"1092","triamterene",0.4154,"Sodium channel blocker"
-"1093","doxorubicin",1.3598,"Topoisomerase inhibitor"
-"1094","exatecan-mesylate",0.7956,"Topoisomerase inhibitor"
-"1095","lomitapide",1.4899,"Microsomal trigylceride transfer protein inhibitor"
-"1096","tosedostat",1.0116,"Peptidase inhibitor"
-"1097","mycophenolate-mofetil",0.7119,"Hydroxycarboxylic acid receptor agonist|Immunosuppressant|Inosine monophosphate dehydrogenase inhibitor|Dehydrogenase inhibitor|Inositol monophosphatase inhibitor"
-"1098","GSK-461364",1.1351,"PLK inhibitor"
-"1099","bexarotene",1.3407,"Retinoid receptor agonist"
-"1100","alfacalcidol",0.9595,"Vitamin D receptor agonist"
-"1101","zaleplon",1.1553,"Benzodiazepine receptor agonist"
-"1102","imatinib",1.2109,"Bcr-Abl kinase inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor"
-"1103","PAC-1",0.6192,"Caspase activator"
-"1104","cladribine",0.6932,"Adenosine deaminase inhibitor|Ribonucleoside reductase inhibitor"
-"1105","RAF-265",0.895,"RAF inhibitor|VEGFR inhibitor"
-"1106","diphemanil",0.8032,"Acetylcholine receptor antagonist"
-"1107","tamoxifen",1.0412,"Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)"
-"1108","ingenol-mebutate",0.9919,"PKC activator"
-"1109","taltirelin",1.1247,"Thyrotropin releasing hormone receptor agonist"
-"1110","quizartinib",1.2628,"FLT3 inhibitor"
-"1111","TWS-119",1.3684,"Glycogen synthase kinase inhibitor"
-"1112","deflazacort",1.0085,"Glucocorticoid receptor agonist"
-"1113","ribavirin",1.4551,"Antiviral"
-"1114","PF-04136309",0.7435,"CC chemokine receptor antagonist"
-"1115","mevastatin",2.1105,"HMGCR inhibitor"
-"1116","ICG-001",1.1445,"Beta-catenin inhibitor"
-"1117","LDN-57444",0.8165,"Ubiquitin C-terminal hydrolase inhibitor"
-"1118","telotristat",-0.7272,"Serotonin receptor antagonist|Serotonin release inhibitor"
-"1119","chromocarb",1.1667,"Antispasmodic"
-"1120","talazoparib",1.1593,"PARP inhibitor"
-"1121","SB-657510",0.74,"Urotensin receptor antagonist"
-"1122","PHA-665752",0.7133,"C-Met inhibitor"
-"1123","OLDA",0.8558,"TRPV agonist"
-"1124","PFK-015",0.6967,"Phosphofructokinase inhibitor"
-"1125","RN-1734",1.0382,"TRPV antagonist"
-"1126","trapidil",0.8275,"PDGFR tyrosine kinase receptor inhibitor"
-"1127","darifenacin",0.9887,"Acetylcholine receptor antagonist"
-"1128","thiamine",0.2892,"Vitamin B"
-"1129","PP-2",1.1464,"Src inhibitor"
-"1130","SRT-1720",0.8915,"SIRT activator"
-"1131","azalomycin-b",0.9183,"Bacterial 50S ribosomal subunit inhibitor"
-"1132","brequinar",1.0323,"Dihydroorotate dehydrogenase inhibitor"
-"1133","cidofovir",-0.9375,"DNA polymerase inhibitor"
-"1134","adefovir-dipivoxil",0.93,"DNA directed DNA polymerase inhibitor|DNA synthesis inhibitor|RNA directed DNA polymerase inhibitor|DNA polymerase inhibitor"
-"1135","caffeic-acid-phenethyl-ester",1.312,"NFkB pathway inhibitor|HIV integrase inhibitor"
-"1136","metaraminol",0.6461,"Adrenergic receptor agonist"
-"1137","Y-320",0.9421,"Interleukin inhibitor"
-"1138","harringtonine",0.9843,"Protein synthesis inhibitor"
-"1139","chloramphenicol-palmitate",0.9064,"Protein synthesis inhibitor"
-"1140","10-deacetylbaccatin",1.3665,"Antitumor agent"
-"1141","deferasirox",1.2621,"Chelating agent"
-"1142","PI-828",1.0752,"PI3K inhibitor"
-"1143","dihydroergocristine",-1.0657,"Adrenergic receptor antagonist|Prolactin inhibitor"
-"1144","diaveridine",1.276,"Dihydrofolate reductase inhibitor"
-"1145","gestrinone",0.8403,"Progesterone receptor antagonist"
-"1146","P-22077",0.4752,"Ubiquitin specific protease inhibitor"
-"1147","chlorpropamide",1.2695,"ATP channel blocker"
-"1148","nicorandil",1.0375,"Nitric oxide donor|Potassium channel activator"
-"1149","PD-173074",0.7382,"FGFR inhibitor|VEGFR inhibitor"
-"1150","theophylline",1.0894,"Adenosine receptor antagonist"
-"1151","BMS-626529",-0.9381,"HIV attachment inhibitor"
-"1152","GSK-J4",0.9066,"Histone lysine demethylase inhibitor"
-"1153","finafloxacin",1.1845,"Bacterial DNA gyrase inhibitor"
-"1154","desoxycortone",0.8574,"Mineralocorticoid receptor agonist"
-"1155","parthenolide",0.7457,"NFkB pathway inhibitor"
-"1156","AZD-8931",0.921,"EGFR inhibitor"
-"1157","SB-2343",1.0542,"MTOR inhibitor|PI3K inhibitor"
-"1158","AZD-5363",1.1297,"AKT inhibitor"
-"1159","AZD-2014",0.8634,"MTOR inhibitor"
-"1160","NSC-319726",0.8908,"P53 activator"
-"1161","ftorafur",0.9447,"Thymidylate synthase inhibitor"
-"1162","baicalin",0.696,"Beta glucuronidase inhibitor"
-"1163","genz-644282",0.3762,"Topoisomerase inhibitor"
-"1164","plinabulin",0.9188,"Tubulin inhibitor"
-"1165","PF-562271",1.0082,"Focal adhesion kinase inhibitor"
-"1166","cephalomannine",1.1934,"DNA polymerase inhibitor"
-"1167","tanaproget",0.9968,"Progesterone receptor agonist"
-"1168","linifanib",1.0538,"PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor"
-"1169","hexachlorophene",0.7528,"Potassium channel activator"
-"1170","hexylresorcinol",1.122,"Local anesthetic"
-"1171","bosutinib",1.1528,"Abl kinase inhibitor|Bcr-Abl kinase inhibitor|Src inhibitor"
-"1172","nemonapride",1.6934,"Dopamine receptor antagonist"
-"1173","levcromakalim",1.0621,"Potassium channel activator"
-"1174","dichloroacetate",0.5887,"Pyruvate dehydrogenase kinase inhibitor"
+pert_iname,query,moa
+8-bromo-cGMP,-1.0074,PKA activator
+noretynodrel,1.107,Progestogen hormone
+flumetasone,0.7799,Glucocorticoid receptor agonist
+betamethasone,1.0552,Glucocorticoid receptor agonist
+ethinyl-estradiol,0.8507,Estrogen receptor agonist|DNA directed DNA polymerase stimunlant|Estrogenic component in oral contraceptives
+mepivacaine,1.0706,Potassium channel blocker|Sodium channel blocker
+fulvestrant,1.286,Estrogen receptor antagonist
+XL-888,0.8574,HSP inhibitor
+methscopolamine,1.1634,Acetylcholine receptor antagonist
+docetaxel,1.1712,Tubulin inhibitor
+lappaconite,0.9861,Sodium channel blocker
+terfenadine,1.1328,Histamine receptor antagonist
+SB-218078,1.1077,CHK inhibitor
+diclazuril,0.8061,Antiprotozoal agent
+isofloxythepin,1.5783,Dopamine receptor antagonist
+galeterone,1.0613,Androgen receptor modulator
+racecadotril,0.8424,Enkephalinase inhibitor
+doxycycline,0.61,Metalloproteinase inhibitor
+CID-5458317,1.0835,MAP kinase phosphatase inhibitor
+cyclophosphamide,0.7842,DNA alkylating agent
+oridonin,0.8296,BCL inhibitor
+monensin,0.6635,Bacterial permeability inducer
+tipranavir,1.2767,HIV protease inhibitor
+propranolol,1.3218,Adrenergic receptor antagonist
+GSK-429286A,0.7947,Rho associated kinase inhibitor
+imiloxan,1.0158,Adrenergic receptor antagonist
+carvedilol,0.9454,Adrenergic receptor antagonist
+nadide,0.7997,Electron acceptor
+beclomethasone-dipropionate,0.8812,Immunosuppressant|Glucocorticoid receptor agonist
+lorazepam,0.9942,Benzodiazepine receptor agonist
+nutlin-3,1.6848,MDM inhibitor
+usniacin-(+),0.8608,MAP kinase activator
+fluorometholone,1.0788,Glucocorticoid receptor agonist
+ornithine,1.057,NFkB pathway modulator
+IDRA-21,0.9836,Glutamate receptor positive allosteric modulator
+mesoridazine,1.0098,Dopamine receptor antagonist
+norgestrel,1.2135,Progesterone receptor agonist
+isoxsuprine,1.561,Adrenergic receptor agonist
+trolox,0.9361,Antioxidant
+lenalidomide,0.7542,Anticancer agent
+idazoxan,1.3514,Adrenergic receptor antagonist
+atenolol-(+/-),-1.3903,Adrenergic receptor antagonist
+canrenone,1.0274,Mineralocorticoid receptor antagonist
+sulmazole,0.7153,Adenosine receptor antagonist
+SB-205384,1.3291,GABA receptor modulator
+pheniramine,1.1442,Histamine receptor antagonist
+naloxone,0.918,Opioid receptor antagonist
+nadifloxacin,1.148,Bacterial DNA gyrase inhibitor
+warfarin,0.8893,Vitamin K antagonist
+erastin,1.4642,Ion channel antagonist
+aminoglutethimide,1.0467,Glucocorticoid receptor antagonist
+KI-16425,1.329,Lysophosphatidic acid receptor antagonist
+narasin,0.7095,Antiprotozoal agent
+emetine,0.8911,Protein synthesis inhibitor
+zaldaride,1.2327,Calmodulin antagonist
+lestaurtinib,1.1495,FLT3 inhibitor|Growth factor receptor inhibitor|JAK inhibitor
+alexidine,1.1523,Phosphatidylglycerophosphatase inhibitor
+prednisolone,0.942,Glucocorticoid receptor agonist
+MTPG,0.9585,Glutamate receptor antagonist
+PKI-179,0.7983,MTOR inhibitor|PI3K inhibitor
+paclitaxel,1.213,Tubulin inhibitor
+puromycin,1.4236,Protein synthesis inhibitor
+bicalutamide,0.6323,Androgen receptor antagonist
+florfenicol,0.9189,Protein synthesis inhibitor
+mozavaptan,0.9595,Vasopressin receptor antagonist
+methocarbamol,1.0068,Muscle relaxant
+etoposide,1.3786,Topoisomerase inhibitor
+lacitol,1.617,Osmosis stimulant
+teniposide,1.1486,Topoisomerase inhibitor
+bruceantin,0.9938,Protein synthesis inhibitor
+buphenine,1.1644,Adrenergic receptor agonist
+oprozomib,0.5266,Proteasome inhibitor
+ketoconazole,0.7881,Sterol demethylase inhibitor
+rabeprazole,0.8525,ATPase inhibitor|Gastrin inhibitor
+norethisterone,1.1067,Progesterone receptor agonist
+efonidipine-monoethanolate,0.9023,L-type calcium channel blocker|T-type calcium channel blocker
+teroxirone,1.0637,DNA inhibitor
+cefpiramide,1.2406,Bacterial cell wall synthesis inhibitor
+practolol,1.3198,Adrenergic receptor antagonist
+teriflunomide,1.5093,Dihydroorotate dehydrogenase inhibitor
+melengestrol-acetate,0.8582,Progesterone receptor agonist
+linalool,0.9394,Anticonvulsant
+oxprenolol,0.7622,Adrenergic receptor antagonist
+indoprofen,0.9301,Cyclooxygenase inhibitor|Prostanoid receptor antagonist
+FLI-06,1.0133,Notch signaling inhibitor
+WYE-125132,0.8843,MTOR inhibitor
+iododexetimide,1.3425,Acetylcholine receptor antagonist
+mitomycin-c,0.9297,DNA alkylating drug|DNA inhibitor|DNA alkylating agent|DNA synthesis inhibitor
+ajmaline,0.7648,Sodium channel blocker
+metacycline,0.7792,Bacterial 50S ribosomal subunit inhibitor
+ciprofibrate,0.7261,PPAR receptor agonist
+fludroxycortide,0.5139,Glucocorticoid receptor agonist
+oxazepam,0.8888,GABA benzodiazepine site receptor agonist
+terbutaline,1.2296,Adrenergic receptor agonist
+meclizine,0.6933,Constitutive androstane receptor (CAR) agonist
+hypoestoxide,1.225,IKK inhibitor
+thiostrepton,0.9717,FOXM1 inhibitor|Protein synthesis inhibitor
+halofantrine,0.6712,Antimalarial agent
+Ro-106-9920,0.7818,NFkB pathway inhibitor
+golgicide-a,0.4636,ARF inhibitor
+butylscopolamine-bromide,0.8311,Cholinergic receptor antagonist
+lanoconazole,1.67,Sterol demethylase inhibitor
+KF-38789,1.0928,P selectin inhibitor
+methotrexate,0.9423,Dihydrofolate reductase inhibitor
+BNTX,0.7639,Opioid receptor antagonist
+primaquine,1.2572,Antimalarial agent|DNA inhibitor
+omeprazole,0.9918,ATPase inhibitor
+PD-318088,1.1368,MEK inhibitor
+oxyphencyclimine,1.2588,Cholinergic receptor antagonist
+selamectin,1.2349,Nematocide
+amisulpride,1.1736,Dopamine receptor antagonist
+8-hydroxy-PIPAT,1.0581,Dopamine receptor ligand
+sodium-stibogluconate,0.8728,Tyrosine phosphatase inhibitor
+Ro-04-5595,1.1533,Glutamate receptor antagonist
+sangivamycin,0.8524,DNA inhibitor
+mexiletine,1.1666,Sodium channel blocker
+lanatoside-c,0.7444,Cardiac glycoside
+DPI-201106,0.8147,Sodium channel activator
+EMD-53998,0.6265,Phosphodiesterase inhibitor
+ixazomib-citrate,1.0316,Proteasome inhibitor
+ifosfamide,0.7748,DNA alkylating agent
+lafutidine,0.9155,Histamine receptor antagonist
+K-858,1.0346,Kinesin-like spindle protein inhibitor
+daunorubicin,1.0544,RNA synthesis inhibitor|Topoisomerase inhibitor
+pranidipine,1.1875,Calcium channel blocker
+BTS-54505,1.1235,Dopamine reuptake inhibitor|Adrenergic transmitter uptake inhibitor|Norepinephrine reputake inhibitor|Serotonin reuptake inhibitor
+nanchangmycin,0.7746,Other antibiotic
+evodiamine,1.1302,ATPase inhibitor|TRPV agonist
+ouabain,1.0372,ATPase inhibitor
+echinomycin,0.6772,DNA intercalating agent
+minocycline,0.9206,Bacterial 30S ribosomal subunit inhibitor
+cyclosporin-a,1.1896,Calcineurin inhibitor
+secnidazole,1.0605,Acetylcholinesterase inhibitor|Microtubule inhibitor
+sulconazole,0.7288,Sterol demethylase inhibitor
+estramustine,1.083,DNA alkylating drug
+fendiline,0.5336,Calcium channel blocker
+SKF-96365,1.1274,Calcium channel blocker
+lasalocid,1.1033,Bacterial permeability inducer
+peruvoside,1.3052,Cardiac glycoside
+adaprev,0.9599,TGF beta receptor inhibitor
+tagatose,0.8465,Phosphorylase inhibitor
+exemestane,0.8129,Aromatase inhibitor
+CGP-54626,1.0149,GABA receptor antagonist
+ibutilide,0.9564,Potassium channel blocker
+pralatrexate,0.6468,Dihydrofolate reductase inhibitor
+clenbuterol,1.0244,Adrenergic receptor agonist
+lomefloxacin,1.2849,Bacterial DNA gyrase inhibitor
+gambogic-acid,0.482,Caspase activator|HSP inhibitor|MYC expression inhibitor|Telomerase reverse transcriptase expression inhibitor|Topoisomerase inhibitor
+enocitabine,0.8163,DNA synthesis inhibitor
+hyoscyamine,1.0285,Acetylcholine receptor antagonist
+prednisolone-hemisuccinate,1.1747,Glucocorticoid receptor agonist
+tropisetron,0.9585,Serotonin receptor antagonist
+midodrine,1.4709,Adrenergic receptor agonist
+NSC-23766,-1.027,Ras GTPase inhibitor
+fenoprofen,0.5122,Prostagladin inhibitor
+BI-D1870,1.0419,Ribosomal protein inhibitor
+saxagliptin,0.754,Dipeptidyl peptidase inhibitor
+mephenytoin,0.5585,Hydantoin antiepileptic
+meloxicam,0.904,Cyclooxygenase inhibitor
+brefeldin-a,0.9569,Protein synthesis inhibitor|Brefeldin A inhibited guanine nucleotide exchange protein inhibitors|Golgi-specific brefeldin A-resistance guanine nucleotide exchange factor inhibitor
+idoxuridin,0.9941,DNA synthesis inhibitor
+clopamide,1.2872,Sodium/chloride cotransporter inhibitor
+tetrahydrouridine,0.5204,Cytidine deaminase inhibitor
+CGP-37849,0.5088,Glutamate receptor antagonist
+eptifibatide,0.5096,Platelet aggregation inhibitor
+eprinomectin,1.2457,GABA receptor agonist
+capecitabine,0.7249,DNA synthesis inhibitor|Thymidylate synthase inhibitor
+danazol,0.6979,Estrogen receptor antagonist|Progesterone receptor agonist
+trimebutine,1.097,Opioid receptor agonist
+temazepam,0.6953,GABA receptor agonist
+digitoxin,1.255,ATPase inhibitor
+PETCM,1.0797,Caspase activator
+nicotine,1.2049,Acetylcholine receptor agonist
+bucladesine,0.9313,Adenosine receptor agonist|CAMP stimulant
+ginkgolide-a,1.3203,GABA receptor antagonist
+digoxin,1.0119,ATPase inhibitor
+colfosceril-palmitate,0.549,Pulmonary surfactant
+tacrolimus,1.2891,Calcineurin inhibitor
+pindolol,0.5565,Adrenergic receptor antagonist
+ketoprofen,0.9103,Cyclooxygenase inhibitor
+"hydroxytacrine-maleate-(r,s)",1.0892,Cholinesterase inhibitor
+paliperidone,1.0745,Dopamine receptor antagonist|Serotonin receptor antagonist
+estramustine-phosphate,1.3959,DNA synthesis inhibitor|Microtubule inhibitor|DNA alkylating drug|DNA inhibitor|Estrogen receptor agonist
+adarotene,0.5912,Retinoid receptor agonist
+colchicine,0.7366,Microtubule inhibitor
+PPT,0.8755,Estrogen receptor agonist
+RITA,0.912,MDM inhibitor
+trovafloxacin,0.8948,Bacterial DNA gyrase inhibitor
+AG-14361,1.4057,PARP inhibitor
+CL-218872,1.2097,GABA receptor agonist
+famotidine,1.1847,Histamine receptor antagonist
+nitisinone,0.4593,Hydroxyphenylpyruvate dioxygenase inhibitor
+SB-590885,0.9773,RAF inhibitor
+triapine,1.0111,Ribonucleoside reductase inhibitor
+TAK-901,1.5319,Aurora kinase inhibitor
+artemisinin,0.8812,DNA synthesis inhibitor
+UNC-2250,1.3439,MER tyrosine kinase inhibitor
+olaparib,1.1897,PARP inhibitor
+panobinostat,0.8855,HDAC inhibitor
+CHIR-124,0.7948,CHK inhibitor
+parbendazole,1.1197,Tubulin inhibitor
+sulfanilamide,1.0057,Carbonic anhydrase inhibitor
+methiazole,1.0109,Anthelmintic agent
+kifunensine,1.467,Mannosidase inhibitor
+clofoctol,1.0967,Protein synthesis inhibitor
+PF-477736,0.9432,CHK inhibitor
+NSC-663284,0.9724,CDC inhibitor
+trifluridine,1.2405,DNA directed DNA polymerase inhibitor|Thymidylate synthase inhibitor
+1-azakenpaullone,0.8812,Glycogen synthase kinase inhibitor
+CCT-137690,1.1692,Aurora kinase inhibitor
+NU-6027,-1.5505,CDK inhibitor
+roquinimex,0.6722,Angiogenesis inhibitor|TNF production inhibitor
+cobimetinib,1.108,MEK inhibitor
+foretinib,1.1393,VEGFR inhibitor
+XL-388,0.5917,MTOR inhibitor
+ixabepilone,1.2169,Microtubule stabilizing agent
+raclopride,0.8875,Dopamine receptor antagonist
+drospirenone,1.1952,Mineralocorticoid receptor antagonist
+octenidine,1.1732,Membrane integrity inhibitor
+YO-01027,1.1395,Gamma secretase inhibitor
+BIBR-1532,1.4134,Telomerase inhibitor
+GSK-1904529A,1.1225,Insulin growth factor receptor inhibitor|Insulin receptor ligand|IGF-1 inhibitor
+GSK-3-inhibitor-IX,0.9022,Glycogen synthase kinase inhibitor|Lipoxygenase inhibitor
+LY-2334737,1.1295,Antitumor agent|Ribonucleoside reductase inhibitor
+PD-184352,1.0126,MEK inhibitor
+E-7449,1.0929,PARP inhibitor
+WP-1066,0.44,STAT inhibitor
+dronedarone,0.6876,Adrenergic receptor antagonist
+sevoflurane,1.1182,Membrane integrity inhibitor
+PSI-7976,0.8636,HCV inhibitor
+AZ-628,0.8114,RAF inhibitor
+methoxyflurane,1.4337,Membrane permeability inhibitor
+posaconazole,0.9532,Sterol demethylase inhibitor
+LY-364947,1.2152,P38 MAPK inhibitor|TGF beta receptor inhibitor
+UK-383367,0.7935,Procollagen C-Endopeptidase Inhibitors
+ryuvidine,0.8557,Histone lysine methyltransferase inhibitor
+bisindolylmaleimide-ix,0.8063,PKC inhibitor
+LE-135,0.9469,Retinoid receptor agonist
+GSK-1838705A,0.4962,Insulin growth factor receptor inhibitor
+nobiletin,1.0434,MEK inhibitor
+fosbretabulin,1.1203,Tubulin inhibitor|VE-cadherin antagonist
+AM-580,0.9008,Retinoid receptor agonist
+cabazitaxel,1.268,Microtubule inhibitor
+BMS-599626,1.2842,EGFR inhibitor|Receptor tyrosine protein kinase inhibitor
+frentizole,1.2209,Immunosuppressant
+dexrazoxane,1.0963,Chelating agent|Topoisomerase inhibitor
+PF-04691502,1.2224,MTOR inhibitor|PI3K inhibitor
+BAM7,1.3355,BAX activator
+WHI-P154,1.199,JAK inhibitor
+curcumin,0.729,Cyclooxygenase inhibitor|Histone acetyltransferase inhibitor|Lipoxygenase inhibitor|NFkB pathway inhibitor
+sparfloxacin,1.0206,Bacterial DNA gyrase inhibitor
+VX-702,1.1623,P38 MAPK inhibitor
+aminopurvalanol-a,0.9809,Tyrosine kinase inhibitor|CDK inhibitor
+danusertib,0.9668,Aurora kinase inhibitor|Growth factor receptor inhibitor
+PF-05212384,0.803,MTOR inhibitor|PI3K inhibitor
+GSK-2126458,0.7346,PI3K inhibitor|MTOR inhibitor
+tetrandrine,1.0259,Calcium channel blocker
+I-BET-762,0.7018,Bromodomain inhibitor
+LCL-161,1.2635,XIAP inhibitor
+chlorpyrifos,1.1418,Acetylcholinesterase inhibitor
+sarafloxacin,0.8616,Bacterial DNA gyrase inhibitor
+irinotecan,1.0458,Topoisomerase inhibitor
+ramatroban,1.2432,Prostanoid receptor antagonist
+thioproperazine,1.0561,Dopamine receptor antagonist
+tremorine,1.0571,Acetylcholine receptor agonist
+3-amino-benzamide,0.739,PARP inhibitor
+pelitinib,0.5976,EGFR inhibitor
+DU-728,0.8209,Structural glycoprotein antagonist
+CCG-50014,0.5416,G protein signaling inhibitor
+zolantidine,0.9168,Histamine receptor antagonist
+deforolimus,1.1526,MTOR inhibitor
+CP-945598,1.2425,Cannabinoid receptor antagonist
+D-4476,1.2114,TGF beta receptor inhibitor
+merimepodib,0.8638,Inosine monophosphate dehydrogenase inhibitor
+SR-57227A,1.0385,Serotonin receptor agonist
+lovastatin,2.1062,HMGCR inhibitor
+TAS-103,1.0231,Topoisomerase inhibitor
+PHA-680632,0.734,Aurora kinase inhibitor
+mibefradil,1.1164,T-type calcium channel blocker
+forskolin,1.5623,Adenylyl cyclase activator
+VS-4718,1.0093,Focal adhesion kinase inhibitor
+caffeic-acid,0.959,HIV integrase inhibitor|Lipoxygenase inhibitor|Nitric oxide production inhibitor|NFkB pathway inhibitor|PPAR receptor modulator|Tumor necrosis factor production inhibitor|TNF production inhibitor
+dabrafenib,1.1747,RAF inhibitor
+sulfasalazine,1.3427,Antirheumatic drug|NFkB pathway inhibitor
+GW-405833,1.0919,Cannabinoid receptor agonist
+temocapril,1.0397,Angiotensin converting enzyme inhibitor
+phenylbutazone,0.9764,Cyclooxygenase inhibitor|Prostanoid receptor antagonist
+tiludronate,1.0839,Bone resorption inhibitor|Osteoclast inhibitor
+latanoprost,0.922,Prostanoid receptor agonist
+CPI-1189,0.8344,Tumor necrosis factor release inhibitor
+norfloxacin,0.6929,Bacterial DNA gyrase inhibitor
+tazemetostat,0.9456,Histone lysine methyltransferase inhibitor
+ambazone,1.3021,DNA damage inducer
+alectinib,1.073,ALK tyrosine kinase receptor inhibitor
+aspirin,0.9476,Cyclooxygenase inhibitor
+teprenone,0.915,Mucus protecting agent
+carmofur,0.9877,Thymidylate synthase inhibitor
+JNJ-7706621,0.6682,CDK inhibitor
+pyroxamide,1.1272,HDAC inhibitor
+PJ-34,1.0845,PARP inhibitor
+ER-27319,1.0422,Mediator release inhibitor|SYK inhibitor
+tipiracil,0.8758,Thymidine phosphorylase inhibitor
+LY-2608204,0.9762,Glucokinase activator
+NVP-BEZ235,1.0523,MTOR inhibitor|PI3K inhibitor
+MEK1-2-inhibitor,0.9515,MEK inhibitor
+trametinib,1.1068,MEK inhibitor
+TG-101348,1.2547,FLT3 inhibitor|JAK inhibitor
+nocodazole,1.0268,Tubulin inhibitor
+CX-5461,1.1921,RNA polymerase inhibitor
+mechlorethamine,0.7818,DNA inhibitor
+PCI-24781,0.8512,HDAC inhibitor
+dapivirine,1.0395,Non-nucleoside reverse transcriptase inhibitor
+YM-976,1.3859,Phosphodiesterase inhibitor
+ciclopirox,0.9444,Membrane integrity inhibitor
+uridine,1.5963,Dopamine receptor agonist
+acivicin,0.8902,Gamma glutamyltransferase Inhibitors
+CGP-52411,1.1186,EGFR inhibitor
+PFI-1,0.9207,Bromodomain inhibitor
+everolimus,1.5049,MTOR inhibitor
+AR-42,0.9668,HDAC inhibitor
+NSC-3852,0.8227,HDAC inhibitor
+pentamidine,1.3091,Anti-pneumocystis agent
+piperazine,0.4057,GABA receptor agonist
+ebastine,0.7374,Histamine receptor antagonist
+thonzonium,1.0233,ATPase inhibitor
+AT-7519,0.9354,CDK inhibitor|Cell cycle inhibitor
+BMS-345541,0.6605,IKK inhibitor
+pepstatin,1.0069,Aspartic protease inhibitor
+P-5091,0.682,Ubiquitin specific protease inhibitor
+midostaurin,1.5332,FLT3 inhibitor|KIT inhibitor|PKC inhibitor
+dinaciclib,0.7775,CDK inhibitor
+bitopertin,0.8788,Glycine transporter inhibitor|GlyT-1 inhibitor
+givinostat,0.9486,HDAC inhibitor
+tenovin-6,1.0233,SIRT inhibitor
+ritodrine,1.5445,Adrenergic receptor agonist
+LY-2603618,0.6635,CHK inhibitor
+MK-0812,0.9907,CC chemokine receptor antagonist
+TG-02,1.0279,CDK inhibitor|FLT3 inhibitor|JAK inhibitor
+IKK-16,0.8692,IKK inhibitor
+berberine,0.5624,LDL receptor activator
+GSK-650394,1.2913,Serum/glucocorticoid regulated kinase inhibitor
+BAY-11-7082,0.4243,NFkB pathway inhibitor
+tiotidine,0.8142,Histamine receptor antagonist
+gemcitabine,1.0625,Ribonucleotide reductase inhibitor
+carfilzomib,0.6073,Proteasome inhibitor
+penfluridol,0.7713,T-type calcium channel blocker
+SB-228357,0.6877,Serotonin receptor antagonist
+papaverine,0.9365,Phosphodiesterase inhibitor
+obatoclax,0.6749,BCL inhibitor
+clotrimazole,1.148,Cytochrome P450 inhibitor|Imidazoline ligand
+abiraterone-acetate,0.6972,"17,20 lyase inhibitor|Cytochrome P450 inhibitor|Steroid sulfatase inhibitor|Androgen biosynthesis inhibitor"
+pyrithione-zinc,-1.0577,ATP synthase inhibitor
+CHIR-99021,1.3645,Glycogen synthase kinase inhibitor
+oxymetazoline,1.5456,Adrenergic receptor agonist
+piperacetazine,1.0475,Dopamine receptor antagonist
+PLX-4720,1.3273,RAF inhibitor
+mocetinostat,0.8852,HDAC inhibitor
+evacetrapib,1.3409,Cholesteryl ester transfer protein inhibitor
+GTP-14564,1.3123,FLT3 inhibitor|Tyrosine kinase inhibitor
+regorafenib,0.7701,FGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RAF inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor
+pibenzimol,1.1922,DNA inhibitor
+bendamustine,0.948,DNA inhibitor
+chloroxine,0.9321,Opioid receptor antagonist
+LY-2874455,1.1508,FGFR antagonist
+penicillamine-(D),0.8673,Chelating agent
+talmapimod,0.9743,P38 MAPK inhibitor
+PD-168393,1.1595,EGFR inhibitor
+JTC-801,0.8885,Opioid receptor antagonist
+belinostat,1.2136,HDAC inhibitor
+tranilast,0.9172,Angiogenesis inhibitor
+indirubin,1.5766,CDK inhibitor|Glycogen synthase kinase inhibitor
+artesunate,1.074,DNA synthesis inhibitor
+eprobemide,0.7884,Monoamine oxidase inhibitor
+fdcyd,1.144,DNA methyltransferase inhibitor
+HA-14-1,0.6945,BCL inhibitor
+propoxycaine,0.831,Local anesthetic
+TG-100572,0.9382,Src inhibitor|VEGFR inhibitor
+digitoxigenin,0.899,ATPase inhibitor
+nafcillin,0.9057,Bacterial cell wall synthesis inhibitor
+digoxigenin,0.9863,Steroid
+bifemelane,0.8106,Acetylcholine release stimulant
+U-0126,1.0463,MEK inhibitor
+LB-42708,1.4421,Farnesyltransferase inhibitor
+estradiol,0.8885,Estrogen receptor agonist
+LY-2801653,0.9145,MET inhibitor
+pacritinib,0.3906,FLT3 inhibitor|JAK inhibitor
+mubritinib,1.2409,Receptor tyrosine protein kinase inhibitor
+darapladib,0.7229,Phospholipase inhibitor
+salvinorin-a,0.7985,Opioid receptor agonist
+gossypol,0.7118,BCL inhibitor|MCL1 inhibitor
+FR-139317,0.7964,Endothelin receptor antagonist
+RKI-1447,1.3104,Rho associated kinase inhibitor
+colforsin-daproate,1.4289,Adenylyl cyclase activator|Adenylate cyclase stimulant
+SB-242235,0.5161,P38 MAPK inhibitor
+saracatinib,1.4525,Src inhibitor
+GGTI-298,1.0254,GGTase inhibitor
+lapatinib,0.8958,EGFR inhibitor|ErbB2 inhibitor
+eplerenone,0.8157,Cytochrome P450 inhibitor
+sonidegib,0.8332,Smoothened receptor antagonist
+CCMI,1.2187,Acetylcholine receptor allosteric modulator
+fostamatinib,1.4791,SYK inhibitor
+BIX-02188,0.9341,MEK inhibitor
+rutin,0.8562,Antioxidant|Capillary stabilizing agent|Nitric oxide scavenger
+bardoxolone,1.0117,"Nuclear factor erythroid derived, like (NRF2) activator"
+NSC-697923,-0.6324,Ubiquitin-conjugating enzyme inhibitor
+mefexamide,1.0326,Psychoactive drug
+CEP-32496,1.1043,RAF inhibitor
+SKI-II,1.0119,Sphingosine kinase inhibitor
+TH-302,0.9223,DNA alkylating drug
+NVP-TAE226,0.7574,Protein tyrosine kinase inhibitor
+riluzole,1.3391,Glutamate inhibitor
+selinexor,0.8557,Exportin antagonist
+marimastat,1.0364,Matrix metalloprotease inhibitor
+desonide,0.5675,Glucocorticoid receptor agonist
+cariporide,1.6554,Sodium/hydrogen exchanger inhibitor
+mitoxantrone,1.5039,Topoisomerase inhibitor
+KW-2449,1.0551,Abl kinase inhibitor|Aurora kinase inhibitor|FLT3 inhibitor
+AMG-900,1.3094,Aurora kinase inhibitor
+AMG-458,1.1122,MET inhibitor
+loxistatin-acid,1.1627,Cysteine peptidase inhibitor
+U-18666A,0.8593,Oxidosqualene cyclase inhibitor
+crenolanib,1.4059,PDGFR tyrosine kinase receptor inhibitor
+simvastatin,1.8024,HMGCR inhibitor
+LY-303511,1.0922,Casein kinase inhibitor|PI3K inhibitor
+scriptaid,0.5805,HDAC inhibitor
+odanacatib,0.8762,Cathepsin inhibitor
+bardoxolone-methyl,0.5622,"Apoptosis stimulant|BCL inhibitor|Glutathione Reductase (NADPH) Activators|Heme Oxygenase Activators|IKK-1 (IKK-alpha) Inhibitors|NFkB pathway inhibitor|Nitric oxide production inhibitor|PPAR receptor agonist|Reducing agent|Nuclear factor erythroid derived, like (NRF2) activator"
+AV-412,0.6489,Receptor tyrosine protein kinase inhibitor
+busulfan,1.1546,DNA inhibitor
+GDC-0980,0.9574,MTOR inhibitor|PI3K inhibitor
+broxyquinoline,0.9925,Antiprotozoal agent
+CYT-997,0.9666,Tubulin inhibitor
+benzyldimethylhexadecylammonium,0.6743,Cationic surfactant
+nilutamide,-1.4656,Androgen receptor antagonist
+voreloxin,1.279,Topoisomerase inhibitor
+dichlorvos,1.1305,Acetylcholinesterase inhibitor
+sorafenib,0.8597,FLT3 inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RAF inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor
+VU-0238429,1.0605,Acetylcholine receptor allosteric modulator
+deoxycorticosterone-acetate,1.187,Progestogen hormone
+ETP-46464,0.737,ATR kinase inhibitor
+AT-9283,1.0924,Aurora kinase inhibitor|JAK inhibitor|Abl kinase inhibitor|Bcr-Abl kinase inhibitor|FLT3 inhibitor|Mitotic inhibitor|Protein kinase inhibitor
+AZD-3463,1.1875,ALK tyrosine kinase receptor inhibitor|Insulin growth factor receptor inhibitor
+phlorizin,1.2949,Sodium/glucose cotransporter inhibitor
+5-hydroxymethyl-tolterodine,1.5183,Acetylcholine receptor antagonist
+NVP-AEW541,0.6729,IGF-1 inhibitor
+ethacridine-lactate-monohydrate,0.9791,DNA intercalating agent
+fluorouracil,1.1046,RNA synthesis inhibitor|Thymidylate synthase inhibitor
+CNX-2006,0.9377,EGFR inhibitor
+pirenperone,1.1223,Serotonin receptor antagonist
+apatinib,0.9191,RET tyrosine kinase inhibitor
+MK-8745,1.0077,Aurora kinase inhibitor
+OSI-930,1.0604,KIT inhibitor|VEGFR inhibitor
+GSK-2110183,0.797,AKT inhibitor
+maprotiline,1.1014,Norepinephrine reputake inhibitor|Tricyclic antidepressant
+LY-2784544,0.7258,JAK inhibitor
+4-iodo-6-phenylpyrimidine,1.0961,Macrophage inhibitor
+josamycin,1.1917,Bacterial 50S ribosomal subunit inhibitor
+licochalcone-a,1.0718,Topoisomerase inhibitor
+NMS-873,1.1809,ATPase inhibitor
+K-Ras(G12C)-inhibitor-6,1.3576,K-ras inhibitor
+PD-153035,0.8959,EGFR inhibitor
+thiocolchicoside,1.0272,GABA receptor antagonist
+imiquimod,0.741,Interferon inducer|TLR agonist
+TAK-733,1.1385,MEK inhibitor
+VX-765,0.9038,Caspase inhibitor
+VE-821,0.4746,ATR kinase inhibitor
+BIX-01294,1.1268,DNA methyltransferase inhibitor|Histone lysine methyltransferase inhibitor
+GW-842166,1.08,Cannabinoid receptor agonist
+azomycin-(2-nitroimidazole),0.3539,Protein synthesis inhibitor
+costunolide,0.8051,Telomerase inhibitor
+AST-1306,0.9722,EGFR inhibitor
+D-64131,1.0759,Microtubule inhibitor
+metatinib,0.853,Bcr-Abl kinase inhibitor
+levocetirizine,1.147,Histamine receptor antagonist
+butamben,0.9081,Sodium channel blocker
+calcitriol,0.8252,Vitamin D receptor agonist
+nomegestrol-acetate,1.2366,Progesterone receptor agonist
+cyclovirobuxin-d,1.2412,Calcium channel modulator
+cyproheptadine,-1.1056,Histamine receptor antagonist
+spiradoline,0.8354,Opioid receptor agonist
+flutamide,1.056,Androgen receptor antagonist
+CH-5132799,0.9459,PI3K inhibitor
+TW-37,0.6826,BCL inhibitor
+nitrocaramiphen,0.7412,Cholinergic receptor antagonist
+benzydamine,0.8557,Prostanoid receptor antagonist
+A-803467,0.7325,Sodium channel blocker
+cilostamide,0.5987,Phosphodiesterase inhibitor
+resminostat,0.511,HDAC inhibitor
+genipin,1.2932,Choleretic agent
+CD-437,0.6287,Retinoid receptor agonist
+BVD-523,0.7859,MAP kinase inhibitor
+isoflupredone-acetate,0.7157,Glucocorticoid receptor agonist
+BGT-226,0.6761,PI3K inhibitor
+chlorambucil,0.9203,DNA inhibitor
+1-naphthyl-PP1,1.0466,Src inhibitor
+ziprasidone,0.7112,Dopamine receptor antagonist|Serotonin receptor antagonist
+MK-8245,0.9063,Stearoyl-CoA desaturase inhibitor
+hypericin,0.5486,Tyrosine kinase inhibitor
+axitinib,1.0294,PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+clomifene,0.5595,Estrogen receptor antagonist
+KX2-391,1.2419,Src inhibitor|Tubulin inhibitor
+torasemide,1.047,Electrolyte reabsorption inhibitor|Thromboxane receptor antagonist
+homoquinolinic-acid,1.183,Glutamate receptor agonist
+SB-216641,0.4558,Serotonin receptor antagonist
+UNBS-5162,1.1975,CC chemokine receptor antagonist
+lucitanib,0.8533,FGFR inhibitor|VEGFR inhibitor
+AZD-9668,0.9313,Elastase inhibitor
+1-phenylbiguanide,1.4691,Serotonin receptor agonist
+rimexolone,0.8917,Glucocorticoid receptor agonist
+icotinib,1.2501,EGFR inhibitor
+levobunolol,0.8492,Adrenergic receptor antagonist
+TAK-632,0.7731,RAF inhibitor
+barasertib,1.0058,Aurora kinase inhibitor
+temozolomide,1.2287,DNA alkylating drug
+AMG-208,1.4709,Tyrosine kinase inhibitor
+etomoxir,0.7081,Carnitine palmitoyltransferase inhibitor
+vanoxerine,0.9776,Dopamine uptake inhibitor
+SU-3327,0.7362,JNK inhibitor
+disulfiram,0.7224,Aldehyde dehydrogenase inhibitor|DNA methyltransferase inhibitor|TRPV agonist
+azathioprine,1.7138,Dehydrogenase inhibitor
+adapalene,0.9025,Retinoid receptor agonist
+tivantinib,0.9901,Tyrosine kinase inhibitor
+obidoxime,0.9741,Cholinesterase reactivator
+rociletinib,0.8488,EGFR inhibitor
+LY-2835219,1.6019,CDK inhibitor
+difluprednate,0.6411,Glucocorticoid receptor agonist
+valnemulin,1.2224,Bacterial 50S ribosomal subunit inhibitor
+GW-3965,0.9398,ABC transporter expression enhancer|LXR agonist
+ZK-93423,1.0676,Benzodiazepine receptor agonist
+clofarabine,1.0453,Ribonucleoside reductase inhibitor
+tanshinone-i,0.4109,AP inhibitor
+cimetidine,0.7608,Histamine receptor antagonist
+imidapril,1.0254,Angiotensin converting enzyme inhibitor
+streptozotocin,1.1452,DNA alkylating agent
+parthenolide-(-),0.5415,NFkB pathway inhibitor|Adiponectin receptor agonist
+levonorgestrel,0.3399,Estrogen receptor agonist|Glucocorticoid receptor antagonist|Progesterone receptor agonist|Progesterone receptor antagonist
+ciclesonide,0.6198,Glucocorticoid receptor agonist
+GZD-824,1.2453,Bcr-Abl kinase inhibitor
+dacarbazine,1.0308,DNA alkylating agent
+niclosamide,0.9213,DNA replication inhibitor|STAT inhibitor
+ABT-702,0.719,Adenosine kinase inhibitor
+cycloheximide,1.4112,Protein synthesis inhibitor
+WAY-170523,1.135,Metalloproteinase inhibitor
+carmustine,1.2332,DNA alkylating drug|DNA inhibitor
+asymmetrical-dimethylarginine,0.494,Dimethylarginine dimethylaminohydrolase inhibitor|Nitric oxide synthase inhibitor
+dolutegravir,0.9721,HIV integrase inhibitor
+bindarit,0.7852,NFkB pathway inhibitor
+PU-H71,1.1302,HSP inhibitor
+tamibarotene,1.363,Retinoid receptor agonist
+stemregenin-1,0.8305,Aryl hydrocarbon receptor antagonist
+GSK-1070916,1.2542,Aurora kinase inhibitor
+ribociclib,1.0464,CDK inhibitor
+CEP-33779,0.8151,JAK inhibitor
+astemizole,0.8236,Histamine receptor antagonist
+mifepristone,0.8729,Glucocorticoid receptor antagonist|Progesterone receptor antagonist
+kenpaullone,1.2157,CDK inhibitor|Glycogen synthase kinase inhibitor
+filanesib,1.1004,Kinesin inhibitor
+zardaverine,1.1778,Phosphodiesterase inhibitor
+GSK-256066,1.4303,Phosphodiesterase inhibitor
+MRS-1220,0.8042,Adenosine receptor antagonist
+AZD-8330,1.0439,MEK inhibitor
+SB-525334,0.7696,TGF beta receptor inhibitor
+dioscin,0.9218,Apoptosis stimulant
+PF-03758309,1.1216,P21 activated kinase inhibitor
+afobazole,0.7546,Anxiolytic
+LY-2183240,1.0301,FAAH reuptake inhibitor|FAAH inhibitor
+camptothecin,0.7351,Topoisomerase inhibitor
+clonazepam,1.0054,GABA benzodiazepine site receptor agonist
+narlaprevir,1.3782,HCV inhibitor
+domperidone,1.2474,Dopamine receptor antagonist
+uprosertib,0.6098,AKT inhibitor
+FK-3311,0.5297,Cyclooxygenase inhibitor
+diazooxonorleucine,1.1283,Glutamate receptor antagonist
+VER-49009,0.9598,HSP inhibitor
+ganetespib,0.9158,HSP inhibitor
+JK-184,1.0491,Hedgehog pathway inhibitor
+MK-0773,0.9806,Androgen receptor modulator
+SAR-131675,1.0524,VEGFR inhibitor
+STF-118804,1.071,NAMPT inhibitor
+atipamezole,1.1189,Adrenergic receptor antagonist
+DMH1,1.1637,ALK tyrosine kinase receptor inhibitor
+nithiamide,1.2508,Bacterial DNA inhibitor
+SDZ-WAG-994,0.9422,Adenosine receptor agonist
+TG-101209,0.8641,JAK inhibitor
+lenvatinib,1.264,FGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+bisacodyl,1.0893,Laxative
+SB-505124,0.7976,ALK tyrosine kinase receptor inhibitor
+torin-1,0.7745,MTOR inhibitor|PI3K inhibitor
+tyrphostin-A9,0.9292,Protein tyrosine kinase inhibitor|Tyrosine kinase inhibitor
+crizotinib-(S),1.0467,MTH1 inhibitor
+CR8-(R),0.7234,CDK inhibitor
+spermidine,0.4408,Glutamate receptor modulator
+eltrombopag,0.9688,Thrombopoietin receptor agonist
+SC-12267,1.1886,Dihydroorotate dehydrogenase inhibitor
+parachlorophenol,1.1538,Antiinfective drug
+GSK-2656157,0.8755,PERK inhibitor
+KW-2478,0.9704,HSP inhibitor
+CUDC-101,0.9044,EGFR inhibitor
+GW-441756,0.8529,Growth factor receptor inhibitor
+ZM-306416,0.9235,Abl kinase inhibitor|Src inhibitor|VEGFR inhibitor
+lonafarnib,1.4823,Farnesyltransferase inhibitor
+STA-5326,0.6459,Interleukin synthesis inhibitor
+NVP-AUY922,0.9308,HSP inhibitor
+tioxolone,0.9161,Carbonic anhydrase inhibitor
+buparlisib,1.0983,PI3K inhibitor
+AZ-20,0.6683,ATR kinase inhibitor
+tasisulam,0.4705,Apoptosis stimulant
+satraplatin,0.8764,DNA alkylating drug
+epiandrosterone,1.6171,Steroid
+sunitinib,1.0994,FLT3 inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor
+temsirolimus,1.2807,MTOR inhibitor
+acetophenazine,0.6487,Dopamine receptor antagonist
+CHIR-98014,0.6772,GSK inhibitor
+mibampator,1.2569,Glutamate receptor modulator
+SR-33805,1.0212,Calcium channel blocker
+GDC-0349,0.642,Pim kinase inhibitor
+polydatin,1.1275,ICAM1 expression inhibitor
+BMS-387032,0.644,CDK inhibitor|Cell cycle inhibitor|MCL1 inhibitor
+oncrasin-1,0.9378,Apoptosis stimulant
+OTX-015,1.1968,Bromodomain inhibitor
+defactinib,0.9745,Focal adhesion kinase inhibitor
+CP-673451,1.927,PDGFR tyrosine kinase receptor inhibitor
+WP-1130,0.6644,Deubiquitinase inhibitor
+iobenguane,1.0147,Antineoplastic agent
+flufenamic-acid,1.1205,Chloride channel blocker
+Y-27632,0.8629,Rho associated kinase inhibitor
+ponatinib,0.7579,Bcr-Abl kinase inhibitor|FLT3 inhibitor|PDGFR tyrosine kinase receptor inhibitor
+2-methoxyestradiol,0.8966,Hypoxia inducible factor inhibitor
+bromosporine,0.9106,Bromodomain inhibitor
+vismodegib,1.3856,Hedgehog pathway inhibitor|Smoothened receptor antagonist
+taselisib,1.0738,PI3K inhibitor
+atenolol,1.2572,Adrenergic receptor antagonist
+famciclovir,1.3136,DNA polymerase inhibitor
+clofibrate,1.1777,PPAR receptor agonist
+7-hydroxystaurosporine,1.0602,CDK inhibitor|CHK inhibitor|PKC inhibitor
+betulinic-acid,0.9218,Apoptosis stimulant|Caspase activator|Diacylglycerol O acyltransferase inhibitor|HIV integrase inhibitor|NFkB pathway activator|SARS coronavirus 3C-like protease inhibitor|Topoisomerase inhibitor
+JZL-184,1.3036,Monoacylglucerol lipase inhibitor
+VU-0361737,1.1894,Glutamate receptor positive allosteric modulator
+M-344,0.9535,HDAC inhibitor
+MPI-0479605,1.0226,Mitotic kinase inhibitor
+3'-fluorobenzylspiperone,0.5712,Dopamine receptor ligand
+anguidine,0.8024,Protein synthesis inhibitor
+ARRY-334543,1.0401,EGFR inhibitor
+TG-100713,1.0056,PI3K inhibitor
+acetylsalicylsalicylic-acid,1.3741,Cyclooxygenase inhibitor
+phenazone,0.3917,Cyclooxygenase inhibitor
+cytochalasin-b,1.2813,Microtubule inhibitor
+chlorogenic-acid,1.1698,Antioxidant
+KI-8751,1.1617,VEGFR inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor
+BMS-754807,1.133,IGF-1 inhibitor
+4-(4-fluorobenzoyl)-1-(4-phenylbutyl)-piperidine,0.7669,Serotonin receptor antagonist
+PP-1,1.6616,Abl kinase inhibitor|Src inhibitor
+podophyllotoxin,1.1695,Microtubule inhibitor|Tubulin inhibitor
+bephenium,1.2536,Acetylcholine receptor agonist
+balapiravir,0.922,RNA polymerase inhibitor
+cebranopadol,1.1838,Opioid receptor agonist
+tecastemizole,0.3083,Histamine receptor antagonist
+CNX-774,1.1993,Bruton's tyrosine kinase (BTK) inhibitor
+YM-201636,1.36,PI3K inhibitor
+methyldopa,-1.0118,Adrenergic receptor agonist
+BAY-11-7085,0.7781,NFkB pathway inhibitor
+PSB-1115,1.3438,Adenosine receptor antagonist
+hyodeoxycholic-acid,1.0221,Atherosclerosis formation inhibitor
+securinine,1.3314,GABA receptor antagonist|TP53 activator
+nintedanib,1.3291,FGFR inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+prazosin,0.2626,Adrenergic receptor antagonist
+vincristine,1.3335,Tubulin inhibitor
+BIBU-1361,0.9455,EGFR inhibitor
+dasatinib,1.5845,Bcr-Abl kinase inhibitor|Ephrin inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|Src inhibitor|Tyrosine kinase inhibitor
+thioguanine,1.0229,Purine antagonist
+PIK-75,1.0741,DNA protein kinase inhibitor|PI3K inhibitor
+pilaralisib,1.1493,PI3K inhibitor
+BX-912,1.1867,Pyruvate dehydrogenase kinase inhibitor
+PD-0325901,1.1286,MAP kinase inhibitor|Protein kinase inhibitor|MEK inhibitor
+mesna,1.0357,Antioxidant
+PHA-767491,1.1025,CDC inhibitor
+NVP-TAE684,0.8478,ALK tyrosine kinase receptor inhibitor
+canertinib,0.998,EGFR inhibitor
+fenofibrate,1.2507,PPAR receptor agonist
+capsaicin,1.1032,TRPV agonist
+oxiracetam,1.4449,Acetylcholine receptor agonist
+cobicistat,1.2001,Cytochrome P450 inhibitor
+lurasidone,0.5464,Dopamine receptor antagonist|Serotonin receptor antagonist
+palbociclib,1.177,CDK inhibitor
+fenbendazole,0.9838,Tubulin inhibitor
+meglitinide,1.1272,Potassium channel blocker
+toremifene,1.0415,Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)
+taurine,1.5998,Antioxidant
+cabozantinib,1.3824,RET tyrosine kinase inhibitor|VEGFR inhibitor
+TPCA-1,0.9626,IKK inhibitor
+ilomastat,1.0798,Matrix metalloprotease inhibitor
+hydroxyurea,0.7023,Ribonucleoside reductase inhibitor
+nemorubicin,0.9089,Topoisomerase inhibitor
+BIIB-021,1.1312,HSP inhibitor
+oxibendazole,1.2355,Tubulin inhibitor
+R-547,1.3022,CDK inhibitor
+chlorhexidine,0.6625,Membrane integrity inhibitor
+tacedinaline,0.7932,HDAC inhibitor
+oligomycin-a,0.7735,ATP synthase inhibitor|ATPase inhibitor
+clindamycin-phosphate,0.5739,Bacterial 50S ribosomal subunit inhibitor|Protein synthesis inhibitor
+TAK-715,1.2882,P38 MAPK inhibitor
+dirithromycin,1.4099,Bacterial 50S ribosomal subunit inhibitor
+epothilone-d,1.1565,Microtubule stabilizing agent|Microtubule stimulant|Tubulin polymerisation inhibitor|Tubulin inhibitor
+GDC-0941,0.868,PI3K inhibitor
+pterostilbene,0.6065,Cyclooxygenase inhibitor|PPAR receptor agonist
+tivozanib,1.1413,VEGFR inhibitor
+OTS-167,0.8469,Maternal embryonic leucine zipper kinase inhibitor
+arctigenin,0.9131,MEK inhibitor
+aurora-a-inhibitor-i,0.4392,Aurora kinase inhibitor
+baricitinib,1.0514,JAK inhibitor
+MK-5108,1.391,Aurora kinase inhibitor
+cinalukast,0.8806,Leukotriene receptor antagonist
+PRT-062607,0.7927,Syk inhibitor
+ruxolitinib,1.4614,JAK inhibitor
+remoxipride,0.9082,Dopamine receptor antagonist
+CMPD-1,1.257,P38 MAPK inhibitor
+halofuginone,1.0548,Collagenase inhibitor
+MK-1775,0.7397,WEE1 kinase inhibitor
+monobenzone,0.5882,Melanin inhibitor
+zolmitriptan,0.8385,Serotonin receptor agonist
+PR-619,1.0885,DUB inhibitor
+JQ1-(+),1.2315,Bromodomain inhibitor
+fudosteine,1.2769,Mucolytic agent
+equol,-1.0432,Estrogen receptor agonist
+alpelisib,0.945,PI3K inhibitor
+azacitidine,1.184,DNA methyltransferase inhibitor
+rigosertib,1.1438,Cell cycle inhibitor|PLK inhibitor
+SC-144,1.0601,P-glycoprotein inhibitor
+AM-404,1.0829,Cyclooxygenase inhibitor|FAAH inhibitor|TRPV antagonist
+latrepirdine,0.9236,Glutamate receptor antagonist
+AP-26113,1.2036,ALK tyrosine kinase receptor inhibitor
+rifampin,1.0096,RNA polymerase inhibitor
+MGCD-265,1.0134,VEGFR inhibitor
+voxtalisib,1.0745,MTOR inhibitor|PI3K inhibitor
+ABT-737,1.0227,BCL inhibitor
+amonafide,1.3989,Topoisomerase inhibitor
+vemurafenib,1.191,RAF inhibitor
+MK-2461,1.4323,FGFR inhibitor|VEGFR inhibitor
+chicago-sky-blue-6b,1.3968,Glutamate transporter modulator|Macrophage migration inhibiting factor inhibitor|Glutamate inhibitor|Macrophage inhibitor
+clofazimine,0.5387,GK0582 inhibitor
+Y-39983,1.2384,Rho associated kinase inhibitor
+epirubicin,1.3107,Topoisomerase inhibitor
+fluroxene,1.199,Local anesthetic
+dacinostat,0.6806,HDAC inhibitor
+selumetinib,1.5122,MEK inhibitor
+CCT-129202,0.8435,Aurora kinase inhibitor
+dacomitinib,1.2133,EGFR inhibitor
+Ro-9187,0.9039,HCV inhibitor
+hesperadin,1.1217,Aurora kinase inhibitor
+Ro-90-7501,1.5372,Beta amyloid inhibitor
+AT-13387,1.0645,HSP antagonist
+palmatine-chloride,0.7831,Dopamine synthesis inhibitor
+FK-866,0.9051,Niacinamide phosphoribosyltransferase inhibitor
+amoxicillin,0.6198,Penicillin binding protein inhibitor
+NMS-E973,0.8626,HSP90 Inhibitor
+AZD-6482,1.1069,PI3K inhibitor
+acetylcysteine,0.7812,Mucolytic agent
+AZ-3146,0.9169,Monopolar spindle 1 kinase inhibitor
+naproxen,-0.7614,Cyclooxygenase inhibitor
+MLN-0128,0.6808,MTOR inhibitor
+delanzomib,0.7665,Proteasome inhibitor
+tozasertib,1.2574,Aurora kinase inhibitor|Bcr-Abl kinase inhibitor|FLT3 inhibitor|JAK inhibitor
+tedizolid,0.9666,Bacterial 50S ribosomal subunit inhibitor
+piperine,0.6036,Monoamine oxidase inhibitor
+cyproterone-acetate,0.7723,Androgen receptor antagonist|Progesterone receptor agonist|Testosterone receptor antagonist
+ubenimex,0.4995,Leukotriene inhibitor
+LDN-212854,0.9005,Bone morphogenic protein inhibitor
+CB-10-277-(free-acid),1.1088,DNA inhibitor|DNA synthesis inhibitor
+sulfabenzamide,0.9871,Bacterial antifolate
+crystal-violet,0.6757,Other antibiotic
+tiagabine,0.6318,GABA uptake inhibitor
+tyrphostin-AG-99,1.0817,Tyrosine kinase inhibitor
+MG-132,0.6648,Proteasome inhibitor
+niacin,0.9176,NAD precursor with lipid lowering effects|Vitamin B
+GSK-1292263,0.6073,"Glucose-Dependent Insulinotropic Receptor (GDIR, GPR119) Agonists"
+chlormidazole,0.9327,Fungal lanosterol demethylase inhibitor
+ONX-0914,0.9106,Proteasome inhibitor
+paricalcitol,0.5369,Vitamin D receptor agonist
+idelalisib,1.2225,PI3K inhibitor
+PHA-848125,1.1563,CDK inhibitor|Growth factor receptor inhibitor
+SB-218795,0.946,Tachykinin antagonist
+combretastatin-A-4,0.9073,Tubulin inhibitor|Angiogenesis inhibitor|Apoptosis stimulant|Tubulin polymerisation inhibitor
+SGI-1027,1.0271,DNA methyltransferase inhibitor
+endo-IWR-1,1.0565,PARP inhibitor
+SB-225002,0.8456,CC chemokine receptor antagonist
+romidepsin,0.9379,HDAC inhibitor
+thiomersal,0.7537,Other antibiotic
+SB-366791,1.087,TRPV antagonist
+resatorvid,1.1075,Toll-like receptor antagonist
+FERb-033,0.7629,ErbB2 inhibitor
+RGFP-966,0.856,HDAC inhibitor
+fleroxacin,1.3878,Topoisomerase inhibitor
+"2,3-DCPE",1.0975,Bcl-XL downregulator
+AS-1949490,0.7728,SHIP2 phosphatase inhibitor
+AVN-944,0.9301,Inosine monophosphate dehydrogenase inhibitor
+anagrelide,0.7469,Phosphodiesterase inhibitor
+fluticasone-propionate,1.289,Glucocorticoid receptor agonist
+venetoclax,0.873,BCL inhibitor
+lerisetron,0.9479,Serotonin receptor antagonist
+aztreonam,0.4304,Bacterial cell wall synthesis inhibitor
+idasanutlin,0.9782,MDM inhibitor
+G-1,1.1056,G protein-coupled receptor agonist
+BMS-265246,0.9442,CDK inhibitor
+tipifarnib-P2,1.5103,Farnesyltransferase inhibitor
+ZSTK-474,0.9895,PI3K inhibitor
+idarubicin,1.2196,Topoisomerase inhibitor
+epinephrine,1.5655,Adrenergic receptor agonist|Neurotransmitter
+EPZ-5676,1.3726,DOT1L inhibitor
+semaxanib,1.1433,VEGFR inhibitor
+temoporfin,1.2466,Radical formation stimulant
+acipimox,0.7899,Cholesterol inhibitor
+mycophenolic-acid,0.8429,Dehydrogenase inhibitor|Inositol monophosphatase inhibitor
+10-hydroxycamptothecin,0.253,Topoisomerase inhibitor
+raloxifene,1.4287,Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)
+barasertib-HQPA,1.2504,Aurora kinase inhibitor
+2'-MeCCPA,1.1061,Adenosine receptor agonist
+gefitinib,0.9699,EGFR inhibitor
+dienogest,1.127,Progesterone receptor agonist
+Ro-4987655,1.2165,MEK inhibitor
+torcetrapib,1.151,Cholesteryl ester transfer protein inhibitor
+PHA-793887,1.4163,CDK inhibitor
+CYC-116,1.4373,Aurora kinase inhibitor
+ispinesib,1.1727,Kinesin inhibitor
+AZ-960,1.2312,JAK inhibitor
+BI-2536,1.4165,PLK inhibitor
+AMG-232,1.3804,MDM inhibitor
+nefiracetam,0.8459,Acetylcholine receptor agonist|GABA receptor agonist
+avanafil,1.1102,Phosphodiesterase inhibitor
+diphenyleneiodonium,0.9706,Nitric oxide synthase inhibitor
+halobetasol-propionate,1.0269,Glucocorticoid receptor agonist|Immunosuppressant
+serdemetan,1.0441,MDM inhibitor
+AZD-1480,0.7267,JAK inhibitor
+salidroside,1.0531,Beta amyloid protein neurotoxicity inhibitor
+CPP,0.3779,Glutamate receptor antagonist
+TMC-353121,0.9692,RSV fusion inhibitor
+afatinib,1.0079,EGFR inhibitor
+fluvastatin,2.0434,HMGCR inhibitor
+VU-0364770,1.2693,Glutamate receptor positive allosteric modulator
+fludarabine,1.0714,DNA synthesis inhibitor
+oxyquinoline,0.5379,Chelating agent
+oleoylethanolamide,-0.7461,Cannabinoid receptor agonist|Glucose dependent insulinotropic receptor agonist|Potassium channel blocker|PPAR receptor agonist
+altretamine,0.8092,DNA synthesis inhibitor
+4E1RCat,0.9241,Protein synthesis inhibitor
+adipiodone,1.2585,Contrast agent
+SB-431542,0.7272,TGF beta receptor inhibitor
+PQ-401,0.78,Insulin growth factor receptor inhibitor|IGF-1 inhibitor
+KU-0063794,0.7856,MTOR inhibitor
+GDC-0879,0.6734,RAF inhibitor
+rheochrysidin,0.8431,Protein tyrosine kinase inhibitor
+pevonedistat,0.6464,Nedd activating enzyme inhibitor
+PI-103,0.9115,MTOR inhibitor|PI3K inhibitor
+eprosartan,0.7936,Angiotensin receptor antagonist
+MK-2206,-1.1745,AKT inhibitor
+palmitoylethanolamide,0.8045,Cannabinoid receptor agonist
+CGS-20625,1.3171,Benzodiazepine receptor agonist
+epothilone-b,1.1168,Microtubule stabilizing agent|Tubulin inhibitor|Microtubule stimulant
+torin-2,0.6675,MTOR inhibitor
+trichostatin-a,0.6602,HDAC inhibitor|CDK expression enhancer|ID1 expression inhibitor
+tyrphostin-AG-1478,1.092,EGFR inhibitor
+amsacrine,1.0608,Topoisomerase inhibitor
+ZK-93426,0.7782,Benzodiazepine receptor antagonist
+EVP-4593,0.8709,NFkB pathway inhibitor
+proflavine-hemisulfate,0.6531,Topical anesthetic
+ENMD-2076,1.1866,Aurora kinase inhibitor|FLT3 inhibitor|VEGFR inhibitor
+dianhydrogalactitol,0.8669,DNA alkylating drug
+dicycloverine,0.9309,Acetylcholine receptor antagonist
+SB-743921,0.8996,Kinesin-like spindle protein inhibitor
+BVT-948,0.6796,Tyrosine phosphatase inhibitor
+ACDPP,0.9996,Glutamate receptor antagonist
+lidamidine,1.1612,Adrenergic receptor agonist
+PF-03814735,1.1081,Aurora kinase inhibitor
+GDC-0152,1.2893,XIAP inhibitor
+PF-3845,1.1488,FAAH inhibitor
+golvatinib,0.7875,VEGFR inhibitor
+sertindole,-0.696,Dopamine receptor antagonist|Serotonin receptor antagonist
+cisplatin,0.9901,DNA alkylating agent|DNA synthesis inhibitor
+vinorelbine,1.336,Tubulin inhibitor
+atorvastatin,2.3697,HMGCR inhibitor
+mericitabine,0.9924,HCV inhibitor
+volasertib,1.0977,PLK inhibitor
+AZD-8055,0.5433,MTOR inhibitor
+SMI-4a,1.2257,Pim kinase inhibitor
+vatalanib,0.8086,KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+INH1,1.0606,Hec1 inhibitor
+ibrutinib,0.7668,BTK inhibitor
+aripiprazole,0.6738,Serotonin receptor agonist|Serotonin receptor antagonist
+erlotinib,1.2259,EGFR inhibitor
+nexturastat-a,0.6635,HDAC inhibitor
+BAY-87-2243,1.0547,Hypoxia inducible factor inhibitor
+ranitidine,0.717,Histamine receptor antagonist
+HMN-214,1.1603,PLK inhibitor
+BIBX-1382,1.352,Tyrosine kinase inhibitor|EGFR inhibitor
+dorzolamide,0.7927,Carbonic anhydrase inhibitor
+fludarabine-phosphate,0.7908,DNA synthesis inhibitor|DNA repair enzyme inhibitor|Purine antagonist
+KD-023,1.089,ACAT inhibitor
+birinapant,1.3779,XIAP inhibitor
+SNX-2112,0.8849,HSP inhibitor
+KPT-185,1.093,Exportin antagonist
+SNS-314,1.3969,Aurora kinase inhibitor
+vidarabine,-1.29,Antiviral
+cefditoren-pivoxil,0.8754,Bacterial cell wall synthesis inhibitor
+baicalein,1.2669,Lipoxygenase inhibitor
+AZD-5438,0.943,CDK inhibitor
+WZ-4002,1.5024,EGFR inhibitor
+ZM-447439,1.4316,Aurora kinase inhibitor
+benzethonium,0.8159,Sodium channel blocker
+arcyriaflavin-a,1.0223,CDK inhibitor
+xanomeline,1.1508,Acetylcholine receptor agonist
+CEP-37440,0.8711,ALK tyrosine kinase receptor inhibitor
+valrubicin,1.109,DNA inhibitor|Topoisomerase inhibitor
+floxuridine,1.2744,DNA synthesis inhibitor
+SNX-5422,1.0388,HSP inhibitor
+tacalcitol,1.0263,Vitamin D receptor agonist
+WZ-3146,1.1283,EGFR inhibitor
+4-methylgenistein,1.4665,Protein tyrosine kinase inhibitor
+OSI-420,1.2442,EGFR inhibitor
+quinisocaine,1.3529,Local anesthetic
+bekanamycin,1.2166,Bacterial 30S ribosomal subunit inhibitor
+nizatidine,0.9237,Histamine receptor antagonist
+azithromycin,0.3792,Bacterial 50S ribosomal subunit inhibitor
+cinacalcet,0.5241,Calcium channel activator
+BI-78D3,-0.7376,JNK inhibitor
+indibulin,1.0805,Tubulin inhibitor
+naftifine,0.9527,Fungal squalene epoxidase inhibitor
+phenylmercuric-acetate,0.8457,Other antifungal
+IKK-2-inhibitor-V,0.95,IKK inhibitor|NFkB pathway inhibitor
+pazopanib,1.271,KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+bosentan,1.0126,Endothelin receptor antagonist
+SCH-900776,1.0264,CHK inhibitor
+carbachol,1.3175,Cholinergic receptor agonist
+alisertib,1.1958,Aurora kinase inhibitor
+KPT-276,1.3447,Exportin antagonist
+tioguanine,1.4594,Purine antagonist
+SU-014813,1.3329,PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+pitavastatin,1.9894,HMGCR inhibitor
+guanidine,1.3887,HSP inhibitor
+tyrphostin-AG-1296,1.0786,FLT3 inhibitor
+JIB04,1.1169,Histone lysine demethylase inhibitor
+ulipristal,0.8162,Progesterone receptor antagonist
+resiquimod,0.81,Toll-like receptor agonist
+BMS-690514,1.0969,EGFR inhibitor|VEGFR inhibitor
+CCT-128930,0.5956,AKT inhibitor
+homoharringtonine,0.919,Protein synthesis inhibitor
+YM-155,0.9182,Survivin inhibitor
+RS-17053,0.3598,Adrenergic receptor antagonist
+CP-724714,0.7959,Tyrosine kinase inhibitor|EGFR inhibitor
+tryptanthrin,0.6316,Cyclooxygenase inhibitor
+WYE-354,1.0461,MTOR inhibitor
+gamma-aminobutyric-acid,1.3623,GABA receptor agonist
+triamcinolone,1.0804,Glucocorticoid receptor agonist
+vandetanib,1.1592,EGFR inhibitor|RET tyrosine kinase inhibitor|VEGFR inhibitor
+BRD-K77634909,1.1493,HSP inducer|Protein kinase inhibitor
+CUDC-907,0.7966,PI3K inhibitor
+SB-200646,1.1941,Serotonin receptor antagonist
+dequalinium,1.1429,PKC inhibitor
+entinostat,1.1805,HDAC inhibitor
+NVP-BVU972,0.8083,MET inhibitor
+mebendazole,0.7763,Tubulin inhibitor
+LY-2090314,0.3771,Glycogen synthase kinase inhibitor
+oxiperomide,0.8202,Dopamine receptor antagonist
+menadione,0.7447,Mitochondrial DNA polymerase inhibitor|Phosphatase inhibitor
+A-674563,0.8705,AKT inhibitor
+PF-4981517,1.3509,Cytochrome P450 inhibitor
+crizotinib,1.1955,ALK tyrosine kinase receptor inhibitor
+dolastatin-10,0.9633,Tubulin inhibitor|Immunostimulant|Microtubule inhibitor|Tubulin polymerisation inhibitor
+ixazomib,1.083,Proteasome inhibitor
+pentagastrin,0.7753,CCK receptor agonist
+suxibuzone,1.2767,Cyclooxygenase inhibitor
+oxaliplatin,0.8442,DNA inhibitor
+albendazole,1.1346,Tubulin inhibitor
+nimorazole,-0.9206,Bacterial DNA inhibitor
+PF-573228,1.8893,Focal adhesion kinase inhibitor
+decitabine,0.8131,DNA methyltransferase inhibitor
+NVP-BHG712,0.9461,Ephrin inhibitor
+inosine,0.9955,Neurotrophic agent
+Ro-10-5824,0.9658,Dopamine receptor agonist
+GW-583340,1.0006,Receptor tyrosine protein kinase inhibitor|EGFR inhibitor|ErbB2 inhibitor
+TAK-285,0.6576,EGFR inhibitor
+triciribine,1.0479,AKT inhibitor
+repsox,1.0172,TGF beta receptor inhibitor
+erteberel,1.0353,Estrogen receptor agonist
+SGI-1776,1.6504,Pim kinase inhibitor
+RS-16566,0.5949,Serotonin receptor antagonist
+INC-280,1.658,C-Met inhibitor
+cyclocytidine,0.925,DNA synthesis inhibitor|RNA synthesis inhibitor
+azilsartan,0.8604,Angiotensin receptor antagonist
+NSC-632839,0.6681,Ubiquitin specific protease inhibitor
+SCH-58261,0.7488,Adenosine receptor antagonist
+triptolide,0.563,RNA polymerase inhibitor
+tideglusib,1.2745,Glycogen synthase kinase inhibitor
+maxacalcitol,0.7006,Vitamin D receptor agonist
+vorinostat,0.7562,HDAC inhibitor
+CX-4945,0.8011,Casein kinase inhibitor
+tanespimycin,1.0631,HSP inhibitor
+nilotinib,0.9464,Abl kinase inhibitor|Bcr-Abl kinase inhibitor
+AC-264613,1.0632,PAR agonist
+VTP-27999,1.5547,Renin inhibitor
+WZ-8040,0.5656,EGFR inhibitor
+PP-121,1.1683,Receptor tyrosine protein kinase inhibitor
+triclabendazole,0.8291,Microtubule inhibitor
+SB-239063,0.5213,P38 MAPK inhibitor
+amfenac,1.0197,Cyclooxygenase inhibitor
+elesclomol,0.5643,Oxidative stress inducer
+navitoclax,0.8287,BCL inhibitor
+batimastat,1.0283,Matrix metalloprotease inhibitor
+PD-407824,0.529,PKC inhibitor
+repaglinide,-1.3994,Insulin secretagogue
+navarixin,1.0808,CC chemokine receptor antagonist
+daclatasvir,0.7777,HCV inhibitor
+ACY-1215,0.5596,HDAC inhibitor
+doxercalciferol,1.0786,Vitamin D receptor agonist
+doxifluridine,0.831,Thymidylate synthase inhibitor
+chloropyramine,0.5852,Histamine receptor antagonist
+skepinone-l,0.9135,P38 MAPK inhibitor
+NMS-1286937,1.044,PLK inhibitor
+PTC-209,0.9346,BMI-1 inhibitor
+JNJ-26481585,0.8219,HDAC inhibitor
+MLN-8054,1.0632,Mitotic inhibitor|Protein kinase inhibitor|Aurora kinase inhibitor
+alvespimycin,0.8676,HSP inhibitor
+nizofenone,0.8437,Ion channel antagonist
+candesartan,1.2337,Angiotensin receptor antagonist
+ercalcitriol,1.0212,Vitamin D receptor agonist
+telatinib,0.8629,KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+trequinsin,0.698,Phosphodiesterase inhibitor
+radezolid,1.1476,Bacterial 30S ribosomal subunit inhibitor|Bacterial 50S ribosomal subunit inhibitor
+riociguat,0.7946,Guanylate cyclase stimulant
+almorexant,1.0187,Orexin receptor antagonist
+sirolimus,1.1935,MTOR inhibitor
+AZD-2461,1.1057,PARP inhibitor
+aphidicolin,0.9186,RNA synthesis inhibitor
+foscarnet,1.3855,DNA polymerase inhibitor
+novobiocin,1.1781,Bacterial DNA gyrase inhibitor
+ramifenazone,0.6253,Cyclooxygenase inhibitor
+dovitinib,1.1354,EGFR inhibitor|FGFR inhibitor|FLT3 inhibitor|PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+ivermectin,1.0557,GABA receptor agonist
+neratinib,0.9339,EGFR inhibitor
+refametinib,1.2795,MEK inhibitor
+AZD-2858,0.7956,Glycogen synthase kinase inhibitor
+kynurenic-acid,0.764,Glutamate receptor antagonist
+WAY-600,0.993,MTOR inhibitor
+flubendazole,0.9245,Tubulin inhibitor
+linsitinib,0.8531,IGF-1 inhibitor
+terconazole,1.1812,Sterol demethylase inhibitor
+AZD-7762,0.4216,CHK inhibitor
+R-306465,0.7524,HDAC inhibitor
+embelin,1.1861,HCV inhibitor|XIAP inhibitor
+SB-939,0.8004,HDAC inhibitor
+PF-04457845,0.6174,FAAH inhibitor
+dofetilide,1.3126,Potassium channel blocker
+cediranib,1.3812,KIT inhibitor|VEGFR inhibitor
+oltipraz,0.73,"Nuclear factor erythroid derived, like (NRF2) activator"
+phenelzine,1.1528,Monoamine oxidase inhibitor
+epothilone-a,1.2026,Microtubule stabilizing agent
+azodicarbonamide,1.5308,DNA synthesis inhibitor
+OSI-027,1.1816,MTOR inhibitor
+norepinephrine,1.1033,Adrenergic receptor agonist
+RS-504393,1.4152,CC chemokine receptor antagonist
+taltobulin,1.187,Tubulin inhibitor
+LY-456236,1.4746,Glutamate receptor antagonist
+istradefylline,0.7468,Adenosine receptor antagonist
+AVL-292,1.0985,Bruton's tyrosine kinase (BTK) inhibitor
+melphalan,1.3466,DNA alkylating agent|DNA inhibitor
+alvocidib,0.4905,CDK inhibitor
+piretanide,0.8971,Glucocorticoid receptor agonist
+naltrexone,1.2837,Opioid receptor antagonist
+pyrimethamine,0.7851,Dihydrofolate reductase inhibitor
+KD-025,1.0047,Rho associated kinase inhibitor
+bortezomib,1.06,NFkB pathway inhibitor|Proteasome inhibitor
+nonoxynol-9,1.1129,Membrane integrity inhibitor
+PD-198306,1.0037,MAP kinase inhibitor|MEK inhibitor
+AS-703026,0.9711,MEK inhibitor
+GSK-923295,1.235,Centromere associated protein inhibitor
+VLX-600,0.7688,USP14 inhibitor
+DCEBIO,0.8686,Potassium channel activator
+SN-38,0.7947,Topoisomerase inhibitor
+vincamine,0.9217,Adrenergic receptor antagonist
+tepoxalin,0.861,Cyclooxygenase inhibitor|Lipoxygenase inhibitor
+raltitrexed,0.6692,Thymidylate synthase inhibitor
+spironolactone,0.8427,Mineralocorticoid receptor antagonist
+chlorquinaldol,0.9505,Other antibiotic
+GW-843682X,0.8634,PLK inhibitor
+AR-12,1.1191,Phosphoinositide dependent kinase inhibitor
+ipsapirone,0.9303,Serotonin receptor agonist
+oleanolic-acid,1.0052,G protein-coupled receptor agonist
+carboplatin,1.2696,DNA alkylating drug|DNA inhibitor
+indiplon,1.0588,Benzodiazepine receptor agonist|GABA receptor agonist
+anisomycin,0.9174,DNA synthesis inhibitor
+mercaptopurine,1.7094,Immunosuppressant|Protein synthesis inhibitor|Purine antagonist
+ABT-751,0.9515,Tubulin inhibitor
+ZK-811752,0.5691,CC chemokine receptor antagonist
+AM-251,-0.9118,Cannabinoid receptor antagonist
+triamterene,0.4154,Sodium channel blocker
+doxorubicin,1.3598,Topoisomerase inhibitor
+exatecan-mesylate,0.7956,Topoisomerase inhibitor
+lomitapide,1.4899,Microsomal trigylceride transfer protein inhibitor
+tosedostat,1.0116,Peptidase inhibitor
+mycophenolate-mofetil,0.7119,Hydroxycarboxylic acid receptor agonist|Immunosuppressant|Inosine monophosphate dehydrogenase inhibitor|Dehydrogenase inhibitor|Inositol monophosphatase inhibitor
+GSK-461364,1.1351,PLK inhibitor
+bexarotene,1.3407,Retinoid receptor agonist
+alfacalcidol,0.9595,Vitamin D receptor agonist
+zaleplon,1.1553,Benzodiazepine receptor agonist
+imatinib,1.2109,Bcr-Abl kinase inhibitor|KIT inhibitor|PDGFR tyrosine kinase receptor inhibitor
+PAC-1,0.6192,Caspase activator
+cladribine,0.6932,Adenosine deaminase inhibitor|Ribonucleoside reductase inhibitor
+RAF-265,0.895,RAF inhibitor|VEGFR inhibitor
+diphemanil,0.8032,Acetylcholine receptor antagonist
+tamoxifen,1.0412,Estrogen receptor antagonist|Selective estrogen receptor modulator (SERM)
+ingenol-mebutate,0.9919,PKC activator
+taltirelin,1.1247,Thyrotropin releasing hormone receptor agonist
+quizartinib,1.2628,FLT3 inhibitor
+TWS-119,1.3684,Glycogen synthase kinase inhibitor
+deflazacort,1.0085,Glucocorticoid receptor agonist
+ribavirin,1.4551,Antiviral
+PF-04136309,0.7435,CC chemokine receptor antagonist
+mevastatin,2.1105,HMGCR inhibitor
+ICG-001,1.1445,Beta-catenin inhibitor
+LDN-57444,0.8165,Ubiquitin C-terminal hydrolase inhibitor
+telotristat,-0.7272,Serotonin receptor antagonist|Serotonin release inhibitor
+chromocarb,1.1667,Antispasmodic
+talazoparib,1.1593,PARP inhibitor
+SB-657510,0.74,Urotensin receptor antagonist
+PHA-665752,0.7133,C-Met inhibitor
+OLDA,0.8558,TRPV agonist
+PFK-015,0.6967,Phosphofructokinase inhibitor
+RN-1734,1.0382,TRPV antagonist
+trapidil,0.8275,PDGFR tyrosine kinase receptor inhibitor
+darifenacin,0.9887,Acetylcholine receptor antagonist
+thiamine,0.2892,Vitamin B
+PP-2,1.1464,Src inhibitor
+SRT-1720,0.8915,SIRT activator
+azalomycin-b,0.9183,Bacterial 50S ribosomal subunit inhibitor
+brequinar,1.0323,Dihydroorotate dehydrogenase inhibitor
+cidofovir,-0.9375,DNA polymerase inhibitor
+adefovir-dipivoxil,0.93,DNA directed DNA polymerase inhibitor|DNA synthesis inhibitor|RNA directed DNA polymerase inhibitor|DNA polymerase inhibitor
+caffeic-acid-phenethyl-ester,1.312,NFkB pathway inhibitor|HIV integrase inhibitor
+metaraminol,0.6461,Adrenergic receptor agonist
+Y-320,0.9421,Interleukin inhibitor
+harringtonine,0.9843,Protein synthesis inhibitor
+chloramphenicol-palmitate,0.9064,Protein synthesis inhibitor
+10-deacetylbaccatin,1.3665,Antitumor agent
+deferasirox,1.2621,Chelating agent
+PI-828,1.0752,PI3K inhibitor
+dihydroergocristine,-1.0657,Adrenergic receptor antagonist|Prolactin inhibitor
+diaveridine,1.276,Dihydrofolate reductase inhibitor
+gestrinone,0.8403,Progesterone receptor antagonist
+P-22077,0.4752,Ubiquitin specific protease inhibitor
+chlorpropamide,1.2695,ATP channel blocker
+nicorandil,1.0375,Nitric oxide donor|Potassium channel activator
+PD-173074,0.7382,FGFR inhibitor|VEGFR inhibitor
+theophylline,1.0894,Adenosine receptor antagonist
+BMS-626529,-0.9381,HIV attachment inhibitor
+GSK-J4,0.9066,Histone lysine demethylase inhibitor
+finafloxacin,1.1845,Bacterial DNA gyrase inhibitor
+desoxycortone,0.8574,Mineralocorticoid receptor agonist
+parthenolide,0.7457,NFkB pathway inhibitor
+AZD-8931,0.921,EGFR inhibitor
+SB-2343,1.0542,MTOR inhibitor|PI3K inhibitor
+AZD-5363,1.1297,AKT inhibitor
+AZD-2014,0.8634,MTOR inhibitor
+NSC-319726,0.8908,P53 activator
+ftorafur,0.9447,Thymidylate synthase inhibitor
+baicalin,0.696,Beta glucuronidase inhibitor
+genz-644282,0.3762,Topoisomerase inhibitor
+plinabulin,0.9188,Tubulin inhibitor
+PF-562271,1.0082,Focal adhesion kinase inhibitor
+cephalomannine,1.1934,DNA polymerase inhibitor
+tanaproget,0.9968,Progesterone receptor agonist
+linifanib,1.0538,PDGFR tyrosine kinase receptor inhibitor|VEGFR inhibitor
+hexachlorophene,0.7528,Potassium channel activator
+hexylresorcinol,1.122,Local anesthetic
+bosutinib,1.1528,Abl kinase inhibitor|Bcr-Abl kinase inhibitor|Src inhibitor
+nemonapride,1.6934,Dopamine receptor antagonist
+levcromakalim,1.0621,Potassium channel activator
+dichloroacetate,0.5887,Pyruvate dehydrogenase kinase inhibitor
