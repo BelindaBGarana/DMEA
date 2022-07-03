@@ -1,5 +1,5 @@
 # DMEA using gene signatures
-# Author: Belinda B. Garana (BG), Date: 2022-05-05; last edit: BG 2022-06-30
+# Author: Belinda B. Garana (BG), Date: 2022-05-05; last edit: BG 2022-07-02
 
 # How to recreate this? Change path in line 12 and press run through the whole script
 # Steps for each dataset:
@@ -109,8 +109,11 @@ avg.filtered.weights.q0.05 <- ddply(filtered.weights.q0.05, .(Gene), summarize,
                                     Log2FC = mean(Log2FC, na.rm=TRUE),
                                     sd.Log2FC = sd(Log2FC, na.rm=TRUE)) # prevent duplicate gene names; 31 genes
 if(nrow(avg.filtered.weights.q0.05) < nrow(filtered.weights.q0.05)){
-  filtered.weights <- avg.filtered.weights.q0.05
-}else{filtered.weights <- filtered.weights.q0.05}
+  filtered.weights <- avg.filtered.weights.q0.05 # columns are already in order of Gene, Log2FC, sd.Log2FC
+}else{
+  filtered.weights <- filtered.weights.q0.05
+  filtered.weights <- filtered.weights[,c("Gene","Log2FC")]
+}
 write.csv(filtered.weights, file="Filtered_gene_signature_no_duplicates.csv", row.names=FALSE)
 
 #### Part 2b - run DMEA::DMEA without any samples used to define the gene signature ####
@@ -197,7 +200,7 @@ fit2 <- contrasts.fit(fit, cont.matrix)
 
 # compute statistics and table of top significant genes
 fit2 <- eBayes(fit2, 0.01)
-tT <- topTable(fit2, adjust="fdr", sort.by="B", number=nrow(fit2$genes))
+tT <- topTable(fit2, adjust="fdr", sort.by="B", number=nrow(fit2))
 
 tT <- subset(tT, select=c("ID","adj.P.Val","P.Value","t","B","logFC","Gene.symbol","Gene.title")) # 22,215 genes
 tT.noblanks <- tT[tT$Gene.symbol!="",] # 21,146 genes
@@ -210,8 +213,11 @@ avg.filtered.weights.q0.05 <- ddply(filtered.weights.q0.05, .(Gene), summarize,
                                     Log2FC = mean(Log2FC, na.rm=TRUE),
                                     sd.Log2FC = sd(Log2FC, na.rm=TRUE)) #prevent duplicate gene names; 3,336 genes
 if(nrow(avg.filtered.weights.q0.05) < nrow(filtered.weights.q0.05)){
-  filtered.weights <- avg.filtered.weights.q0.05
-}else{filtered.weights <- filtered.weights.q0.05}
+  filtered.weights <- avg.filtered.weights.q0.05 # columns are already in order of Gene, Log2FC, sd.Log2FC
+}else{
+  filtered.weights <- filtered.weights.q0.05
+  filtered.weights <- filtered.weights[,c("Gene","Log2FC")]
+}
 write.csv(filtered.weights, file="Filtered_gene_signature_no_duplicates.csv", row.names=FALSE)
 
 #### Part 3b - run DMEA::DMEA without any samples used to define the gene signature ####
@@ -311,7 +317,7 @@ fit2 <- contrasts.fit(fit, cont.matrix)
 
 # compute statistics and table of top significant genes
 fit2 <- eBayes(fit2, 0.01)
-tT <- topTable(fit2, adjust="fdr", sort.by="B", number=nrow(fit2$genes))
+tT <- topTable(fit2, adjust="fdr", sort.by="B", number=nrow(fit2))
 
 tT <- subset(tT, select=c("ID","adj.P.Val","P.Value","t","B","logFC","Gene.symbol","Gene.title")) # 54,675 genes
 tT.noblanks <- tT[tT$Gene.symbol!="",] #45,118 genes
@@ -324,8 +330,11 @@ avg.filtered.weights.q0.05 <- ddply(filtered.weights.q0.05, .(Gene), summarize,
                                     Log2FC = mean(Log2FC, na.rm=TRUE),
                                     sd.Log2FC = sd(Log2FC, na.rm=TRUE)) #prevent duplicate gene names; 49 genes
 if(nrow(avg.filtered.weights.q0.05) < nrow(filtered.weights.q0.05)){
-  filtered.weights <- avg.filtered.weights.q0.05
-}else{filtered.weights <- filtered.weights.q0.05}
+  filtered.weights <- avg.filtered.weights.q0.05 # columns are already in order of Gene, Log2FC, sd.Log2FC
+}else{
+  filtered.weights <- filtered.weights.q0.05
+  filtered.weights <- filtered.weights[,c("Gene","Log2FC")]
+}
 write.csv(filtered.weights, file="Filtered_gene_signature_no_duplicates.csv", row.names=FALSE)
 
 #### Part 4b - run DMEA::DMEA without any samples used to define the gene signature ####
@@ -401,8 +410,11 @@ avg.filtered.weights.q0.05 <- ddply(filtered.weights.q0.05, .(Gene), summarize,
                                     Log2FC = mean(Log2FC, na.rm=TRUE),
                                     sd.Log2FC = sd(Log2FC, na.rm=TRUE)) #prevent duplicate gene names; 748 genes
 if(nrow(avg.filtered.weights.q0.05) < nrow(filtered.weights.q0.05)){
-  filtered.weights <- avg.filtered.weights.q0.05
-}else{filtered.weights <- filtered.weights.q0.05}
+  filtered.weights <- avg.filtered.weights.q0.05 # columns are already in order of Gene, Log2FC, sd.Log2FC
+}else{
+  filtered.weights <- filtered.weights.q0.05
+  filtered.weights <- filtered.weights[,c("Gene","Log2FC")]
+}
 write.csv(filtered.weights, file="Filtered_gene_signature_no_duplicates.csv", row.names=FALSE)
 
 #### Part 5b - run DMEA::DMEA without any samples used to define the gene signature ####
