@@ -36,107 +36,40 @@
     
         <!-- Use the main area to add the main content to the webpage -->
         <main>
-            <div class="mobile-tablet">
-                <h2>How to Use: Web App</h2>
-                <p>The easiest way to use DMEA is with the web application here: <a href="https://belindabgarana.shinyapps.io/dmea/" class="link" >https://belindabgarana.shinyapps.io/dmea/</a></p>
-                <p>
-                    To use the web app, format your input drug rank list or gene signature as a .txt file which looks like the examples below.
-                    DMEA is flexible to accept any signed numeric values as rank metrics for drugs or genes.
-                    For example, drug ranks could be outputs from CMap queries and gene ranks could be Log2FC values from analysis of a GEO dataset.
-                    For the drug rank list input, the third column with mechanism-of-action (moa) annotations is optional. You can also test DMEA using one of the provided examples.
-                </p>
-                <p>Please access this website on desktop to view these examples.</p>
-                <p>For more information, please watch our demo video below or <a href="contact.html" class="link">Contact Us</a>.</p>
-            </div>
 
-            <div class="desktop">
+            <div>
                 <section id="how">
                     <h2>How to Use: Web App</h2>
-                    <p>The easiest way to use DMEA is with the web application here: <a href="https://belindabgarana.shinyapps.io/dmea/" class="link" target="_blank">https://belindabgarana.shinyapps.io/dmea/</a></p>
+                    <p>The easiest way to use DMEA is with the web application here: <a href="https://dmea.app" class="link" target="_blank">https://dmea.app</a> . For more information, please watch our demo video below or <a href="contact.html" class="link">Contact Us</a>. </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kt0Bq6coCdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    <p>To use the web app, you can either run one of our provided examples or select one of 4 input types:</p>
+
+                    <ol>
+                        <li>CMap L1000 query output .gct file (i.e., “query_result.gct” or “ncs.gct”)</li>
+                        <li>CMap PRISM query output .gct file (i.e., “ncs.gct”)</li>
+                        <li>Drug rank list .csv file (drug names in column 1, drug rank metrics in column 2, optional: drug mechanisms-of-action in column 3; headers included)</li>
+                        <li>Gene signature .csv file (gene names in column 1, gene rank metrics in column 2; headers included)</li>
+                    </ol>
+
                     <p>
-                        To use the web app, format your input drug rank list or gene signature as a .txt file which looks like the examples below.
                         DMEA is flexible to accept any signed numeric values as rank metrics for drugs or genes.
-                        For example, drug ranks could be outputs from CMap queries and gene ranks could be Log2FC values from analysis of a GEO dataset.
-                        For the drug rank list input, the third column with mechanism-of-action (moa) annotations is optional. You can also test DMEA using one of the provided examples.
+                        Please refer to the example inputs below or the “Examples” folder on our GitHub repo: <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>
                     </p>
-                    <p>For more information, please watch our demo video below or <a href="contact.html" class="link">Contact Us</a>.</p>
                 </section>
 
                 <section id="rank">
-                    <table id="ranktable">
-                        <caption>Drug Rank List</caption>
-
-                        <tr><!-- Row 1 -->
-                            <th>Drug</th>
-                            <th>Rank</th>
-                            <th>moa</th>
-                        </tr>
-
-                        <tr><!-- Row 2 -->
-                            <td>8-bromo-cGMP</td>
-                            <td>
-                                -1.0074
-                            </td>
-                            <td>
-                                PKA activator
-                            </td>
-                        </tr>
-
-                        <tr><!-- Row 3 -->
-                            <td>parthenolide-(-)</td>
-                            <td>
-                                0.5415
-                            </td>
-                            <td>
-                                NFkB pathway inhibitor|Adiponectin receptor agonist
-                            </td>
-                        </tr>
-
-                        <tr><!-- Row 4 -->
-                            <td>...</td>
-                            <td>
-                                ...
-                            </td>
-                            <td>
-                                ...
-                            </td>
-                        </tr>
-
-                    </table>
+                    <h3>Drug Rank List</h3>
+                    <img src="images/Drug_rank_list_format.png" alt="drug rank list format">
 
                     <p>If the third column with moa annotations is not provided, our default moa annotations based on the PRISM drug screen dataset will be used.</p>
                 </section>
 
                 <section id="signature">
-                    <table id="genetable">
-                        <caption>Gene Signature</caption>
-                        <tr><!-- Row 1 -->
-                            <th>Gene</th>
-                            <th>Rank</th>
-                        </tr>
+                    <h3>Gene Signature</h3>
+                    <img src="images/Gene_signature_format.jpg" alt="gene signature format">
 
-                        <tr><!-- Row 2 -->
-                            <td>TSPAN</td>
-                            <td>
-                                2.10
-                            </td>
-                        </tr>
-
-                        <tr><!-- Row 3 -->
-                            <td>FGR</td>
-                            <td>
-                                -2.46
-                            </td>
-                        </tr>
-
-                        <tr><!-- Row 4 -->
-                            <td>...</td>
-                            <td>
-                                ...
-                            </td>
-                        </tr>
-
-                    </table>
+                    <p>Gene signature inputs will be processed using the PRISM drug sensitivity score metric AUC (Area Under the Curve) and CCLE RNAseq data from version 19Q4.</p>
                 </section>
 
             </div>
@@ -144,14 +77,13 @@
             <section id="how">
                 <h2>How to Use: R Package</h2>
                 <p>
-                    DMEA is intended to be user-friendly. To use DMEA, 
-                    please install our R package by running the 2 lines 
-                    of code below and then use the following instructions 
-                    to either input a drug rank list or a gene signature.
-                    For more information, visit our GitHub repo here: <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>
+                    To use the DMEA R package, first install it by running the 2 lines of code below 
+                    and then use the steps below to either input a drug rank list or a gene signature. 
+                    DMEA is flexible to accept any signed numeric values as rank metrics for drugs or genes. 
+                    To see examples, please refer to the “Examples” folder on our GitHub repo here: <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>
                 </p>
                 <div id="info" class="round">
-                    <p class="equation">if (!require(devtools)) {install.packages(dev.tools) }</p>
+                    <p class="equation">if (!require(devtools)) {install.packages(dev.tools)}</p>
                     <p class="equation">devtools::install_github ('BelindaBGarana/DMEA')</p>
                 </div>
             </section>
@@ -159,20 +91,27 @@
             <section id="rank">
                 <h3>Drug Rank List</h3>
                 <ol>
-                    <li>Install the DMEA R package and load into your library</li>
-                    <li>Input a drug rank list directly into the drugSEA function, as well as a gmt object of drug sets (such as our provided gmt file)</li>
+                    <li>Install the DMEA R package and load it from your library</li>
+                    <li>Input a dataframe containing your drug rank list. 
+                        If you have mechanism-of-action (MOA) annotations, you can provide these in a column in your dataframe. 
+                        If not, you must also input a gmt object such as “MOA_gmt_file_n6_no_special_chars.gmt” available in the “Inputs” folder on our GitHub repo. 
+                        2+ MOA must be represented in your input.</li>
                     <li>Save the output dataframe of the enrichment results for each drug set in addition to plots summarizing the results</li>
-                </ul>
+                </ol>
                 <img src="images/Fig1_DMEA_2022-06-24_no_background.png" alt="DMEA method for drug rank list input">
             </section>
 
             <section id="signature">
                 <h3>Gene Signature</h3>
                 <ol>
-                    <li>Install the DMEA R package and load into your library</li>
-                    <li>Input a gene signature directly into the DMEA function as well as a gmt object of drug sets (such as our provided gmt file) and dataframes of drug sensitivity and gene expression (e.g., PRISM and CCLE)</li>
+                    <li>Install the DMEA R package and load it from your library</li>
+                    <li>Input a dataframe containing your gene signature, as well as dataframes containing drug sensitivity scores and gene expression data with common sample names in the first columns. 
+                        If you have mechanism-of-action (MOA) annotations, you can provide these in a separate dataframe. 
+                        If not, you must also input a gmt object such as “MOA_gmt_file_n6_no_special_chars.gmt”. 
+                        This file, in addition to files containing drug sensitivity scores and gene expression data, is available in the "Inputs" folder on our GitHub repo. 
+                        2+ MOA must be represented in your input.</li>
                     <li>Save the output dataframes with the Weighted Voting, correlation, and enrichment results for each drug set in addition to plots summarizing the results</li>
-                </ul>
+                </ol>
                 <div id="sigimage">
                     <img src="images/Fig4_DMEA_1000dpi.png" alt="DMEA method for gene signature input">
                 </div>
