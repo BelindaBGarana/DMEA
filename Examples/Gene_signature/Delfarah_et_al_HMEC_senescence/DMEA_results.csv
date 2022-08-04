@@ -1,0 +1,84 @@
+"Rank_metric","Drug_set","ES","NES","p_value","Position_at_max","FDR_q_value"
+"Pearson.est","EGFR inhibitor",-0.78128,-2.18,0,1320,0.0613
+"Pearson.est","Abl kinase inhibitor",-0.26883,-0.764,0.738,1322,0.992
+"Pearson.est","acetylcholine receptor agonist",0.44433,1.08,0.395,264,0.788
+"Pearson.est","acetylcholine receptor antagonist",0.42557,1.04,0.412,418,0.794
+"Pearson.est","adenosine receptor antagonist",-0.43851,-1.22,0.219,1346,1
+"Pearson.est","adrenergic receptor agonist",-0.42359,-1.2,0.235,607,0.944
+"Pearson.est","adrenergic receptor antagonist",0.3223,0.775,0.743,708,1
+"Pearson.est","AKT inhibitor",-0.38398,-1.09,0.323,1276,0.924
+"Pearson.est","ALK tyrosine kinase receptor inhibitor",-0.38986,-1.09,0.365,1376,0.924
+"Pearson.est","androgen receptor antagonist",0.25889,0.631,0.905,232,0.955
+"Pearson.est","antioxidant",0.36197,0.89,0.596,308,0.956
+"Pearson.est","AP inhibitor",-0.37363,-1.03,0.402,1278,0.919
+"Pearson.est","ATPase inhibitor",0.60201,1.45,0.0715,311,0.359
+"Pearson.est","Aurora kinase inhibitor",0.673,1.61,0.0337,440,0.219
+"Pearson.est","bacterial 50S ribosomal subunit inhibitor",0.42146,1.02,0.449,289,0.813
+"Pearson.est","bacterial DNA gyrase inhibitor",-0.28542,-0.818,0.669,411,0.981
+"Pearson.est","BCL inhibitor",0.53925,1.31,0.163,74,0.537
+"Pearson.est","Bcr.Abl kinase inhibitor",-0.29774,-0.828,0.653,1421,1
+"Pearson.est","benzodiazepine receptor agonist",0.41306,1,0.491,526,0.829
+"Pearson.est","bromodomain inhibitor",0.76494,1.86,0.00658,310,0.0843
+"Pearson.est","calcium channel blocker",0.38361,0.946,0.531,61,0.867
+"Pearson.est","CC chemokine receptor antagonist",0.72496,1.73,0.00677,303,0.197
+"Pearson.est","CDK inhibitor",0.31708,0.77,0.779,703,0.995
+"Pearson.est","CHK inhibitor",0.28193,0.679,0.848,152,0.986
+"Pearson.est","cyclooxygenase inhibitor",0.23942,0.584,0.944,347,0.973
+"Pearson.est","cytochrome P450 inhibitor",0.27219,0.655,0.887,680,0.991
+"Pearson.est","DNA alkylating agent",0.29536,0.7,0.818,635,1
+"Pearson.est","DNA inhibitor",0.59956,1.45,0.0668,205,0.359
+"Pearson.est","DNA methyltransferase inhibitor",0.26997,0.641,0.914,541,0.965
+"Pearson.est","DNA polymerase inhibitor",0.66246,1.61,0.0327,312,0.219
+"Pearson.est","DNA synthesis inhibitor",0.35616,0.856,0.652,548,0.944
+"Pearson.est","dopamine receptor antagonist",-0.21392,-0.568,0.941,1265,0.951
+"Pearson.est","estrogen receptor agonist",0.17658,0.424,0.997,399,0.995
+"Pearson.est","estrogen receptor antagonist",0.44654,1.06,0.395,358,0.776
+"Pearson.est","FGFR inhibitor",0.58978,1.43,0.0867,279,0.342
+"Pearson.est","FLT3 inhibitor",0.49642,1.2,0.235,499,0.59
+"Pearson.est","glucocorticoid receptor agonist",0.33906,0.814,0.712,661,0.995
+"Pearson.est","glutamate receptor antagonist",-0.35639,-0.985,0.459,1250,0.831
+"Pearson.est","glycogen synthase kinase inhibitor",-0.28799,-0.773,0.708,1336,1
+"Pearson.est","growth factor receptor inhibitor",0.27891,0.685,0.855,100,0.999
+"Pearson.est","HCV inhibitor",0.3511,0.865,0.624,460,0.952
+"Pearson.est","HDAC inhibitor",0.44129,1.06,0.379,492,0.776
+"Pearson.est","histamine receptor antagonist",0.22959,0.552,0.96,254,0.974
+"Pearson.est","HMGCR inhibitor",0.63636,1.52,0.0519,524,0.314
+"Pearson.est","HSP inhibitor",-0.30595,-0.848,0.601,1405,1
+"Pearson.est","JAK inhibitor",0.32345,0.776,0.744,563,1
+"Pearson.est","KIT inhibitor",0.54679,1.32,0.123,193,0.549
+"Pearson.est","MDM inhibitor",0.8516,2.06,0.00136,220,0.0133
+"Pearson.est","MEK inhibitor",-0.69946,-2.01,0.0038,1259,0.125
+"Pearson.est","MET inhibitor",-0.2656,-0.725,0.811,383,1
+"Pearson.est","microtubule inhibitor",0.49554,1.2,0.235,357,0.59
+"Pearson.est","mTOR inhibitor",-0.35585,-1.01,0.39,1149,0.895
+"Pearson.est","NFkB pathway inhibitor",0.3127,0.747,0.788,508,0.984
+"Pearson.est","opioid receptor agonist",-0.42761,-1.21,0.255,1239,1
+"Pearson.est","p38 MAPK inhibitor",0.35413,0.868,0.634,550,0.972
+"Pearson.est","PARP inhibitor",0.61821,1.48,0.0606,396,0.362
+"Pearson.est","PDGFR tyrosine kinase receptor inhibitor",0.44586,1.09,0.36,279,0.793
+"Pearson.est","phosphatase inhibitor",0.51691,1.25,0.198,192,0.559
+"Pearson.est","phosphodiesterase inhibitor",0.31414,0.758,0.779,411,0.99
+"Pearson.est","PI3K inhibitor",-0.2164,-0.609,0.932,1203,0.993
+"Pearson.est","PLK inhibitor",0.69535,1.67,0.0186,446,0.243
+"Pearson.est","potassium channel blocker",-0.47157,-1.31,0.144,680,1
+"Pearson.est","PPAR receptor agonist",0.52082,1.25,0.203,9,0.559
+"Pearson.est","progesterone receptor agonist",-0.3524,-0.962,0.482,1303,0.829
+"Pearson.est","proteasome inhibitor",-0.41724,-1.13,0.307,1225,1
+"Pearson.est","protein synthesis inhibitor",0.53168,1.27,0.19,404,0.602
+"Pearson.est","protein tyrosine kinase inhibitor",-0.3613,-0.993,0.442,1175,0.869
+"Pearson.est","RAF inhibitor",0.49426,1.18,0.265,373,0.609
+"Pearson.est","RET tyrosine kinase inhibitor",0.51119,1.23,0.207,151,0.578
+"Pearson.est","retinoid receptor agonist",0.51508,1.25,0.215,143,0.559
+"Pearson.est","ribonucleotide reductase inhibitor",0.67316,1.63,0.0353,253,0.263
+"Pearson.est","serotonin receptor agonist",-0.23162,-0.63,0.898,334,1
+"Pearson.est","serotonin receptor antagonist",0.40042,0.961,0.517,138,0.861
+"Pearson.est","sodium channel blocker",-0.25505,-0.707,0.818,366,0.998
+"Pearson.est","src inhibitor",-0.53312,-1.51,0.0789,1293,0.752
+"Pearson.est","sterol demethylase inhibitor",0.30176,0.727,0.819,578,0.989
+"Pearson.est","TGF beta receptor inhibitor",-0.38424,-1.08,0.338,1312,0.867
+"Pearson.est","thymidylate synthase inhibitor",0.41174,0.99,0.496,483,0.824
+"Pearson.est","topoisomerase inhibitor",0.64652,1.56,0.0399,394,0.271
+"Pearson.est","tubulin polymerization inhibitor",0.59487,1.43,0.0854,427,0.342
+"Pearson.est","tyrosine kinase inhibitor",-0.22386,-0.607,0.931,1399,0.958
+"Pearson.est","VEGFR inhibitor",0.26996,0.645,0.89,154,0.98
+"Pearson.est","vitamin D receptor agonist",-0.23734,-0.68,0.831,342,0.993
