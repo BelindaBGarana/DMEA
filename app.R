@@ -6,6 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
+# Author: Belinda B. Garana; last edit: 2022-08-04
 
 library(shiny);library(utils);library(GSA);library(DMEA);library(plyr);
 library(dplyr);library(ggplot2);library(reshape2);library(gridExtra);library(sjmisc);
@@ -115,14 +116,15 @@ ui <- fluidPage(
                               "CMap L1000: HUVEC treated with HMGCR inhibitor pitavastatin" = "Drug_rank_list/CMap/L1000/GSE32547_Pitavastatin_treated_HUVEC_cells_1_uM_at_4H_vs_DMSO_treated",
                               "CMap L1000: A2058 treated with PI3K/MTOR inhibitor BEZ235" = "Drug_rank_list/CMap/L1000/GSE33643_PI3K_MTOR_inhibitor_BEZ235_treated_A2058_cells_3_doses_at_24H_vs_DMSO_treated",
                               "CMap L1000: A375 treated with MEK inhibitor GSK212" = "Drug_rank_list/CMap/L1000/GSE35230_MEK_inhibitor_GSK212_treated_A375_clones_30nM_at_24H_vs_DMSO_treated",
-                              "CMap L1000: Senescenct HMEC" = "Drug_rank_list/CMap/L1000/Delfarah_et_al_HMEC_senescence",
+                              "CMap L1000: Senescent HMEC" = "Drug_rank_list/CMap/L1000/Delfarah_et_al_HMEC_senescence",
                               "CMap PRISM: Sensitive to HMGCR inhibitor lovastatin" = "Drug_rank_list/CMap/PRISM/Cell_lines_sensitive_to_HMGCR_inhibitor_lovastatin",
                               "CMap PRISM: EGFR-activating mutation" = "Drug_rank_list/CMap/PRISM/Cell_lines_with_EGFR_activating_mutation_ELREA746DEL",
                               "CMap PRISM: High expression of PDGFRA" = "Drug_rank_list/CMap/PRISM/Cell_lines_with_high_gene_expression_of_PDGFRA",
                               "Gene signature: NSCLC sensitive to EGFR inhibitor gefitinib" = "Gene_signature/Coldren_et_al_NSCLC_sensitive_vs_resistant_to_gefitinib",
                               "Gene signature: BRCA sensitive to EGFR inhibitor erlotinib" = "Gene_signature/GSE12790_BRCA_sensitive_vs_resistant_to_erlotinib",
                               "Gene signature: NSCLC sensitive to EGFR inhibitor erlotinib" = "Gene_signature/GSE31625_NSCLC_sensitive_vs_resistant_to_erlotinib",
-                              "Gene signature: SKCM sensitive to RAF inhibitor dabrafenib" = "Gene_signature/GSE66539_SKCM_sensitive_vs_resistant_to_dabrafenib")),
+                              "Gene signature: SKCM sensitive to RAF inhibitor vemurafenib" = "Gene_signature/GSE66539_SKCM_sensitive_vs_resistant_to_vemurafenib",
+                              "Gene signature: Senescent HMEC" = "Gene_signature/Delfarah_et_al_HMEC_senescence")),
       
       # get drug moa of interest (if any)
       textInput(inputId = "interest", label = "Optional: enter a moa of interest to view its mountain plot (case-sensitive; e.g., HMGCR inhibitor) "),
