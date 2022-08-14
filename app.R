@@ -6,7 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
-# Author: Belinda B. Garana; last edit: 2022-08-04
+# Author: Belinda B. Garana; last edit: 2022-08-14
 
 library(shiny);library(utils);library(GSA);library(DMEA);library(plyr);
 library(dplyr);library(ggplot2);library(reshape2);library(gridExtra);library(sjmisc);
@@ -17,7 +17,10 @@ library(BiocManager)
 options(repos = BiocManager::repositories())
 library(qvalue)
 
+# set limit for upload file size
 MB.limit <- 180
+
+# set illegal filename characters
 illegal.chars <- c("#","<","%",">","!","`","&","'","=","}","/",":","@") # source: https://www.mtu.edu/umc/services/websites/writing/characters-avoid/; would be nice to protect against " and \ too
 illegal.chars.need.brackets <- c("$","+","*","|","{","?") # for these chars, gsub needs brackets but str_contains can't have brackets
 
@@ -127,7 +130,17 @@ ui <- fluidPage(
                               "Gene signature: Senescent HMEC" = "Gene_signature/Delfarah_et_al_HMEC_senescence")),
       
       # get drug moa of interest (if any)
-      textInput(inputId = "interest", label = "Optional: enter a moa of interest to view its mountain plot (case-sensitive; e.g., HMGCR inhibitor) "),
+      textInput(inputId = "interest", label = "Optional: enter a moa of interest to view its mountain plot (case-sensitive; e.g., HMGCR inhibitor)"),
+      
+      # offer advanced settings
+      checkboxInput(inputId = "advanced", label = "Optional: advanced settings", value = FALSE),
+      conditionalPanel(
+          condition = "input.advanced",
+          sliderInput("n.min.per.set","Minimum drugs per set:",
+                    min=1, max=40, value=6),
+          sliderInput("FDR.cutoff","False discovery rate cutoff:",
+                        min=0, max=1, value=0.25)
+      ),
       
       # include "Run" button
       actionButton(inputId = "run", label = "Run"),
@@ -170,6 +183,7 @@ ui <- fluidPage(
   )
 )
 
+# Define backend
 server <- function(input, output) {
   url <- a("https://belindabgarana.github.io/DMEA", href = "https://belindabgarana.github.io/DMEA")
   output$info <- renderUI({tagList("For more information or to contact us, please visit: ", url)})
@@ -198,7 +212,8 @@ server <- function(input, output) {
         
         # run DMEA
         cat(file=stderr(), "About to run enrichment analysis", "\n")
-        DMEA.output <- drugSEA(rank.data, gmt, drug="pert_iname", rank.metric=colnames(rank.data)[2])
+        DMEA.output <- drugSEA(rank.data, gmt, drug="pert_iname", rank.metric=colnames(rank.data)[2],
+                               FDR=FDR.cutoff, min.per.set=n.min.per.set)
         
         # output results
         cat(file=stderr(), "About to output results", "\n")
@@ -233,7 +248,8 @@ server <- function(input, output) {
         
         # run DMEA
         cat(file=stderr(), "About to run enrichment analysis", "\n")
-        DMEA.output <- DMEA(inputs$PRISM.AUC, inputs$gmt, inputs$RNA.df, weights=rank.data, ylab="Drug AUC")
+        DMEA.output <- DMEA(inputs$PRISM.AUC, inputs$gmt, inputs$RNA.df, weights=rank.data, ylab="Drug AUC",
+                            FDR=FDR.cutoff, min.per.set=n.min.per.set)
         
         # output results
         cat(file=stderr(), "About to output results", "\n")
@@ -311,7 +327,8 @@ server <- function(input, output) {
       
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
-      DMEA.output <- drugSEA(rank.data, drug="pert_iname", rank.metric=rank.metric)
+      DMEA.output <- drugSEA(rank.data, drug="pert_iname", rank.metric=rank.metric,
+                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -375,7 +392,8 @@ server <- function(input, output) {
       
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
-      DMEA.output <- drugSEA(rank.data, drug="pert_iname", rank.metric=rank.metric)
+      DMEA.output <- drugSEA(rank.data, drug="pert_iname", rank.metric=rank.metric,
+                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -443,7 +461,8 @@ server <- function(input, output) {
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
       DMEA.output <- drugSEA(rank.data, drug=colnames(rank.data)[1], 
-                             rank.metric=colnames(rank.data)[2], set.type=colnames(rank.data)[3])
+                             rank.metric=colnames(rank.data)[2], set.type=colnames(rank.data)[3],
+                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -520,7 +539,8 @@ server <- function(input, output) {
       
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
-      DMEA.output <- drugSEA(rank.data, gmt, drug=colnames(rank.data)[1], rank.metric=colnames(rank.data)[2])
+      DMEA.output <- drugSEA(rank.data, gmt, drug=colnames(rank.data)[1], rank.metric=colnames(rank.data)[2],
+                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -591,7 +611,8 @@ server <- function(input, output) {
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
       if(nrow(rank.data)>0){
-        DMEA.output <- DMEA(inputs$PRISM.AUC, inputs$gmt, inputs$RNA.df, weights=rank.data, ylab="Drug AUC")
+        DMEA.output <- DMEA(inputs$PRISM.AUC, inputs$gmt, inputs$RNA.df, weights=rank.data, ylab="Drug AUC",
+                            FDR=FDR.cutoff, min.per.set=n.min.per.set)
         
         # output results
         cat(file=stderr(), "About to output results", "\n")
