@@ -42,10 +42,9 @@ num.drugs <- length(drug.names) #1351
 # Make synthetic cell line name - only need 1!
 synthetic.cell.names <- "Cell_No_1"
 
-# How far do we want to vary values here? Start with 0 to 0.5
+# How far do we want to vary values here?
 min.vary <- -1
 max.vary <- 1
-#values.to.vary <- seq(from = min.vary, to = max.vary, by = (max.vary-min.vary)/10)
 values.to.vary <- seq(from = min.vary, to = max.vary, by = 0.25)
 
 # Import pathways
@@ -53,7 +52,7 @@ gmt <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs
 
 path.sim <- paste0("Sim_results_",Sys.Date())
 dir.create(path.sim)
-#Change path to where you want files saved
+# Change path to where you want files saved
 setwd(path.sim)
 
 all.synth.sim.results <- list()
