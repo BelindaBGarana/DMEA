@@ -1,4 +1,5 @@
-#JJ sent 12-17-20; BG adapted for DMEA; last edit: BG 20220620
+# Authors: Belinda B. Garana (BG), James H. Joly (JJ)
+# JJ sent 12-17-20; BG adapted for DMEA; last edit: BG 2022-06-20
 ### We want to know the true positive / false negative rates of enrichment
 ### So we will create synthetic data with enrichments for a drug set
 ### We will vary drug rank metric for a set of X drugs all in one direction, then run DMEA
@@ -11,10 +12,8 @@
 ### Step 4: Repeat with different values of X (5, 10, 20, 40)
 
 rm(list=ls(all=TRUE))
-
 if(!require(devtools)){install.packages("dev.tools")}
 if(!require(DMEA)){devtools::install_github('BelindaBGarana/DMEA')}
-
 library(DMEA);library(dplyr);library(GSA);library(reshape2);library(data.table);library(ggplot2);
 
 ### Step 0: Prep rows, columns, values
@@ -47,7 +46,7 @@ min.vary <- -1
 max.vary <- 1
 values.to.vary <- seq(from = min.vary, to = max.vary, by = 0.25)
 
-# Import pathways
+# Import MOA set information
 gmt <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/MOA_gmt_file_n6_no_special_chars.gmt")
 
 path.sim <- paste0("Sim_results_",Sys.Date())
