@@ -197,6 +197,8 @@ server <- function(input, output) {
     avg.gene <- input$gene.avg
     selected.ex <- input$example
     selected.moa <- input$interest
+    min.per.set <- input$n.min.per.set
+    FDR <- input$FDR.cutoff
     if(selected.ex != "none"){
       # get last folder name for filename when outputting results
       selection.info <- strsplit(selected.ex, "/")[[1]]
@@ -213,7 +215,7 @@ server <- function(input, output) {
         # run DMEA
         cat(file=stderr(), "About to run enrichment analysis", "\n")
         DMEA.output <- drugSEA(rank.data, gmt, drug="pert_iname", rank.metric=colnames(rank.data)[2],
-                               FDR=FDR.cutoff, min.per.set=n.min.per.set)
+                               FDR=FDR, min.per.set=min.per.set)
         
         # output results
         cat(file=stderr(), "About to output results", "\n")
@@ -249,7 +251,7 @@ server <- function(input, output) {
         # run DMEA
         cat(file=stderr(), "About to run enrichment analysis", "\n")
         DMEA.output <- DMEA(inputs$PRISM.AUC, inputs$gmt, inputs$RNA.df, weights=rank.data, ylab="Drug AUC",
-                            FDR=FDR.cutoff, min.per.set=n.min.per.set)
+                            FDR=FDR, min.per.set=min.per.set)
         
         # output results
         cat(file=stderr(), "About to output results", "\n")
@@ -328,7 +330,7 @@ server <- function(input, output) {
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
       DMEA.output <- drugSEA(rank.data, drug="pert_iname", rank.metric=rank.metric,
-                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
+                             FDR=FDR, min.per.set=min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -393,7 +395,7 @@ server <- function(input, output) {
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
       DMEA.output <- drugSEA(rank.data, drug="pert_iname", rank.metric=rank.metric,
-                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
+                             FDR=FDR, min.per.set=min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -462,7 +464,7 @@ server <- function(input, output) {
       cat(file=stderr(), "About to run enrichment analysis", "\n")
       DMEA.output <- drugSEA(rank.data, drug=colnames(rank.data)[1], 
                              rank.metric=colnames(rank.data)[2], set.type=colnames(rank.data)[3],
-                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
+                             FDR=FDR, min.per.set=min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -540,7 +542,7 @@ server <- function(input, output) {
       # run DMEA
       cat(file=stderr(), "About to run enrichment analysis", "\n")
       DMEA.output <- drugSEA(rank.data, gmt, drug=colnames(rank.data)[1], rank.metric=colnames(rank.data)[2],
-                             FDR=FDR.cutoff, min.per.set=n.min.per.set)
+                             FDR=FDR, min.per.set=min.per.set)
       
       # output results
       cat(file=stderr(), "About to output results", "\n")
@@ -612,7 +614,7 @@ server <- function(input, output) {
       cat(file=stderr(), "About to run enrichment analysis", "\n")
       if(nrow(rank.data)>0){
         DMEA.output <- DMEA(inputs$PRISM.AUC, inputs$gmt, inputs$RNA.df, weights=rank.data, ylab="Drug AUC",
-                            FDR=FDR.cutoff, min.per.set=n.min.per.set)
+                            FDR=FDR, min.per.set=min.per.set)
         
         # output results
         cat(file=stderr(), "About to output results", "\n")
