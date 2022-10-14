@@ -213,7 +213,7 @@ as.gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
         elements[[all.sets[i]]] <- list()
         for(j in 1:nrow(data)){ 
           sets <- strsplit(as.character(data[j, c(set.names)]), sep)[[1]]
-          if(all.sets[i] %in% sets){elements[[all.sets[i]]] <- c(elements[[all.sets[i]]], data[j, c(element.names)])}
+          if(all.sets[i] %in% sets){elements[[all.sets[i]]] <- unique(c(elements[[all.sets[i]]], data[j, c(element.names)]))}
         }
         # store sets with elements
         if(length(elements[[all.sets[i]]])>=min.per.set){
