@@ -1,5 +1,5 @@
 #DMEA
-#Author: Belinda B. Garana (BG), Date: 2020-12-03; last edit: BG 2022-07-03
+#Author: Belinda B. Garana (BG), Date: 2020-12-03; last edit: BG 2022-12-07
 #Note: drugSEA co-authored with JJ (GSEA_custom by JJ & revised by BG for drugSEA; gsea_mountain_plot by JJ & revised by BG)
 #Note: thanks to NG for ng.theme (used in rank.corr)
 
@@ -36,8 +36,8 @@ WV <- function(expression, weights, sample.names=colnames(expression)[1],
 
 rank.corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2], ylab=value, position.x="mid", position.y="max", se=TRUE){
   print("Running correlations and regressions...")
-  library(dplyr);library(qvalue);library(ggplot2);library(stats);library(reshape2);library(gridExtra)
-  ;library(parallel);library(snow);library(doSNOW);
+  library(dplyr);library(qvalue);library(ggplot2);library(stats);library(reshape2);library(gridExtra);
+  library(parallel);library(snow);library(doSNOW);
   
   cores <- parallel::detectCores() # number of cores available
   if(cores[1] > 1){
@@ -693,18 +693,18 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       ggrepel::geom_text_repel(data=subset(plot.data,Significance==paste0("FDR < ", FDR)),mapping=aes(label=Drug_set,size=I(4)),nudge_y = 0.25) +
       ggplot2::scale_color_manual(values=c("red","azure4"),name="Significance",breaks=c(paste0("FDR < ", FDR), paste0("FDR > ", FDR))) +
       ggplot2::xlim(-limit.x,limit.x) + ylim(0,limit.y) + ggplot2::xlab("Normalized Enrichment Score") + ggplot2::ylab("-Log(p-value)") +
-      ggplot2::geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
-      ggplot2::theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
+      ggplot2::geom_vline(xintercept=0,linetype="solid",color="grey",linewidth=0.5) +
+      ggplot2::theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=1), axis.line = element_line(colour = 'black', linewidth = 0.65),
             legend.text=element_text(size=10),axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
-            panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10),
+            panel.background = element_rect(fill="white", colour="white", linewidth=0.5,linetype="solid", color="black"), text = element_text(size = 10),
             legend.position = "bottom", legend.key = element_blank())
   }else{
     volc <- ggplot2::ggplot(data = plot.data, aes(x = NES, y = -log(p_value,10))) + ggplot2::geom_point(size = 4, color="azure4") + 
       ggplot2::xlim(-limit.x,limit.x) + ggplot2::ylim(0,limit.y) + ggplot2::xlab("Normalized Enrichment Score") + ggplot2::ylab("-Log(p-value)") +
-      ggplot2::geom_vline(xintercept=0,linetype="solid",color="grey",size=0.5) +
-      ggplot2::theme(panel.border = element_rect(colour = "black", fill=NA, size=1), axis.line = element_line(colour = 'black', size = 0.65),
+      ggplot2::geom_vline(xintercept=0,linetype="solid",color="grey",linewidth=0.5) +
+      ggplot2::theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=1), axis.line = element_line(colour = 'black', linewidth = 0.65),
             axis.text=element_text(size=10),axis.title=element_text(size=20,face="bold"),
-            panel.background = element_rect(fill="white", colour="white", size=0.5,linetype="solid", color="black"), text = element_text(size = 10))
+            panel.background = element_rect(fill="white", colour="white", linewidth=0.5,linetype="solid", color="black"), text = element_text(size = 10))
   }
   
   outputs <- list(gmt = gmt, result = EA.Results, mtn.plots = temp.plot, volcano.plot = volc)
