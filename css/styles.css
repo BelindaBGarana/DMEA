@@ -252,9 +252,9 @@ footer {
     background-color: #800000;
     color: #f6eee4;
     padding: 1% 0%;
-    position: fixed;
     width: 100%;
     bottom: 0;
+    height: 60px;
 }
 
 footer a {
