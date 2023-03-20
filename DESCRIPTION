@@ -8,3 +8,8 @@ Description: Drug Mechanism Enrichment Analysis
 License: CC0
 Encoding: UTF-8
 LazyData: true
+Imports:
+	aplot, cowplot, doSNOW, dplyr, 
+	foreach, ggrepel, gridExtra, ggplot2, 
+	parallel, qvalue, reshape2, stats, 
+	sjmisc, snow, testthat, tidyselect
