@@ -20,7 +20,7 @@ WV(expression, weights, sample.names=colnames(expression)[1],
 
   \item{sample.names}{Column name in expression dataframe containing the sample names. Default: colnames(expression)[1].}
 
-  \item{gene.names}{Column name in weights dataframe containing the gene names. Default: colnames(weights)[1].}
+  \item{gene.names}{Column name in weights dataframe containing the gene symbols. Default: colnames(weights)[1].}
 
   \item{weight.values}{Column name in weights dataframe containing the weight values (e.g., log2(fold-change) values). Default: colnames(weights)[2].}
 }
@@ -41,6 +41,10 @@ For more information, please visit: https://belindabgarana.github.io/DMEA
 \section{Warning }{Make sure your weights have the same gene names as your expression dataframe, and that your expression dataframe is formatted with gene names along columns.}
 
 \examples{
+# select example gene signature
+selected.ex <- "Gene_signature/GSE31625_NSCLC_sensitive_vs_resistant_to_erlotinib"
+gene.sig <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Examples/",selected.ex,"/Filtered_gene_signature_no_duplicates.csv"))
+
 # download RNAseq data
 download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin",
               destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin"))
@@ -49,10 +53,6 @@ download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Norma
               destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin"))
 load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin")
 RNA.df <- rbind(RNA.first200, RNA.rest)
-
-# select example gene signature
-selected.ex <- "Gene_signature/GSE31625_NSCLC_sensitive_vs_resistant_to_erlotinib"
-gene.sig <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Examples/",selected.ex,"/Filtered_gene_signature_no_duplicates.csv"))
 
 # run Weighted Voting to score each sample
 WV.test <- WV(RNA.df, gene.sig)
