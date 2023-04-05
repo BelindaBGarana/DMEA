@@ -2,12 +2,26 @@ Package: DMEA
 Type: Package
 Title: Drug Mechanism Enrichment Analysis
 Version: 0.1.0
-Author: Belinda B. Garana, James H. Joly
-Maintainer: Belinda B. Garana <bgarana@usc.edu>
+Authors@R: 
+	c(person(given = c("Belinda", "B."),
+		 family = "Garana", 
+		 role = c("aut", "cre"),
+		 email = "garana.belinda@gmail.com",
+		 comment = c(ORCID = "0000-0001-8906-5270")),
+	  person(given = c("James", "H."),
+		 family = "Joly", 
+		 role = "ctb",
+		 comment = c(ORCID = "0000-0003-3780-9412")))
 Description: Drug Mechanism Enrichment Analysis
 License: CC0
+URL: https://belindabgarana.github.io/DMEA, https://github.com/BelindaBGarana/DMEA
+BugReports: https://github.com/BelindaBGarana/DMEA/issues
 Encoding: UTF-8
 LazyData: true
+biocViews:
+	BiomedicalInformatics, GeneExpression, GraphAndNetwork,
+	NetworkEnrichment, Pharmacogenetics, Pharmacogenomics, 
+	Proteomics, Regression, SystemsBiology, Transcriptomics
 Imports:
 	aplot, cowplot, dplyr, foreach, 
 	ggrepel, gridExtra, ggplot2, 
@@ -15,6 +29,8 @@ Imports:
 	sjmisc, testthat, tidyselect
 Enhances:
 	parallel, snow, doSNOW
+VignetteBuilder: knitr
+Suggests: BiocStyle, knitr, rmarkdown
 Collate:
 	'as_gmt.R'
 	'rank_corr.R'
