@@ -18,11 +18,11 @@ library(DMEA);library(dplyr);library(GSA);library(reshape2);library(data.table);
 
 ### Step 0: Prep rows, columns, values
 #Import PRISM data for drug list
-prism <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/PRISM_drug_mean_AUC_6-23-21.csv",header=T) #481 cell lines
+prism <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_drug_mean_AUC_6-23-21.csv",header=T) #481 cell lines
 prism$X <- NULL
 
 #Import drug info
-drug.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/PRISM_secondary-screen-replicate-treatment-info.csv",header=T) #481 cell lines
+drug.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_secondary-screen-replicate-treatment-info.csv",header=T) #481 cell lines
 drug.info$X <- NULL
 colnames(drug.info)[colnames(drug.info)=="name"] <- "Drug"
 drug.info$Drug <- gsub("[[:punct:][:blank:]]",".",drug.info$Drug)
@@ -47,7 +47,7 @@ max.vary <- 1
 values.to.vary <- seq(from = min.vary, to = max.vary, by = 0.25)
 
 # Import MOA set information
-gmt <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/MOA_gmt_file_n6_no_special_chars.gmt")
+gmt <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt")
 
 path.sim <- paste0("Sim_results_",Sys.Date())
 dir.create(path.sim)
