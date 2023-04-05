@@ -25,16 +25,16 @@ library(ggplot2);library(stringr);library(dostats);
 
 ### Step 0: Prep rows, columns, values
 # Import pathways
-drug.sets <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/main/Simulations/DMEA_using_WGV/MOA_gmt_file_n6_w_synthetic_set.gmt")
+drug.sets <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Simulations/DMEA_using_WGV/MOA_gmt_file_n6_w_synthetic_set.gmt")
 pathway.names <- drug.sets$geneset.names
 num.pathways <- length(pathway.names)
 
 # Import CCLE RNAseq data for gene list
-download.file("https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin", 
-              destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin"))
+download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin", 
+              destfile = "Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin")
 load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin")
-download.file("https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin", 
-              destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin"))
+download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin", 
+              destfile = "Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin")
 load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin")
 CCLE.RNAseq <- rbind(RNA.first200, RNA.rest)
 gene.names <- unique(colnames(CCLE.RNAseq[,2:ncol(CCLE.RNAseq)]))
@@ -47,7 +47,7 @@ synthetic.gene.set <-  c("HDAC11","FSBP","PGF","NBEAL2","SMIM15","PRSS33","USP29
                          "LRRC41","ARHGEF38","KRT85","TMEM121","DPYSL2","DAZ4","C1QA","CILP","AFF2","CHAC2","BLVRA","RNF114")
 
 #Import PRISM data for drug list
-prism <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/PRISM_drug_mean_AUC_6-23-21.csv",header=T)
+prism <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_drug_mean_AUC_6-23-21.csv",header=T)
 prism$X <- NULL
 
 #Make a synthetic drug set of size 10 drugs - already done in "Metabolic Pathways and the drugs that target them - filtered - gmt.gmt"
@@ -65,7 +65,7 @@ synthetic.cell.names <- paste("Cell_No_", synthetic.cell.names, sep = "")
 values.to.vary <- seq(from = 0, to = 0.1, by = 0.01)
 
 # Import drug info
-drug.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/PRISM_secondary-screen-replicate-treatment-info.csv",header=T) #481 cell lines
+drug.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_secondary-screen-replicate-treatment-info.csv",header=T) #481 cell lines
 colnames(drug.info)[colnames(drug.info)=="name"] <- "Drug"
 drug.info$Drug <- gsub("[[:punct:][:blank:]]",".",drug.info$Drug)
 drug.moa <- na.omit(distinct(drug.info[,c("Drug","moa")]))
