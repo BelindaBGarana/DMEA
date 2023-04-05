@@ -79,25 +79,14 @@ If convert.synonyms=TRUE, an internet connection is required and the drug synony
 }
 
 \examples{
-## Example 1
-# select example drug rank list
-# this example has a column for moa annotations named "moa"
-# otherwise, a gmt object would also be needed
-selected.ex <- "Drug_rank_list/CMap/PRISM/Cell_lines_sensitive_to_HMGCR_inhibitor_lovastatin"
-rank.data <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Examples/",selected.ex,"/DMEA_input.csv"))
+# prepare dataframe containing rank metrics and set annotations for each drug
+Drug <- paste0("Drug_", seq(from = 1, to = 24)) # Drug is our default for the drug parameter
+data <- as.data.frame(Drug)
+data$Pearson.est <- rnorm(length(Drug), sd = 0.25) # Pearson.est is our default for the rank.metric parameter
+data$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
 
-# perform drugSEA
-drugSEA.test <- drugSEA(rank.data, drug = colnames(rank.data)[1],
-                  rank.metric = colnames(rank.data)[2])
-
-## Example 2
-# select example drug rank list
-selected.ex2 <- "Gene_signature/GSE31625_NSCLC_sensitive_vs_resistant_to_erlotinib"
-rank.data2 <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Examples/",selected.ex2,"/DMEA_correlation_results.csv"))
-
-# import gmt containing PRISM moa annotations
-gmt <- GSA::GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt")
-
-# perform drugSEA
-drugSEA.test2 <- drugSEA(rank.data2, gmt)
+# perform drugSEA and store results
+# if you use other column names for your data parameter, 
+# then make sure to set drug, rank.metric, and set.type parameters
+drugSEA.test <- DMEA::drugSEA(data)
 }

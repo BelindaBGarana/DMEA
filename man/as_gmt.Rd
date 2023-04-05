@@ -44,10 +44,10 @@ For more information, please visit: https://belindabgarana.github.io/DMEA
 
 \examples{
 # prepare input dataframe
-Drug <- LETTERS[seq(from = 1, to = 18)]
-moa <- c(rep(LETTERS[19], 6), rep(LETTERS[20], 6), rep(LETTERS[21], 6))
+Drug <- paste0("Drug_", LETTERS[seq(from = 1, to = 18)]) # Drug is our default for the element.names parameter
+moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 3)]), 6) # moa is our default for the set.names parameter
 data <- as.data.frame(cbind(Drug, moa)) # this example input has 18 drugs and 3 sets
 
 # produce gmt object
-gmt.test <- as_gmt(data)
+gmt.test <- DMEA::as_gmt(data)
 }

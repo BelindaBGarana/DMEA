@@ -9,7 +9,7 @@
 }
 
 \usage{
-DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.names=colnames(expression)[1],
+DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", sample.names=colnames(expression)[1],
                  gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
                  rank.metric="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted",
                  drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]",
@@ -23,17 +23,17 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.n
 
   \item{gmt}{Optional: gmt object containing drug sets (e.g., output from GSA.read.gmt function from GSA package). If gmt is not provided, drug.info parameter must be provided. Default: NULL.}
 
-  \item{expression}{Dataframe containing normalized gene expression with gene names as column names, except for one column which contains sample names.}
+  \item{expression}{Dataframe containing normalized gene expression with gene symbols as column names, except for one column which contains sample names.}
 
-  \item{weights}{Dataframe with gene.names and weight.values (e.g., log2(fold-change) values). All gene.names must be present in the expression dataframe.}
+  \item{weights}{Dataframe with gene.names and weight.values (e.g., log2(fold-change) values).}
 
   \item{value}{Description of the values starting at column 3. Do not include spaces! Default: "AUC".}
 
   \item{sample.names}{Column name in drug sensitivity and expression dataframes containing the sample names. Default: colnames(expression)[1].}
 
-  \item{gene.names}{Column name in weights dataframe containing the gene names. Default: colnames(weights)[1].}
+  \item{gene.names}{Column name in weights dataframe containing gene symbols. Default: colnames(weights)[1].}
 
-  \item{weight.values}{Column name in weights dataframe containing the weight values (e.g., log2(fold-change) values). Default: colnames(weights)[2].}
+  \item{weight.values}{Column name in weights dataframe containing weight values (e.g., log2(fold-change) values). Default: colnames(weights)[2].}
 
   \item{estimate}{Estimate for ranking drugs for enrichment analysis. Must be "Pearson.est", "Spearman.est", "Slope", "Rank.slope", or another column name in the output typically produced by the rank.corr function. Default: "Pearson.est".}
 
@@ -59,7 +59,7 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.n
 
   \item{min.per.corr}{Minimum number of samples required to run correlations. Default: 3.}
 
-  \item{scatter.plots}{Set TRUE to produce scatter plots for correlations. Default: TRUE.}
+  \item{scatter.plots}{Logical operator describing whether or not to produce scatter plots for correlations. Default: TRUE.}
 
   \item{scatter.plot.type}{Correlation type for plots. Must be specified as "pearson" or "spearman". Default: "pearson".}
 
@@ -72,6 +72,8 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", expr.sample.n
   \item{position.x}{X-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "mid".}
 
   \item{position.y}{Y-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "max".}
+  
+    \item{se}{Logical operator describing whether or not to include the 95 percent confidence interval limits of the regression line on the scatter plots. Default: TRUE.}
 }
 
 \value{
@@ -108,10 +110,10 @@ Output gmt can be saved for future use as an R object using saveRDS(DMEA.output$
 }
 
 \section{Warning }{The column name for your samples must be the same in your drug sensitivity dataframe as in your expression dataframe. You can set the name of the column containing your samples using the parameter sample.names.
+
 If no gmt is provided, then drug.info with set.type annotations must be provided. Either the gmt or set.type column must provide annotations for 2+ drug sets.
 
-Make sure the qvalue package dependency is installed from Bioconductor using:
-BiocManager::install("qvalue")
+Each drug must have only one numeric, nonzero rank.
 }
 
 \seealso{
@@ -122,26 +124,32 @@ BiocManager::install("qvalue")
 }
 
 \examples{
-# select example gene signature
-selected.ex <- "Gene_signature/GSE31625_NSCLC_sensitive_vs_resistant_to_erlotinib"
-rank.data <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Examples/",selected.ex,"/Filtered_gene_signature_no_duplicates.csv"))
+# prepare drug sensitivity data frame
+Sample_ID <- seq(from = 1, to = 21) # create list of sample names
+drug.sensitivity <- as.data.frame(Sample_ID)
+Drug <- paste0("Drug_", seq(from = 1, to = 24)) # create list of drug names
+for(i in 1:length(Drug)){ # give each drug values representative of AUC sensitivity scores
+  drug.sensitivity[,c(Drug[i])] <- rnorm(length(Sample_ID), mean = 0.83, sd = 0.166)
+}
 
-# import gmt containing PRISM moa annotations
-gmt <- GSA::GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt")
+# prepare drug.info data frame
+# alternatively, a gmt object could be provided
+drug.info <- as.data.frame(Drug)
+drug.info$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
 
-# import PRISM drug AUC sensitivity scores
-PRISM.AUC <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_drug_mean_AUC_6-23-21.csv") #481 cell lines
-PRISM.AUC$X <- NULL
+# prepare gene weight data frame
+Gene <- paste0("Gene_", seq(from = 1, to = 50)) # create list of gene symbols
+weights <- as.data.frame(Gene) # by 
+weights$Rank_metric <- rnorm(length(Gene)) # give each gene a weight
 
-# import CCLE RNAseq data
-download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin",
-              destfile = "Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin")
-load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin")
-download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin",
-              destfile = "Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin")
-load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin")
-RNA.df <- rbind(RNA.first200, RNA.rest)
+# prepare expression data frame
+# by default, column 1 of your expression data frame is the column name from which sample names are gathered
+# the column containing sample names in your drug sensitivity data frame should have the same name
+expression <- as.data.frame(Sample_ID)
+for(i in 1:length(Gene)){ # give each gene values representative of normalized RNA expression
+  expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
+}
 
-# run DMEA
-DMEA.test <- DMEA(PRISM.AUC, gmt, RNA.df, rank.data, ylab="Drug AUC")
+# perform DMEA and store results
+DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expression, weights = weights, drug.info = drug.info)
 }

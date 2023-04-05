@@ -41,20 +41,20 @@ For more information, please visit: https://belindabgarana.github.io/DMEA
 \section{Warning }{Make sure your weights have the same gene names as your expression dataframe, and that your expression dataframe is formatted with gene names along columns.}
 
 \examples{
-# select example gene signature
-selected.ex <- "Gene_signature/GSE31625_NSCLC_sensitive_vs_resistant_to_erlotinib"
-gene.sig <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Examples/",selected.ex,"/Filtered_gene_signature_no_duplicates.csv"))
+# prepare gene weight data frame
+Gene <- paste0("Gene_", seq(from = 1, to = 50)) # create list of gene symbols
+weights <- as.data.frame(Gene) # by 
+weights$Rank_metric <- rnorm(length(Gene)) # give each gene a weight
 
-# download RNAseq data
-download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin",
-              destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin"))
-load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin")
-download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin",
-              destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin"))
-load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin")
-RNA.df <- rbind(RNA.first200, RNA.rest)
+# prepare expression data frame
+# by default, column 1 of your expression data frame is the column name from which sample names are gathered
+# the column containing sample names in your drug sensitivity data frame should have the same name
+expression <- as.data.frame(Sample_ID)
+for(i in 1:length(Gene)){ # give each gene values representative of normalized RNA expression
+  expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
+}
 
 # run Weighted Voting to score each sample
-WV.test <- WV(RNA.df, gene.sig)
+WV.test <- DMEA::WV(expression, weights)
 }
 

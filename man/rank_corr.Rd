@@ -25,7 +25,7 @@ rank_corr(data, variable="Drug", value="AUC",type="pearson",
 
   \item{min.per.corr}{Minimum number of samples required to run each correlation. Default: 3.}
 
-  \item{plots}{Set TRUE to produce scatter plots. Default: TRUE.}
+  \item{plots}{Logical operator describing whether or not to produce scatter plots for correlations. Default: TRUE.}
 
   \item{FDR}{False discovery rate cut-off value to produce scatter plots for significant correlations. Default: 0.05.}
 
@@ -36,6 +36,8 @@ rank_corr(data, variable="Drug", value="AUC",type="pearson",
   \item{position.x}{X-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "mid".}
 
   \item{position.y}{Y-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "max".}
+  
+  \item{se}{Logical operator describing whether or not to include the 95 percent confidence interval limits of the regression line on the scatter plots. Default: TRUE.}
 }
 
 \value{
@@ -56,16 +58,16 @@ For more information, please visit: https://belindabgarana.github.io/DMEA
 
 \section{Warning }{For this function to work, you need 2 or more variables in your set.
 Do not name your variable as "variable.name" or your value as "value.name". Do not include spaces in "value" variable.
-
-Make sure the qvalue package dependency is installed from Bioconductor using:
-BiocManager::install("qvalue")
 }
 
 \examples{
-# import dataframe
-PRISM.AUC <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_drug_mean_AUC_6-23-21.csv")
-PRISM.AUC$X <- NULL
+# prepare data frame with variables to correlate
+expression <- as.data.frame(Sample_ID)
+for(i in 1:length(Gene)){
+  expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
+}
 
 # run correlations between the rank metric and each variable's values
-corr.test <- rank_corr(PRISM.AUC)
+# sample names are in column 1, the rank metric is in column 2, and the variables are the rest of the columns
+corr.test <- DMEA::rank_corr(expression)
 }
