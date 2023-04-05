@@ -215,6 +215,10 @@ DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expression, weights = wei
     ## [1] "Generating gmt object for enrichment analysis..."
     ## [1] "Running enrichment analysis..."
 
+    ## Warning in drugSEA(data = corr.output, gmt, rank.metric = rank.metric,
+    ## stat.type = stat.type, : No enrichments met the FDR cut-off to produce mountain
+    ## plots
+
 ## Session Info
 
 ``` r
@@ -248,11 +252,10 @@ sessionInfo()
     ##  [9] yaml_2.3.7         utf8_1.2.3         gridGraphics_0.5-1 rlang_1.1.0       
     ## [13] pillar_1.9.0       glue_1.6.2         withr_2.5.0        plyr_1.8.8        
     ## [17] lifecycle_1.0.3    stringr_1.5.0      munsell_0.5.0      gtable_0.3.3      
-    ## [21] codetools_0.2-19   evaluate_0.20      labeling_0.4.2     knitr_1.42        
-    ## [25] fastmap_1.1.1      fansi_1.0.4        Rcpp_1.0.10        scales_1.2.1      
-    ## [29] desc_1.4.2         pkgload_1.3.2      brio_1.1.3         digest_0.6.31     
-    ## [33] stringi_1.7.12     insight_0.19.1     grid_4.2.3         rprojroot_2.0.3   
-    ## [37] DMEA_0.1.0         cli_3.6.1          tools_4.2.3        yulab.utils_0.0.6 
-    ## [41] magrittr_2.0.3     patchwork_1.1.2    tibble_3.2.1       pkgconfig_2.0.3   
-    ## [45] ggplotify_0.1.0    rmarkdown_2.21     rstudioapi_0.14    R6_2.5.1          
-    ## [49] compiler_4.2.3
+    ## [21] codetools_0.2-19   evaluate_0.20      knitr_1.42         fastmap_1.1.1     
+    ## [25] fansi_1.0.4        Rcpp_1.0.10        scales_1.2.1       desc_1.4.2        
+    ## [29] pkgload_1.3.2      brio_1.1.3         digest_0.6.31      stringi_1.7.12    
+    ## [33] insight_0.19.1     grid_4.2.3         rprojroot_2.0.3    DMEA_0.1.0        
+    ## [37] cli_3.6.1          tools_4.2.3        yulab.utils_0.0.6  magrittr_2.0.3    
+    ## [41] patchwork_1.1.2    tibble_3.2.1       pkgconfig_2.0.3    ggplotify_0.1.0   
+    ## [45] rmarkdown_2.21     rstudioapi_0.14    R6_2.5.1           compiler_4.2.3
