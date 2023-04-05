@@ -56,7 +56,7 @@ for(k in 1:length(query.types)){
     # }
     # input.df <- distinct(na.omit(input.df[!duplicated(input.df[,c("pert_iname")]),c("pert_iname", rank.metric, "moa")])) # remove any NA, duplicates
     # write.csv(input.df, file="DMEA_input.csv", row.names=FALSE)
-    input.df <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/main/Examples/Drug_rank_list/CMap/",query.types[k],"/",cases[i],"/DMEA_input.csv"))
+    input.df <- read.csv(file=paste0("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Examples/Drug_rank_list/CMap/",query.types[k],"/",cases[i],"/DMEA_input.csv"))
     
     # run DMEA
     DMEA.results <- drugSEA(input.df, drug="pert_iname", rank.metric=rank.metric)
