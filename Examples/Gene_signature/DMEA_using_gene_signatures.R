@@ -16,26 +16,26 @@ illegal.chars <- c("#","<","%",">","!","`","&","'","=","}","/",":","@") # source
 illegal.chars.need.brackets <- c("$","+","*","|","{","?") # these characters need brackets for gsub, but not for str_contains
 
 #### cell line info (CCLE 19Q4)
-cell.line.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/CCLE_sample_info.csv")
+cell.line.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/CCLE_sample_info.csv")
 cell.line.info$X <- NULL
 
 #### drug info (PRISM)
-drug.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/PRISM_secondary-screen-replicate-treatment-info.csv")
+drug.info <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_secondary-screen-replicate-treatment-info.csv")
 colnames(drug.info)[colnames(drug.info)=="name"] <- "Drug"
 drug.info$Drug <- gsub("[[:punct:][:blank:]]",".",drug.info$Drug)
 drug.moa <- na.omit(distinct(drug.info[,c("Drug","moa")]))
 
 #### RNAseq (CCLE 19Q4)
-download.file("https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin", 
+download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin", 
               destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin"))
 load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_1-200.Rbin")
-download.file("https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin", 
+download.file("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin", 
               destfile = paste0(getwd(),"/Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin"))
 load("Normalized_adherent_CCLE_RNAseq_19Q4_samples_in_PRISM_201-327.Rbin")
 RNA.df <- rbind(RNA.first200, RNA.rest)
 
 #### PRISM drug AUC
-AUC.df <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/PRISM_drug_mean_AUC_6-23-21.csv") #481 cell lines
+AUC.df <- read.csv(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_drug_mean_AUC_6-23-21.csv") #481 cell lines
 AUC.df$X <- NULL
 
 ### only use drugs with moa annotations
@@ -45,7 +45,7 @@ AUC.df$CCLE_ID <- rownames(AUC.df)
 AUC.df <- AUC.df[,c("CCLE_ID",colnames(AUC.df)[1:(ncol(AUC.df)-1)])] # for DMEA, the sample names must be in the first column for both the drug sensitivity and gene expression dataframes
 
 #### drug moa sets
-gmt <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/main/Inputs/MOA_gmt_file_n6_no_special_chars.gmt")
+gmt <- GSA.read.gmt(file="https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt")
 
 ##### Part 2: Coldren et al (EGFR inhibitor) #####
 dir.create("Coldren_et_al_NSCLC_sensitive_vs_resistant_to_gefitinib")
