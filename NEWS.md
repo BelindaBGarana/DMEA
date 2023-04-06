@@ -1,4 +1,4 @@
-# DMEA 0.1.0
+# DMEA 0.99.0
 
 * Submitted to Bioconductor
 
