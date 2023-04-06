@@ -1,7 +1,7 @@
 Package: DMEA
 Type: Package
 Title: Drug Mechanism Enrichment Analysis
-Version: 0.99.0
+Version: 0.1.0
 Authors@R: 
 	c(person(given = c("Belinda", "B."),
 		 family = "Garana", 
@@ -17,7 +17,6 @@ License: CC0
 URL: https://belindabgarana.github.io/DMEA, https://github.com/BelindaBGarana/DMEA
 BugReports: https://github.com/BelindaBGarana/DMEA/issues
 Encoding: UTF-8
-LazyData: true
 biocViews:
 	BiomedicalInformatics, GeneExpression, GraphAndNetwork,
 	NetworkEnrichment, Pharmacogenetics, Pharmacogenomics, 
@@ -25,8 +24,8 @@ biocViews:
 Imports:
 	aplot, cowplot, dplyr, foreach, 
 	ggrepel, gridExtra, ggplot2, 
-	qvalue, reshape2, stats, 
-	sjmisc, testthat, tidyselect
+	patchwork, qvalue, reshape2,
+	stats, sjmisc, testthat, tidyselect
 Enhances:
 	parallel, snow, doSNOW
 VignetteBuilder: knitr
