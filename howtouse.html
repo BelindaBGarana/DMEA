@@ -53,8 +53,10 @@
                     </ol>
 
                     <p>
-                        DMEA is flexible to accept any signed numeric values as rank metrics for drugs or genes.
-                        Please refer to the example inputs below or the “Examples” folder on our GitHub repo: <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>
+                        DMEA is flexible to accept any numeric, nonzero values as rank metrics for drugs or genes.
+                        To avoid errors, please refresh your web browser after each analysis and format your inputs to match our examples above or 
+                        on our GitHub repository here: <a href="https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples</a>. 
+                        Please note that you will also need to refresh your connection to the web app after 5 minutes of inactivity.
                     </p>
                 </section>
 
@@ -81,8 +83,9 @@
                     and then use the steps below to either input a drug rank list or a gene signature.
                     If you use Windows OS, you may need to install the R package using 
                     devtools::install_github ('BelindaBGarana/DMEA', build=FALSE).
-                    DMEA is flexible to accept any signed numeric values as rank metrics for drugs or genes. 
-                    To see examples, please refer to the “Examples” folder on our GitHub repo here: <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>
+                    DMEA is flexible to accept any numeric, nonzero values as rank metrics for drugs or genes. 
+                    To see examples, please refer to the “Examples” folder on our GitHub repo here: <a href="https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples</a>.
+                    More information about how to use our R package is available in our README, vignette, and man files on our GitHub repo: <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>.
                 </p>
                 <div id="info" class="round">
                     <p class="equation">if (!require(devtools)) {install.packages("devtools")}</p>
@@ -97,7 +100,7 @@
                     <li>Input a dataframe containing your drug rank list. 
                         If you have mechanism-of-action (MOA) annotations, you can provide these in a column in your dataframe. 
                         If not, you must also input a gmt object such as “MOA_gmt_file_n6_no_special_chars.gmt” available in the “Inputs” folder on our GitHub repo. 
-                        2+ MOA must be represented in your input.</li>
+                        2+ MOA must be represented in your input. Make sure each drug has only one numeric, nonzero rank value. </li>
                     <li>Save the output dataframe of the enrichment results for each drug set in addition to plots summarizing the results</li>
                 </ol>
                 <img src="images/Fig1_DMEA_2022-06-24_no_background.png" alt="DMEA method for drug rank list input">
