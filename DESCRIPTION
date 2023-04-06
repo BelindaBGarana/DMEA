@@ -1,7 +1,7 @@
 Package: DMEA
 Type: Package
 Title: Drug Mechanism Enrichment Analysis
-Version: 0.1.0
+Version: 0.99.0
 Authors@R: 
 	c(person(given = c("Belinda", "B."),
 		 family = "Garana", 
