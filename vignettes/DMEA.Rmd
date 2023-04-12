@@ -52,12 +52,6 @@ Required inputs:
   * gmt: gmt object containing drug set information. If not provided, a third column in your data input parameter must include set annotations; if so, the name of this column must be denoted by the set.type parameter. If you do not have your own drug set annotations, you can use our PRISM moa annotations on our GitHub repository at: https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt
 
 Example:
-1. Load the DMEA package into your R environment
-```{r eval=FALSE}
-library(DMEA)
-```
-
-2. Import a data frame containing your drug rank list
 ```{r}
 # prepare dataframe containing rank metrics and set annotations for each drug
 Drug <- paste0("Drug_", seq(from = 1, to = 24))
@@ -92,12 +86,6 @@ Required inputs:
   * weights: a dataframe containing gene symbols in one column (default: column 1) and weight values in another column (default: column 2)
 
 Example:
-1. Load the DMEA package into your R environment
-```{r eval=FALSE}
-library(DMEA)
-```
-
-2. Import a data frame containing your drug rank list
 ```{r}
 # prepare drug sensitivity data frame
 Sample_ID <- seq(from = 1, to = 21) # create list of sample names
