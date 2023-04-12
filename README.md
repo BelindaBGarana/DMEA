@@ -65,13 +65,7 @@ drug set annotations, you can use our PRISM moa annotations on our
 GitHub repository at:
 <https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt>
 
-Example: 1. Load the DMEA package into your R environment
-
-``` r
-library(DMEA)
-```
-
-2.  Import a data frame containing your drug rank list
+Example:
 
 ``` r
 # prepare dataframe containing rank metrics and set annotations for each drug
@@ -152,13 +146,7 @@ sample names \* weights: a dataframe containing gene symbols in one
 column (default: column 1) and weight values in another column (default:
 column 2)
 
-Example: 1. Load the DMEA package into your R environment
-
-``` r
-library(DMEA)
-```
-
-2.  Import a data frame containing your drug rank list
+Example:
 
 ``` r
 # prepare drug sensitivity data frame
