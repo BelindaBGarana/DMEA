@@ -9,13 +9,15 @@
 }
 
 \usage{
-DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", sample.names=colnames(expression)[1],
-                 gene.names=colnames(weights)[1], weight.values=colnames(weights)[2],
-                 rank.metric="Pearson.est", FDR=0.25, num.permutations=1000, stat.type="Weighted",
-                 drug.info=NULL, drug="Drug", set.type="moa", min.per.set=6, sep="[|]",
-                 exclusions=c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL,
-                 min.per.corr=3, scatter.plots=TRUE, scatter.plot.type="pearson", FDR.scatter.plots=0.05,
-                 xlab="Weighted Voting Score", ylab=value, position.x="min", position.y="min", se=TRUE)
+DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC",
+    sample.names=colnames(expression)[1], gene.names=colnames(weights)[1],
+    weight.values=colnames(weights)[2], rank.metric="Pearson.est", FDR=0.25,
+    num.permutations=1000, stat.type="Weighted", drug.info=NULL, drug="Drug",
+    set.type="moa", min.per.set=6, sep="[|]",
+    exclusions=c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL,
+    min.per.corr=3, scatter.plots=TRUE, scatter.plot.type="pearson",
+    FDR.scatter.plots=0.05, xlab="Weighted Voting Score", ylab=value,
+    position.x="min", position.y="min", se=TRUE)
 }
 
 \arguments{
@@ -35,7 +37,7 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", sample.names=
 
   \item{weight.values}{Column name in weights dataframe containing weight values (e.g., log2(fold-change) values). Default: colnames(weights)[2].}
 
-  \item{estimate}{Estimate for ranking drugs for enrichment analysis. Must be "Pearson.est", "Spearman.est", "Slope", "Rank.slope", or another column name in the output typically produced by the rank.corr function. Default: "Pearson.est".}
+  \item{rank.metric}{Estimate for ranking drugs for enrichment analysis. Must be "Pearson.est", "Spearman.est", "Slope", "Rank.slope", or another column name in the output produced by the rank_corr function. Default: "Pearson.est".}
 
   \item{FDR}{False discovery rate cut-off value to produce mountain plots for significant enrichments. Default: 0.25.}
 
@@ -72,7 +74,7 @@ DMEA(drug.sensitivity, gmt=NULL, expression, weights, value="AUC", sample.names=
   \item{position.x}{X-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "mid".}
 
   \item{position.y}{Y-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "max".}
-  
+
     \item{se}{Logical operator describing whether or not to include the 95 percent confidence interval limits of the regression line on the scatter plots. Default: TRUE.}
 }
 
@@ -118,8 +120,8 @@ Each drug must have only one numeric, nonzero rank.
 
 \seealso{
   \link[DMEA]{WV}
-  \link[DMEA]{rank.corr}
-  \link[DMEA]{as.gmt}
+  \link[DMEA]{rank_corr}
+  \link[DMEA]{as_gmt}
   \link[DMEA]{drugSEA}
 }
 
@@ -132,24 +134,26 @@ for(i in 1:length(Drug)){ # give each drug values representative of AUC sensitiv
   drug.sensitivity[,c(Drug[i])] <- rnorm(length(Sample_ID), mean = 0.83, sd = 0.166)
 }
 
-# prepare drug.info data frame
+# prepare drug info data frame
 # alternatively, a gmt object could be provided
-drug.info <- as.data.frame(Drug)
-drug.info$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
+info <- as.data.frame(Drug)
+info$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6)
+# moa is our default for the set.type parameter
 
 # prepare gene weight data frame
 Gene <- paste0("Gene_", seq(from = 1, to = 50)) # create list of gene symbols
-weights <- as.data.frame(Gene) # by 
+weights <- as.data.frame(Gene) # by
 weights$Rank_metric <- rnorm(length(Gene)) # give each gene a weight
 
 # prepare expression data frame
-# by default, column 1 of your expression data frame is the column name from which sample names are gathered
+# by default, column 1 of your expression data frame is
+# the column name from which sample names are gathered and
 # the column containing sample names in your drug sensitivity data frame should have the same name
-expression <- as.data.frame(Sample_ID)
+expr <- as.data.frame(Sample_ID)
 for(i in 1:length(Gene)){ # give each gene values representative of normalized RNA expression
-  expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
+  expr[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
 }
 
 # perform DMEA and store results
-DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expression, weights = weights, drug.info = drug.info)
+DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expr, weights = weights, drug.info = info)
 }

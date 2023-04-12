@@ -10,8 +10,8 @@
 
 \usage{
 rank_corr(data, variable="Drug", value="AUC",type="pearson",
-            min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2],
-            ylab=value, position.x="mid", position.y="max", se=TRUE)
+          min.per.corr=3, plots=TRUE, FDR=0.05, xlab=colnames(data)[2],
+          ylab=value, position.x="mid", position.y="max", se=TRUE)
 }
 
 \arguments{
@@ -36,7 +36,7 @@ rank_corr(data, variable="Drug", value="AUC",type="pearson",
   \item{position.x}{X-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "mid".}
 
   \item{position.y}{Y-axis position of correlation estimate on scatter plots. Must be "min", "mid", "max", or numeric. Default: "max".}
-  
+
   \item{se}{Logical operator describing whether or not to include the 95 percent confidence interval limits of the regression line on the scatter plots. Default: TRUE.}
 }
 
@@ -62,12 +62,15 @@ Do not name your variable as "variable.name" or your value as "value.name". Do n
 
 \examples{
 # prepare data frame with variables to correlate
+Sample_ID <- seq(from = 1, to = 21) # create list of sample names
 expression <- as.data.frame(Sample_ID)
+Gene <- paste0("Gene_", seq(from = 1, to = 50)) # create list of gene symbols
 for(i in 1:length(Gene)){
   expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
 }
 
 # run correlations between the rank metric and each variable's values
-# sample names are in column 1, the rank metric is in column 2, and the variables are the rest of the columns
+# sample names are in column 1, the rank metric is in column 2,
+# and the variables are the rest of the columns
 corr.test <- DMEA::rank_corr(expression)
 }

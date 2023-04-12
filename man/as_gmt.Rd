@@ -10,7 +10,7 @@
 
 \usage{
 as_gmt(data, element.names = "Drug", set.names = "moa", min.per.set = 6,
-          sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions = NULL)
+      sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions = NULL)
 }
 
 \arguments{
@@ -44,8 +44,12 @@ For more information, please visit: https://belindabgarana.github.io/DMEA
 
 \examples{
 # prepare input dataframe
-Drug <- paste0("Drug_", LETTERS[seq(from = 1, to = 18)]) # Drug is our default for the element.names parameter
-moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 3)]), 6) # moa is our default for the set.names parameter
+Drug <- paste0("Drug_", LETTERS[seq(from = 1, to = 18)])
+# Drug is our default for the element.names parameter
+
+moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 3)]), 6)
+# moa is our default for the set.names parameter
+
 data <- as.data.frame(cbind(Drug, moa)) # this example input has 18 drugs and 3 sets
 
 # produce gmt object

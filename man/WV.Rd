@@ -43,12 +43,15 @@ For more information, please visit: https://belindabgarana.github.io/DMEA
 \examples{
 # prepare gene weight data frame
 Gene <- paste0("Gene_", seq(from = 1, to = 50)) # create list of gene symbols
-weights <- as.data.frame(Gene) # by 
+weights <- as.data.frame(Gene) # by
 weights$Rank_metric <- rnorm(length(Gene)) # give each gene a weight
 
 # prepare expression data frame
-# by default, column 1 of your expression data frame is the column name from which sample names are gathered
-# the column containing sample names in your drug sensitivity data frame should have the same name
+# by default, column 1 of your expression data frame is
+# the column name from which sample names are gathered and
+# the column containing sample names in your drug sensitivity
+# data frame should have the same name
+Sample_ID <- seq(from = 1, to = 21) # create list of sample names
 expression <- as.data.frame(Sample_ID)
 for(i in 1:length(Gene)){ # give each gene values representative of normalized RNA expression
   expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)

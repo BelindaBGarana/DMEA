@@ -9,11 +9,11 @@
 }
 
 \usage{
-drugSEA(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.type="moa",
-              direction.adjust=NULL, FDR=0.25, num.permutations=1000,
-              stat.type="Weighted", min.per.set=6, sep = "[|]",
-              exclusions = c("-666", "NA", "na", "NaN", "NULL"), descriptions=NULL,
-              convert.synonyms=FALSE)
+drugSEA(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est",
+        set.type="moa", direction.adjust=NULL, FDR=0.25,
+        num.permutations=1000, stat.type="Weighted", min.per.set=6,
+        sep = "[|]", exclusions = c("-666", "NA", "na", "NaN", "NULL"),
+        descriptions=NULL, convert.synonyms=FALSE)
 }
 
 \arguments{
@@ -80,13 +80,19 @@ If convert.synonyms=TRUE, an internet connection is required and the drug synony
 
 \examples{
 # prepare dataframe containing rank metrics and set annotations for each drug
-Drug <- paste0("Drug_", seq(from = 1, to = 24)) # Drug is our default for the drug parameter
+Drug <- paste0("Drug_", seq(from = 1, to = 24))
+# Drug is our default for the drug parameter
+
 data <- as.data.frame(Drug)
-data$Pearson.est <- rnorm(length(Drug), sd = 0.25) # Pearson.est is our default for the rank.metric parameter
-data$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
+
+data$Pearson.est <- rnorm(length(Drug), sd = 0.25)
+# Pearson.est is our default for the rank.metric parameter
+
+data$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6)
+# moa is our default for the set.type parameter
 
 # perform drugSEA and store results
-# if you use other column names for your data parameter, 
+# if you use other column names for your data parameter,
 # then make sure to set drug, rank.metric, and set.type parameters
 drugSEA.test <- DMEA::drugSEA(data)
 }
