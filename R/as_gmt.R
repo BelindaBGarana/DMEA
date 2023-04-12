@@ -4,14 +4,14 @@ as_gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
 
   all.sets <- unique(data[,c(set.names)])
   if(length(all.sets) > 0){
-    all.sets <- all.sets[all.sets %in% exclusions == FALSE]
+    all.sets <- all.sets[!(all.sets %in% exclusions)]
     if(length(all.sets) > 0){
       elements <- list()
 
       # use parallel computing if possible
-      if(require(parallel) &
-         require(snow) &
-         require(doSNOW)){
+      if(requireNamespace("parallel") &
+         requireNamespace("snow") &
+         requireNamespace("doSNOW")){
         cores <- parallel::detectCores() # number of cores available
         if(cores[1] > 1){
           cl <- snow::makeCluster(cores[1]-1) # cluster using all but 1 core
@@ -37,9 +37,9 @@ as_gmt <- function(data, element.names = "Drug", set.names = "moa", min.per.set=
       rm(elements)
       rm(all.sets)
 
-      if(require(parallel) &
-         require(snow) &
-         require(doSNOW)){
+      if(requireNamespace("parallel") &
+         requireNamespace("snow") &
+         requireNamespace("doSNOW")){
         if(cores[1] > 1){
           snow::stopCluster(cl) #stop cluster
           rm(cl)

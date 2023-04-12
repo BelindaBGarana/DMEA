@@ -2,9 +2,9 @@ rank_corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
   print("Running correlations and regressions...")
 
   # use parallel computing if possible
-  if(require(parallel) &
-     require(snow) &
-     require(doSNOW)){
+  if(requireNamespace("parallel") &
+     requireNamespace("snow") &
+     requireNamespace("doSNOW")){
     cores <- parallel::detectCores() # number of cores available
     if(cores[1] > 1){
       cl <- snow::makeCluster(cores[1]-1) # cluster using all but 1 core
@@ -72,13 +72,13 @@ rank_corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
     id.var <- colnames(data)[1]
     rank.var <- colnames(data)[2]
     plot.data <- reshape2::melt(all.data.corr, id=c(id.var,rank.var), variable.name = variable, value.name = value, na.rm=TRUE)
-    if(type=="pearson"){
-      results <- unique(corr.no.na[which(corr.no.na$Pearson.q<=FDR),1])
+    if(type == "pearson"){
+      results <- unique(corr.no.na[which(corr.no.na$Pearson.q <= FDR),1])
       if(length(results)>0){
         a <- list()
         for(i in 1:length(results)){
           # identify significant correlations
-          sig.data <- plot.data[plot.data[,3]==results[i],]
+          sig.data <- plot.data[plot.data[,3] == results[i],]
 
           # set plot parameters
           min.x <- min(sig.data[,c(rank.var)])
@@ -87,14 +87,14 @@ rank_corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
           min.y <- min(sig.data[,c(value)])
           max.y <- max(sig.data[,c(value)])
           mid.y <- 0.5*(min.y+max.y)
-          if(position.x=="min"){pos.x <- min.x}else if(position.x=="mid"){pos.x <- mid.x
-          }else if(position.x=="max"){pos.x <- max.x}else if(is.numeric(position.x)){pos.x <- position.x}
-          if(position.y=="min"){pos.y <- min.y}else if(position.y=="mid"){pos.y <- mid.y
-          }else if(position.y=="max"){pos.y <- max.y}else if(is.numeric(position.y)){pos.y <- position.y}
+          if(position.x == "min"){pos.x <- min.x}else if(position.x == "mid"){pos.x <- mid.x
+          }else if(position.x == "max"){pos.x <- max.x}else if(is.numeric(position.x)){pos.x <- position.x}
+          if(position.y == "min"){pos.y <- min.y}else if(position.y == "mid"){pos.y <- mid.y
+          }else if(position.y == "max"){pos.y <- max.y}else if(is.numeric(position.y)){pos.y <- position.y}
 
           # get correlation parameters for plot
-          Pearson.est <- corr.no.na[corr.no.na[,1]==results[i],]$Pearson.est
-          Pearson.p <- corr.no.na[corr.no.na[,1]==results[i],]$Pearson.p
+          Pearson.est <- corr.no.na[corr.no.na[,1] == results[i],]$Pearson.est
+          Pearson.p <- corr.no.na[corr.no.na[,1] == results[i],]$Pearson.p
           stats_pearson <- substitute(r == est*","~~"p"~"="~p,
                                       list(est = format(Pearson.est, digits = 3),
                                            p = format(Pearson.p, digits = 3)))
@@ -111,13 +111,13 @@ rank_corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
         scatter.plots <- NA
         warning("No correlations met the FDR cut-off to produce scatter plots")
       }
-    }else if(type=="spearman"){
-      results <- unique(corr.no.na[which(corr.no.na$Spearman.q<=FDR),1])
+    }else if(type == "spearman"){
+      results <- unique(corr.no.na[which(corr.no.na$Spearman.q <= FDR),1])
       if(length(results)>0){
         a <- list()
         for(i in 1:length(results)){
           # identify significant correlations
-          sig.data <- plot.data[plot.data[,3]==results[i],]
+          sig.data <- plot.data[plot.data[,3] == results[i],]
 
           # set plot parameters
           min.x <- 1
@@ -126,14 +126,14 @@ rank_corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
           min.y <- 1
           mid.y <- 0.5*length(sig.data[,c(value)])
           max.y <- length(sig.data[,c(value)])
-          if(position.x=="min"){pos.x <- min.x}else if(position.x=="mid"){pos.x <- mid.x
-          }else if(position.x=="max"){pos.x <- max.x}else if(is.numeric(position.x)){pos.x <- position.x}
-          if(position.y=="min"){pos.y <- min.y}else if(position.y=="mid"){pos.y <- mid.y
-          }else if(position.y=="max"){pos.y <- max.y}else if(is.numeric(position.y)){pos.y <- position.y}
+          if(position.x == "min"){pos.x <- min.x}else if(position.x == "mid"){pos.x <- mid.x
+          }else if(position.x == "max"){pos.x <- max.x}else if(is.numeric(position.x)){pos.x <- position.x}
+          if(position.y == "min"){pos.y <- min.y}else if(position.y == "mid"){pos.y <- mid.y
+          }else if(position.y == "max"){pos.y <- max.y}else if(is.numeric(position.y)){pos.y <- position.y}
 
           # get correlation parameters for plot
-          Spearman.est <- corr.no.na[corr.no.na[,1]==results[i],]$Spearman.est
-          Spearman.p <- corr.no.na[corr.no.na[,1]==results[i],]$Spearman.p
+          Spearman.est <- corr.no.na[corr.no.na[,1] == results[i],]$Spearman.est
+          Spearman.p <- corr.no.na[corr.no.na[,1] == results[i],]$Spearman.p
           stats_spearman <- substitute(rho == est*","~~"p"~"="~p,
                                        list(est = format(Spearman.est, digits = 3),
                                             p = format(Spearman.p, digits = 3)))
@@ -148,17 +148,17 @@ rank_corr <- function(data, variable="Drug", value="AUC",type="pearson", min.per
         scatter.plots <- gridExtra::marrangeGrob(a, nrow=1, ncol=1)
       }else{
         warning("No correlations met the FDR cut-off to produce scatter plots")
-        scatter.plots <- NA
+        scatter.plots <- NULL
       }
     }else{
       warning("Type must be specified as either spearman or pearson to produce scatter plots")
-      scatter.plots <- NA
+      scatter.plots <- NULL
     }
-  }else{scatter.plots <- NA}
+  }else{scatter.plots <- NULL}
 
-  if(require(parallel) &
-     require(snow) &
-     require(doSNOW)){
+  if(requireNamespace("parallel") &
+     requireNamespace("snow") &
+     requireNamespace("doSNOW")){
     if(cores[1] > 1){
       snow::stopCluster(cl) # stop cluster
       rm(cl)

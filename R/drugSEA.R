@@ -122,9 +122,9 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     annotations <- as.matrix(annotations)
 
     # Find out how many cores are available
-    if(require(parallel) &
-       require(snow) &
-       require(doSNOW)){
+    if(requireNamespace("parallel") &
+       requireNamespace("snow") &
+       requireNamespace("doSNOW")){
       cores<-parallel::detectCores()
       if(cores[1] > 1){
         cl <- snow::makeCluster(cores[1]-1) # cluster using all but 1 core
@@ -148,7 +148,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     ### Check if any drugs are not in any sets
     unannotated.drugs <- c()
     for(i in 1:nrow(annotations)){
-      if(sum(annotations[i, 2:ncol(annotations)] == "X")==0){
+      if(sum(annotations[i, 2:ncol(annotations)] == "X") == 0){
         unannotated.drugs <- c(unannotated.drugs, annotations[i,1])
       }
     }
@@ -156,13 +156,13 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
     ### Check if these unannotated drug names are a synonym for an annotated drug
     if(convert.synonyms){
       # access drug synonyms
-      synonyms <- read.csv("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_drug_synonyms.csv")
+      synonyms <- utils::read.csv("https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/PRISM_drug_synonyms.csv")
       replacements <- as.data.frame(unannotated.drugs)
       replacements[,c("PRISM_drug_name","PubChem_CID","PubChem_synonyms")] <- NA
       for(i in 1:length(unannotated.drugs)){
         # check if unannotated drug name is a CID for a PRISM drug
         if(unannotated.drugs[i] %in% synonyms$PubChem_CID){
-          replacements[i,c("PRISM_drug_name","PubChem_CID","PubChem_synonyms")] <- synonyms[synonyms$PubChem_CID==unannotated.drugs[i],]
+          replacements[i,c("PRISM_drug_name","PubChem_CID","PubChem_synonyms")] <- synonyms[synonyms$PubChem_CID == unannotated.drugs[i],]
         }else{
           # else check if unannotated drug is a synonym for a PRISM drug name
           for(j in 1:nrow(synonyms)){
@@ -181,7 +181,7 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       # replace drug names in rank list
       for(i in 1:nrow(input.df)){
         if(input.df[i,1] %in% replacements$unannotated.drugs){
-          input.df[i,1] <- replacements[replacements$unannotated.drugs==input.df[i,1],]$PRISM_drug_name
+          input.df[i,1] <- replacements[replacements$unannotated.drugs == input.df[i,1],]$PRISM_drug_name
         }
       }
 
@@ -351,9 +351,9 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
       }
     }
 
-    if(require(parallel) &
-       require(snow) &
-       require(doSNOW)){
+    if(requireNamespace("parallel") &
+       requireNamespace("snow") &
+       requireNamespace("doSNOW")){
       if(cores[1] > 1){
         snow::stopCluster(cl) # stop cluster
         rm(cl)
@@ -370,9 +370,9 @@ drugSEA <- function(data, gmt=NULL, drug="Drug", rank.metric="Pearson.est", set.
 
   # load mountain plot function
   gsea_mountain_plot <- function(GSEA.list, Sample.Name, Gene.Set.A, color = TRUE){
-    if(color == TRUE){
+    if(color){
       color.palette <- c("red")
-    }else if(color == FALSE){
+    }else if(!color){
       color.palette <- c("black")
     }
 
