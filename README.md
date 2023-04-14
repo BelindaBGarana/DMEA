@@ -23,7 +23,7 @@ information, please visit our website:
 To install this package, start R and enter:
 
 ``` r
-if (!require("BiocManager", quietlly = TRUE))
+if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
   
 BiocManager::install("DMEA")
@@ -33,7 +33,7 @@ Alternatively, to install this package directly from our GitHub
 repository, start R and enter:
 
 ``` r
-if (!require("devtools", quietlly = TRUE))
+if (!require("devtools", quietly = TRUE))
   install.packages("devtools")
   
 devtools::install_github("BelindaBGarana/DMEA")
@@ -42,7 +42,7 @@ devtools::install_github("BelindaBGarana/DMEA")
 If you are using Windows OS, you may need to change the above code to:
 
 ``` r
-if (!require("devtools", quietlly = TRUE))
+if (!require("devtools", quietly = TRUE))
   install.packages("devtools")
   
 devtools::install_github("BelindaBGarana/DMEA", build = FALSE)
@@ -68,14 +68,21 @@ GitHub repository at:
 Example:
 
 ``` r
-# prepare dataframe containing rank metrics and set annotations for each drug
-Drug <- paste0("Drug_", seq(from = 1, to = 24)) # Drug is our default for the drug parameter
-data <- as.data.frame(Drug)
-data$Pearson.est <- rnorm(length(Drug), sd = 0.25) # Pearson.est is our default for the rank.metric parameter
-data$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
+## Step 1: prepare data frame containing rank metrics
+## and set annotations for each drug
+# Drug is our default name for the column containing drug names
+Drug <- paste0("Drug_", seq(from = 1, to = 24))
 
-# perform drugSEA and store results
-# if you use other column names for your data parameter, 
+data <- as.data.frame(Drug)
+
+# Pearson.est is our default name for the column containing drug ranks
+data$Pearson.est <- rnorm(length(Drug), sd = 0.25)
+
+# moa is our default name for the column containing drug set annotations
+data$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6)
+
+## Step 2: perform drugSEA and store results
+# if you use other column names for your data parameter,
 # then make sure to set drug, rank.metric, and set.type parameters
 drugSEA.test <- DMEA::drugSEA(data)
 ```
@@ -149,34 +156,57 @@ column 2)
 Example:
 
 ``` r
-# prepare drug sensitivity data frame
-Sample_ID <- seq(from = 1, to = 21) # create list of sample names
+## Step 1: prepare drug sensitivity data frame
+# create list of sample names
+Sample_ID <- seq(from = 1, to = 21)
+
 drug.sensitivity <- as.data.frame(Sample_ID)
-Drug <- paste0("Drug_", seq(from = 1, to = 24)) # create list of drug names
-for(i in 1:length(Drug)){ # give each drug values representative of AUC sensitivity scores
-  drug.sensitivity[,c(Drug[i])] <- rnorm(length(Sample_ID), mean = 0.83, sd = 0.166)
+
+# create list of drug names
+Drug <- paste0("Drug_", seq(from = 1, to = 24))
+
+# give each drug values representative of AUC sensitivity scores
+for(i in 1:length(Drug)){
+  drug.sensitivity[,c(Drug[i])] <- rnorm(length(Sample_ID),
+                                        mean = 0.83, sd = 0.166)
 }
 
-# prepare drug.info data frame
+## Step 2: prepare drug info data frame
 # alternatively, a gmt object could be provided
-drug.info <- as.data.frame(Drug)
-drug.info$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
+info <- as.data.frame(Drug)
 
-# prepare gene weight data frame
-Gene <- paste0("Gene_", seq(from = 1, to = 50)) # create list of gene symbols
-weights <- as.data.frame(Gene) # by 
-weights$Rank_metric <- rnorm(length(Gene)) # give each gene a weight
+# moa is our default name for the column containing drug set annotations
+info$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6)
 
-# prepare expression data frame
-# by default, column 1 of your expression data frame is the column name from which sample names are gathered
-# the column containing sample names in your drug sensitivity data frame should have the same name
-expression <- as.data.frame(Sample_ID)
-for(i in 1:length(Gene)){ # give each gene values representative of normalized RNA expression
-  expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
+## Step 3: prepare gene weight data frame
+# create list of gene symbols
+Gene <- paste0("Gene_", seq(from = 1, to = 50))
+
+# by default, gene symbols are found in
+# the first column of your weights data frame
+weights <- as.data.frame(Gene)
+
+# give each gene a weight
+# by default, gene weight values are found in
+# the second column of your weights data frame
+weights$Rank_metric <- rnorm(length(Gene))
+
+## Step 4: prepare expression data frame
+# by default, column 1 of your expression data frame is
+# the column name from which sample names are gathered and
+# the column containing sample names in your drug sensitivity
+# data frame should have the same name
+expr <- as.data.frame(Sample_ID)
+
+# give each gene values representative of normalized RNA expression
+# each gene is represented by a column in your expression data frame
+for(i in 1:length(Gene)){
+  expr[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
 }
 
-# perform DMEA and store results
-DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expression, weights = weights, drug.info = drug.info)
+## Step 5: perform DMEA and store results
+DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expr,
+                        weights = weights, drug.info = info)
 ```
 
     ## [1] "Calculating Weighted Voting scores..."

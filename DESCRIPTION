@@ -18,9 +18,10 @@ URL: https://belindabgarana.github.io/DMEA, https://github.com/BelindaBGarana/DM
 BugReports: https://github.com/BelindaBGarana/DMEA/issues
 Encoding: UTF-8
 biocViews:
-	BiomedicalInformatics, GeneExpression, GraphAndNetwork,
-	NetworkEnrichment, Pharmacogenetics, Pharmacogenomics, 
-	Proteomics, Regression, SystemsBiology, Transcriptomics
+	BiomedicalInformatics, GeneExpression, GeneSetEnrichment,
+	GeneTarget, GraphAndNetwork, NetworkEnrichment, 
+	Pharmacogenetics, Pharmacogenomics, Proteomics, 
+	Regression, SystemsBiology, Transcriptomics
 Imports:
 	aplot, cowplot, dplyr, foreach, 
 	ggrepel, gridExtra, ggplot2, 
