@@ -683,17 +683,18 @@ drugSEA <- function(data, gmt = NULL, drug = "Drug",
 
   # categorize data by significance level if there are significant hits
   if (nrow(significant.hits) > 0) {
-    plot.data$Significance <- FALSE
-    plot.data[plot.data$FDR_q_value < FDR, ]$Significance <- TRUE
+    plot.data$Significance <- paste0("FDR > ", FDR)
+    plot.data[plot.data$FDR_q_value < FDR, ]$Significance <- paste0("FDR < ", FDR)
     plot.data$Significance <- factor(plot.data$Significance,
-                                     levels = c(TRUE, FALSE))
+                                     levels = c(paste0("FDR < ", FDR),
+                                                paste0("FDR > ", FDR)))
     volc <- ggplot2::ggplot(data = plot.data, aes(
       x = NES, y = -log(p_value, 10),
       color = Significance
     )) +
       ggplot2::geom_point(size = 4) +
       ggrepel::geom_text_repel(
-        data = subset(plot.data, Significance == TRUE),
+        data = subset(plot.data, Significance == paste0("FDR < ", FDR)),
         mapping = aes(label = Drug_set, size = I(4)), nudge_y = 0.25
       ) +
       ggplot2::scale_color_manual(
