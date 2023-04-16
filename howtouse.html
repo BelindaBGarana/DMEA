@@ -40,7 +40,9 @@
             <div>
                 <section id="how">
                     <h2>How to Use: Web App</h2>
-                    <p>The easiest way to use DMEA is with the web application here: <a href="https://belindabgarana.shinyapps.io/dmea" class="link" target="_blank">https://belindabgarana.shinyapps.io/dmea</a> . For more information, please watch our demo video below or <a href="contact.html" class="link">Contact Us</a>. </p>
+                    <p>The easiest way to use DMEA is with the web application here: 
+                        <a href="https://belindabgarana.shinyapps.io/dmea" class="link" target="_blank">https://belindabgarana.shinyapps.io/dmea</a> . 
+                        For more information, please watch our tutorial video below or <a href="contact.html" class="link">Contact Us</a>. </p>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Kt0Bq6coCdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
                     <p>To use the web app, you can either run one of our provided examples or select one of 4 input types:</p>
@@ -48,14 +50,16 @@
                     <ol>
                         <li>CMap L1000 query output .gct file (i.e., “query_result.gct” or “ncs.gct”)</li>
                         <li>CMap PRISM query output .gct file (i.e., “ncs.gct”)</li>
-                        <li>Drug rank list .csv file (drug names in column 1, drug rank metrics in column 2, optional: drug mechanisms-of-action in column 3; headers included)</li>
+                        <li>Drug rank list .csv file (drug names in column 1, drug rank metrics in column 2, optional: drug mechanisms-of-action in column 3; 
+                            headers included)</li>
                         <li>Gene signature .csv file (gene names in column 1, gene rank metrics in column 2; headers included)</li>
                     </ol>
 
                     <p>
                         DMEA is flexible to accept any numeric, nonzero values as rank metrics for drugs or genes.
                         To avoid errors, please refresh your web browser after each analysis and format your inputs to match our examples below or 
-                        on our GitHub repository here: <a href="https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples</a>. 
+                        on our GitHub repository here: 
+                        <a href="https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples</a>. 
                         Please note that you will also need to refresh your connection to the web app after 5 minutes of inactivity.
                     </p>
                 </section>
@@ -66,8 +70,8 @@
 
                     <p>If the third column with moa annotations is not provided, our default moa annotations based on the PRISM drug screen dataset will be used 
                         (available on our GitHub repository here: <a href="https://github.com/BelindaBGarana/DMEA/blob/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt" class="link" target="_blank">MOA_gmt_file_n6_no_special_chars.gmt</a>). 
-                        Whether moa annotations are provided or not, the moa sets are output with each analysis in a “DMEA_gmt.Rbin” file which could be used with 
-                        any future DMEA analyses in R software.</p>
+                        Whether moa annotations are provided or not, the moa sets are output with each analysis in a “DMEA_gmt.Rbin” file for any future analyses 
+                        with our R package for DMEA (described below).</p>
                 </section>
 
                 <section id="signature">
@@ -87,8 +91,10 @@
                     If you use Windows OS, you may need to install the R package using 
                     devtools::install_github ('BelindaBGarana/DMEA', build=FALSE).
                     DMEA is flexible to accept any numeric, nonzero values as rank metrics for drugs or genes. 
-                    To see examples, please refer to the “Examples” folder on our GitHub repo here: <a href="https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples</a>.
-                    More information about how to use our R package is available in our README, vignette, and man files on our GitHub repo: <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>.
+                    To see examples, please refer to the “Examples” folder on our GitHub repository here: 
+                    <a href="https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Examples</a>.
+                    More information about how to use our R package is available in our README, vignette, and man files on our GitHub repository: 
+                    <a href="https://github.com/BelindaBGarana/DMEA" class="link" target="_blank">https://github.com/BelindaBGarana/DMEA</a>.
                 </p>
                 <div id="info" class="round">
                     <p class="equation">if (!require(devtools)) {install.packages("devtools")}</p>
@@ -102,7 +108,8 @@
                     <li>Install the DMEA R package and load it from your library</li>
                     <li>Input a dataframe containing your drug rank list. 
                         If you have mechanism-of-action (MOA) annotations, you can provide these in a column in your dataframe. 
-                        If not, you must also input a gmt object such as “MOA_gmt_file_n6_no_special_chars.gmt” available in the “Inputs” folder on our GitHub repo. 
+                        If not, you must also input a gmt object such as 
+                        <a href="https://github.com/BelindaBGarana/DMEA/blob/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt" class="link" target="_blank">MOA_gmt_file_n6_no_special_chars.gmt</a>.
                         2+ MOA must be represented in your input. Make sure each drug has only one numeric, nonzero rank value. </li>
                     <li>Save the output dataframe of the enrichment results for each drug set in addition to plots summarizing the results</li>
                 </ol>
@@ -113,10 +120,13 @@
                 <h3>Gene Signature</h3>
                 <ol>
                     <li>Install the DMEA R package and load it from your library</li>
-                    <li>Input a dataframe containing your gene signature, as well as dataframes containing drug sensitivity scores and gene expression data with common sample names in the first columns. 
+                    <li>Input a dataframe containing your gene signature, as well as dataframes containing drug sensitivity scores 
+                        and gene expression data with common sample names in the first columns. 
                         If you have mechanism-of-action (MOA) annotations, you can provide these in a separate dataframe. 
-                        If not, you must also input a gmt object such as “MOA_gmt_file_n6_no_special_chars.gmt”. 
-                        This file, in addition to files containing drug sensitivity scores and gene expression data, is available in the "Inputs" folder on our GitHub repo. 
+                        If not, you must also input a gmt object such as 
+                        <a href="https://github.com/BelindaBGarana/DMEA/blob/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt" class="link" target="_blank">MOA_gmt_file_n6_no_special_chars.gmt</a>. 
+                        This file, in addition to files containing drug sensitivity scores and gene expression data, is available in the 
+                        <a href="https://github.com/BelindaBGarana/DMEA/tree/shiny-app/Inputs" class="link" target="_blank"> "Inputs" folder on our GitHub repository</a>. 
                         2+ MOA must be represented in your input.</li>
                     <li>Save the output dataframes with the Weighted Voting, correlation, and enrichment results for each drug set in addition to plots summarizing the results</li>
                 </ol>
