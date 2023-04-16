@@ -130,6 +130,12 @@ video {
     padding-bottom: 50px;
 }
 
+#rank2, #signature2 {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
 #info {
     clear: left;
     padding: 1% 2%;
@@ -387,6 +393,13 @@ footer a {
     }
 
     #rank, #signature {
+        width: 45%;
+        float: left;
+        margin: 0 2%;
+        padding-bottom: 50px;
+    }
+    
+    #rank2, #signature2 {
         width: 45%;
         float: left;
         margin: 0 2%;
