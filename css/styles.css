@@ -127,13 +127,11 @@ video {
 #rank, #signature {
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 50px;
+    padding-bottom: 2%;
 }
 
-#rank2, #signature2 {
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 50px;
+#how {
+    clear: left;
 }
 
 #info {
@@ -301,7 +299,7 @@ footer a {
     /* Tablet Viewport: Style rules for nav area */
     .center {
         width: 40%;
-        margin-bottom: 10%;
+
     }
 
     /* Tablet Viewport: Style rule for form element */
@@ -396,14 +394,6 @@ footer a {
         width: 45%;
         float: left;
         margin: 0 2%;
-        padding-bottom: 50px;
-    }
-    
-    #rank2, #signature2 {
-        width: 45%;
-        float: left;
-        margin: 0 2%;
-        padding-bottom: 50px;
     }
 
     #genetable {
