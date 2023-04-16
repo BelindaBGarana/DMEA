@@ -390,6 +390,7 @@ footer a {
         width: 45%;
         float: left;
         margin: 0 2%;
+        padding-bottom: 50px;
     }
 
     #genetable {
