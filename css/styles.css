@@ -127,11 +127,7 @@ video {
 #rank, #signature {
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 10%;
-}
-
-#how {
-    padding-top: 30%;
+    padding-bottom: 50px;
 }
 
 #info {
