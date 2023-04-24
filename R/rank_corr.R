@@ -224,18 +224,18 @@ rank_corr <- function(data, variable = "Drug", value = "AUC", type = "pearson",
           )
 
           # generate plot for each significant correlation
-          a[[i]] <- ggplot(data = sig.data, aes_string(
+          a[[i]] <- ggplot2::ggplot(data = sig.data, aes_string(
             x = rank(sig.data[, c(rank.var)]),
             y = rank(sig.data[, c(value)])
           )) +
-            geom_point() +
-            labs(x = paste0(xlab, " Rank"), y = paste0(ylab, " Rank")) +
-            ggtitle(results[i]) +
-            geom_smooth(
+            ggplot2::geom_point() +
+            ggplot2::labs(x = paste0(xlab, " Rank"), y = paste0(ylab, " Rank")) +
+            ggplot2::ggtitle(results[i]) +
+            ggplot2::geom_smooth(
               method = "lm", size = 1.5, linetype = "solid", color = "blue",
               se = se, na.rm = TRUE
             ) +
-            geom_text(
+            ggplot2::geom_text(
               x = pos.x, y = pos.y,
               label = as.character(as.expression(stats_spearman)),
               colour = "blue", size = 8, parse = TRUE
