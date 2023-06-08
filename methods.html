@@ -37,24 +37,25 @@
         <!-- Use the main area to add the main content to the webpage -->
         <main>
             <h2>Methods</h2>
-            <p>The DMEA algorithm is similar to that of Gene Set Enrichment Analysis (GSEA).</p>
+            <p>The DMEA algorithm is similar to that of <a href="https://www.pnas.org/doi/10.1073/pnas.0506580102" class="link" target="_blank">Gene Set Enrichment Analysis (GSEA)</a>.</p>
             
             <div class="mobile-tablet">
                 
                 <h3>Calculations of Parameters for DMEA:</h3>
                 <p>
                     Enrichment Score (ES): Maximum deviation from 0 on walk down drug list (using weighted, 
-                    running sum Kolmogorov–Smirnov-like statistic). Please refer to 
-                    the image below to see how the weights are calculated for drugs 
-                    in the set (P_hit) or not in the set (P_miss). The score increases 
-                    if the drug is in the set, or decreases if not. By default, we use a weight (p) of 1.
+                    running sum Kolmogorov–Smirnov-like statistic). The score increases 
+                    if the drug is in the set, or decreases if not. Please refer to 
+                    the image below to see how the score increments are calculated for drugs 
+                    in the set (P_hit) or not in the set (P_miss).
                 </p>
 
-                <p>Normalized Enrichment Score (NES): ES is normalized across all background drug sets.</p>
+                <p>Normalized Enrichment Score (NES): ES is divided by the mean of same-signed ES_null based on 1,000 permutations.</p>
 
-                <p>p-value: Number of permutations for which |NES| > |NES_NULL (with random drugs)| divided by 1000 total permutations.</p>
+                <p>p-value: The percentage of same-signed ES_null equal to or greater than the ES divided by the percentage of same-signed ES_null.</p>
 
-                <p>q-value: Number of same-signed drug sets with higher |NES| divided by the number of same-signed drug sets.</p>
+                <p>q-value: The percentage of same-signed NES_null with NES equal or greater to the observed NES 
+                    divided by the percentage of same-signed NES equal or greater.</p>
     
             </div>
 
@@ -72,40 +73,39 @@
                         <td>Enrichment Score (ES)</td>
                         <td>
                             Maximum deviation from 0 on walk down drug list (using weighted, 
-                            running sum Kolmogorov–Smirnov-like statistic). Please refer to 
-                            the image below to see how the weights are calculated for drugs 
-                            in the set (P_hit) or not in the set (P_miss). The score increases 
-                            if the drug is in the set, or decreases if not.
+                            running sum Kolmogorov–Smirnov-like statistic). The score increases 
+                            if the drug is in the set, or decreases if not. Please refer to 
+                            the image below to see how the score increments are calculated for drugs 
+                            in the set (P_hit) or not in the set (P_miss).
                         </td>
                     </tr>
 
                     <tr><!-- Row 3 -->
                         <td>Normalized Enrichment Score (NES)</td>
                         <td>
-                            ES is normalized across all background drug sets.
+                            ES is divided by the mean of same-signed ES_null based on 1,000 permutations.
                         </td>
                     </tr>
 
                     <tr><!-- Row 4 -->
                         <td>p-value</td>
                         <td>
-                            Number of permutations for which |NES| > |NES_NULL (with random drugs)| 
-                            divided by 1000 total permutations.
+                            The percentage of same-signed ES_null equal to or greater than the ES 
+                            divided by the percentage of same-signed ES_null.
                         </td>
                     </tr>
 
                     <tr><!-- Row 5 -->
                         <td>q-value</td>
                         <td>
-                            Number of same-signed drug sets with higher |NES| divided by the number 
-                            of same-signed drug sets.
+                            The percentage of same-signed NES_null with NES equal or greater to 
+                            the observed NES divided by the percentage of same-signed NES equal or greater.
                         </td>
                     </tr>
 
                 </table>
             </div>
             <img src="images/enrichment_calculation.png" alt="DMEA Enrichment Calculation" class="center" class="bottom">
-            <p>Image source: <a href="https://www.pnas.org/doi/10.1073/pnas.0506580102" class="link" target="_blank">Subramanian et al.</a></p>
         </main>
     
         <footer>
