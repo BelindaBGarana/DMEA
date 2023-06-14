@@ -1,0 +1,20 @@
+citHeader("To cite this package, please use:")
+
+citEntry(entry = "article",
+	textVersion = paste("Garana, B.B.,",
+		"Joly, J.H., Delfarah, A. et al.",
+		"Drug mechanism enrichment analysis",
+		"improves prioritization of therapeutics",
+		"for repurposing. BMC Bioinformatics 24, 215 (2023).",
+		"https://doi.org/10.1186/s12859-023-05343-8"),
+	author = personList(person("Belinda", "Garana", "B."),
+				person("James", "Joly", "H."),
+				person("Alireza", "Delfarah"),
+				person("Hyunjun", "Hong"),
+				person("Nicholas", "Graham", "A.")),
+	journal = "BMC Bioinformatics",
+	number = "24",
+	pages = "215",
+	title = paste("Drug mechanism enrichment analysis improves",
+			"prioritization of therapeutics for repurposing"),
+	year = "2023")

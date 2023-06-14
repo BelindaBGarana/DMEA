@@ -5,8 +5,8 @@
 
 Though there are many algorithms for drug repurposing, most only
 evaluate individual drugs which can be prone to off-target effects. In
-contrast, our approach is to evaluate drug mechanisms-of-action by
-aggregating results across many drugs. Though mechanisms-of-action have
+contrast, our approach is to evaluate drug mechanisms of action by
+aggregating results across many drugs. Though mechanisms of action have
 also been evaluated in a similar manner by the Connectivity Map
 (clue.io), Drugmonizome (<https://maayanlab.cloud/drugmonizome>), and
 DrugEnrichr(<https://maayanlab.cloud/DrugEnrichr>), these tools only
@@ -14,9 +14,14 @@ allow analysis of select public datasets and do not consider the ranks
 or directionality of input features. With our tool Drug Mechanism
 Enrichment Analysis (DMEA), users can query any dataset of interest
 using either an input gene signature or drug rank list to identify
-enriched mechanisms-of-action for drug repurposing efforts. For more
+enriched mechanisms of action for drug repurposing efforts. For more
 information, please visit our website:
 <https://belindabgarana.github.io/DMEA>
+
+## Citation
+
+To cite this package, please use:
+Garana, B.B., Joly, J.H., Delfarah, A. et al. Drug mechanism enrichment analysis improves prioritization of therapeutics for repurposing. BMC Bioinformatics 24, 215 (2023). https://doi.org/10.1186/s12859-023-05343-8
 
 ## Installation
 

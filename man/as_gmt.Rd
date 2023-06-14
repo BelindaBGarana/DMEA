@@ -46,7 +46,9 @@ as_gmt(data, element.names = "Drug", set.names = "moa", min.per.set = 6,
 }
 
 \references{
-For more information, please visit: https://belindabgarana.github.io/DMEA
+Garana, B.B., Joly, J.H., Delfarah, A. et al. Drug mechanism enrichment analysis
+improves prioritization of therapeutics for repurposing. BMC Bioinformatics 24,
+215 (2023). https://doi.org/10.1186/s12859-023-05343-8
 }
 
 \author{Belinda B. Garana
