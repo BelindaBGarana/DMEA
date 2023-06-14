@@ -115,7 +115,7 @@ video {
 }
 
 #sigimage {
-    margin-bottom: 20%;
+    margin-bottom: 12%;
 }
 
 #backgroundimage {
@@ -127,7 +127,7 @@ video {
 #rank, #signature {
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
 }
 
 #how {
@@ -154,10 +154,11 @@ main ul {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    margin-bottom: 10%;
 }
 
 .bottom {
-    margin-bottom: 10%;
+    margin-bottom: 12%;
 }
 
 .action {
@@ -298,8 +299,13 @@ footer a {
 
     /* Tablet Viewport: Style rules for nav area */
     .center {
-        width: 40%;
+        width: 50%;
+        margin-bottom: 10%;
+    }
 
+    /* Tablet Viewport: Style rules for footer area */
+    footer {
+        position: fixed;
     }
 
     /* Tablet Viewport: Style rule for form element */
@@ -313,7 +319,7 @@ footer a {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        padding-bottom: 20%;
+        padding-bottom: 12%;
     }
 
 }
@@ -390,6 +396,11 @@ footer a {
         font-size: 1.5em;
     }
 
+    /* Desktop Viewport: Style rules for footer */
+    footer {
+        position: fixed;
+    }
+
     #rank, #signature {
         width: 45%;
         float: left;
@@ -401,8 +412,7 @@ footer a {
         margin: 0 0 210px 0;
     }
 
-    #ranktable
-    {
+    #ranktable {
         padding: 3%;
     }
 
