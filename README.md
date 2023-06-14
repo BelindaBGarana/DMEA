@@ -5,8 +5,8 @@
 
 Though there are many algorithms for drug repurposing, most only
 evaluate individual drugs which can be prone to off-target effects. In
-contrast, our approach is to evaluate drug mechanisms-of-action by
-aggregating results across many drugs. Though mechanisms-of-action have
+contrast, our approach is to evaluate drug mechanisms of action by
+aggregating results across many drugs. Though mechanisms of action have
 also been evaluated in a similar manner by the Connectivity Map
 (clue.io), Drugmonizome (<https://maayanlab.cloud/drugmonizome>), and
 DrugEnrichr(<https://maayanlab.cloud/DrugEnrichr>), these tools only
@@ -14,16 +14,21 @@ allow analysis of select public datasets and do not consider the ranks
 or directionality of input features. With our tool Drug Mechanism
 Enrichment Analysis (DMEA), users can query any dataset of interest
 using either an input gene signature or drug rank list to identify
-enriched mechanisms-of-action for drug repurposing efforts. For more
+enriched mechanisms of action for drug repurposing efforts. For more
 information, please visit our website:
 <https://belindabgarana.github.io/DMEA>
+
+## Citation
+
+To cite this package, please use:
+Garana, B.B., Joly, J.H., Delfarah, A. et al. Drug mechanism enrichment analysis improves prioritization of therapeutics for repurposing. BMC Bioinformatics 24, 215 (2023). https://doi.org/10.1186/s12859-023-05343-8
 
 ## Installation
 
 To install this package, start R and enter:
 
 ``` r
-if (!require("BiocManager", quietlly = TRUE))
+if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
   
 BiocManager::install("DMEA")
@@ -33,7 +38,7 @@ Alternatively, to install this package directly from our GitHub
 repository, start R and enter:
 
 ``` r
-if (!require("devtools", quietlly = TRUE))
+if (!require("devtools", quietly = TRUE))
   install.packages("devtools")
   
 devtools::install_github("BelindaBGarana/DMEA")
@@ -42,7 +47,7 @@ devtools::install_github("BelindaBGarana/DMEA")
 If you are using Windows OS, you may need to change the above code to:
 
 ``` r
-if (!require("devtools", quietlly = TRUE))
+if (!require("devtools", quietly = TRUE))
   install.packages("devtools")
   
 devtools::install_github("BelindaBGarana/DMEA", build = FALSE)
@@ -65,23 +70,24 @@ drug set annotations, you can use our PRISM moa annotations on our
 GitHub repository at:
 <https://raw.github.com/BelindaBGarana/DMEA/shiny-app/Inputs/MOA_gmt_file_n6_no_special_chars.gmt>
 
-Example: 1. Load the DMEA package into your R environment
+Example:
 
 ``` r
-library(DMEA)
-```
+## Step 1: prepare data frame containing rank metrics
+## and set annotations for each drug
+# Drug is our default name for the column containing drug names
+Drug <- paste0("Drug_", seq(from = 1, to = 24))
 
-2.  Import a data frame containing your drug rank list
-
-``` r
-# prepare dataframe containing rank metrics and set annotations for each drug
-Drug <- paste0("Drug_", seq(from = 1, to = 24)) # Drug is our default for the drug parameter
 data <- as.data.frame(Drug)
-data$Pearson.est <- rnorm(length(Drug), sd = 0.25) # Pearson.est is our default for the rank.metric parameter
-data$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
 
-# perform drugSEA and store results
-# if you use other column names for your data parameter, 
+# Pearson.est is our default name for the column containing drug ranks
+data$Pearson.est <- rnorm(length(Drug), sd = 0.25)
+
+# moa is our default name for the column containing drug set annotations
+data$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6)
+
+## Step 2: perform drugSEA and store results
+# if you use other column names for your data parameter,
 # then make sure to set drug, rank.metric, and set.type parameters
 drugSEA.test <- DMEA::drugSEA(data)
 ```
@@ -152,43 +158,60 @@ sample names \* weights: a dataframe containing gene symbols in one
 column (default: column 1) and weight values in another column (default:
 column 2)
 
-Example: 1. Load the DMEA package into your R environment
+Example:
 
 ``` r
-library(DMEA)
-```
+## Step 1: prepare drug sensitivity data frame
+# create list of sample names
+Sample_ID <- seq(from = 1, to = 21)
 
-2.  Import a data frame containing your drug rank list
-
-``` r
-# prepare drug sensitivity data frame
-Sample_ID <- seq(from = 1, to = 21) # create list of sample names
 drug.sensitivity <- as.data.frame(Sample_ID)
-Drug <- paste0("Drug_", seq(from = 1, to = 24)) # create list of drug names
-for(i in 1:length(Drug)){ # give each drug values representative of AUC sensitivity scores
-  drug.sensitivity[,c(Drug[i])] <- rnorm(length(Sample_ID), mean = 0.83, sd = 0.166)
+
+# create list of drug names
+Drug <- paste0("Drug_", seq(from = 1, to = 24))
+
+# give each drug values representative of AUC sensitivity scores
+for(i in 1:length(Drug)){
+  drug.sensitivity[,c(Drug[i])] <- rnorm(length(Sample_ID),
+                                        mean = 0.83, sd = 0.166)
 }
 
-# prepare drug.info data frame
+## Step 2: prepare drug info data frame
 # alternatively, a gmt object could be provided
-drug.info <- as.data.frame(Drug)
-drug.info$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6) # moa is our default for the set.type parameter
+info <- as.data.frame(Drug)
 
-# prepare gene weight data frame
-Gene <- paste0("Gene_", seq(from = 1, to = 50)) # create list of gene symbols
-weights <- as.data.frame(Gene) # by 
-weights$Rank_metric <- rnorm(length(Gene)) # give each gene a weight
+# moa is our default name for the column containing drug set annotations
+info$moa <- rep(paste("Set", LETTERS[seq(from = 1, to = 4)]), 6)
 
-# prepare expression data frame
-# by default, column 1 of your expression data frame is the column name from which sample names are gathered
-# the column containing sample names in your drug sensitivity data frame should have the same name
-expression <- as.data.frame(Sample_ID)
-for(i in 1:length(Gene)){ # give each gene values representative of normalized RNA expression
-  expression[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
+## Step 3: prepare gene weight data frame
+# create list of gene symbols
+Gene <- paste0("Gene_", seq(from = 1, to = 50))
+
+# by default, gene symbols are found in
+# the first column of your weights data frame
+weights <- as.data.frame(Gene)
+
+# give each gene a weight
+# by default, gene weight values are found in
+# the second column of your weights data frame
+weights$Rank_metric <- rnorm(length(Gene))
+
+## Step 4: prepare expression data frame
+# by default, column 1 of your expression data frame is
+# the column name from which sample names are gathered and
+# the column containing sample names in your drug sensitivity
+# data frame should have the same name
+expr <- as.data.frame(Sample_ID)
+
+# give each gene values representative of normalized RNA expression
+# each gene is represented by a column in your expression data frame
+for(i in 1:length(Gene)){
+  expr[,c(Gene[i])] <- rnorm(length(Sample_ID), sd = 0.5)
 }
 
-# perform DMEA and store results
-DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expression, weights = weights, drug.info = drug.info)
+## Step 5: perform DMEA and store results
+DMEA.test <- DMEA::DMEA(drug.sensitivity, expression = expr,
+                        weights = weights, drug.info = info)
 ```
 
     ## [1] "Calculating Weighted Voting scores..."
