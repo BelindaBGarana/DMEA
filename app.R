@@ -6,16 +6,10 @@
 #
 #    http://shiny.rstudio.com/
 #
-# Author: Belinda B. Garana; last edit: 2022-04-04
+# Author: Belinda B. Garana; last edit: 2023-07-05
 
-library(shiny);library(utils);library(GSA);library(DMEA);library(plyr);
-library(dplyr);library(ggplot2);library(reshape2);library(gridExtra);library(sjmisc);
-library(stats);library(foreach);library(cowplot);library(aplot);library(patchwork);library(ggrepel);
-library(devtools);library(usethis);library(iterators);
-library(tidyselect);library(parallel);library(testthat);library(snow);library(doSNOW);
-library(BiocManager)
-options(repos = BiocManager::repositories())
-library(qvalue);
+library(shiny);library(plyr);library(dplyr);library(utils);
+library(GSA);library(sjmisc);library(ggplot2);library(DMEA);
 
 # set limit for upload file size
 MB.limit <- 180
@@ -204,7 +198,7 @@ server <- function(input, output) {
   url <- a("https://belindabgarana.github.io/DMEA", href = "https://belindabgarana.github.io/DMEA")
   output$info <- renderUI({tagList("For more information or to contact us, please visit: ", url)})
   output$private <- renderText({"No user data is stored on our secure server, so your data will remain private."})
-  output$refresh <- renderText({"Please refresh your web browser after each analysis and format your inputs to match the examples on the 'How to Use' page at the url above to avoid errors. You will also need to refresh this webpage after 5 minutes of inactivity."})
+  output$refresh <- renderText({"Please refresh your web browser after each analysis and format your inputs to match the examples on the 'How to Use' page at the URL above to avoid errors. You will also need to refresh this webpage after 5 minutes of inactivity."})
   output$fyi <- renderText({"Running analysis... Please allow 1 to 5 minutes of run time"})
   options(shiny.maxRequestSize = MB.limit*1024^2)
   observeEvent(input$run, {
@@ -251,7 +245,7 @@ server <- function(input, output) {
               ggsave(temp.name, DMEA.output$mtn.plots[[i]], device="pdf")
             }
             all.files <- c("DMEA_input.csv",
-                           "DMEA_gmt.Rbin",
+                           "DMEA_gmt.rds",
                            "DMEA_results.csv",
                            "DMEA_removed_drug_sets.csv",
                            "DMEA_unannotated_drugs.csv",
@@ -293,7 +287,7 @@ server <- function(input, output) {
                            "DMEA_unused_gene_weights.csv",
                            "DMEA_correlation_results.csv",
                            "DMEA_correlation_plots.pdf",
-                           "DMEA_gmt.Rbin",
+                           "DMEA_gmt.rds",
                            "DMEA_results.csv",
                            "DMEA_removed_drug_sets.csv",
                            "DMEA_unannotated_drugs.csv",
@@ -375,7 +369,7 @@ server <- function(input, output) {
             ggsave(temp.name, DMEA.output$mtn.plots[[i]], device="pdf")
           }
           all.files <- c("DMEA_input.csv",
-                         "DMEA_gmt.Rbin",
+                         "DMEA_gmt.rds",
                          "DMEA_results.csv",
                          "DMEA_removed_drug_sets.csv",
                          "DMEA_unannotated_drugs.csv",
@@ -445,7 +439,7 @@ server <- function(input, output) {
             ggsave(temp.name, DMEA.output$mtn.plots[[i]], device="pdf")
           }
           all.files <- c("DMEA_input.csv",
-                         "DMEA_gmt.Rbin",
+                         "DMEA_gmt.rds",
                          "DMEA_results.csv",
                          "DMEA_removed_drug_sets.csv",
                          "DMEA_unannotated_drugs.csv",
@@ -519,7 +513,7 @@ server <- function(input, output) {
             ggsave(temp.name, DMEA.output$mtn.plots[[i]], device="pdf")
           }
           all.files <- c("DMEA_input.csv",
-                         "DMEA_gmt.Rbin",
+                         "DMEA_gmt.rds",
                          "DMEA_results.csv",
                          "DMEA_removed_drug_sets.csv",
                          "DMEA_unannotated_drugs.csv",
@@ -602,7 +596,7 @@ server <- function(input, output) {
             ggsave(temp.name, DMEA.output$mtn.plots[[i]], device="pdf")
           }
           all.files <- c("DMEA_input.csv",
-                         "DMEA_gmt.Rbin",
+                         "DMEA_gmt.rds",
                          "DMEA_results.csv",
                          "DMEA_removed_drug_sets.csv",
                          "DMEA_replaced_drug_synonyms.csv",
@@ -682,7 +676,7 @@ server <- function(input, output) {
                            "DMEA_unused_gene_weights.csv",
                            "DMEA_correlation_results.csv",
                            "DMEA_correlation_plots.pdf",
-                           "DMEA_gmt.Rbin",
+                           "DMEA_gmt.rds",
                            "DMEA_results.csv",
                            "DMEA_removed_drug_sets.csv",
                            "DMEA_unannotated_drugs.csv",
