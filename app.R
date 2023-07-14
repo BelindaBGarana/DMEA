@@ -8,8 +8,14 @@
 #
 # Author: Belinda B. Garana; last edit: 2023-07-05
 
-library(shiny);library(plyr);library(dplyr);library(utils);
-library(GSA);library(sjmisc);library(ggplot2);library(DMEA);
+library(shiny);library(utils);library(GSA);library(DMEA);library(plyr);
+library(dplyr);library(ggplot2);library(reshape2);library(gridExtra);library(sjmisc);
+library(stats);library(foreach);library(cowplot);library(aplot);library(patchwork);library(ggrepel);
+library(devtools);library(usethis);library(iterators);
+library(tidyselect);library(parallel);library(testthat);library(snow);library(doSNOW);
+library(BiocManager)
+options(repos = BiocManager::repositories())
+library(qvalue);
 
 # set limit for upload file size
 MB.limit <- 180
