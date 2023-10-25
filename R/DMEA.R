@@ -33,7 +33,7 @@ DMEA <- function(drug.sensitivity, gmt = NULL, expression, weights,
 
   # rank_corr
   corr.results <- rank_corr(
-    data = WV.result.drug.sensitivity, variable = "Drug", value = value,
+    data = WV.result.drug.sensitivity, variable = drug, value = value,
     type = scatter.plot.type, min.per.corr = min.per.corr,
     plots = scatter.plots, FDR = FDR.scatter.plots, xlab = xlab, ylab = ylab,
     position.x = position.x, position.y = position.y, se = se
@@ -62,8 +62,10 @@ DMEA <- function(drug.sensitivity, gmt = NULL, expression, weights,
 
   # Drug Mechanism Enrichment Analysis (DMEA)
   DMEA.results <- drugSEA(
-    data = corr.output, gmt, rank.metric = rank.metric, stat.type = stat.type,
-    num.permutations = num.permutations, FDR = FDR
+    corr.output, gmt, drug, rank.metric, set.type,
+    direction.adjust = NULL, FDR, num.permutations,
+    stat.type, min.per.set, sep, exclusions, 
+    descriptions, convert.synonyms = FALSE
   )
 
   return(list(
