@@ -50,8 +50,7 @@ DMEA <- function(drug.sensitivity, gmt = NULL, expression, weights,
         "must be provided as input if no gmt object is provided"
       ))
     } else {
-      corr.output <- merge(corr.results$result, drug.info, 
-                           by.x = "Drug", by.y = drug)
+      corr.output <- merge(corr.results$result, drug.info, by = drug)
       gmt <- as_gmt(
         data = corr.output, element.names = drug, set.names = set.type,
         min.per.set, sep, exclusions, descriptions
