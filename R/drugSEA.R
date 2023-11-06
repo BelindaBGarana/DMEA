@@ -283,10 +283,10 @@ drugSEA <- function(data, gmt = NULL, drug = "Drug",
     input.df <- stats::na.omit(input.df)
     rm(annotations)
 
-    GSEA.Results <- matrix(data = NA, nrow = length(Drug.Sets.All), ncol = 7)
+    GSEA.Results <- matrix(data = NA, nrow = length(Drug.Sets.All), ncol = 8)
     colnames(GSEA.Results) <- c(
       "Rank_metric", "Drug_set", "ES", "NES",
-      "p_value", "Position_at_max", "FDR_q_value"
+      "p_value", "Position_at_max", "FDR_q_value", "Leading_edge"
     )
     GSEA.Results <- as.data.frame(GSEA.Results)
     GSEA.Results$Drug_set <- Drug.Sets.All
@@ -317,6 +317,7 @@ drugSEA <- function(data, gmt = NULL, drug = "Drug",
       input.df3 <- input.df[, Drug.Sets.All[i]]
 
       # check to see if there is anything in the column (e.g. X)
+      # before calculating ES and position at max
       numhits_pathway <- sum(input.df3 == "X")
       if (numhits_pathway > 1) {
         pos_gene_set <- which(input.df[, Drug.Sets.All[i]] %in% c("X"))
@@ -324,12 +325,24 @@ drugSEA <- function(data, gmt = NULL, drug = "Drug",
           weighted.score.type = score.weight,
           correl.vector = rank_metric
         )
+        
+        # store ES and positions
         GSEA.Results[GSEA.Results$Drug_set == Drug.Sets.All[i],
                      ]$ES <- KS_real$ES
         GSEA.Results[GSEA.Results$Drug_set == Drug.Sets.All[i],
                      ]$Position_at_max <- KS_real$arg.ES
         ks_results_plot[[Drug.Sets.All[i]]] <- KS_real$RES
         positions.of.hits[[Drug.Sets.All[i]]] <- pos_gene_set
+        
+        # identify leading edge elements
+        if (KS_real$ES <= 0) {
+          pos_leading_edge <- pos_gene_set[pos_gene_set >= KS_real$arg.ES]
+        } else if (KS_real$ES >= 0) {
+          pos_leading_edge <- pos_gene_set[pos_gene_set <= KS_real$arg.ES]
+        }
+        leading_edge <- input.df[pos_leading_edge, drug]
+        GSEA.Results[GSEA.Results$Drug_set == Drug.Sets.All[i], 
+                     ]$Leading_edge <- paste(leading_edge, collapse = ", ")
       }
     }
     Mountain.Plot.Info <- list(
